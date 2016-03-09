@@ -1,0 +1,8 @@
+{
+    "jwolfe.file-tree-exclude.list": [
+        "node_modules",
+        ".gitignore",
+        "README.md",
+		".git"
+    ]
+}

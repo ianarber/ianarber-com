@@ -1,0 +1,32 @@
+$mainBodyColor: #c4cbcf;
+$font-stack: 'Open Sans', sans-serif;
+$mainFontSize: 20px;
+$menuBackgroundColor: #273640;
+$headerBackgroundColor: #121B21;
+$menuHoverColor: #00afc4;
+$headerGradientColor: rgba(0, 175, 196, 0.9);
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: $mainBodyColor;
+    font-family: $font-stack;
+    font-size: $mainFontSize;
+    font-weight: 400;
+}
+
+a{
+    text-decoration: none;
+	color: $mainBodyColor;
+}
+
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
