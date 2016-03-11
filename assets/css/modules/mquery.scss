@@ -1,0 +1,151 @@
+/* Big tablet to 1200px (widths smaller than the pixel row of 1140px)*/
+@media only screen and (max-width: 1200px){
+
+}
+
+
+
+
+/*Small tablet to big table from 768px to 1023px*/
+@media only screen and (max-width: 1060px){
+	.logo{
+		#ianarber{
+			font-size: 220%;
+			transition: font-size 0.3s ease-in-out;
+		}
+		#composer,
+		#film{
+			font-size: 60%;
+			transition: font-size 0.3s ease-in-out;
+		}
+		#composer{
+			&:before, &:after{
+				top: 5px;
+				width: 37.7%;
+				transition: top 0.3s ease-in-out;
+				transition: width 0.3s ease-in-out;
+			}
+    	}
+		#film{
+			&:before, &:after{
+				top: 5px;
+				width: 29.6%;
+				transition: top 0.3s ease-in-out;
+				transition: width 0.3s ease-in-out;
+			}
+    	}
+	}
+	
+	.menu-list-1,
+	.menu-list-2{
+    	margin-top: 25px;
+		transition: margin-top 0.3s ease-in-out;
+	}
+	
+	.menu-items-1,
+	.menu-items-2{
+		font-size: 70%;
+		transition: font-size 0.3s ease-in-out;
+		&:nth-child(-n+2){
+			margin-right: 30px;
+			transition: margin-right 0.3s ease-in-out;
+		}
+	}
+	
+}
+
+
+@media only screen and (max-width: 960px){
+	.logo{
+		#ianarber{
+			font-size: 195%;
+		}
+		#composer,
+		#film{
+			font-size: 55%;
+		}
+	}
+	
+	.menu-list-1,
+	.menu-list-2{
+    	margin-top: 17px;
+	}
+	
+	.menu-items-1,
+	.menu-items-2{
+		font-size: 65%;
+		&:nth-child(-n+2){
+			margin-right: 20px;
+		}
+	}
+}
+
+
+
+/*Small phones to small tablets from 481 to 767px*/
+@media only screen and (max-width: 860px){
+	.logo{
+		#ianarber{
+			font-size: 170%;
+		}
+		#composer,
+		#film{
+			font-size: 50%;
+		}
+		#composer{
+			&:before, &:after{
+				top: 4px;
+				width: 37.6%;
+			}
+    	}
+		#film{
+			&:before, &:after{
+				top: 4px;
+				width: 29.2%;
+			}
+    	}
+	}
+	
+	.menu-list-1,
+	.menu-list-2{
+    	margin-top: 14px;
+	}
+	
+	.menu-items-1,
+	.menu-items-2{
+		font-size: 65%;
+		letter-spacing: 1px;
+		&:nth-child(-n+2){
+			margin-right: 10px;
+		}
+	}
+}
+
+
+@media only screen and (max-width: 760px){
+    .main-nav{
+		display: none;
+    }
+    
+    .logo{
+        width: 100%;
+    }
+    
+    .nav-toggle{
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 480px){
+	.nav-toggle{
+		top: 8px;
+		left: -35px;   
+	}
+}
+
+
+
+
+
+
+
