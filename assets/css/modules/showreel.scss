@@ -1,18 +1,166 @@
-.showreel-background{
-    position: relative;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/mi3-still.png);
-    background-size: cover;
-    background-position: center;
-    height: 700px;
+figure{
+	margin: 0;
+	padding: 0;
 }
 
-.container{
-    height: 700px;
-    margin: 0 auto;
-    background-color: rgba(51, 51, 51, 0.6);
-    box-shadow: 0 0 5px 3px #222 inset;
+.portfolio-background{
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/mission-impossible-5-bg.png);
+	background-size: cover;
+	background-position: center;
+	height: 1120px;
+	position: relative;
 }
 
-.poster-row img{
-    height: 200px;
+.portfolio{
+	position: absolute;
+	height: 1010px;
+	width: 90%;
+	margin: 0 auto;
+	top: 50px;
+	left: 0;
+	right: 0;
+	background-color: #2f3238;
+    //box-shadow: 0 0 5px px #222 inset;
+	//border-radius: 5px;
 }
+
+.poster-row{
+	position: relative;
+	margin-top: 10px;
+	margin-left: 20px;
+	.poster{
+		min-width: 200px;
+		max-width: 200px;
+	}
+	img{
+		display: block;
+		position: relative;
+		width: 200px;
+		//margin-left: 15px;
+		transition: opacity 1s, transform 1s;
+		image-rendering: crisp-edges;
+	}
+}
+
+.poster-figure{
+	position: relative;
+	overflow: hidden;
+	
+}
+
+.poster-caption{
+	position: absolute;
+	top: 195px;
+	left: 0;
+	p{
+		display: inline-block;
+		background: rgba(255,255,255,0.9);
+		color: #2f3238;
+		transform: translate3d(30px,0,0);
+		margin: 0 0 3px;
+    	padding: 5px 10px;
+    	font-size: 75%;
+		transition: transform 0.35s;
+		transform: translate3d(-160px,0,0);
+	}
+	.controls{
+		transform: translate3d(30px,0,0);
+		transition: transform 0.35s;
+		transform: translate3d(-160px,0,0);
+		i{
+			font-size: 200%;
+			background: rgba(255,255,255,0.9);
+			color: #2f3238;
+    		padding: 5px 10px;
+			cursor: pointer;
+		}
+	}
+}
+
+.poster:hover .poster-caption p,
+.poster:hover .poster-caption .controls{
+	transform: translate3d(15px,0,0);
+}
+.poster:hover img{
+	opacity: 0.4;
+	transform: scale3d(1.05,1.05,1);
+}
+
+.poster-caption p:first-child{
+	transition-delay: 0s;
+}
+
+.poster-caption p:nth-of-type(2){
+	transition-delay: 0.15s;
+}
+
+.poster-caption .controls{
+	transition-delay: 0.30s;
+}
+
+
+
+
+
+
+
+
+
+
+/* .poster-figure{
+	position: relative;
+	overflow: hidden;
+}
+
+.poster-caption{
+	position: absolute;
+	left: 15px;
+	bottom: -100px;
+	width: 180px;
+	color: #fff;
+	background: rgba(0, 0, 0, 0.8);
+	transition: transform 0.3s;
+}
+
+.poster:hover .poster-caption{
+	transform: translateY(-100px);
+}
+
+.fig-description{
+
+} */
+
+
+
+
+
+/* .poster-row{
+	position: relative;
+	margin-top: 10px;
+	margin-left: 20px;
+	img{
+		height: 290px;
+		margin-left: 15px;
+	}
+	h3{
+		position: absolute;
+		top: 275px;
+		left: 15px;
+		span{
+			color: #fff;
+			line-height: 25px;
+			background: rgba(0, 0, 0, 0.7);
+			padding: 2px 5px;
+		}
+	}
+} */
+
+
+
+
+
+
+
+
+
+
