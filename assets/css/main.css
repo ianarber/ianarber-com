@@ -854,8 +854,8 @@ th {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../../fonts/fontawesome-webfont.eot?v=4.5.0");
-  src: url("../../fonts/fontawesome-webfont.eot?#iefix&v=4.5.0") format("embedded-opentype"), url("../../fonts/fontawesome-webfont.woff2?v=4.5.0") format("woff2"), url("../../fonts/fontawesome-webfont.woff?v=4.5.0") format("woff"), url("../../fonts/fontawesome-webfont.ttf?v=4.5.0") format("truetype"), url("../../fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular") format("svg");
+  src: url("../fonts/fontawesome-webfont.eot?v=4.5.0");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.5.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.5.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.5.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.5.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -2961,6 +2961,10 @@ a {
   text-decoration: none;
   color: #0d2f52; }
 
+figure {
+  margin: 0;
+  padding: 0; }
+
 /*******CHANGE FONT SIZE OF FLATICON FONTS*******/
 [class^="flaticon-"]:before,
 [class*=" flaticon-"]:before,
@@ -3119,58 +3123,114 @@ a {
   margin-right: 20px; }
 
 .intro {
-  height: auto;
-  background-color: #ededed;
+  position: relative;
+  height: 635px;
+  background-color: #efefef;
   border-top: 1px solid #ccc;
   -webkit-box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.3);
           box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.3); }
 
-.intro-div {
+.profile-pic {
+  position: absolute;
+  height: 450px;
+  width: 90%;
   margin: 0 auto;
-  height: inherit; }
+  top: 50px;
+  left: 0;
+  right: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(../img/mission-impossible-5-bg.png);
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/mission-impossible-5-bg.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/mission-impossible-5-bg.png);
+  background-size: cover;
+  background-position: center;
+  border: 5px solid #fff;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3); }
 
-.intro-text {
-  margin-top: 15px;
-  padding: 0 100px;
-  font-size: 75%;
-  color: #999794;
-  text-align: center; }
-
-.contact-btn div:first-child {
-  padding-left: 170px; }
-
-.contact-btn div:last-child {
-  padding-right: 170px; }
-
-.contact-btn p:first-child,
-.contact p:first-child {
-  margin-top: 10px;
-  font-size: 75%;
-  color: #999794;
-  text-align: center;
-  text-transform: uppercase; }
-
-.hire-me-btn {
-  margin: 0 auto;
-  margin-top: 10px;
-  width: 50%;
-  font-weight: 800;
-  font-size: 70%;
-  text-align: center;
+.profile-pic #welcome-intro {
+  position: absolute;
+  top: 35px;
+  left: 40px;
+  width: auto;
+  margin-right: 40px;
+  padding: 0 8px;
+  font-size: 160%;
+  font-weight: 600;
+  word-spacing: 1px;
   text-transform: uppercase;
-  padding: 15px 30px;
-  color: #0d2f52;
-  -webkit-border-radius: 4px;
-          border-radius: 4px;
-  border: 2px solid #0d2f52;
-  -webkit-transition: background-color 0.3s, color 0.3s;
-  transition: background-color 0.3s, color 0.3s; }
+  background-color: rgba(242, 242, 242, 0.8);
+  color: rgba(0, 0, 0, 0.8); }
 
-.hire-me-btn:hover {
+.profile-pic #welcome-text {
+  position: absolute;
+  margin-top: 3px;
+  margin-left: 30px;
+  font-size: 50%;
+  font-weight: 300;
+  width: 60%;
+  padding: 2px 8px;
+  background-color: rgba(242, 242, 242, 0.8); }
+
+.profile-pic #quote {
+  position: absolute;
+  color: #f2f2f2;
+  bottom: 50px;
+  right: 20px;
+  margin-left: 20px;
+  width: auto;
+  font-size: 90%;
+  padding: 3px 8px;
+  text-align: right;
+  background-color: rgba(0, 0, 0, 0.8); }
+
+.profile-pic #cite {
+  position: absolute;
+  color: #f2f2f2;
+  bottom: 20px;
+  right: 50px;
+  width: auto;
+  font-size: 80%;
+  padding: 3px 8px;
+  text-align: right;
+  background-color: rgba(0, 0, 0, 0.8); }
+
+.email-contact {
+  text-align: center;
+  margin-top: 515px; }
+  .email-contact a:first-child,
+  .email-contact a:last-child {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 75%;
+    font-weight: 600;
+    letter-spacing: 1px; }
+  .email-contact a:first-child {
+    margin-right: 30px; }
+  .email-contact a:last-child {
+    margin-left: 30px; }
+
+.email-contact a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
   background-color: #0d2f52;
-  color: #fff;
-  -webkit-transition: background-color 0.3s, color 0.3s;
-  transition: background-color 0.3s, color 0.3s; }
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s; }
+
+.email-contact a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+          transform: scaleX(1); }
 
 .social-slide {
   height: 48px;
@@ -3188,8 +3248,9 @@ a {
   transition: all ease 0.3s; }
 
 .social-btns {
-  width: 40%;
+  width: 35%;
   margin: 0 auto;
+  margin-top: 10px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3224,18 +3285,119 @@ a {
 .contact {
   margin-bottom: 10px; }
 
-figure {
-  margin: 0;
-  padding: 0; }
+/* .intro{
+    height: auto;
+    background-color: #ededed;
+	border-top: 1px solid #ccc;
+	box-shadow: inset 0px 1px 2px rgba(0, 0, 0, .3);
+}
 
-.portfolio-background {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../img/mission-impossible-5-bg.png);
-  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/mission-impossible-5-bg.png);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/mission-impossible-5-bg.png);
+.intro-div{
+	margin: 0 auto;
+	height: inherit;
+}
+
+.intro-text{
+	margin-top: 15px;
+    padding: 0 100px;
+	font-size: 75%;
+	color: #999794;
+    text-align: center;
+}
+
+.contact-btn div:first-child{
+	padding-left: 170px;
+}
+
+.contact-btn div:last-child{
+	padding-right: 170px;
+}
+
+.contact-btn p:first-child,
+.contact p:first-child{
+	margin-top: 10px;
+    font-size: 75%;
+    color: #999794;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.hire-me-btn{
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 50%;
+    font-weight: 800;
+	font-size: 70%;
+	text-align: center;
+    text-transform: uppercase;
+    padding: 15px 30px;
+	color: #0d2f52;
+    border-radius: 4px;
+	border: 2px solid #0d2f52;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.hire-me-btn:hover{
+    background-color: #0d2f52;
+	color: #fff;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.social-slide{
+    height: 48px;
+    width: 48px;
+    margin: 10px;
+    float: left;
+    transition: all ease 0.3s;
+}
+
+.social-slide:hover{
+    background-position: 0px -48px;
+    box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.8);
+    transition: all ease 0.3s;
+}
+
+.social-btns{
+	width: 40%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+}
+
+.social-btns a{
+	flex: auto;
+}
+
+.twitter-hover{
+    background-image: url(../img/twitter-hover.png);
+}
+
+.facebook-hover{
+    margin-left: 22px;
+    background-image: url(../img/facebook-hover.png);
+}
+
+.soundcloud-hover{
+    background-image: url(../img/soundcloud-hover.png);
+}
+
+.skype-hover{
+    background-image: url(../img/skype-hover.png);
+}
+
+.linkedin-hover{
+    background-image: url(../img/linkedin-hover.png);
+}
+
+.contact{
+	margin-bottom: 10px;
+} */
+.showreel-background {
+  background-image: url(../img/showreelBackground.png);
   background-size: cover;
   background-position: center;
-  height: 1120px;
-  position: relative; }
+  height: 720px; }
 
 .portfolio {
   position: absolute;
@@ -3248,39 +3410,47 @@ figure {
   background-color: #2f3238; }
 
 .poster-row {
-  position: relative;
-  margin-top: 10px;
-  margin-left: 20px; }
+  margin: 0 auto; }
   .poster-row .poster {
     min-width: 200px;
-    max-width: 200px; }
+    max-width: 200px;
+    margin-top: 30px;
+    margin-right: 10px; }
   .poster-row img {
-    display: block;
     position: relative;
+    z-index: 1;
     width: 200px;
-    -webkit-transition: opacity 1s, -webkit-transform 1s;
-    transition: opacity 1s, -webkit-transform 1s;
-    transition: opacity 1s, transform 1s;
-    transition: opacity 1s, transform 1s, -webkit-transform 1s;
-    image-rendering: crisp-edges; }
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s; }
 
 .poster-figure {
   position: relative;
-  overflow: hidden; }
+  z-index: 2;
+  display: inline-block;
+  overflow: hidden;
+  max-height: 305px;
+  -webkit-transition: -webkit-box-shadow 0.5s;
+  transition: -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s; }
 
 .poster-caption {
   position: absolute;
+  z-index: 3;
   top: 195px;
   left: 0; }
   .poster-caption p {
     display: inline-block;
-    background: rgba(255, 255, 255, 0.9);
-    color: #2f3238;
+    background: #f2f2f2;
+    color: rgba(0, 0, 0, 0.8);
     -webkit-transform: translate3d(30px, 0, 0);
             transform: translate3d(30px, 0, 0);
     margin: 0 0 3px;
-    padding: 5px 10px;
+    padding: 3px 8px;
     font-size: 75%;
+    font-weight: 600;
     -webkit-transition: -webkit-transform 0.35s;
     transition: -webkit-transform 0.35s;
     transition: transform 0.35s;
@@ -3297,9 +3467,9 @@ figure {
     -webkit-transform: translate3d(-160px, 0, 0);
             transform: translate3d(-160px, 0, 0); }
     .poster-caption .controls i {
-      font-size: 200%;
-      background: rgba(255, 255, 255, 0.9);
-      color: #2f3238;
+      font-size: 120%;
+      background: rgba(242, 242, 242, 0.8);
+      color: rgba(0, 0, 0, 0.8);
       padding: 5px 10px;
       cursor: pointer; }
 
@@ -3309,64 +3479,29 @@ figure {
           transform: translate3d(15px, 0, 0); }
 
 .poster:hover img {
-  opacity: 0.4;
-  -webkit-transform: scale3d(1.05, 1.05, 1);
-          transform: scale3d(1.05, 1.05, 1); }
+  -webkit-transform: scale3d(1.03, 1.03, 1);
+          transform: scale3d(1.03, 1.03, 1); }
+
+.poster:hover .poster-figure {
+  -webkit-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.8);
+          box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.8);
+  -webkit-transition: -webkit-box-shadow 0.5s;
+  transition: -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s; }
 
 .poster-caption p:first-child {
   -webkit-transition-delay: 0s;
           transition-delay: 0s; }
 
 .poster-caption p:nth-of-type(2) {
-  -webkit-transition-delay: 0.15s;
-          transition-delay: 0.15s; }
+  -webkit-transition-delay: 0.05s;
+          transition-delay: 0.05s; }
 
 .poster-caption .controls {
-  -webkit-transition-delay: 0.30s;
-          transition-delay: 0.30s; }
+  -webkit-transition-delay: 0.10s;
+          transition-delay: 0.10s; }
 
-/* .poster-figure{
-	position: relative;
-	overflow: hidden;
-}
-
-.poster-caption{
-	position: absolute;
-	left: 15px;
-	bottom: -100px;
-	width: 180px;
-	color: #fff;
-	background: rgba(0, 0, 0, 0.8);
-	transition: transform 0.3s;
-}
-
-.poster:hover .poster-caption{
-	transform: translateY(-100px);
-}
-
-.fig-description{
-
-} */
-/* .poster-row{
-	position: relative;
-	margin-top: 10px;
-	margin-left: 20px;
-	img{
-		height: 290px;
-		margin-left: 15px;
-	}
-	h3{
-		position: absolute;
-		top: 275px;
-		left: 15px;
-		span{
-			color: #fff;
-			line-height: 25px;
-			background: rgba(0, 0, 0, 0.7);
-			padding: 2px 5px;
-		}
-	}
-} */
 /* Big tablet to 1200px (widths smaller than the pixel row of 1140px)*/
 /*Small tablet to big table from 768px to 1023px*/
 @media only screen and (max-width: 1060px) {
@@ -3407,7 +3542,14 @@ figure {
     .menu-items-2:nth-child(-n+2) {
       margin-right: 30px;
       -webkit-transition: margin-right 0.3s ease-in-out;
-      transition: margin-right 0.3s ease-in-out; } }
+      transition: margin-right 0.3s ease-in-out; }
+  .profile-pic #welcome-intro {
+    font-size: 130%; }
+  .profile-pic #quote {
+    font-size: 70%; }
+  .profile-pic #cite {
+    bottom: 25px;
+    font-size: 60%; } }
 
 @media only screen and (max-width: 960px) {
   .logo #ianarber {
@@ -3447,7 +3589,18 @@ figure {
     letter-spacing: 1px; }
     .menu-items-1:nth-child(-n+2),
     .menu-items-2:nth-child(-n+2) {
-      margin-right: 10px; } }
+      margin-right: 10px; }
+  .profile-pic #welcome-intro {
+    font-size: 100%; }
+  .profile-pic #welcome-text {
+    font-size: 60%;
+    width: 80%; }
+  .profile-pic #quote {
+    width: 80%;
+    font-size: 70%; }
+  .profile-pic #cite {
+    bottom: 25px;
+    font-size: 60%; } }
 
 @media only screen and (max-width: 760px) {
   .main-nav {
@@ -3460,4 +3613,24 @@ figure {
 @media only screen and (max-width: 480px) {
   .nav-toggle {
     top: 8px;
-    left: -35px; } }
+    left: -35px; }
+  .profile-pic #welcome-intro {
+    top: 15px;
+    left: 20px;
+    word-spacing: normal; }
+  .profile-pic #welcome-text {
+    width: 95%; }
+  .profile-pic #quote {
+    bottom: 52px; }
+  .profile-pic #cite {
+    width: 70%;
+    bottom: 10px;
+    right: 25px; } }
+
+@media only screen and (max-width: 400px) {
+  .profile-pic #welcome-intro {
+    top: 15px;
+    left: 20px;
+    word-spacing: normal; }
+  .profile-pic #welcome-text {
+    display: none; } }
