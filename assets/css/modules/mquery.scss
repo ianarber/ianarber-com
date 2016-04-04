@@ -52,6 +52,10 @@
 		}
 	}
 	
+	.intro{
+		top: 100px;
+	}
+	
 	.profile-pic{
 		#welcome-intro{
 			font-size: 130%;
@@ -92,8 +96,10 @@
 			margin-right: 20px;
 		}
 	}
-
-		
+	
+	.intro{
+		top: 80px;
+	}
 	
 }
 
@@ -135,6 +141,10 @@
 		&:nth-child(-n+2){
 			margin-right: 10px;
 		}
+	}
+	
+	.intro{
+		top: 65px;
 	}
 	
 	.profile-pic{
@@ -183,13 +193,7 @@
 	}
 	
 	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	
 }
@@ -198,6 +202,10 @@
 	.nav-toggle{
 		top: 8px;
 		left: -35px;   
+	}
+	
+	.intro{
+		top: 60px;
 	}
 	
 	.profile-pic{

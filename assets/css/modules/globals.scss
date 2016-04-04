@@ -21,7 +21,7 @@ body{
     color: $mainFontColor;
     font-weight: 400;
     overflow-x: hidden;
-    &:before{
+  /*   &:before{
         content: "";
         position: fixed;
         top: -10px;
@@ -30,7 +30,7 @@ body{
         height: 10px;
         z-index: 100;
         box-shadow: 0px 0px 10px rgba(0,0,0,.8);
-    }
+    } */
 }
 
 a{

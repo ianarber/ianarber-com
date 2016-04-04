@@ -3,6 +3,7 @@
 	background-size: cover;
 	background-position: center;
 	height: 720px;
+	margin-top: 110px;
 }
 
 .portfolio{
@@ -18,11 +19,20 @@
 
 .poster-row{
 	margin: 0 auto;
+	max-width: 1500px;
+	display: flex;
+	flex-flow: wrap;
+	justify-content: space-around;
 	.poster{
+		float: left;
+		flex: auto;
 		min-width: 200px;
 		max-width: 200px;
-		margin-top: 30px;
+		margin-top: 20px;
 		margin-right: 10px;
+		&:first-child{
+			margin-left: 10px;
+		}
 	}
 	img{
 		position: relative;
