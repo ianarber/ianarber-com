@@ -18,14 +18,21 @@
 	
 	{% include mobile-nav.html %}
 
-	<div class="site-wrap">
+	<!-- <div class="site-wrap"> -->
+	<div id="container">
 	
+		{% include header.html %}
+		<div id="wrapper" class="slide">
+		
 		{{ content }}
-
+		
+		</div>
 	</div>
+	<!-- </div> -->
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script type="text/javascript" src="assets/script/mobileMenu.js"></script>
+<script type="text/javascript" src="assets/script/collapseHeader.js"></script>
 <script type="text/javascript" src="assets/script/audioPlayer.js"></script>
 
 </body>

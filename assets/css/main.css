@@ -2975,7 +2975,7 @@ figure {
 .row {
   max-width: 1140px; }
 
-.header {
+#header {
   position: fixed;
   width: 100%;
   z-index: 100;
@@ -2983,14 +2983,14 @@ figure {
   -webkit-box-shadow: inset 0px -1px 3px rgba(0, 0, 0, 0.3);
           box-shadow: inset 0px -1px 3px rgba(0, 0, 0, 0.3); }
 
-.logo {
+#logo {
   text-align: center;
   text-transform: uppercase;
   font-family: "Droid Serif", serif; }
-  .logo #composer {
+  #logo #composer {
     display: table;
     margin: 0 auto; }
-    .logo #composer:before, .logo #composer:after {
+    #logo #composer:before, #logo #composer:after {
       border-top: 2px solid #0d2f52;
       content: '';
       display: table-cell;
@@ -3001,15 +3001,15 @@ figure {
       transition: top 0.3s ease-in-out;
       -webkit-transition: width 0.3s ease-in-out;
       transition: width 0.3s ease-in-out; }
-    .logo #composer:before {
+    #logo #composer:before {
       right: 1.5%; }
-    .logo #composer:after {
+    #logo #composer:after {
       right: -1.5%;
       width: 50; }
-  .logo #film {
+  #logo #film {
     display: table;
     margin: 0 auto; }
-    .logo #film:before, .logo #film:after {
+    #logo #film:before, #logo #film:after {
       border-top: 2px solid #0d2f52;
       content: '';
       display: table-cell;
@@ -3020,9 +3020,9 @@ figure {
       transition: top 0.3s ease-in-out;
       -webkit-transition: width 0.3s ease-in-out;
       transition: width 0.3s ease-in-out; }
-    .logo #film:before {
+    #logo #film:before {
       right: 1.5%; }
-    .logo #film:after {
+    #logo #film:after {
       right: -1.5%;
       width: 50; }
 
@@ -3049,29 +3049,49 @@ figure {
   position: relative;
   top: -5px; }
 
-.nav-toggle {
+#container {
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 105; }
+
+.slide {
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0); }
+
+#container.active .slide {
+  -webkit-transform: translate3d(-200px, 0, 0);
+          transform: translate3d(-200px, 0, 0); }
+
+.mobile-nav.active {
+  -webkit-transform: translate(-200px, 0);
+      -ms-transform: translate(-200px, 0);
+          transform: translate(-200px, 0); }
+
+/******************************************/
+#nav-toggle {
   display: none;
   position: absolute;
   top: 15px;
-  left: -80px;
+  right: 15px;
   z-index: 102; }
 
 .mobile-nav {
   position: fixed;
   z-index: 101;
-  top: 0;
-  right: 0;
+  top: 75px;
+  right: -200px;
   bottom: 0;
   width: 200px;
   background-color: #333;
   -webkit-box-shadow: 0 0 5px 5px #222 inset;
           box-shadow: 0 0 5px 5px #222 inset;
-  -webkit-transform: translate3d(200px, 0, 0);
-          transform: translate3d(200px, 0, 0);
-  -webkit-transition: -webkit-transform 0.4s ease;
-  transition: -webkit-transform 0.4s ease;
-  transition: transform 0.4s ease;
-  transition: transform 0.4s ease, -webkit-transform 0.4s ease; }
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0); }
   .mobile-nav .mobile-nav-list {
     list-style: none; }
     .mobile-nav .mobile-nav-list .mobile-nav-item {
@@ -3082,20 +3102,17 @@ figure {
       border-top: 1px solid #4d4d4d;
       border-bottom: 1px solid #1a1a1a; }
 
-.active-nav .mobile-nav {
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0); }
+/* .active-nav .mobile-nav{
+    transform: translate3d(0, 0, 0);
+}
 
-.site-wrap {
-  -webkit-transition: -webkit-transform 0.4s ease;
-  transition: -webkit-transform 0.4s ease;
-  transition: transform 0.4s ease;
-  transition: transform 0.4s ease, -webkit-transform 0.4s ease; }
+.site-wrap{
+    transition: transform 0.4s ease;
+}
 
-.active-nav .site-wrap {
-  -webkit-transform: translate3d(-200px, 0, 0);
-          transform: translate3d(-200px, 0, 0); }
-
+.active-nav .site-wrap{
+    transform: translate3d(-100px, 0, 0);
+} */
 .menu-list-1,
 .menu-list-2 {
   margin-top: 30px;
@@ -3200,6 +3217,9 @@ figure {
   padding: 3px 8px;
   text-align: right;
   background-color: rgba(0, 0, 0, 0.8); }
+
+.contact-details {
+  margin-left: 15px; }
 
 .social-slide {
   height: 48px;
@@ -3385,23 +3405,23 @@ figure {
 /* Big tablet to 1200px (widths smaller than the pixel row of 1140px)*/
 /*Small tablet to big table from 768px to 1023px*/
 @media only screen and (max-width: 1060px) {
-  .logo #ianarber {
+  #logo #ianarber {
     font-size: 220%;
     -webkit-transition: font-size 0.3s ease-in-out;
     transition: font-size 0.3s ease-in-out; }
-  .logo #composer,
-  .logo #film {
+  #logo #composer,
+  #logo #film {
     font-size: 60%;
     -webkit-transition: font-size 0.3s ease-in-out;
     transition: font-size 0.3s ease-in-out; }
-  .logo #composer:before, .logo #composer:after {
+  #logo #composer:before, #logo #composer:after {
     top: 5px;
     width: 37.7%;
     -webkit-transition: top 0.3s ease-in-out;
     transition: top 0.3s ease-in-out;
     -webkit-transition: width 0.3s ease-in-out;
     transition: width 0.3s ease-in-out; }
-  .logo #film:before, .logo #film:after {
+  #logo #film:before, #logo #film:after {
     top: 5px;
     width: 29.6%;
     -webkit-transition: top 0.3s ease-in-out;
@@ -3434,10 +3454,10 @@ figure {
     font-size: 60%; } }
 
 @media only screen and (max-width: 960px) {
-  .logo #ianarber {
+  #logo #ianarber {
     font-size: 195%; }
-  .logo #composer,
-  .logo #film {
+  #logo #composer,
+  #logo #film {
     font-size: 55%; }
   .menu-list-1,
   .menu-list-2 {
@@ -3453,15 +3473,15 @@ figure {
 
 /*Small phones to small tablets from 481 to 767px*/
 @media only screen and (max-width: 860px) {
-  .logo #ianarber {
+  #logo #ianarber {
     font-size: 170%; }
-  .logo #composer,
-  .logo #film {
+  #logo #composer,
+  #logo #film {
     font-size: 50%; }
-  .logo #composer:before, .logo #composer:after {
+  #logo #composer:before, #logo #composer:after {
     top: 4px;
     width: 37.6%; }
-  .logo #film:before, .logo #film:after {
+  #logo #film:before, #logo #film:after {
     top: 4px;
     width: 29.2%; }
   .menu-list-1,
@@ -3491,9 +3511,9 @@ figure {
 @media only screen and (max-width: 760px) {
   .main-nav {
     display: none; }
-  .logo {
+  #logo {
     width: 100%; }
-  .nav-toggle {
+  #nav-toggle {
     display: block; }
   .intro {
     height: 615px; }
@@ -3503,7 +3523,7 @@ figure {
     margin-top: 495px; } }
 
 @media only screen and (max-width: 480px) {
-  .nav-toggle {
+  #nav-toggle {
     top: 8px;
     left: -35px; }
   .intro {
