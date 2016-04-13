@@ -1,18 +1,23 @@
 <section class="section showreel-background">
+	<!-- 5 movie posters defined in one row -->
 	<div class="poster-row">
 		<div class="poster" onmouseout="stopPlayer('player')">
 			<figure class="poster-figure">
 				<img src="assets/img/mission-impossible-rogue-nation-poster.jpg" alt="MI5 Poster" />
+				<!-- figcaption elements will overlay on mouseover -->
 				<figcaption class="poster-caption">
 					<div>
 						<p>Assistant Composer</p>
 						<br/>
 						<p>2015</p>
+						<!-- ~30s audio samples -->
 						<audio id="player">
 							<source src="assets/media/sample.ogg" type="audio/ogg">
 							<source src="assets/media/sample.mp3" type="audio/mp3"> Your browser does not support the audio element.
 						</audio>
 						<div class="controls">
+							<!-- REMOVE INLINE SCRIPTING!! -->
+							<!-- only have step forward btn. audio will stop and reset on mouseout -->
 							<i class="fa fa-play" onclick="document.getElementById('player').play()"></i>
 							<i class="fa fa-step-forward" onclick="document.getElementById('player').pause()"></i>
 							<i class="fa fa-info"></i>
@@ -105,12 +110,6 @@
 				</figcaption>
 			</figure>
 		</div>
-	</div>
-	
-	
-	
-	
-	
-		
+	</div>	
 </section>
 

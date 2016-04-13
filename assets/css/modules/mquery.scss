@@ -1,24 +1,16 @@
-/* Big tablet to 1200px (widths smaller than the pixel row of 1140px)*/
-@media only screen and (max-width: 1200px){
-
-}
-
-
-
-
-/*Small tablet to big table from 768px to 1023px*/
+/* 961px to 1060px */
 @media only screen and (max-width: 1060px){
 	#logo{
-		#ianarber{
+		.ianarber{
 			font-size: 220%;
 			transition: font-size 0.3s ease-in-out;
 		}
-		#composer,
-		#film{
+		.composer,
+		.film{
 			font-size: 60%;
 			transition: font-size 0.3s ease-in-out;
 		}
-		#composer{
+		.composer{
 			&:before, &:after{
 				top: 5px;
 				width: 37.7%;
@@ -26,7 +18,7 @@
 				transition: width 0.3s ease-in-out;
 			}
     	}
-		#film{
+		.film{
 			&:before, &:after{
 				top: 5px;
 				width: 29.6%;
@@ -67,19 +59,17 @@
 			bottom: 25px;
 			font-size: 60%;
 		}
-	}
-	
-	
+	}	
 }
 
-
+/* 861px to 960px */
 @media only screen and (max-width: 960px){
 	#logo{
-		#ianarber{
+		.ianarber{
 			font-size: 195%;
 		}
-		#composer,
-		#film{
+		.composer,
+		.film{
 			font-size: 55%;
 		}
 	}
@@ -100,28 +90,25 @@
 	.intro{
 		top: 80px;
 	}
-	
 }
 
-
-
-/*Small phones to small tablets from 481 to 767px*/
+/* 761px to 860px */
 @media only screen and (max-width: 860px){
 	#logo{
-		#ianarber{
+		.ianarber{
 			font-size: 170%;
 		}
-		#composer,
-		#film{
+		.composer,
+		.film{
 			font-size: 50%;
 		}
-		#composer{
+		.composer{
 			&:before, &:after{
 				top: 4px;
 				width: 37.6%;
 			}
     	}
-		#film{
+		.film{
 			&:before, &:after{
 				top: 4px;
 				width: 29.2%;
@@ -166,7 +153,7 @@
 	}
 }
 
-
+/* 481px to 760px */
 @media only screen and (max-width: 760px){
     .main-nav{
 		display: none;
@@ -190,14 +177,10 @@
 	
 	.email-contact{
 		margin-top: 495px;
-	}
-	
-	
-
-	
-	
+	}	
 }
 
+/* 401px to 480px */
 @media only screen and (max-width: 480px){
 	#nav-toggle{
 		top: 8px;
@@ -228,6 +211,7 @@
 	}
 }
 
+/* --- to 400px */
 @media only screen and (max-width: 400px){
 	.profile-pic{
 		#welcome-intro{
@@ -241,10 +225,3 @@
 
 	}
 }
-
-
-
-
-
-
-

@@ -1,16 +1,25 @@
-var header = document.getElementById("header");
-var name = document.getElementById("ianarber");
-var composer = document.getElementById("composer");
-var film = document.getElementById("film");
-var menuItems1 = document.getElementsByClassName("menu-items-1");
-var menuItems2 = document.getElementsByClassName("menu-items-2");
-
-function initScroll(){
-	if(window.pageYOffset > 200){
-		name.style.fontSize = "100%";
-	}else{
-		name.style.fontSize = "250%";
+$('#welcome-intro').waypoint(function (direction) {
+	if (direction == 'down') {
+		$('.ianarber').css({'fontSize': '150%'});
+		$('.ianarber').css({'top': '-10px'});
+		$('#logo p:eq(0)').removeClass('composer').addClass('jscomposer');
+		$('#logo p:eq(2)').removeClass('film').addClass('jsfilm');
+		$('.menu-list-1').css({'marginTop': '0px'});
+		$('.menu-list-2').css({'marginTop': '0px'});
+		$('.menu-items-1').css({'fontSize': '65%'});
+		$('.menu-items-2').css({'fontSize': '65%'});
+		$('#header').animate({height: '60px'}, 300);
+	} else {
+		$('.ianarber').css({'fontSize': '250%'});
+		$('.ianarber').css({'top': '0px'});
+		$('#logo p:eq(0)').removeClass('jscomposer').addClass('composer');
+		$('#logo p:eq(2)').removeClass('jsfilm').addClass('film');
+		$('.menu-list-1').css({'marginTop': '30px'});
+		$('.menu-list-2').css({'marginTop': '30px'});
+		$('.menu-items-1').css({'fontSize': '75%'});
+		$('.menu-items-2').css({'fontSize': '75%'});
+		$('#header').animate({height: '120px'}, 300);
 	}
-}
+});
 
-window.addEventListener("scoll", initScroll);
+

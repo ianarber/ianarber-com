@@ -1,18 +1,41 @@
+/* header fixed - content will scroll underneath */
 #header{
 	position: fixed;
 	width: 100%;
+	height: 120px;
 	z-index: 100;
 	background-color: $backgroundColor;
 	box-shadow: inset 0px -1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.ianarber {
+	position: relative;
+	top: 0px;
+    font-size: 250%;
+    letter-spacing: 5px;
+    font-weight: 700;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+	transition: font-size 0.3s ease-in-out;
+	transition: top 0.3s ease-in-out;
+}
+
+.composer,
+.film{
+	position: relative;
+    font-size: 70%;
+    font-weight: 700;
+	transition: font-size 0.3s ease-in-out;
 }
 
 #logo{
     text-align: center;
     text-transform: uppercase;
     font-family: $logoFontStyle;
-    #composer{
+    .composer{
         display: table;
         margin: 0 auto;
+		top: 6px;
+		/* pseudo classes for line-out style */
         &:before, &:after{
             border-top: 2px solid $mainFontColor;
             content: '';
@@ -29,9 +52,10 @@
             width: 50
         }
     }
-    #film{
+    .film{
         display: table;
         margin: 0 auto;
+		top: -5px;
         &:before, &:after{
             border-top: 2px solid $mainFontColor;
             content: '';
@@ -50,27 +74,90 @@
     }
 }
 
-#ianarber {
-    font-size: 250%;
-    letter-spacing: 5px;
+/* pre-written classes to allow collapseHeader.js file to remove/add pesudo classes */
+.jscomposer{
+	display: table;
+	margin: 0 auto;
+	top: -5px;
+	&:before, &:after{
+		border-top: 2px solid $mainFontColor;
+		content: '';
+		display: table-cell;
+		position: relative;
+		top: 4px;
+		width: 37.3%;
+		transition: top 0.3s ease-in-out;
+		transition: width 0.3s ease-in-out;
+	}
+	&:before { right: 1.5%; }
+	&:after {
+		right: -1.5%;
+		width: 50
+	}
+}
+.jsfilm{
+	display: table;
+	margin: 0 auto;
+	top: -14px;
+	&:before, &:after{
+		border-top: 2px solid $mainFontColor;
+		content: '';
+		display: table-cell;
+		position: relative;
+		top: 4px;
+		width: 29.1%;
+		transition: top 0.3s ease-in-out;
+		transition: width 0.3s ease-in-out;
+	}
+	&:before { right: 1.5%; }
+	&:after {
+		right: -1.5%;
+		width: 50
+	}
+}
+.jscomposer,
+.jsfilm{
+	position: relative;
+    font-size: 45%;
     font-weight: 700;
-    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
 	transition: font-size 0.3s ease-in-out;
+	transition: top 0.3s ease-in-out;
+}
+/***************************************************************************/
+
+.menu-list-1,
+.menu-list-2{
+    margin-top: 30px;
+	transition: margin-top 0.3s ease-in-out;
 }
 
-#composer,
-#film{
-    font-size: 70%;
-    font-weight: 700;
+.menu-list-1{
+	text-align: center;
+	&:first-child{
+		margin-left: 20px;
+	}
+}
+
+.menu-list-1{
+	text-align: right;
+}
+
+.menu-items-1,
+.menu-items-2{
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 75%;
 	transition: font-size 0.3s ease-in-out;
+    letter-spacing: 2px;
+    &:nth-child(-n+2){
+        margin-right: 40px;
+		transition: margin-right 0.3s ease-in-out;
+    }
 }
 
-#composer{
-    position: relative;
-    top: 6px;
-}
-
-#film{
-    position: relative;
-    top: -5px;
+.menu-items-2{
+	&:last-child{
+		margin-right: 20px;
+	}
 }

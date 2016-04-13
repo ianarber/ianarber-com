@@ -17,6 +17,7 @@
 	background-color: #2f3238;
 }
 
+/* individual posters will flex expand when width increases */
 .poster-row{
 	margin: 0 auto;
 	max-width: 1500px;
@@ -39,7 +40,6 @@
 		z-index: 1;
 		width: 200px;
 		transition: transform 1s;
-		//transition: opacity 1s, transform 1s;
 	}
 }
 
@@ -47,7 +47,6 @@
 	position: relative;
 	z-index: 2;
 	display: inline-block;
-	//background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
 	overflow: hidden;
 	max-height: 305px;
 	transition: box-shadow 0.5s;
@@ -89,7 +88,6 @@
 	transform: translate3d(15px,0,0);
 }
 .poster:hover img{
-	//opacity: 0.1;
 	transform: scale3d(1.03,1.03,1);
 }
 
@@ -109,16 +107,3 @@
 .poster-caption .controls{
 	transition-delay: 0.10s;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -2978,6 +2978,7 @@ figure {
 #header {
   position: fixed;
   width: 100%;
+  height: 120px;
   z-index: 100;
   background-color: #fafafa;
   -webkit-box-shadow: inset 0px -1px 3px rgba(0, 0, 0, 0.3);
@@ -2987,10 +2988,11 @@ figure {
   text-align: center;
   text-transform: uppercase;
   font-family: "Droid Serif", serif; }
-  #logo #composer {
+  #logo .composer {
     display: table;
-    margin: 0 auto; }
-    #logo #composer:before, #logo #composer:after {
+    margin: 0 auto;
+    top: 6px; }
+    #logo .composer:before, #logo .composer:after {
       border-top: 2px solid #0d2f52;
       content: '';
       display: table-cell;
@@ -3001,15 +3003,16 @@ figure {
       transition: top 0.3s ease-in-out;
       -webkit-transition: width 0.3s ease-in-out;
       transition: width 0.3s ease-in-out; }
-    #logo #composer:before {
+    #logo .composer:before {
       right: 1.5%; }
-    #logo #composer:after {
+    #logo .composer:after {
       right: -1.5%;
       width: 50; }
-  #logo #film {
+  #logo .film {
     display: table;
-    margin: 0 auto; }
-    #logo #film:before, #logo #film:after {
+    margin: 0 auto;
+    top: -5px; }
+    #logo .film:before, #logo .film:after {
       border-top: 2px solid #0d2f52;
       content: '';
       display: table-cell;
@@ -3020,34 +3023,85 @@ figure {
       transition: top 0.3s ease-in-out;
       -webkit-transition: width 0.3s ease-in-out;
       transition: width 0.3s ease-in-out; }
-    #logo #film:before {
+    #logo .film:before {
       right: 1.5%; }
-    #logo #film:after {
+    #logo .film:after {
       right: -1.5%;
       width: 50; }
 
-#ianarber {
+/****PSEUDO CLASSES FOR USE WITH COLLAPSE HEADER JS FILE****/
+.jscomposer {
+  display: table;
+  margin: 0 auto;
+  top: -5px; }
+  .jscomposer:before, .jscomposer:after {
+    border-top: 2px solid #0d2f52;
+    content: '';
+    display: table-cell;
+    position: relative;
+    top: 4px;
+    width: 37.3%;
+    -webkit-transition: top 0.3s ease-in-out;
+    transition: top 0.3s ease-in-out;
+    -webkit-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out; }
+  .jscomposer:before {
+    right: 1.5%; }
+  .jscomposer:after {
+    right: -1.5%;
+    width: 50; }
+
+.jsfilm {
+  display: table;
+  margin: 0 auto;
+  top: -14px; }
+  .jsfilm:before, .jsfilm:after {
+    border-top: 2px solid #0d2f52;
+    content: '';
+    display: table-cell;
+    position: relative;
+    top: 4px;
+    width: 29.1%;
+    -webkit-transition: top 0.3s ease-in-out;
+    transition: top 0.3s ease-in-out;
+    -webkit-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out; }
+  .jsfilm:before {
+    right: 1.5%; }
+  .jsfilm:after {
+    right: -1.5%;
+    width: 50; }
+
+.jscomposer,
+.jsfilm {
+  position: relative;
+  font-size: 45%;
+  font-weight: 700;
+  -webkit-transition: font-size 0.3s ease-in-out;
+  transition: font-size 0.3s ease-in-out;
+  -webkit-transition: top 0.3s ease-in-out;
+  transition: top 0.3s ease-in-out; }
+
+/********************************************************/
+.ianarber {
+  position: relative;
+  top: 0px;
   font-size: 250%;
   letter-spacing: 5px;
   font-weight: 700;
   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
   -webkit-transition: font-size 0.3s ease-in-out;
-  transition: font-size 0.3s ease-in-out; }
+  transition: font-size 0.3s ease-in-out;
+  -webkit-transition: top 0.3s ease-in-out;
+  transition: top 0.3s ease-in-out; }
 
-#composer,
-#film {
+.composer,
+.film {
+  position: relative;
   font-size: 70%;
   font-weight: 700;
   -webkit-transition: font-size 0.3s ease-in-out;
   transition: font-size 0.3s ease-in-out; }
-
-#composer {
-  position: relative;
-  top: 6px; }
-
-#film {
-  position: relative;
-  top: -5px; }
 
 #container {
   width: 100%;
@@ -3405,23 +3459,23 @@ figure {
 /* Big tablet to 1200px (widths smaller than the pixel row of 1140px)*/
 /*Small tablet to big table from 768px to 1023px*/
 @media only screen and (max-width: 1060px) {
-  #logo #ianarber {
+  #logo .ianarber {
     font-size: 220%;
     -webkit-transition: font-size 0.3s ease-in-out;
     transition: font-size 0.3s ease-in-out; }
-  #logo #composer,
-  #logo #film {
+  #logo .composer,
+  #logo .film {
     font-size: 60%;
     -webkit-transition: font-size 0.3s ease-in-out;
     transition: font-size 0.3s ease-in-out; }
-  #logo #composer:before, #logo #composer:after {
+  #logo .composer:before, #logo .composer:after {
     top: 5px;
     width: 37.7%;
     -webkit-transition: top 0.3s ease-in-out;
     transition: top 0.3s ease-in-out;
     -webkit-transition: width 0.3s ease-in-out;
     transition: width 0.3s ease-in-out; }
-  #logo #film:before, #logo #film:after {
+  #logo .film:before, #logo .film:after {
     top: 5px;
     width: 29.6%;
     -webkit-transition: top 0.3s ease-in-out;
@@ -3454,10 +3508,10 @@ figure {
     font-size: 60%; } }
 
 @media only screen and (max-width: 960px) {
-  #logo #ianarber {
+  #logo .ianarber {
     font-size: 195%; }
-  #logo #composer,
-  #logo #film {
+  #logo .composer,
+  #logo .film {
     font-size: 55%; }
   .menu-list-1,
   .menu-list-2 {
@@ -3473,15 +3527,15 @@ figure {
 
 /*Small phones to small tablets from 481 to 767px*/
 @media only screen and (max-width: 860px) {
-  #logo #ianarber {
+  #logo .ianarber {
     font-size: 170%; }
-  #logo #composer,
-  #logo #film {
+  #logo .composer,
+  #logo .film {
     font-size: 50%; }
-  #logo #composer:before, #logo #composer:after {
+  #logo .composer:before, #logo .composer:after {
     top: 4px;
     width: 37.6%; }
-  #logo #film:before, #logo #film:after {
+  #logo .film:before, #logo .film:after {
     top: 4px;
     width: 29.2%; }
   .menu-list-1,

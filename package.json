@@ -1,13 +1,11 @@
 {
-  "name": "browser-sync-jekyll",
+  "name": "Website - Ian Arber",
   "version": "0.0.0",
-  "description": "A starter project including full setup for Jekyll, GulpJS, SASS & BrowserSync",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Shane Osbourne",
-  "license": "ISC",
+  "author": "Anthony Desmier",
   "devDependencies": {
     "browser-sync": "^2.11.1",
     "gulp": "^3.9.1",
