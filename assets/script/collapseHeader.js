@@ -20,6 +20,8 @@ $('#welcome-intro').waypoint(function (direction) {
 		$('.menu-items-2').css({'fontSize': '75%'});
 		$('#header').animate({height: '120px'}, 300);
 	}
+},{
+	offset: '100px'
 });
 
 

@@ -1,21 +1,53 @@
 .showreel-background{
-	background-image: url(../img/showreelBackground.png);
-	background-size: cover;
-	background-position: center;
-	height: 720px;
+	//background-image: url(../img/showreelBackground.png);
+	//background-size: cover;
+	//background-position: center;
+	background-color: $backgroundColor;
+	height: 910px;
 	margin-top: 110px;
 }
 
-.portfolio{
-	position: absolute;
-	height: 1010px;
-	width: 90%;
-	margin: 0 auto;
-	top: 50px;
-	left: 0;
-	right: 0;
-	background-color: #2f3238;
+.section-header{
+	text-transform: uppercase;
+	text-align: center;
+	padding-top: 17px;
+	letter-spacing: 1px;
+	h4{
+		margin: 0 auto;
+		display: table;
+		white-space: nowrap;
+		&:before, &:after{
+			border-top: 2px solid $mainFontColor;
+			content: '';
+			display: table-cell;
+			position: relative;
+			top: 14px;
+			width: 100px;
+		}
+		&:before { right: 1.5% };
+		&:after { right: -1.5% };
+	}
 }
+
+.section-footer{
+	margin: 15px auto 5px auto;
+	width: 100px;
+	text-transform: uppercase;
+	font-size: 75%;
+	text-align: center;
+}
+
+.section-footer a{
+	padding: 3px 6px;
+	transition: all 0.3s;
+	&:hover{
+		background-color: $mainFontColor;
+		color: #efefef;
+		transition: all 0.3s;
+	}
+}
+
+
 
 /* individual posters will flex expand when width increases */
 .poster-row{
@@ -108,3 +140,16 @@
 .poster-caption .controls{
 	transition-delay: 0.10s;
 }
+
+
+.sc-player-frame{
+	display: block;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+
+
