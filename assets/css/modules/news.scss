@@ -2,3 +2,22 @@
 	height: 400px;
 	background-color: #efefef;
 }
+
+.news-container{
+	width: 90%;
+	height: 200px;
+	margin-top: 18px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.news-preview{
+	width: 24.25%;
+	height: 300px;
+	border: 1px solid firebrick;
+	float: left;
+	&:not(:last-child){
+		margin-right: 1%;
+	}
+}
+
