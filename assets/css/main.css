@@ -3049,7 +3049,6 @@ figure {
   font-size: 250%;
   letter-spacing: 5px;
   font-weight: 700;
-  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
   -webkit-transition: font-size 0.3s ease-in-out;
   transition: font-size 0.3s ease-in-out; }
 
@@ -3076,16 +3075,15 @@ figure {
       display: table-cell;
       position: relative;
       top: 7px;
-      width: 37.4%;
+      width: 37.2%;
       -webkit-transition: top 0.3s ease-in-out;
       transition: top 0.3s ease-in-out;
       -webkit-transition: width 0.3s ease-in-out;
       transition: width 0.3s ease-in-out; }
     #logo .composer:before {
-      right: 1.5%; }
+      right: 1.8%; }
     #logo .composer:after {
-      right: -1.5%;
-      width: 50; }
+      right: -1%; }
   #logo .film {
     display: table;
     margin: 0 auto;
@@ -3096,16 +3094,15 @@ figure {
       display: table-cell;
       position: relative;
       top: 7px;
-      width: 28.7%;
+      width: 28.5%;
       -webkit-transition: top 0.3s ease-in-out;
       transition: top 0.3s ease-in-out;
       -webkit-transition: width 0.3s ease-in-out;
       transition: width 0.3s ease-in-out; }
     #logo .film:before {
-      right: 1.5%; }
+      right: 1.8%; }
     #logo .film:after {
-      right: -1.5%;
-      width: 50; }
+      right: -1.4%; }
 
 /* pre-written classes to allow collapseHeader.js file to remove/add pesudo classes */
 .jscomposer {
@@ -3118,16 +3115,15 @@ figure {
     display: table-cell;
     position: relative;
     top: 4px;
-    width: 37.3%;
+    width: 37.1%;
     -webkit-transition: top 0.3s ease-in-out;
     transition: top 0.3s ease-in-out;
     -webkit-transition: width 0.3s ease-in-out;
     transition: width 0.3s ease-in-out; }
   .jscomposer:before {
-    right: 1.5%; }
+    right: 1.7%; }
   .jscomposer:after {
-    right: -1.5%;
-    width: 50; }
+    right: -1%; }
 
 .jsfilm {
   display: table;
@@ -3139,16 +3135,15 @@ figure {
     display: table-cell;
     position: relative;
     top: 4px;
-    width: 29.1%;
+    width: 28.7%;
     -webkit-transition: top 0.3s ease-in-out;
     transition: top 0.3s ease-in-out;
     -webkit-transition: width 0.3s ease-in-out;
     transition: width 0.3s ease-in-out; }
   .jsfilm:before {
-    right: 1.5%; }
+    right: 1.8%; }
   .jsfilm:after {
-    right: -1.5%;
-    width: 50; }
+    right: -1.5%; }
 
 .jscomposer,
 .jsfilm {
@@ -3278,8 +3273,6 @@ figure {
   transition: all 0.3s ease-in-out; }
   .social-slide:hover {
     background-position: 0px -48px;
-    -webkit-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.8);
-            box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.8);
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
 
@@ -3363,7 +3356,7 @@ figure {
 /* individual posters will flex expand when width increases */
 .poster-row {
   margin: 0 auto;
-  max-width: 1500px;
+  max-width: 95%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3400,92 +3393,128 @@ figure {
   z-index: 2;
   display: inline-block;
   overflow: hidden;
-  max-height: 305px;
-  -webkit-transition: -webkit-box-shadow 0.5s;
-  transition: -webkit-box-shadow 0.5s;
-  transition: box-shadow 0.5s;
-  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s; }
+  max-height: 305px; }
 
 .poster-caption {
+  display: block;
   position: absolute;
   z-index: 3;
-  top: 195px;
-  left: -8px; }
-  .poster-caption p {
-    display: inline-block;
-    background: #f2f2f2;
-    color: rgba(0, 0, 0, 0.8);
-    -webkit-transform: translate3d(30px, 0, 0);
-            transform: translate3d(30px, 0, 0);
-    margin: 0 0 2px;
-    padding: 3px 8px;
-    font-size: 75%;
-    font-weight: 600;
-    -webkit-transition: -webkit-transform 0.35s;
-    transition: -webkit-transform 0.35s;
-    transition: transform 0.35s;
-    transition: transform 0.35s, -webkit-transform 0.35s;
-    -webkit-transform: translate3d(-160px, 0, 0);
-            transform: translate3d(-160px, 0, 0); }
+  background: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #fafafa;
+  font-size: 75%; }
+  .poster-caption ul {
+    margin-top: 15px;
+    margin-left: 70px; }
+  .poster-caption #mi5-info {
+    margin-left: 40px; }
+  .poster-caption li {
+    margin-top: 5px; }
+  .poster-caption #seperator {
+    width: 20%;
+    height: 1px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #fafafa; }
+  .poster-caption #credit-brief {
+    margin-top: 15px;
+    font-size: 85%;
+    padding-left: 15px;
+    padding-right: 15px; }
   .poster-caption .controls {
-    -webkit-transform: translate3d(30px, 0, 0);
-            transform: translate3d(30px, 0, 0);
-    -webkit-transition: -webkit-transform 0.35s;
-    transition: -webkit-transform 0.35s;
-    transition: transform 0.35s;
-    transition: transform 0.35s, -webkit-transform 0.35s;
-    -webkit-transform: translate3d(-160px, 0, 0);
-            transform: translate3d(-160px, 0, 0); }
-    .poster-caption .controls i {
-      font-size: 120%;
-      background: #f2f2f2;
-      color: rgba(0, 0, 0, 0.8);
-      margin-top: 2px;
-      padding: 5px 10px;
-      cursor: pointer; }
+    font-size: 350%;
+    text-align: center;
+    margin-top: -5px; }
 
-.poster:hover .poster-caption p,
-.poster:hover .poster-caption .controls {
-  -webkit-transform: translate3d(22px, 0, 0);
-          transform: translate3d(22px, 0, 0); }
+.poster .poster-caption {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 0; }
 
-.poster:hover img {
-  -webkit-transform: scale3d(1.03, 1.03, 1);
-          transform: scale3d(1.03, 1.03, 1); }
-
-.poster:hover .poster-figure {
-  -webkit-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.8);
-          box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.8);
-  -webkit-transition: -webkit-box-shadow 0.5s;
-  transition: -webkit-box-shadow 0.5s;
-  transition: box-shadow 0.5s;
-  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s; }
-
-.poster-caption p:first-child {
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s; }
-
-.poster-caption p:nth-of-type(2) {
-  -webkit-transition-delay: 0.05s;
-          transition-delay: 0.05s; }
-
-.poster-caption .controls {
-  -webkit-transition-delay: 0.10s;
-          transition-delay: 0.10s; }
+.poster .poster-figure.hover .poster-caption {
+  height: 100%; }
 
 .sc-player-frame {
   display: block;
   margin-top: 20px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  border: none; }
 
+/*********************************************************
+-----------ORIGINAL MOUSE OVER STYLINGS-------------
+
+.poster-caption{
+	position: absolute;
+	z-index: 3;
+	top: 195px;
+	left: -8px;
+	p{
+		display: inline-block;
+		background: rgba(242, 242, 242, 1);
+		color: rgba(0, 0, 0, 0.8);
+		transform: translate3d(30px,0,0);
+		margin: 0 0 2px;
+    	padding: 3px 8px;
+    	font-size: 75%;
+		font-weight: 600;
+		transition: transform 0.35s;
+		transform: translate3d(-160px,0,0);
+	}
+	.controls{
+		transform: translate3d(30px,0,0);
+		transition: transform 0.35s;
+		transform: translate3d(-160px,0,0);
+		i{
+			font-size: 120%;
+			background: rgba(242, 242, 242, 1);
+			color: rgba(0, 0, 0, 0.8);
+			margin-top: 2px;
+    		padding: 5px 10px;
+			cursor: pointer;
+		}
+	}
+}
+
+.poster:hover .poster-caption p,
+.poster:hover .poster-caption .controls{
+	transform: translate3d(22px,0,0);
+}
+.poster:hover img{
+	transform: scale3d(1.03,1.03,1);
+}
+
+//.poster:hover .poster-figure{
+	//box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.8);
+	//transition: box-shadow 0.5s;
+//}
+
+.poster-caption p:first-child{
+	transition-delay: 0s;
+}
+
+.poster-caption p:nth-of-type(2){
+	transition-delay: 0.05s;
+}
+
+.poster-caption .controls{
+	transition-delay: 0.10s;
+}
+
+
+
+/***********************************************************/
 .news {
   height: 400px;
   background-color: #efefef; }
 
 .news-container {
   width: 90%;
-  height: 200px;
   margin-top: 18px;
   margin-left: auto;
   margin-right: auto; }
@@ -3493,10 +3522,22 @@ figure {
 .news-preview {
   width: 24.25%;
   height: 300px;
-  border: 1px solid firebrick;
+  background-color: #fafafa;
   float: left; }
   .news-preview:not(:last-child) {
     margin-right: 1%; }
+  .news-preview img {
+    width: 100%; }
+  .news-preview a {
+    margin-left: 15px;
+    font-size: 80%;
+    font-weight: 600; }
+    .news-preview a:hover {
+      color: #1b4571; }
+  .news-preview p {
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 70%; }
 
 .form {
   height: 400px;

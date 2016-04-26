@@ -52,7 +52,8 @@
 /* individual posters will flex expand when width increases */
 .poster-row{
 	margin: 0 auto;
-	max-width: 1500px;
+	//max-width: 1500px;
+	max-width: 95%;
 	display: flex;
 	flex-flow: wrap;
 	justify-content: space-around;
@@ -81,8 +82,82 @@
 	display: inline-block;
 	overflow: hidden;
 	max-height: 305px;
-	transition: box-shadow 0.5s;
 }
+
+.poster-caption{
+	display: block;
+	position: absolute;
+	z-index: 3;
+	background: rgba(0, 0, 0, 0.8);
+	overflow: hidden;
+	transition: all 0.3s;
+	color: $backgroundColor;
+	font-size: 75%;
+	ul{
+		margin-top: 15px;
+		margin-left: 70px;
+	}
+	#mi5-info{
+		margin-left: 40px;
+	}
+	li{
+		margin-top: 5px;
+	}
+	#seperator{
+		width: 20%;
+		height: 1px;
+		margin-top: 15px;
+		margin-left: auto;
+		margin-right: auto;
+		background: $backgroundColor;
+	}
+	#credit-brief{
+		margin-top: 15px;
+		font-size: 85%;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.controls{
+		font-size: 350%;
+		text-align: center;
+		margin-top: -5px;
+	}
+	
+	
+	
+	
+}
+
+.poster .poster-caption{
+	bottom: 0;
+  	left: 0;
+  	right: 0;
+  	width: 100%;
+  	height: 0;
+}
+
+.poster .poster-figure.hover .poster-caption{
+	height: 100%;
+}
+
+
+.sc-player-frame{
+	display: block;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	border: none;
+}
+
+
+
+
+
+
+
+
+/*********************************************************
+-----------ORIGINAL MOUSE OVER STYLINGS-------------
 
 .poster-caption{
 	position: absolute;
@@ -124,10 +199,10 @@
 	transform: scale3d(1.03,1.03,1);
 }
 
-.poster:hover .poster-figure{
-	box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.8);
-	transition: box-shadow 0.5s;
-}
+//.poster:hover .poster-figure{
+	//box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.8);
+	//transition: box-shadow 0.5s;
+//}
 
 .poster-caption p:first-child{
 	transition-delay: 0s;
@@ -142,14 +217,7 @@
 }
 
 
-.sc-player-frame{
-	display: block;
-	margin-top: 20px;
-	margin-left: auto;
-	margin-right: auto;
-}
 
-
-
+/***********************************************************/
 
 

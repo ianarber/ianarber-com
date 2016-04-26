@@ -5,20 +5,40 @@
 	
 	<div class="news-container">
 		<div class="news-preview">
-			{% for post in site.posts %}
-				<li>
-					<a href="{{ post.url }}">{{ post.title }}</a>
-				</li>
+			{% for post in site.posts limit:1 %}
+			<figure>
+				<img src="{{ post.thumbnail }}" alt="Cast Photo"/>
+			</figure>
+			<a href="{{ post.url }}">{{ post.title }}</a>
+			{{ post.excerpt }}
 			{% endfor %}
 		</div>
 		<div class="news-preview">
-			
+			{% for post in site.posts offset:1 limit:1 %}
+			<figure>
+				<img src="{{ post.thumbnail }}" alt="Cast Photo"/>
+			</figure>
+			<a href="{{ post.url }}">{{ post.title }}</a>
+			{{ post.excerpt }}
+			{% endfor %}
 		</div>
 		<div class="news-preview">
-			
+			{% for post in site.posts offset:2 limit:1 %}
+			<figure>
+				<img src="{{ post.thumbnail }}" alt="Cast Photo"/>
+			</figure>
+			<a href="{{ post.url }}">{{ post.title }}</a>
+			{{ post.excerpt }}
+			{% endfor %}
 		</div>
 		<div class="news-preview">
-			
+			{% for post in site.posts offset:3 limit:1 %}
+			<figure>
+				<img src="{{ post.thumbnail }}" alt="Cast Photo"/>
+			</figure>
+			<a href="{{ post.url }}">{{ post.title }}</a>
+			{{ post.excerpt }}
+			{% endfor %}
 		</div>
 		
 		
