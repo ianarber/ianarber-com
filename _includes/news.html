@@ -4,46 +4,110 @@
 	</div>
 	
 	<div class="news-container">
-		<div class="news-preview">
+		<article class="news-preview">
 			{% for post in site.posts limit:1 %}
 			<figure>
 				<img src="{{ post.thumbnail }}" alt="Cast Photo"/>
 			</figure>
 			<a href="{{ post.url }}">{{ post.title }}</a>
 			{{ post.excerpt }}
+			<div class="post-byline">
+			    <ul class="fa-ul">
+			        <li><i class="fa-li fa fa-calendar-o"></i>{{ post.date | date_to_string }}</li>
+			        <li><i class="fa-li fa fa-tag"></i>{{ post.categories }}</li>
+			    </ul>
+			</div>	
 			{% endfor %}
-		</div>
-		<div class="news-preview">
+		</article>
+		<article class="news-preview">
 			{% for post in site.posts offset:1 limit:1 %}
 			<figure>
 				<img src="{{ post.thumbnail }}" alt="Cast Photo"/>
 			</figure>
 			<a href="{{ post.url }}">{{ post.title }}</a>
 			{{ post.excerpt }}
+			<div class="post-byline">
+			    <ul class="fa-ul">
+			        <li><i class="fa-li fa fa-calendar-o"></i>{{ post.date | date_to_string }}</li>
+			        <li><i class="fa-li fa fa-tag"></i>{{ post.categories }}</li>
+			    </ul>
+			</div>	
 			{% endfor %}
-		</div>
-		<div class="news-preview">
+		</article>
+		<article class="news-preview">
 			{% for post in site.posts offset:2 limit:1 %}
 			<figure>
 				<img src="{{ post.thumbnail }}" alt="Cast Photo"/>
 			</figure>
 			<a href="{{ post.url }}">{{ post.title }}</a>
 			{{ post.excerpt }}
+			<div class="post-byline">
+			    <ul class="fa-ul">
+			        <li><i class="fa-li fa fa-calendar-o"></i>{{ post.date | date_to_string }}</li>
+			        <li><i class="fa-li fa fa-tag"></i>{{ post.categories }}</li>
+			    </ul>
+			</div>	
 			{% endfor %}
-		</div>
-		<div class="news-preview">
+		</article>
+		<article class="news-preview">
 			{% for post in site.posts offset:3 limit:1 %}
 			<figure>
 				<img src="{{ post.thumbnail }}" alt="Cast Photo"/>
 			</figure>
 			<a href="{{ post.url }}">{{ post.title }}</a>
 			{{ post.excerpt }}
+			<div class="post-byline">
+			    <ul class="fa-ul">
+			        <li><i class="fa-li fa fa-calendar-o"></i>{{ post.date | date_to_string }}</li>
+			        <li><i class="fa-li fa fa-tag"></i>{{ post.categories }}</li>
+			    </ul>
+			</div>	
 			{% endfor %}
-		</div>
-		
-		
-		
+		</article>
 	</div>
+	
+	<div class="social-feeds">
+	    <div class="twitter-feed">
+	        dfg
+	    </div>
+	    <div class="insta-feed">
+	        
+	        dfg
+	        
+	    </div>
+	    
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	<div class="section-footer">
 		<a href="#">Read more</a>

@@ -2,6 +2,7 @@
 layout: news
 title: BBC 2 Series - Quacks
 thumbnail: assets/img/fill-murray-900x450.jpg
+categories: news television
 excerpt_separator: <!--more-->
 ---
 
