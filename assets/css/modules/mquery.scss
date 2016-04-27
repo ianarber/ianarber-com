@@ -1,5 +1,9 @@
 /* 961px to 1060px */
-@media only screen and (max-width: 1060px){
+@media only screen and (max-width: 1075px){
+	#header{
+		height: 110px;
+	}
+	
 	#logo{
 		.ianarber{
 			font-size: 220%;
@@ -30,7 +34,7 @@
 	
 	.menu-list-1,
 	.menu-list-2{
-    	margin-top: 25px;
+    	margin-top: 23px;
 		transition: margin-top 0.3s ease-in-out;
 	}
 	
@@ -60,10 +64,15 @@
 			font-size: 60%;
 		}
 	}	
+
 }
 
 /* 861px to 960px */
-@media only screen and (max-width: 960px){
+@media only screen and (max-width: 975px){
+	#header{
+		height: 100px;
+	}
+	
 	#logo{
 		.ianarber{
 			font-size: 195%;
@@ -90,10 +99,16 @@
 	.intro{
 		top: 80px;
 	}
+	
+
 }
 
 /* 761px to 860px */
-@media only screen and (max-width: 860px){
+@media only screen and (max-width: 875px){
+	#header{
+		height: 90px;
+	}
+	
 	#logo{
 		.ianarber{
 			font-size: 170%;
@@ -151,6 +166,7 @@
 			font-size: 60%;
 		}
 	}
+
 }
 
 /* 481px to 760px */
@@ -159,16 +175,50 @@
 		display: none;
     }
     
-    #logo{
-        width: 100%;
-    }
-    
+	#header{
+		height: 60px;
+	}
+	
+	#logo{
+		width: 100%;
+		
+		.ianarber{
+			font-size: 150%;
+			top: -10px;
+			transition: font-size 0.3s ease-in-out;
+		}
+		.composer,
+		.film{
+			font-size: 45%;
+			transition: font-size 0.3s ease-in-out;
+		}
+		.composer{
+			top: -5px;
+			&:before, &:after{
+				top: 4px;
+				width: 37.1%;
+				transition: top 0.3s ease-in-out;
+				transition: width 0.3s ease-in-out;
+			}
+    	}
+		.film{
+			top: -14px;
+			&:before, &:after{
+				top: 4px;
+				width: 28.7%;
+				transition: top 0.3s ease-in-out;
+				transition: width 0.3s ease-in-out;
+			}
+    	}
+	}
+
     #nav-toggle{
         display: block;
     }
 	
 	.intro{
-		height: 615px;
+		top: 60px;
+		height: 575px;
 	}
 	
 	.profile-pic{
@@ -178,17 +228,24 @@
 	.email-contact{
 		margin-top: 495px;
 	}	
+	
+	.social-btns{
+		margin-top: 493px;
+	}
+	
+	
 }
 
 /* 401px to 480px */
 @media only screen and (max-width: 480px){
 	#nav-toggle{
-		top: 8px;
-		left: -35px;   
+		top: 10px;
+		right: -25px;
 	}
 	
 	.intro{
-		top: 60px;
+		top: 50px;
+		height: 565px;
 	}
 	
 	.profile-pic{
@@ -209,6 +266,11 @@
 			right: 25px;
 		}
 	}
+	
+	.social-slide{
+		margin: 5px;
+	}
+	
 }
 
 /* --- to 400px */
@@ -222,6 +284,5 @@
 		#welcome-text{
 			display: none;
 		}
-
 	}
 }

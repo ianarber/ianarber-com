@@ -72,10 +72,6 @@
 	}
 }
 
-.social-contact{
-	margin-left: 15px;
-}
-
 .social-slide{
     height: 48px;
     width: 48px;
@@ -90,11 +86,13 @@
 }
 
 .social-btns{
-	width: 35%;
-	margin: 0 auto;
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
 	margin-top: 515px;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	a{
 		flex: auto;
 	}

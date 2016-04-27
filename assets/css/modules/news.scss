@@ -4,17 +4,22 @@
 }
 
 .news-container{
-	width: 90%;
 	margin-top: 18px;
 	margin-left: auto;
 	margin-right: auto;
+	max-width: 90%;
+	display: flex;
+	flex-flow: wrap;
+	justify-content: space-around;
 }
 
 .news-preview{
-	width: 24.25%;
-	height: 300px;
+	//width: 24.25%;
+	max-width: 250px;
+	height: 100%;
 	background-color: $backgroundColor;
 	float: left;
+	flex: auto;
 	&:not(:last-child){
 		margin-right: 1%;
 	}

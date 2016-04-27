@@ -29,15 +29,15 @@
 #nav-toggle{
 	display: none;
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 8px;
+    right: 10px;
 	z-index: 102;
 }
 
 .mobile-nav{
     position: fixed;
     z-index: 101;
-    top: 75px;
+    top: 60px;
     right: -200px;
     bottom: 0;  
     width: 200px;
