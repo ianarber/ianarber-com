@@ -3563,22 +3563,23 @@ figure {
     .news-preview .post-byline li {
       margin-bottom: 5px; }
 
-.social-feeds {
+#social-feeds {
   width: 70%;
   height: 300px;
   margin-top: 30px;
   margin-left: auto;
-  margin-right: auto;
-  border: 1px solid black; }
-  .social-feeds .twitter-feed {
+  margin-right: auto; }
+  #social-feeds #twitterfeed {
     float: left;
-    border: 1px solid blue;
     width: 50%;
     height: auto; }
-  .social-feeds .insta-feed {
+  #social-feeds #instafeed {
     float: left;
-    border: 1px solid red;
-    width: 50%; }
+    width: 50%;
+    height: auto; }
+    #social-feeds #instafeed #lightwidget-widget {
+      width: 70%;
+      overflow: hidden; }
 
 .form {
   height: 400px;

@@ -53,23 +53,29 @@
 }
 
 
-.social-feeds{
+#social-feeds{
     width: 70%;
     height: 300px;
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid black;
-    .twitter-feed{
+    //border: 1px solid black;
+    #twitterfeed{
         float: left;
-        border: 1px solid blue;
+        //border: 1px solid blue;
         width: 50%;
         height: auto;
     }
-    .insta-feed{
-        float: left;
-        border: 1px solid red;
-        width: 50%;
+    #instafeed{
+		float: left;
+		//border: 1px solid red;
+		width: 50%;
+		height: auto;
+		#lightwidget-widget{
+			width: 70%;
+		
+			overflow: hidden;
+		}
     }
 }
 
