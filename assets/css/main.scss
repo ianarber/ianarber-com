@@ -5,8 +5,9 @@
 @import "modules/globals";
 @import "modules/mobile-nav";
 @import "modules/header";
-@import "modules/intro";
-@import "modules/showreel";
-@import "modules/news";
-@import "modules/contact-form";
+@import "modules/home/intro";
+@import "modules/home/showreel";
+@import "modules/home/news";
+@import "modules/home/contact-form";
 @import "modules/mquery";
+@import "modules/news/news";

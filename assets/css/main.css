@@ -3568,18 +3568,20 @@ figure {
   height: 300px;
   margin-top: 30px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  border: 1px solid black; }
   #social-feeds #twitterfeed {
     float: left;
-    width: 50%;
-    height: auto; }
+    border: 1px solid blue;
+    width: 60%;
+    height: auto;
+    padding-left: 60px;
+    padding-right: 60px; }
   #social-feeds #instafeed {
     float: left;
-    width: 50%;
+    border: 1px solid red;
+    width: 40%;
     height: auto; }
-    #social-feeds #instafeed #lightwidget-widget {
-      width: 70%;
-      overflow: hidden; }
 
 .form {
   height: 400px;
@@ -3776,3 +3778,33 @@ figure {
     word-spacing: normal; }
   .profile-pic #welcome-text {
     display: none; } }
+
+.post-container {
+  width: 70%;
+  height: auto;
+  margin-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 80%; }
+  .post-container img {
+    width: 100%; }
+  .post-container h1 {
+    margin-left: 14px;
+    margin-top: 5px; }
+  .post-container quote {
+    display: inline-block;
+    margin: 12px 0;
+    border-left: 4px solid #bebebe;
+    font-weight: 600; }
+    .post-container quote p {
+      margin-left: 10px; }
+
+.post-excerpt {
+  margin-left: 15px;
+  margin-top: -15px; }
+
+.post {
+  margin-top: 10px;
+  margin-left: 15px;
+  line-height: 28px;
+  word-spacing: 0.5px; }
