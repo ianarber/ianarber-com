@@ -2,18 +2,40 @@
 layout: default
 ---
 <div class="post-container">
-	<img src="{{ page.thumbnail }}" alt=""/>
-
-	<h1>{{ page.title }}</h1>
-	
-	<div class="post-excerpt">
-		{{ page.excerpt }}
+    <figure class="post-image">
+	    <img src="{{ page.thumbnail }}" alt="Photo"/>
+	    <figcaption class="post-caption">
+	                <p><i class="fa fa-picture-o"></i>{{ page.caption }}</p>
+	    </figcaption>
+    </figure>
+   
+    <div class="post-title"><h2>{{ page.title }}</h2></div>
+    <div class="post-date">
+        <ul class="fa-ul">
+            <li><i class="fa-li fa fa-calendar-o"></i>{{ page.date | date_to_string }}</li>
+            <li><i class="fa-li fa fa-tag"></i>{{ page.categories }}</li>
+        </ul>
+    </div>
+    	
+	<div class="post-heading">
+		{{ page.heading }}
 	</div>
-	
 	
 	<div class="post">
 		{{ content }}
 	</div>
+	
+    <div id="post-seperator"></div>
+   
+    <div class="post-navigation">
+        {% if page.previous.url %}
+        <a id="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+        {% endif %}
+        
+        {% if page.next.url %}
+        <a id="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+        {% endif %}
+    </div>
 	
 </div>
 
