@@ -3587,13 +3587,38 @@ figure {
 .form {
   height: 400px;
   background-color: #fafafa; }
+  .form i {
+    border: 2px solid #0d2f52;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; }
+    .form i:hover {
+      background: #0d2f52;
+      color: #fafafa;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s; }
 
-.direct {
+.direct,
+.social,
+.agent {
   text-align: center; }
 
+.direct {
+  margin-top: 10px; }
+  .direct i {
+    margin: 10px 0px;
+    font-size: 110%;
+    padding: 12px 12px; }
+  .direct p {
+    font-size: 85%; }
+
 .social {
+  margin-top: 20px; }
+
+.social-icons {
   width: 50%;
-  margin-top: 10px;
+  margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
   font-size: 150%;
@@ -3609,17 +3634,33 @@ figure {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center; }
-  .social div {
+  .social-icons div {
     text-align: center;
     -webkit-box-flex: 1;
     -webkit-flex: auto;
         -ms-flex: auto;
             flex: auto; }
-  .social i {
-    border: 2px solid #0d2f52;
-    -webkit-border-radius: 50%;
-            border-radius: 50%;
-    padding: 10px 10px; }
+
+.social-icons div:nth-child(1) i {
+  padding: 12px 18px; }
+
+.social-icons div:nth-child(2) i {
+  padding: 12px 14px; }
+
+.social-icons div:nth-child(3) i {
+  padding: 12px 8px; }
+
+.social-icons div:nth-child(4) i {
+  padding: 12px 15px; }
+
+.social-icons div:nth-child(5) i {
+  padding: 12px 14px; }
+
+.social-icons div:nth-child(6) i {
+  padding: 12px 14px; }
+
+.agent {
+  margin-top: 25px; }
 
 /* .form{
 	height: 400px;

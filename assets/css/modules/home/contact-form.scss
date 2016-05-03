@@ -1,15 +1,45 @@
 .form{
 	height: 400px;
 	background-color: $backgroundColor;
+    i{
+        border: 2px solid $mainFontColor;
+        border-radius: 50%;
+        transition: all 0.3s;
+        &:hover{
+            background: $mainFontColor;
+            color: $backgroundColor;
+            transition: all 0.3s;
+        }
+    }
 }
 
-.direct{
+.direct,
+.social,
+.agent{
 	text-align: center;
 }
 
+.direct {
+    margin-top: 10px;
+    i{
+        margin: 10px 0px;
+        font-size: 110%;
+        padding: 12px 12px;
+    }
+    p{
+        font-size: 85%;
+    }
+
+}
+
 .social{
+    margin-top: 20px;
+}
+
+
+.social-icons{
 	width: 50%;
-	margin-top: 10px;
+	margin-top: 15px;
 	margin-left: auto;
 	margin-right: auto;
 	font-size: 150%;
@@ -17,24 +47,39 @@
 	align-items: center;
 	justify-content: center;
 	div{
+   
 		text-align: center;
 		flex: auto;
-
 	}
-	i{
-		border: 2px solid $mainFontColor;
-		border-radius: 50%;
-		padding: 10px 10px;
-	}
-	
-	
-	
-	
 
 }
 
+.social-icons{
+    div:nth-child(1){
+        i{ padding: 12px 18px; }
+    }
+    div:nth-child(2){
+        i{ padding: 12px 14px; }
+    }
+    div:nth-child(3){
+        i{ padding: 12px 8px; }
+    }
+    div:nth-child(4){
+        i{ padding: 12px 15px; }
+    }
+    div:nth-child(5){
+        i{ padding: 12px 14px; }
+    }
+    div:nth-child(6){
+        i{ padding: 12px 14px; }
+    }
+}
+
+
+
+
 .agent{
-	
+	margin-top: 25px;
 }
 
 
