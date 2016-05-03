@@ -2974,6 +2974,45 @@ figure {
 .row {
   max-width: 1140px; }
 
+/**********************SECTION HEADERS AND FOOTERS*********************/
+.section-header {
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 17px;
+  letter-spacing: 1px; }
+  .section-header h4 {
+    margin: 0 auto;
+    display: table;
+    white-space: nowrap; }
+    .section-header h4:before, .section-header h4:after {
+      border-top: 2px solid #0d2f52;
+      content: '';
+      display: table-cell;
+      position: relative;
+      top: 14px;
+      width: 100px; }
+    .section-header h4:before {
+      right: 1.5%; }
+    .section-header h4:after {
+      right: -1.5%; }
+
+.section-footer {
+  margin: 15px auto 5px auto;
+  width: 100px;
+  text-transform: uppercase;
+  font-size: 75%;
+  text-align: center; }
+
+.section-footer a {
+  padding: 3px 6px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+  .section-footer a:hover {
+    background-color: #0d2f52;
+    color: #efefef;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; }
+
 /* style for whole page container exlucing mobile-nav */
 #container {
   width: 100%;
@@ -3314,44 +3353,6 @@ figure {
   height: 1410px;
   margin-top: 110px; }
 
-.section-header {
-  text-transform: uppercase;
-  text-align: center;
-  padding-top: 17px;
-  letter-spacing: 1px; }
-  .section-header h4 {
-    margin: 0 auto;
-    display: table;
-    white-space: nowrap; }
-    .section-header h4:before, .section-header h4:after {
-      border-top: 2px solid #0d2f52;
-      content: '';
-      display: table-cell;
-      position: relative;
-      top: 14px;
-      width: 100px; }
-    .section-header h4:before {
-      right: 1.5%; }
-    .section-header h4:after {
-      right: -1.5%; }
-
-.section-footer {
-  margin: 15px auto 5px auto;
-  width: 100px;
-  text-transform: uppercase;
-  font-size: 75%;
-  text-align: center; }
-
-.section-footer a {
-  padding: 3px 6px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s; }
-  .section-footer a:hover {
-    background-color: #0d2f52;
-    color: #efefef;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s; }
-
 /* individual posters will flex expand when width increases */
 .poster-row {
   margin: 0 auto;
@@ -3587,6 +3588,137 @@ figure {
   height: 400px;
   background-color: #fafafa; }
 
+.direct {
+  text-align: center; }
+
+.social {
+  width: 50%;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 150%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .social div {
+    text-align: center;
+    -webkit-box-flex: 1;
+    -webkit-flex: auto;
+        -ms-flex: auto;
+            flex: auto; }
+  .social i {
+    border: 2px solid #0d2f52;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    padding: 10px 10px; }
+
+/* .form{
+	height: 400px;
+	background-color: $backgroundColor;
+}
+
+.contact-form{
+	width: 90%;
+	font-size: 85%;
+	margin-top: -5px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.direct-contact{
+	padding-right: 10px;
+	padding-left: 10px;
+	input[type=text],
+	input[type=email],
+	textarea{
+		width: 100%;
+		font-size: 75%;
+		padding: 5px;
+		border-radius: 3px;
+		border: 1px solid $mainFontColor;
+	}
+}
+
+input[type=submit]{
+
+	//margin: 15px auto 5px auto;
+	padding: 2px 0px;
+	width: 80px;
+	text-transform: uppercase;
+	font-size: 85%;
+
+	
+	border: 1px solid $mainFontColor;
+	border-radius: 3px;
+	background: none;
+	
+	
+	&:hover{
+		background-color: $mainFontColor;
+		color: #efefef;
+		transition: all 0.3s;
+	}
+}
+
+.agent-contact{
+	padding-right: 10px;
+	padding-left: 10px;
+	margin-top: 25px;
+	h4,h5{
+		text-align: center;
+	}	
+	h5{
+		margin: 20px 0;
+	}	
+	ul{
+		font-size: 90%;
+		margin-top: 10px;
+		margin-left: 80px;
+		li{
+			text-align: center;
+			margin-bottom: 8px;
+		}
+	}
+}
+
+#sma-link{
+	font-size: 90%;
+	margin-top: 3px;
+	text-align: center;
+	a{
+		padding: 2px 6px;
+		transition: all 0.3s;
+		&:hover{
+			background-color: $mainFontColor;
+			color: #efefef;
+			transition: all 0.3s;
+		}
+	}
+}
+
+
+
+
+ */
+/* 	div{
+		font-size: 95%;
+		width: 50%;
+		margin: 0 auto;
+		&:hover{
+			background-color: $mainFontColor;
+			color: #efefef;
+			transition: all 0.3s;
+		}
+	} */
 /* 961px to 1060px */
 @media only screen and (max-width: 1075px) {
   #header {
