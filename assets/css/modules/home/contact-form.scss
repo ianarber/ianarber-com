@@ -1,5 +1,5 @@
 .form{
-	height: 400px;
+	height: 600px;
 	background-color: $backgroundColor;
     i{
         border: 2px solid $mainFontColor;
@@ -17,12 +17,19 @@
 .social,
 .agent{
 	text-align: center;
+	h5{
+		letter-spacing: 2px;
+		font-size: 90%;
+	}
+	p{
+		letter-spacing: 2px;
+	}
 }
 
-.direct {
-    margin-top: 10px;
+.direct{
+    margin-top: 15px;
     i{
-        margin: 10px 0px;
+        margin: 8px 0px;
         font-size: 110%;
         padding: 12px 12px;
     }
@@ -32,54 +39,27 @@
 
 }
 
-.social{
-    margin-top: 20px;
+.form .social{
+    margin-top: 25px;
 }
-
-
-.social-icons{
-	width: 50%;
-	margin-top: 15px;
-	margin-left: auto;
-	margin-right: auto;
-	font-size: 150%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	div{
-   
-		text-align: center;
-		flex: auto;
-	}
-
-}
-
-.social-icons{
-    div:nth-child(1){
-        i{ padding: 12px 18px; }
-    }
-    div:nth-child(2){
-        i{ padding: 12px 14px; }
-    }
-    div:nth-child(3){
-        i{ padding: 12px 8px; }
-    }
-    div:nth-child(4){
-        i{ padding: 12px 15px; }
-    }
-    div:nth-child(5){
-        i{ padding: 12px 14px; }
-    }
-    div:nth-child(6){
-        i{ padding: 12px 14px; }
-    }
-}
-
-
-
 
 .agent{
-	margin-top: 25px;
+	margin-top: 30px;
+	h6{
+		margin-top: 10px;
+		font-size: 75%;
+	}
+	p{
+		font-size: 85%;
+	}
+	i{
+		margin-top: 8px;
+		border: none;
+		&:hover{
+			background: $backgroundColor;
+            color: $mainFontColor;
+		}
+	}
 }
 
 

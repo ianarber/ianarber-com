@@ -56,6 +56,77 @@ figure{
 	max-width: 1140px;
 }
 
+/**********************SOCIAL ICONS*********************/
+
+
+.intro .social{
+	margin-top: 520px;
+}
+
+
+.social-icons{
+	width: 50%;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 120%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	div{
+   
+		text-align: center;
+		flex: auto;
+	}
+}
+
+.social-icons{
+    div:nth-child(1){
+        i{ padding: 12px 17px; }
+    }
+    div:nth-child(2){
+        i{ padding: 12px 13px; }
+    }
+    div:nth-child(3){
+        i{ padding: 12px 9px; }
+    }
+    div:nth-child(4){
+        i{ padding: 12px 14px; }
+    }
+    div:nth-child(5){
+        i{ padding: 12px 14px; }
+    }
+    div:nth-child(6){
+        i{ padding: 12px 14px; }
+    }
+}
+
+/***SOCIAL ICONS PULSE ANIMATION*****/
+
+@keyframes pulse {
+  25% {
+	transform: scale(0.9);
+  }
+
+  75% {
+    transform: scale(1.1);
+  }
+}
+
+.pulse {
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	backface-visibility: hidden;
+}
+
+.pulse:hover, .pulse:focus, .pulse:active {
+	animation-name: pulse;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
 
 /**********************SECTION HEADERS AND FOOTERS*********************/
 
