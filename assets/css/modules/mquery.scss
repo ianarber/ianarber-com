@@ -1,5 +1,5 @@
 /* 961px to 1060px */
-@media only screen and (max-width: 1075px){
+@media only screen and (max-width: 1220px){
 	#header{
 		height: 110px;
 	}
@@ -68,14 +68,15 @@
 }
 
 /* 861px to 960px */
-@media only screen and (max-width: 975px){
+@media only screen and (max-width: 1120px){
 	#header{
-		height: 100px;
+		height: 80px;
 	}
 	
 	#logo{
 		.ianarber{
 			font-size: 195%;
+            top: -10px;
 		}
 		.composer,
 		.film{

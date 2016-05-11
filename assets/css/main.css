@@ -3077,7 +3077,7 @@ figure {
       right: -1.5%; }
 
 .section-footer {
-  margin: 15px auto 5px auto;
+  margin: 20px auto 5px auto;
   width: 100px;
   text-transform: uppercase;
   font-size: 75%;
@@ -3279,9 +3279,6 @@ figure {
   transition: margin-top 0.3s ease-in-out; }
 
 .menu-list-1 {
-  margin-right: -10px; }
-
-.menu-list-1 {
   text-align: right; }
 
 .menu-items-1,
@@ -3299,10 +3296,8 @@ figure {
     -webkit-transition: margin-right 0.3s ease-in-out;
     transition: margin-right 0.3s ease-in-out; }
 
-.menu-items-2 {
-  margin-left: -10px; }
-  .menu-items-2:last-child {
-    margin-right: 20px; }
+.menu-items-2:last-child {
+  margin-right: 20px; }
 
 .intro {
   position: relative;
@@ -3428,7 +3423,7 @@ figure {
 } */
 .showreel-background {
   background-color: #fafafa;
-  height: 910px;
+  height: 995px;
   margin-top: 110px; }
 
 /* individual posters will flex expand when width increases */
@@ -3591,7 +3586,7 @@ figure {
 
 /***********************************************************/
 .news {
-  height: 800px;
+  height: 445px;
   background-color: #efefef; }
 
 .news-container {
@@ -3642,28 +3637,31 @@ figure {
     .news-preview .post-byline li {
       margin-bottom: 5px; }
 
-#social-feeds {
-  width: 70%;
-  height: 300px;
-  margin-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  border: 1px solid black; }
-  #social-feeds #twitterfeed {
-    float: left;
-    border: 1px solid blue;
-    width: 60%;
-    height: auto;
-    padding-left: 60px;
-    padding-right: 60px; }
-  #social-feeds #instafeed {
-    float: left;
-    border: 1px solid red;
-    width: 40%;
-    height: auto; }
+/* #social-feeds{
+    width: 70%;
+    height: 300px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    #twitterfeed{
+        float: left;
+        border: 1px solid blue;
+        width: 60%;
+        height: auto;
+        padding-left: 60px;
+        padding-right: 60px;
 
+    }
+    #instafeed{
+        float: left;
+        border: 1px solid red;
+        width: 40%;
+        height: auto;
+    }
+} */
 .form {
-  height: 380px;
+  height: 365px;
   background-color: #fafafa; }
   .form i {
     border: 2px solid #0d2f52;
@@ -3852,7 +3850,7 @@ figure {
   color: #898989; }
 
 /* 961px to 1060px */
-@media only screen and (max-width: 1075px) {
+@media only screen and (max-width: 1220px) {
   #header {
     height: 110px; }
   #logo .ianarber {
@@ -3904,11 +3902,12 @@ figure {
     font-size: 60%; } }
 
 /* 861px to 960px */
-@media only screen and (max-width: 975px) {
+@media only screen and (max-width: 1120px) {
   #header {
-    height: 100px; }
+    height: 80px; }
   #logo .ianarber {
-    font-size: 195%; }
+    font-size: 195%;
+    top: -10px; }
   #logo .composer,
   #logo .film {
     font-size: 55%; }
