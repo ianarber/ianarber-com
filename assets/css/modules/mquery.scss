@@ -1,4 +1,12 @@
 /* 961px to 1060px */
+@media only screen and (max-width: 1232px){
+    .news{
+        height: 795px;
+    }
+}
+
+
+
 @media only screen and (max-width: 1220px){
 	#header{
 		height: 110px;
@@ -37,6 +45,12 @@
     	margin-top: 23px;
 		transition: margin-top 0.3s ease-in-out;
 	}
+     
+    .menu-list-1{
+        li:not(:last-child){
+            margin-right: 40px;
+        }
+    }  
 	
 	.menu-items-1,
 	.menu-items-2{
@@ -54,18 +68,33 @@
 	
 	.profile-pic{
 		#welcome-intro{
-			font-size: 130%;
+			font-size: 135%;
 		}
 		#quote{
-			font-size: 70%;
+			font-size: 75%;
 		}
 		#cite{
-			bottom: 25px;
-			font-size: 60%;
+			bottom: 23px;
+			font-size: 65%;
 		}
 	}	
+    
+    .showreel-background{
+        margin-top: 100px;
+    }
 
 }
+
+
+@media only screen and (max-width: 1132px){
+    .showreel-background{
+        height: 1325px;
+    }
+}
+
+
+
+
 
 /* 861px to 960px */
 @media only screen and (max-width: 1120px){
@@ -75,19 +104,39 @@
 	
 	#logo{
 		.ianarber{
-			font-size: 195%;
+			font-size: 185%;
             top: -10px;
 		}
 		.composer,
 		.film{
 			font-size: 55%;
 		}
+        .composer{
+            top: -4px;
+            &:before, &:after{
+				top: 5px;
+				width: 36.9%;
+			}
+        }
+        .film{
+            top: -14px;
+            &:before, &:after{
+				top: 5px;
+				width: 28.3%;
+			}
+        }
 	}
 	
 	.menu-list-1,
 	.menu-list-2{
-    	margin-top: 17px;
+    	margin-top: 10px;
 	}
+    
+    .menu-list-1{
+        li:not(:last-child){
+            margin-right: 35px;
+        }
+    }  
 	
 	.menu-items-1,
 	.menu-items-2{
@@ -98,21 +147,24 @@
 	}
 	
 	.intro{
-		top: 80px;
+		top: 75px;
 	}
 	
+    .showreel-background{
+        margin-top: 75px;
+    }
 
 }
 
 /* 761px to 860px */
-@media only screen and (max-width: 875px){
+@media only screen and (max-width: 1005px){
 	#header{
-		height: 90px;
+		height: 70px;
 	}
 	
 	#logo{
 		.ianarber{
-			font-size: 170%;
+			font-size: 160%;
 		}
 		.composer,
 		.film{
@@ -121,45 +173,51 @@
 		.composer{
 			&:before, &:after{
 				top: 4px;
-				width: 37.6%;
+				width: 36.7%;
 			}
     	}
 		.film{
 			&:before, &:after{
 				top: 4px;
-				width: 29.2%;
+				width: 27.8%;
 			}
     	}
 	}
 	
 	.menu-list-1,
 	.menu-list-2{
-    	margin-top: 14px;
+    	margin-top: 3px;
 	}
+    
+    .menu-list-1{
+        li:not(:last-child){
+            margin-right: 30px;
+        }
+    } 
 	
 	.menu-items-1,
 	.menu-items-2{
 		font-size: 65%;
 		letter-spacing: 1px;
 		&:nth-child(-n+2){
-			margin-right: 10px;
+			margin-right: 15px;
 		}
 	}
 	
 	.intro{
-		top: 65px;
+		top: 60px;
 	}
 	
 	.profile-pic{
 		#welcome-intro{
-			font-size: 100%;
+			font-size: 115%;
 		}
 		#welcome-text{
 			font-size: 60%;
 			width: 80%;
 		}
 		#quote{
-			width: 80%;
+			width: 90%;
 			font-size: 70%;
 		}
 		#cite{
@@ -167,11 +225,15 @@
 			font-size: 60%;
 		}
 	}
+    
+    .showreel-background{
+        margin-top: 60px;
+    }
 
 }
 
 /* 481px to 760px */
-@media only screen and (max-width: 760px){
+@media only screen and (max-width: 895px){
     .main-nav{
 		display: none;
     }
@@ -185,30 +247,24 @@
 		
 		.ianarber{
 			font-size: 150%;
-			top: -10px;
-			transition: font-size 0.3s ease-in-out;
+			top: -12px;
 		}
 		.composer,
 		.film{
 			font-size: 45%;
-			transition: font-size 0.3s ease-in-out;
 		}
 		.composer{
-			top: -5px;
+			top: -7px;
 			&:before, &:after{
 				top: 4px;
 				width: 37.1%;
-				transition: top 0.3s ease-in-out;
-				transition: width 0.3s ease-in-out;
 			}
     	}
 		.film{
-			top: -14px;
+			top: -15px;
 			&:before, &:after{
 				top: 4px;
-				width: 28.7%;
-				transition: top 0.3s ease-in-out;
-				transition: width 0.3s ease-in-out;
+				width: 28.9%;
 			}
     	}
 	}
@@ -224,18 +280,46 @@
 	
 	.profile-pic{
 		top: 30px;
+        #welcome-intro{
+			font-size: 105%;
+		}
 	}
+    
+    .intro .social{
+        margin-top: 500px;
+    }
+
 	
-	.email-contact{
-		margin-top: 495px;
-	}	
-	
-	.social-btns{
-		margin-top: 493px;
-	}
+//	.email-contact{
+//		//margin-top: 495px;
+//	}	
 	
 	
 }
+
+
+
+@media only screen and (max-width: 680px){
+    .showreel-background{
+        height: 1655px;
+        iframe{
+            width: 80%;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 618px){
+    .news{
+        height: 1140px;
+    }
+}
+@media only screen and (max-width: 612px){
+    .news{
+        height: 1485px;
+    }
+}
+
 
 /* 401px to 480px */
 @media only screen and (max-width: 480px){
@@ -268,10 +352,11 @@
 		}
 	}
 	
-	.social-slide{
-		margin: 5px;
-	}
-	
+    .intro .social{
+        margin-top: 500px;
+    }
+
+
 }
 
 /* --- to 400px */

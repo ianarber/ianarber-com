@@ -3279,6 +3279,11 @@ figure {
   transition: margin-top 0.3s ease-in-out; }
 
 .menu-list-1 {
+  margin-right: 10px; }
+  .menu-list-1 li:not(:last-child) {
+    margin-right: 50px; }
+
+.menu-list-1 {
   text-align: right; }
 
 .menu-items-1,
@@ -3522,6 +3527,10 @@ figure {
   margin-right: auto;
   border: none; }
 
+.showreel-background iframe {
+  width: 80%;
+  height: 450px; }
+
 /*********************************************************
 -----------ORIGINAL MOUSE OVER STYLINGS-------------
 
@@ -3590,7 +3599,6 @@ figure {
   background-color: #efefef; }
 
 .news-container {
-  margin-top: 18px;
   margin-left: auto;
   margin-right: auto;
   max-width: 95%;
@@ -3607,6 +3615,7 @@ figure {
 
 .news-preview {
   max-width: 280px;
+  margin-top: 20px;
   background-color: #fafafa;
   float: left;
   -webkit-box-flex: 1;
@@ -3850,6 +3859,10 @@ figure {
   color: #898989; }
 
 /* 961px to 1060px */
+@media only screen and (max-width: 1232px) {
+  .news {
+    height: 795px; } }
+
 @media only screen and (max-width: 1220px) {
   #header {
     height: 110px; }
@@ -3881,6 +3894,8 @@ figure {
     margin-top: 23px;
     -webkit-transition: margin-top 0.3s ease-in-out;
     transition: margin-top 0.3s ease-in-out; }
+  .menu-list-1 li:not(:last-child) {
+    margin-right: 40px; }
   .menu-items-1,
   .menu-items-2 {
     font-size: 70%;
@@ -3894,26 +3909,44 @@ figure {
   .intro {
     top: 100px; }
   .profile-pic #welcome-intro {
-    font-size: 130%; }
+    font-size: 135%; }
   .profile-pic #quote {
-    font-size: 70%; }
+    font-size: 75%; }
   .profile-pic #cite {
-    bottom: 25px;
-    font-size: 60%; } }
+    bottom: 23px;
+    font-size: 65%; }
+  .showreel-background {
+    margin-top: 100px; } }
+
+@media only screen and (max-width: 1132px) {
+  .showreel-background {
+    height: 1325px; } }
 
 /* 861px to 960px */
 @media only screen and (max-width: 1120px) {
   #header {
     height: 80px; }
   #logo .ianarber {
-    font-size: 195%;
+    font-size: 185%;
     top: -10px; }
   #logo .composer,
   #logo .film {
     font-size: 55%; }
+  #logo .composer {
+    top: -4px; }
+    #logo .composer:before, #logo .composer:after {
+      top: 5px;
+      width: 36.9%; }
+  #logo .film {
+    top: -14px; }
+    #logo .film:before, #logo .film:after {
+      top: 5px;
+      width: 28.3%; }
   .menu-list-1,
   .menu-list-2 {
-    margin-top: 17px; }
+    margin-top: 10px; }
+  .menu-list-1 li:not(:last-child) {
+    margin-right: 35px; }
   .menu-items-1,
   .menu-items-2 {
     font-size: 65%; }
@@ -3921,49 +3954,55 @@ figure {
     .menu-items-2:nth-child(-n+2) {
       margin-right: 20px; }
   .intro {
-    top: 80px; } }
+    top: 75px; }
+  .showreel-background {
+    margin-top: 75px; } }
 
 /* 761px to 860px */
-@media only screen and (max-width: 875px) {
+@media only screen and (max-width: 1005px) {
   #header {
-    height: 90px; }
+    height: 70px; }
   #logo .ianarber {
-    font-size: 170%; }
+    font-size: 160%; }
   #logo .composer,
   #logo .film {
     font-size: 50%; }
   #logo .composer:before, #logo .composer:after {
     top: 4px;
-    width: 37.6%; }
+    width: 36.7%; }
   #logo .film:before, #logo .film:after {
     top: 4px;
-    width: 29.2%; }
+    width: 27.8%; }
   .menu-list-1,
   .menu-list-2 {
-    margin-top: 14px; }
+    margin-top: 3px; }
+  .menu-list-1 li:not(:last-child) {
+    margin-right: 30px; }
   .menu-items-1,
   .menu-items-2 {
     font-size: 65%;
     letter-spacing: 1px; }
     .menu-items-1:nth-child(-n+2),
     .menu-items-2:nth-child(-n+2) {
-      margin-right: 10px; }
+      margin-right: 15px; }
   .intro {
-    top: 65px; }
+    top: 60px; }
   .profile-pic #welcome-intro {
-    font-size: 100%; }
+    font-size: 115%; }
   .profile-pic #welcome-text {
     font-size: 60%;
     width: 80%; }
   .profile-pic #quote {
-    width: 80%;
+    width: 90%;
     font-size: 70%; }
   .profile-pic #cite {
     bottom: 25px;
-    font-size: 60%; } }
+    font-size: 60%; }
+  .showreel-background {
+    margin-top: 60px; } }
 
 /* 481px to 760px */
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 895px) {
   .main-nav {
     display: none; }
   #header {
@@ -3972,32 +4011,20 @@ figure {
     width: 100%; }
     #logo .ianarber {
       font-size: 150%;
-      top: -10px;
-      -webkit-transition: font-size 0.3s ease-in-out;
-      transition: font-size 0.3s ease-in-out; }
+      top: -12px; }
     #logo .composer,
     #logo .film {
-      font-size: 45%;
-      -webkit-transition: font-size 0.3s ease-in-out;
-      transition: font-size 0.3s ease-in-out; }
+      font-size: 45%; }
     #logo .composer {
-      top: -5px; }
+      top: -7px; }
       #logo .composer:before, #logo .composer:after {
         top: 4px;
-        width: 37.1%;
-        -webkit-transition: top 0.3s ease-in-out;
-        transition: top 0.3s ease-in-out;
-        -webkit-transition: width 0.3s ease-in-out;
-        transition: width 0.3s ease-in-out; }
+        width: 37.1%; }
     #logo .film {
-      top: -14px; }
+      top: -15px; }
       #logo .film:before, #logo .film:after {
         top: 4px;
-        width: 28.7%;
-        -webkit-transition: top 0.3s ease-in-out;
-        transition: top 0.3s ease-in-out;
-        -webkit-transition: width 0.3s ease-in-out;
-        transition: width 0.3s ease-in-out; }
+        width: 28.9%; }
   #nav-toggle {
     display: block; }
   .intro {
@@ -4005,10 +4032,24 @@ figure {
     height: 575px; }
   .profile-pic {
     top: 30px; }
-  .email-contact {
-    margin-top: 495px; }
-  .social-btns {
-    margin-top: 493px; } }
+    .profile-pic #welcome-intro {
+      font-size: 105%; }
+  .intro .social {
+    margin-top: 500px; } }
+
+@media only screen and (max-width: 680px) {
+  .showreel-background {
+    height: 1655px; }
+    .showreel-background iframe {
+      width: 80%; } }
+
+@media only screen and (max-width: 618px) {
+  .news {
+    height: 1140px; } }
+
+@media only screen and (max-width: 612px) {
+  .news {
+    height: 1485px; } }
 
 /* 401px to 480px */
 @media only screen and (max-width: 480px) {
@@ -4030,8 +4071,8 @@ figure {
     width: 70%;
     bottom: 10px;
     right: 25px; }
-  .social-slide {
-    margin: 5px; } }
+  .intro .social {
+    margin-top: 500px; } }
 
 /* --- to 400px */
 @media only screen and (max-width: 400px) {

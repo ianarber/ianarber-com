@@ -129,9 +129,9 @@
 }
 
 .menu-list-1{
-	//margin-right: -10px;
-	&:first-child{
-		//margin-left: 20px;
+	margin-right: 10px;
+	li:not(:last-child){
+		margin-right: 50px;
 	}
 }
 
