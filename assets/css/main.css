@@ -4074,6 +4074,10 @@ figure {
   .intro .social {
     margin-top: 500px; } }
 
+@media only screen and (max-width: 459px) {
+  .showreel-background {
+    height: 2320px; } }
+
 /* --- to 400px */
 @media only screen and (max-width: 400px) {
   .profile-pic #welcome-intro {
