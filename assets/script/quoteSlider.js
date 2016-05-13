@@ -67,30 +67,39 @@ function getSupportedPropertyName(properties) {
 //
 // The code for sliding the content automatically
 //
-var timeoutID;
- 
-function startTimer() {
-    // wait 2 seconds before calling goInactive
-    timeoutID = window.setInterval(goToNextItem, 8000);
-}
-startTimer();
- 
-function resetTimer() {
-    window.clearInterval(timeoutID);
-    startTimer();
-}
- 
-function goToNextItem() {
-    removeActiveLinks();
- 
-    if (activeLink < links.length - 1) {
-        activeLink++;
-    } else {
-        activeLink = 0;
-    }
- 
-    var newLink = links[activeLink];
-    changePosition(newLink);
-}
+//var timeoutID;
+// 
+//function startTimer() {
+//    // wait 2 seconds before calling goInactive
+//    timeoutID = window.setInterval(goToNextItem, 8000);
+//}
+//startTimer();
+// 
+//function resetTimer() {
+//    window.clearInterval(timeoutID);
+//    startTimer();
+//}
+// 
+//function goToNextItem() {
+//    removeActiveLinks();
+// 
+//    if (activeLink < links.length - 1) {
+//        activeLink++;
+//    } else {
+//        activeLink = 0;
+//    }
+// 
+//    var newLink = links[activeLink];
+//    changePosition(newLink);
+//}
+
+
+
+
+
+
+
+
+
 
 

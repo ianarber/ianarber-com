@@ -3956,7 +3956,21 @@ figure {
   .intro {
     top: 75px; }
   .showreel-background {
-    margin-top: 75px; } }
+    margin-top: 75px; }
+  /*******************************************************/
+  .testimonials {
+    width: 800px; }
+    .testimonials #testimonial-container {
+      height: 95px; }
+    .testimonials .content {
+      width: 800px;
+      height: 95px; }
+    .testimonials #navLinks {
+      width: 800px; }
+  #testimonial-wrapper {
+    width: 4000px;
+    padding-left: 5px; }
+  /*******************************************************/ }
 
 /* 761px to 860px */
 @media only screen and (max-width: 1005px) {
@@ -4035,13 +4049,40 @@ figure {
     .profile-pic #welcome-intro {
       font-size: 105%; }
   .intro .social {
-    margin-top: 500px; } }
+    margin-top: 500px; }
+  /*******************************************************/
+  .testimonials {
+    width: 600px; }
+    .testimonials #testimonial-container {
+      height: 110px; }
+    .testimonials .content {
+      width: 600px;
+      height: 110px; }
+    .testimonials #navLinks {
+      width: 600px; }
+  #testimonial-wrapper {
+    width: 3000px;
+    padding-left: 8px; }
+  /*******************************************************/ }
 
 @media only screen and (max-width: 680px) {
   .showreel-background {
     height: 1655px; }
     .showreel-background iframe {
-      width: 80%; } }
+      width: 80%; }
+  /*******************************************************/
+  .testimonials {
+    width: 400px; }
+    .testimonials #testimonial-container {
+      height: 165px; }
+    .testimonials .content {
+      width: 400px;
+      height: 165px; }
+    .testimonials #navLinks {
+      width: 400px; }
+  #testimonial-wrapper {
+    width: 2000px; }
+  /*******************************************************/ }
 
 @media only screen and (max-width: 618px) {
   .news {
@@ -4076,7 +4117,20 @@ figure {
 
 @media only screen and (max-width: 459px) {
   .showreel-background {
-    height: 2320px; } }
+    height: 2320px; }
+  /*******************************************************/
+  .testimonials {
+    width: 300px; }
+    .testimonials #testimonial-container {
+      height: 205px; }
+    .testimonials .content {
+      width: 300px;
+      height: 205px; }
+    .testimonials #navLinks {
+      width: 300px; }
+  #testimonial-wrapper {
+    width: 1500px; }
+  /*******************************************************/ }
 
 /* --- to 400px */
 @media only screen and (max-width: 400px) {
