@@ -332,6 +332,23 @@
 //		//margin-top: 495px;
 //	}	
     
+    .form{
+	    height: 595px;
+    }
+    
+    .direct{
+        margin-top: 5px;
+    }
+    
+    .form .social{
+        margin-top: 15px;
+    }
+    
+    .agent{
+	    margin-top: 15px;
+    }
+    
+    
     
      /*******************************************************/
     
@@ -356,6 +373,41 @@
     
     
     /*******************************************************/
+    
+    .footer{
+        height: 495px;
+    }
+        
+    .foot-upper{
+        top: 185px;
+    }
+    
+    .foot-lower{
+        top: 205px;
+    }
+    
+    .foot-social{
+        h4{
+            margin-top: -5px;
+        }
+        .social-icons{
+            margin-top: 10px;
+        }
+    }
+
+    .copyright{
+	    top: 470px;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -398,6 +450,24 @@
     
     
     /*******************************************************/
+    
+    .footer{
+        height: 565px;
+    }
+        
+    .foot-upper{
+        top: 240px;
+    }
+    
+    .foot-lower{
+        top: 260px;
+    }
+
+    .copyright{
+	    top: 540px;
+    }
+    
+    
     
     
     
@@ -451,7 +521,13 @@
         margin-top: 500px;
     }
 
-
+     .form .social{
+        .social-icons{
+            div:not(:last-child){
+                margin-right: 5px;
+            }
+        }
+    }
 }
 
 
@@ -486,6 +562,31 @@
     /*******************************************************/
     
     
+    .footer{
+        height: 610px;
+    }
+        
+    .foot-upper{
+        top: 280px;
+    }
+    
+    .foot-lower{
+        top: 300px;
+    }
+    
+    .foot-social{
+        .social-icons{
+            div:not(:last-child){
+                margin-right: 5px;
+            }
+        }
+    }
+
+    .copyright{
+	    top: 585px;
+    }
+    
+    
     
 }
 
@@ -504,5 +605,5 @@
 		#welcome-text{
 			display: none;
 		}
-	}
+	} 
 }

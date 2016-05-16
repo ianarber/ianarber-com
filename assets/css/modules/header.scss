@@ -131,7 +131,7 @@
 .menu-list-1{
 	margin-right: 10px;
 	li:not(:last-child){
-		margin-right: 50px;
+		margin-right: 45px;
 	}
 }
 
@@ -148,7 +148,7 @@
 	transition: font-size 0.3s ease-in-out;
     letter-spacing: 2px;
     &:nth-child(-n+2){
-        margin-right: 40px;
+        margin-right: 35px;
 		transition: margin-right 0.3s ease-in-out;
     }
 }
