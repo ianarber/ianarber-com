@@ -3705,6 +3705,7 @@ figure {
 .direct {
   margin-top: 25px; }
   .direct i {
+    cursor: pointer;
     margin: 10px 0px;
     font-size: 110%;
     padding: 12px 12px; }
@@ -3734,11 +3735,13 @@ figure {
 
 .footer {
   position: relative;
-  height: 360px;
+  height: 400px;
   background-color: #333;
   -webkit-box-shadow: 0 0 2px 1px #222;
           box-shadow: 0 0 2px 1px #222;
   color: #efefef; }
+  .footer a {
+    color: #efefef; }
 
 .testimonials {
   position: absolute;
@@ -3826,6 +3829,9 @@ figure {
     font-size: 80%;
     margin-bottom: 5px; }
 
+.foot-test {
+  top: 200px; }
+
 .foot-about img {
   width: 50px;
   border: 2px solid #3c3c3c;
@@ -3835,12 +3841,15 @@ figure {
 .foot-about p {
   font-size: 75%; }
 
-.foot-map ul {
-  list-style: none;
-  font-size: 75%; }
-
-.foot-map li {
-  margin-bottom: 1px; }
+.foot-map {
+  top: 175px; }
+  .foot-map ul {
+    list-style: none;
+    font-size: 75%; }
+  .foot-map li {
+    display: inline-block;
+    margin-bottom: 1px;
+    margin-right: 5px; }
 
 .foot-social .social-icons {
   margin-top: 40px;
@@ -3848,12 +3857,17 @@ figure {
   .foot-social .social-icons div:not(:last-child) {
     margin-right: 10px; }
   .foot-social .social-icons i {
-    border: 2px solid;
+    border: 2px solid #efefef;
     -webkit-border-radius: 50%;
             border-radius: 50%; }
+    .foot-social .social-icons i:hover {
+      background: #efefef;
+      color: #333;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s; }
 
 .copyright {
-  top: 335px;
+  top: 370px;
   font-size: 60%;
   word-spacing: 2px;
   color: #898989; }

@@ -1,9 +1,12 @@
 .footer{
 	position: relative;
-	height: 360px;
+	height: 400px;
 	background-color: #333;
 	box-shadow: 0 0 2px 1px #222;
 	color: #efefef;
+    a{
+        color: #efefef;
+    }
 }
 
 .testimonials{
@@ -105,6 +108,10 @@
 	}
 }
 
+.foot-test{
+    top: 200px;
+}
+
 .foot-about{	
 	img{
 		width: 50px;
@@ -117,12 +124,15 @@
 }
 
 .foot-map{
+    top: 175px;
 	ul{
 		list-style: none;
 		font-size: 75%;
 	}
 	li{
+        display: inline-block;
 		margin-bottom: 1px;
+        margin-right: 5px;
 	}
 }
 
@@ -135,15 +145,20 @@
             margin-right: 10px;
         }
         i{
-            border: 2px solid;
+            border: 2px solid #efefef;
             border-radius: 50%;
+            &:hover{
+                background: #efefef;
+                color: #333;
+                transition: all 0.3s;
+            }
         }
 	}
 }
 
 
 .copyright{
-	top: 335px;
+	top: 370px;
 	font-size: 60%;
 	word-spacing: 2px;
 	color: #898989;
