@@ -3095,6 +3095,68 @@ figure {
     -webkit-transition: all 0.3s;
     transition: all 0.3s; }
 
+/******************FEATURE IMAGE STYLINGS FOR HOME PAGE INTRO AND ABOUT PAGES*****************/
+.profile-pic,
+.bio-pic {
+  position: absolute;
+  height: 450px;
+  margin: 0 auto;
+  top: 50px;
+  left: 0;
+  right: 0;
+  border: 5px solid #fff;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3); }
+
+/**********************POST TEXT CONTAINER STYLINGS - NEWS AND ABOUT PAGES*********************/
+.post-container {
+  width: 70%;
+  height: 1500px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto; }
+  .post-container .post-title {
+    margin-left: 14px;
+    margin-top: 5px;
+    display: inline-block; }
+  .post-container .post-date {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 75%;
+    color: #6f6f6f; }
+    .post-container .post-date li {
+      display: inline-block;
+      margin-right: 40px; }
+  .post-container blockquote {
+    display: inline-block;
+    margin: 12px 0;
+    border-left: 4px solid #d1d1d1;
+    color: #5f5f5f;
+    font-size: 90%; }
+    .post-container blockquote p {
+      margin-left: 10px;
+      padding: 3px 0px;
+      font-weight: 600; }
+    .post-container blockquote footer {
+      margin-top: -5px;
+      margin-left: 30px;
+      padding-bottom: 5px;
+      font-weight: 300; }
+    .post-container blockquote a {
+      color: #5f5f5f; }
+
+.post-heading {
+  font-size: 85%;
+  color: #313131;
+  font-weight: 600; }
+
+.post {
+  line-height: 28px;
+  word-spacing: 0.5px;
+  font-size: 80%; }
+
 /* style for whole page container exlucing mobile-nav */
 #container {
   width: 100%;
@@ -3320,24 +3382,14 @@ figure {
 .intro .social {
   margin-top: 520px; }
 
+/**futher stylings in globals.scss**/
 .profile-pic {
-  position: absolute;
-  height: 450px;
   width: 90%;
-  margin: 0 auto;
-  top: 50px;
-  left: 0;
-  right: 0;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(../img/mission-impossible-5-bg.png);
   background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/mission-impossible-5-bg.png);
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/mission-impossible-5-bg.png);
   background-size: cover;
-  background-position: center;
-  border: 5px solid #fff;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3); }
+  background-position: center; }
 
 .profile-pic #welcome-intro {
   position: absolute;
@@ -4202,35 +4254,7 @@ figure {
   .profile-pic #welcome-text {
     display: none; } }
 
-.post-container {
-  width: 70%;
-  height: 1500px;
-  margin-top: 150px;
-  margin-left: auto;
-  margin-right: auto; }
-  .post-container .post-title {
-    margin-left: 14px;
-    margin-top: 5px;
-    display: inline-block; }
-  .post-container .post-date {
-    display: inline-block;
-    margin-left: 10px;
-    font-size: 75%;
-    color: #6f6f6f; }
-    .post-container .post-date li {
-      display: inline-block;
-      margin-right: 40px; }
-  .post-container blockquote {
-    display: inline-block;
-    margin: 12px 0;
-    border-left: 4px solid #d1d1d1;
-    color: #5f5f5f;
-    font-weight: 600;
-    font-size: 90%; }
-    .post-container blockquote p {
-      margin-left: 10px;
-      padding: 3px 0; }
-
+/****Stylings for post-container class are in defined in globals.scss****/
 .post-image {
   position: relative;
   overflow: hidden; }
@@ -4262,16 +4286,10 @@ figure {
   transition: bottom 0.3s cubic-bezier(0.9, 0, 0.05, 1); }
 
 .post-heading {
-  margin: 5px 15px 0 15px;
-  font-size: 85%;
-  color: #313131;
-  font-weight: 600; }
+  margin: 5px 15px 0 15px; }
 
 .post {
-  margin: 20px 15px 0 15px;
-  line-height: 28px;
-  word-spacing: 0.5px;
-  font-size: 80%; }
+  margin: 20px 15px 0 15px; }
 
 #post-seperator {
   width: 20%;
@@ -4299,19 +4317,9 @@ figure {
   background-color: #efefef;
   border-top: 1px solid #efefef; }
 
+/**futher stylings in globals.scss**/
 .bio-pic {
-  position: absolute;
-  min-height: 450px;
-  width: 70%;
-  margin: 0 auto;
-  top: 50px;
-  left: 0;
-  right: 0;
-  border: 5px solid #fff;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3); }
+  width: 70%; }
 
 .bio-slideshow {
   list-style: none; }
@@ -4399,40 +4407,12 @@ figure {
     -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
             box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3); }
 
-.post-container {
-  width: 70%;
-  height: 1500px;
-  margin-top: 10px;
-  margin-left: auto;
-  margin-right: auto; }
-  .post-container blockquote {
-    display: inline-block;
-    margin: 12px 0;
-    border-left: 4px solid #d1d1d1;
-    color: #5f5f5f;
-    font-size: 90%; }
-    .post-container blockquote p {
-      margin-left: 10px;
-      padding: 3px 0px;
-      font-style: italic;
-      font-weight: 600; }
-    .post-container blockquote footer {
-      margin-top: -5px;
-      margin-left: 30px;
-      padding-bottom: 5px;
-      font-weight: 300; }
-    .post-container blockquote a {
-      color: #5f5f5f; }
+.bio-text blockquote p {
+  font-style: italic; }
 
-.post-heading {
+.bio-text .post-heading {
   margin: 5px 15px 0 15px;
-  padding-left: 150px;
-  font-size: 85%;
-  color: #313131;
-  font-weight: 600; }
+  padding-left: 150px; }
 
-.post {
-  margin: 35px 15px 0 15px;
-  line-height: 28px;
-  word-spacing: 0.5px;
-  font-size: 80%; }
+.bio-text .post {
+  margin: 35px 15px 0 15px; }

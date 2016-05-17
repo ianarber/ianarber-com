@@ -6,26 +6,11 @@
 	border-top: 1px solid #efefef;
 }
 
+/**futher stylings in globals.scss**/
 .bio-pic{
-	
-    
-    
-    position: absolute;
-	min-height: 450px;
 	width: 70%;
-	margin: 0 auto;
-	top: 50px;
-	left: 0;
-	right: 0;
-	
-	
-    
-    
-    
-    border: 5px solid #fff;
-	border-radius: 5px;
-	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
 }
+
 
 .bio-slideshow{
     list-style: none;
