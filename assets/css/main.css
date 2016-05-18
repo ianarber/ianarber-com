@@ -3080,10 +3080,11 @@ figure {
 
 .section-footer {
   margin: 20px auto 5px auto;
-  width: 100px;
+  width: 130px;
   text-transform: uppercase;
   font-size: 75%;
-  text-align: center; }
+  text-align: center;
+  letter-spacing: 1px; }
 
 .section-footer a {
   padding: 3px 6px;
@@ -3728,7 +3729,7 @@ figure {
     }
 } */
 .form {
-  height: 355px;
+  height: 390px;
   background-color: #fafafa; }
   .form i {
     border: 2px solid #0d2f52;
@@ -3761,7 +3762,8 @@ figure {
     letter-spacing: 2px; }
 
 .direct {
-  margin-top: 20px; }
+  margin-top: 25px;
+  position: relative; }
   .direct i {
     cursor: pointer;
     margin: 10px 0px;
@@ -3769,6 +3771,84 @@ figure {
     padding: 12px 12px; }
   .direct p {
     font-size: 85%; }
+  .direct .tooltip-form {
+    position: absolute;
+    opacity: 0;
+    background: #fafafa;
+    width: 90%;
+    left: 4px;
+    right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    pointer-events: none;
+    -webkit-transform: translateY(-30px);
+        -ms-transform: translateY(-30px);
+            transform: translateY(-30px);
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    border: 2px solid #0d2f52;
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
+    -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28); }
+    .direct .tooltip-form:after {
+      border-left: solid transparent 10px;
+      border-right: solid transparent 10px;
+      border-bottom: solid #0d2f52 10px;
+      top: -10px;
+      content: " ";
+      height: 0;
+      left: 50%;
+      margin-left: -13px;
+      position: absolute;
+      width: 0; }
+
+.tooltip-form.active {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: translateY(-20px);
+      -ms-transform: translateY(-20px);
+          transform: translateY(-20px); }
+
+#submit-form {
+  padding: 10px; }
+  #submit-form input,
+  #submit-form label,
+  #submit-form textarea {
+    font-size: 70%;
+    letter-spacing: 1px; }
+  #submit-form input[type=text],
+  #submit-form input[type=email],
+  #submit-form textarea {
+    border: 1px solid #0d2f52;
+    -webkit-border-radius: 2px;
+            border-radius: 2px;
+    padding: 5px;
+    margin-bottom: 8px;
+    outline: none; }
+  #submit-form input[name=_gotcha] {
+    display: none; }
+  #submit-form textarea {
+    width: 270px;
+    height: 120px;
+    resize: none; }
+  #submit-form div:nth-child(2) * {
+    vertical-align: middle; }
+  #submit-form input[type=submit] {
+    border: none;
+    background-color: #fafafa;
+    padding: 3px 6px;
+    margin-left: 10px;
+    text-transform: uppercase;
+    font-size: 75%;
+    text-align: center;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; }
+    #submit-form input[type=submit]:hover {
+      background-color: #0d2f52;
+      color: #fafafa;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s; }
 
 .form .social {
   margin-top: 25px; }
@@ -3778,7 +3858,7 @@ figure {
       margin-right: 10px; }
 
 .agent {
-  margin-top: 5px; }
+  margin-top: 10px; }
   .agent h6 {
     margin-top: 10px;
     font-size: 75%; }

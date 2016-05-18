@@ -1,5 +1,5 @@
 .form{
-	height: 355px;
+	height: 390px;
 	background-color: $backgroundColor;
     i{
         border: 2px solid $mainFontColor;
@@ -34,7 +34,7 @@
 }
 
 .direct{
-    margin-top: 20px;
+    margin-top: 25px;
     i{
         cursor: pointer;
         margin: 10px 0px;
@@ -44,8 +44,94 @@
     p{
         font-size: 85%;
     }
-
+    position: relative;
+    .tooltip-form{
+        position: absolute;
+        opacity: 0;
+        background: $backgroundColor;
+        width: 90%;
+        left: 4px;
+        right: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        pointer-events: none;
+        transform: translateY(-30px);
+        transition: all 0.2s ease-out;
+        border: 2px solid $mainFontColor;
+        border-radius: 3px;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+        &:after{
+            border-left: solid transparent 10px;
+            border-right: solid transparent 10px;
+            border-bottom: solid $mainFontColor 10px;
+            top: -10px;
+            content: " ";
+            height: 0;
+            left: 50%;
+            margin-left: -13px;
+            position: absolute;
+            width: 0;
+        }
+    }
 }
+
+.tooltip-form.active{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(-20px);
+}
+
+
+#submit-form{
+    padding: 10px;
+    input,
+    label,
+    textarea{
+        font-size: 70%;
+        letter-spacing: 1px;
+    }
+    input[type=text],
+    input[type=email],
+    textarea{
+        border: 1px solid $mainFontColor;
+        border-radius: 2px;
+        padding: 5px;
+        margin-bottom: 8px;
+        outline: none;
+    }
+    input[name=_gotcha]{
+        display: none;
+    }
+    textarea{
+        width: 270px;
+        height: 120px;
+        resize: none;
+    }
+    div:nth-child(2) *{
+        vertical-align: middle;
+    }
+    input[type=submit]{
+        border: none;
+        background-color: $backgroundColor;
+        padding: 3px 6px;
+        margin-left: 10px;
+        text-transform: uppercase;
+        font-size: 75%;
+        text-align: center;
+        transition: all 0.3s;
+        &:hover{
+            background-color: $mainFontColor;
+            color: $backgroundColor;
+            transition: all 0.3s;
+        }
+    }
+}
+
+
+
+
+
+
 
 .form .social{
     margin-top: 25px;
@@ -59,7 +145,7 @@
 
 
 .agent{
-	margin-top: 5px;
+	margin-top: 10px;
 	h6{
 		margin-top: 10px;
 		font-size: 75%;
