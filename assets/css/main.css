@@ -4419,13 +4419,13 @@ figure {
     -webkit-animation: imageAnimation 30s linear infinite 0s;
             animation: imageAnimation 30s linear infinite 0s; }
   .bio-slideshow li:nth-child(1) span {
-    background-image: url(../img/bio-background-1.jpg); }
+    background-image: url(../img/about-bio/bio-background-1.jpg); }
   .bio-slideshow li:nth-child(2) span {
-    background-image: url(../img/bio-background-2.jpg);
+    background-image: url(../img/about-bio/bio-background-2.jpg);
     -webkit-animation-delay: 10s;
             animation-delay: 10s; }
   .bio-slideshow li:nth-child(3) span {
-    background-image: url(../img/bio-background-3.jpg);
+    background-image: url(../img/about-bio/bio-background-3.jpg);
     -webkit-animation-delay: 20s;
             animation-delay: 20s; }
 
@@ -4498,7 +4498,7 @@ figure {
   margin: 35px 15px 0 15px; }
 
 .masonry-grid {
-  height: 1500px;
+  height: auto;
   margin-top: 130px;
   background-color: #fafafa; }
 
@@ -4523,7 +4523,6 @@ figure {
 
 /* Grid style */
 .grid-wrap {
-  border: 1px solid black;
   max-width: 80%;
   margin: 0 auto;
   padding: 0 1em 1.875em; }
@@ -4547,3 +4546,17 @@ figure {
 .grid figcaption {
   background: #e4e4e4;
   padding: 25px; }
+
+/* Example media queries (reduce number of columns and change slideshow layout) */
+@media screen and (max-width: 60em) {
+  /* responsive columns; see "Element sizing" on http://masonry.desandro.com/options.html */
+  .grid li {
+    width: 33.3%; } }
+
+@media screen and (max-width: 35em) {
+  .grid li {
+    width: 50%; } }
+
+@media screen and (max-width: 24em) {
+  .grid li {
+    width: 100%; } }

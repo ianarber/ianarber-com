@@ -3,7 +3,6 @@ layout: news
 title: BBC 2 Series - Quacks
 thumbnail: /assets/img/fill-murray-900x450.jpg
 caption: The cast of the new BBC comedy Quacks
-categories: news television
 heading: Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC
 excerpt_separator: <!--more-->
 ---

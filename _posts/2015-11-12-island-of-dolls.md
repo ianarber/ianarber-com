@@ -3,7 +3,6 @@ layout: news
 title: The Island of Dolls
 thumbnail: /assets/img/fill-murray-900x450.jpg
 caption: Loads of dolls
-categories: news television
 heading: Scary Island with Dolls is next!
 excerpt_separator: <!--more-->
 ---

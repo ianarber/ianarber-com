@@ -29,14 +29,14 @@
         animation: imageAnimation 30s linear infinite 0s;
     }
     li:nth-child(1) span{
-        background-image: url(../img/bio-background-1.jpg);
+        background-image: url(../img/about-bio/bio-background-1.jpg);
     }
     li:nth-child(2) span{
-        background-image: url(../img/bio-background-2.jpg);
+        background-image: url(../img/about-bio/bio-background-2.jpg);
         animation-delay: 10s;
     }
     li:nth-child(3) span{
-        background-image: url(../img/bio-background-3.jpg);
+        background-image: url(../img/about-bio/bio-background-3.jpg);
         animation-delay: 20s;
     }
 }

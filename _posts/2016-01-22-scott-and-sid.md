@@ -3,7 +3,6 @@ layout: news
 title: Scott and Sid
 thumbnail: /assets/img/fill-murray-900x450.jpg
 caption: The lads - scott and sid
-categories: news television
 heading: Ian will meet scott and sid to make music
 excerpt_separator: <!--more-->
 ---

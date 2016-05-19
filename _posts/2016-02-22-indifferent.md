@@ -3,7 +3,6 @@ layout: news
 title: Denise Van-Outen Onboard
 thumbnail: /assets/img/fill-murray-900x450.jpg
 caption: Denise Van-Outen Onboard joins the cast of Indifferent
-categories: news television
 heading: Denise Van-Outen has joined Hollywood greats Julian Glover and Isla Blair on the cast of feature-film "Indifferent".
 excerpt_separator: <!--more-->
 ---
