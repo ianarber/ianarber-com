@@ -230,13 +230,23 @@ figure{
 	}
 }
 
+.post-image,
+.post-credit-image{
+    position: relative;
+    overflow: hidden;
+    img{
+        display: block;
+    }
+}
+
 .post-heading{
     font-size: 85%;
     color: #313131;
     font-weight: 600;
 }
 
-.post{
+.post,
+.credit-post{
 	line-height: 28px;
 	word-spacing: 0.5px;
     font-size: 80%;

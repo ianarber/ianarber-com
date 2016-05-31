@@ -24,9 +24,22 @@
         <div id="wrapper" class="slide">
 
             <div class="post-container">
-                <figure class="post-image">
-                    <img src="/{{ page.thumbnail }}" alt="Photo" />
-                </figure>
+                <div class="post-credit-header">
+
+                    <figure class="post-credit-image">
+                        <img src="/{{ page.thumbnail }}" alt="Photo" />
+                    </figure>
+
+                    <div id="player"></div>
+
+                    {% if page.soundcloud %}
+                        <iframe class="frame" src="{{ page.soundcloud }}"></iframe>
+                    {% endif %}
+
+                    
+                </div>
+                
+                <div class="section"></div>
 
                 <div class="post-title">
                     <h2>{{ page.title }}</h2>
@@ -42,9 +55,7 @@
                     {{ page.synopsis }}
                 </div>
                 
-                
-
-                <div class="post">
+                <div class="credit-post">
                     <blockquote>
                         <p>
                             Genre: {{ page.genre }}</br>
@@ -55,7 +66,7 @@
                             {% endif %}
                                 
                             {% if page.producers %}
-                                Producer: {{ page.producers }}
+                                Producers: {{ page.producers }}
                             {% endif %}
                         </p>
                     </blockquote>

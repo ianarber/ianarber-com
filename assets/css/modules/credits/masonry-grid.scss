@@ -52,13 +52,6 @@
     }
 }
 
-
-
-
-
-
-
-
 .grid > li{
     width: 25%;
     float: left;
@@ -68,4 +61,39 @@
 .grid > li:hover figure{
 	opacity: 0.7;
 }
+
+
+
+
+/****Styling for blockquote text on credit post page***/
+
+.credit-post{
+    margin: 5px 15px 0 15px;
+}
+
+.post-credit-header{
+    width: 100%;
+    figure{
+        float: left;
+        width: 30%;
+    }
+    iframe{
+        float: left;
+        display: block;
+        border: none;
+        width: 70%;
+        height: 350px;
+        padding: 20px 50px 0px 60px;
+    }
+}
+
+.post-credit-image{
+    img{
+       width: 90%;
+    }
+}
+
+
+
+
 

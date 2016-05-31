@@ -17,10 +17,19 @@
                         <figcaption>
                             <h5>{{ post.title }} ({{ post.year }})</h5>
                             <p id="role">{{ post.role }}</p>
-                            <p>Genre: {{ post.genre }}</p>
-                            <p>Director: {{ post.director }}</p>
-
-
+                            <p><b>Genre:</b> {{ post.genre }}</p>
+                            
+                            {% if post.director %}
+                                <p><b>Director:</b> {{ post.director }}</p>
+                            {% endif %}
+                            
+                            {% if post.writers %}
+                                <p><b>Writers:</b> {{ post.writers }}</p>
+                            {% endif %}
+                            
+                            {% if post.producers %}
+                                <p><b>Producers:</b> {{ post.producers }}</p>
+                            {% endif %}
 
                         </figcaption>
                     </figure>
