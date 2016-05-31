@@ -1,9 +1,10 @@
 ---
 layout: news
-title: Denise Van-Outen Onboard
+title: Scott and Sid
 thumbnail: /assets/img/fill-murray-900x450.jpg
-caption: Denise Van-Outen Onboard joins the cast of Indifferent
-heading: Denise Van-Outen has joined Hollywood greats Julian Glover and Isla Blair on the cast of feature-film "Indifferent".
+category: news
+caption: The lads - scott and sid
+heading: Ian will meet scott and sid to make music
 excerpt_separator: <!--more-->
 ---
 

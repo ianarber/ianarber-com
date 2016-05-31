@@ -4,8 +4,8 @@
 	</div>
 	
 	<div class="news-container">
-		<article class="news-preview">
-			{% for post in site.posts limit:1 %}
+	    {% for post in site.categories.news limit:4 %}
+	    <article class="news-preview">		
 			<figure>
 				<img src="{{ post.thumbnail }}" alt="Cast Photo"/>
 			</figure>
@@ -16,50 +16,8 @@
 			        <li><i class="fa-li fa fa-calendar-o"></i>{{ post.date | date_to_string }}</li>
 			    </ul>
 			</div>	
-			{% endfor %}
 		</article>
-		<article class="news-preview">
-			{% for post in site.posts offset:1 limit:1 %}
-			<figure>
-				<img src="{{ post.thumbnail }}" alt="Cast Photo"/>
-			</figure>
-			<a href="{{ post.url }}">{{ post.title }}</a>
-			{{ post.excerpt }}
-			<div class="post-byline">
-			    <ul class="fa-ul">
-			        <li><i class="fa-li fa fa-calendar-o"></i>{{ post.date | date_to_string }}</li>
-			    </ul>
-			</div>	
-			{% endfor %}
-		</article>
-		<article class="news-preview">
-			{% for post in site.posts offset:2 limit:1 %}
-			<figure>
-				<img src="{{ post.thumbnail }}" alt="Cast Photo"/>
-			</figure>
-			<a href="{{ post.url }}">{{ post.title }}</a>
-			{{ post.excerpt }}
-			<div class="post-byline">
-			    <ul class="fa-ul">
-			        <li><i class="fa-li fa fa-calendar-o"></i>{{ post.date | date_to_string }}</li>
-			    </ul>
-			</div>	
-			{% endfor %}
-		</article>
-		<article class="news-preview">
-			{% for post in site.posts offset:3 limit:1 %}
-			<figure>
-				<img src="{{ post.thumbnail }}" alt="Cast Photo"/>
-			</figure>
-			<a href="{{ post.url }}">{{ post.title }}</a>
-			{{ post.excerpt }}
-			<div class="post-byline">
-			    <ul class="fa-ul">
-			        <li><i class="fa-li fa fa-calendar-o"></i>{{ post.date | date_to_string }}</li>
-			    </ul>
-			</div>	
-			{% endfor %}
-		</article>
+        {% endfor %}		
 	</div>
 	
 <!-- 	<div id="social-feeds">

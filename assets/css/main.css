@@ -3115,7 +3115,7 @@ figure {
 .post-container {
   width: 70%;
   height: 1500px;
-  margin-top: 10px;
+  margin-top: 180px;
   margin-left: auto;
   margin-right: auto; }
   .post-container .post-title {
@@ -4166,7 +4166,9 @@ figure {
     bottom: 25px;
     font-size: 60%; }
   .showreel-background {
-    margin-top: 60px; } }
+    margin-top: 60px; }
+  .grid-wrap .grid li {
+    width: 33.3%; } }
 
 /* 481px to 760px */
 @media only screen and (max-width: 895px) {
@@ -4263,7 +4265,9 @@ figure {
   .foot-lower {
     top: 260px; }
   .copyright {
-    top: 540px; } }
+    top: 540px; }
+  .grid-wrap .grid li {
+    width: 50%; } }
 
 @media only screen and (max-width: 618px) {
   .news {
@@ -4296,7 +4300,9 @@ figure {
   .intro .social {
     margin-top: 500px; }
   .form .social .social-icons div:not(:last-child) {
-    margin-right: 5px; } }
+    margin-right: 5px; }
+  .grid-wrap .grid li {
+    width: 100%; } }
 
 @media only screen and (max-width: 459px) {
   .showreel-background {
@@ -4502,61 +4508,48 @@ figure {
   margin-top: 130px;
   background-color: #fafafa; }
 
-.grid-gallery ul {
+.grid-gallery {
+  width: 80%;
+  margin: 0 auto; }
+  .grid-gallery figure {
+    margin: 0; }
+    .grid-gallery figure img {
+      display: block;
+      width: 100%; }
+
+.grid-wrap {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 16px 30px; }
+
+.grid-wrap > ul {
   list-style: none;
   margin: 0;
   padding: 0; }
 
-.grid-gallery figure {
-  margin: 0; }
-
-.grid-gallery figure img {
-  display: block;
-  width: 100%; }
-
-.grid-gallery figcaption h3 {
-  margin: 0;
-  padding: 0 0 0.5em; }
-
-.grid-gallery figcaption p {
-  margin: 0; }
-
-/* Grid style */
-.grid-wrap {
-  max-width: 80%;
-  margin: 0 auto;
-  padding: 0 1em 1.875em; }
-
 .grid {
   margin: 0 auto; }
+  .grid figure {
+    padding: 15px;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s; }
+  .grid figcaption {
+    background: #efefef;
+    padding: 10px;
+    text-align: center; }
+    .grid figcaption p[id="role"] {
+      font-style: italic;
+      margin-bottom: 5px;
+      color: #0d2f52; }
+    .grid figcaption p {
+      color: #313131;
+      font-size: 75%;
+      margin-bottom: 1px; }
 
-.grid li {
+.grid > li {
   width: 25%;
   float: left;
   cursor: pointer; }
 
-.grid figure {
-  padding: 15px;
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s; }
-
-.grid li:hover figure {
+.grid > li:hover figure {
   opacity: 0.7; }
-
-.grid figcaption {
-  background: #e4e4e4;
-  padding: 25px; }
-
-/* Example media queries (reduce number of columns and change slideshow layout) */
-@media screen and (max-width: 60em) {
-  /* responsive columns; see "Element sizing" on http://masonry.desandro.com/options.html */
-  .grid li {
-    width: 33.3%; } }
-
-@media screen and (max-width: 35em) {
-  .grid li {
-    width: 50%; } }
-
-@media screen and (max-width: 24em) {
-  .grid li {
-    width: 100%; } }
