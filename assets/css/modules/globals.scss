@@ -43,6 +43,12 @@ figure{
 	padding: 0;
 }
 
+hr{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(49, 49, 49, 0), rgba(49, 49, 49, 0.75), rgba(49, 49, 49, 0));
+}
+
 /*******CHANGE FONT SIZE OF FLATICON FONTS*******/
 
 [class^="flaticon-"]:before,
@@ -192,7 +198,7 @@ figure{
 	margin-top: 180px;
 	margin-left: auto;
 	margin-right: auto;
-    .post-title {
+    .post-title{
         margin-left: 14px;
         margin-top: 5px;
         display: inline-block;

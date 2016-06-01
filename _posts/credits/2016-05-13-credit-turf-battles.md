@@ -1,5 +1,5 @@
 ---
-layout: credits
+layout: credit-info
 title: Turf Battles
 thumbnail: assets/img/credits-grid/credit-turf-battles.jpg
 category: credits

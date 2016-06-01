@@ -2966,6 +2966,13 @@ figure {
   margin: 0;
   padding: 0; }
 
+hr {
+  border: 0;
+  height: 1px;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(49, 49, 49, 0)), color-stop(rgba(49, 49, 49, 0.75)), to(rgba(49, 49, 49, 0)));
+  background-image: -webkit-linear-gradient(left, rgba(49, 49, 49, 0), rgba(49, 49, 49, 0.75), rgba(49, 49, 49, 0));
+  background-image: linear-gradient(to right, rgba(49, 49, 49, 0), rgba(49, 49, 49, 0.75), rgba(49, 49, 49, 0)); }
+
 /*******CHANGE FONT SIZE OF FLATICON FONTS*******/
 [class^="flaticon-"]:before,
 [class*=" flaticon-"]:before,
@@ -3191,8 +3198,8 @@ figure {
   -webkit-transform: translate(-200px, 0);
       -ms-transform: translate(-200px, 0);
           transform: translate(-200px, 0);
-  -webkit-transition: all .2s linear;
-  transition: all .2s linear; }
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out; }
 
 /***************************************************************************/
 #nav-toggle {
@@ -3204,7 +3211,7 @@ figure {
 
 .mobile-nav {
   position: fixed;
-  z-index: 101;
+  z-index: 106;
   top: 60px;
   right: -200px;
   bottom: 0;
@@ -3215,17 +3222,18 @@ figure {
   -webkit-transform: translate(0, 0);
       -ms-transform: translate(0, 0);
           transform: translate(0, 0);
-  -webkit-transition: all .2s linear;
-  transition: all .2s linear; }
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out; }
   .mobile-nav .mobile-nav-list {
     list-style: none; }
     .mobile-nav .mobile-nav-list .mobile-nav-item {
       display: block;
       padding: 10px 0 10px 20px;
       font-size: 75%;
-      color: #fafafa;
       border-top: 1px solid #4d4d4d;
       border-bottom: 1px solid #1a1a1a; }
+    .mobile-nav .mobile-nav-list a {
+      color: #fafafa; }
 
 /* header fixed - content will scroll underneath */
 #header {
@@ -4383,14 +4391,6 @@ figure {
 .post {
   margin: 20px 15px 0 15px; }
 
-#post-seperator {
-  width: 20%;
-  height: 4px;
-  margin-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  background: #d1d1d1; }
-
 .post-navigation {
   margin-top: 30px;
   font-size: 70%;
@@ -4478,12 +4478,7 @@ figure {
   height: 1395px;
   margin-top: 110px; }
   .bio-text hr {
-    border: 0;
-    height: 1px;
-    margin-bottom: 25px;
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(49, 49, 49, 0)), color-stop(rgba(49, 49, 49, 0.75)), to(rgba(49, 49, 49, 0)));
-    background-image: -webkit-linear-gradient(left, rgba(49, 49, 49, 0), rgba(49, 49, 49, 0.75), rgba(49, 49, 49, 0));
-    background-image: linear-gradient(to right, rgba(49, 49, 49, 0), rgba(49, 49, 49, 0.75), rgba(49, 49, 49, 0)); }
+    margin-bottom: 25px; }
 
 .bio-profile {
   width: 70%;
@@ -4545,11 +4540,12 @@ figure {
     text-align: center; }
     .grid figcaption p[id="role"] {
       font-style: italic;
+      font-size: 75%;
       margin-bottom: 5px;
       color: #0d2f52; }
     .grid figcaption p {
       color: #313131;
-      font-size: 75%;
+      font-size: 70%;
       margin-bottom: 1px; }
 
 .grid > li {
@@ -4560,22 +4556,31 @@ figure {
 .grid > li:hover figure {
   opacity: 0.7; }
 
-/****Styling for blockquote text on credit post page***/
+.post-container hr {
+  margin-top: 40px;
+  margin-bottom: 20px; }
+
 .credit-post {
   margin: 5px 15px 0 15px; }
 
-.post-credit-header {
-  width: 100%; }
-  .post-credit-header figure {
-    float: left;
-    width: 30%; }
-  .post-credit-header iframe {
-    float: left;
+.post-credit-image {
+  float: left;
+  width: 25%; }
+
+.post-credit-audio {
+  width: 75%;
+  float: left; }
+  .post-credit-audio iframe {
     display: block;
     border: none;
-    width: 70%;
-    height: 350px;
-    padding: 20px 50px 0px 60px; }
+    width: 100%;
+    margin: 0 auto;
+    height: 300px;
+    padding: 0% 10% 0% 5%; }
+
+.post-credit-header {
+  margin-bottom: 10px; }
 
 .post-credit-image img {
-  width: 90%; }
+  max-height: 300px;
+  margin: 0 auto; }

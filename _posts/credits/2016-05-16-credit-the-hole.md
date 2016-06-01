@@ -1,5 +1,5 @@
 ---
-layout: credits
+layout: credit-info
 title: The Hole
 thumbnail: assets/img/credits-grid/credit-the-hole.jpg
 category: credits
