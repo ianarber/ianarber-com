@@ -3114,24 +3114,22 @@ hr {
   overflow: hidden;
   transition: all 0.3s;
   color: #fafafa;
-  font-size: 75%; }
+  font-size: 70%; }
   .poster-caption ul {
     margin-top: 15px;
-    margin-left: 70px; }
-  .poster-caption #mi5-info {
-    margin-left: 40px; }
+    margin-left: 50px; }
   .poster-caption li {
     margin-top: 5px; }
-  .poster-caption #seperator {
+  .poster-caption .seperator {
     width: 20%;
     height: 1px;
     margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
     background: #fafafa; }
-  .poster-caption #credit-brief {
+  .poster-caption .credit-brief {
     margin-top: 15px;
-    font-size: 85%;
+    font-size: 90%;
     padding-left: 15px;
     padding-right: 15px; }
   .poster-caption .controls {
