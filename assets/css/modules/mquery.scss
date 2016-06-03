@@ -1,3 +1,5 @@
+/* TODO: clean up mquery file */
+
 /* 961px to 1060px */
 @media only screen and (max-width: 1645px){
     .grid-wrap {
@@ -21,27 +23,21 @@
 	#logo{
 		.ianarber{
 			font-size: 220%;
-			transition: font-size 0.3s ease-in-out;
 		}
 		.composer,
 		.film{
 			font-size: 60%;
-			transition: font-size 0.3s ease-in-out;
 		}
 		.composer{
 			&:before, &:after{
 				top: 5px;
 				width: 37.7%;
-				transition: top 0.3s ease-in-out;
-				transition: width 0.3s ease-in-out;
 			}
     	}
 		.film{
 			&:before, &:after{
 				top: 5px;
 				width: 29.6%;
-				transition: top 0.3s ease-in-out;
-				transition: width 0.3s ease-in-out;
 			}
     	}
 	}
@@ -49,7 +45,6 @@
 	.menu-list-1,
 	.menu-list-2{
     	margin-top: 23px;
-		transition: margin-top 0.3s ease-in-out;
 	}
      
     .menu-list-1{
@@ -61,10 +56,8 @@
 	.menu-items-1,
 	.menu-items-2{
 		font-size: 70%;
-		transition: font-size 0.3s ease-in-out;
 		&:nth-child(-n+2){
 			margin-right: 30px;
-			transition: margin-right 0.3s ease-in-out;
 		}
 	}
 	
@@ -203,34 +196,41 @@
 /* 761px to 860px */
 @media only screen and (max-width: 1005px){
 	#header{
-		height: 70px;
+		height: 60px;
 	}
 	
 	#logo{
 		.ianarber{
-			font-size: 160%;
+            top: -12px;
+			font-size: 150%;
 		}
 		.composer,
 		.film{
-			font-size: 50%;
+			font-size: 45%;
 		}
 		.composer{
 			&:before, &:after{
 				top: 4px;
-				width: 36.7%;
+				width: 37.1%;
 			}
     	}
 		.film{
 			&:before, &:after{
 				top: 4px;
-				width: 27.8%;
+				width: 28.9%;
 			}
-    	}
+    	}  
+        .composer {
+            top: -7px;
+        }
+        .film {
+            top: -15px;
+        }
 	}
 	
 	.menu-list-1,
 	.menu-list-2{
-    	margin-top: 3px;
+    	margin-top: 0px;
 	}
     
     .menu-list-1{
@@ -296,36 +296,9 @@
     .main-nav{
 		display: none;
     }
-    
-	#header{
-		height: 60px;
-	}
 	
 	#logo{
 		width: 100%;
-		
-		.ianarber{
-			font-size: 150%;
-			top: -12px;
-		}
-		.composer,
-		.film{
-			font-size: 45%;
-		}
-		.composer{
-			top: -7px;
-			&:before, &:after{
-				top: 4px;
-				width: 37.1%;
-			}
-    	}
-		.film{
-			top: -15px;
-			&:before, &:after{
-				top: 4px;
-				width: 28.9%;
-			}
-    	}
 	}
 
     #nav-toggle{

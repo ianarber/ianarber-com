@@ -478,349 +478,6 @@ th {
   .span-1-of-5 {
     width: 100%; } }
 
-/*  GRID OF SIX   ============================================================================= */
-.span-6-of-6 {
-  width: 100%; }
-
-.span-5-of-6 {
-  width: 83.06%; }
-
-.span-4-of-6 {
-  width: 66.13%; }
-
-.span-3-of-6 {
-  width: 49.2%; }
-
-.span-2-of-6 {
-  width: 32.26%; }
-
-.span-1-of-6 {
-  width: 15.33%; }
-
-/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
-@media only screen and (max-width: 480px) {
-  .span-6-of-6 {
-    width: 100%; }
-  .span-5-of-6 {
-    width: 100%; }
-  .span-4-of-6 {
-    width: 100%; }
-  .span-3-of-6 {
-    width: 100%; }
-  .span-2-of-6 {
-    width: 100%; }
-  .span-1-of-6 {
-    width: 100%; } }
-
-/*  GRID OF SEVEN   ============================================================================= */
-.span-7-of-7 {
-  width: 100%; }
-
-.span-6-of-7 {
-  width: 85.48%; }
-
-.span-5-of-7 {
-  width: 70.97%; }
-
-.span-4-of-7 {
-  width: 56.45%; }
-
-.span-3-of-7 {
-  width: 41.94%; }
-
-.span-2-of-7 {
-  width: 27.42%; }
-
-.span-1-of-7 {
-  width: 12.91%; }
-
-/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
-@media only screen and (max-width: 480px) {
-  .span-7-of-7 {
-    width: 100%; }
-  .span-6-of-7 {
-    width: 100%; }
-  .span-5-of-7 {
-    width: 100%; }
-  .span-4-of-7 {
-    width: 100%; }
-  .span-3-of-7 {
-    width: 100%; }
-  .span-2-of-7 {
-    width: 100%; }
-  .span-1-of-7 {
-    width: 100%; } }
-
-/*  GRID OF EIGHT   ============================================================================= */
-.span-8-of-8 {
-  width: 100%; }
-
-.span-7-of-8 {
-  width: 87.3%; }
-
-.span-6-of-8 {
-  width: 74.6%; }
-
-.span-5-of-8 {
-  width: 61.9%; }
-
-.span-4-of-8 {
-  width: 49.2%; }
-
-.span-3-of-8 {
-  width: 36.5%; }
-
-.span-2-of-8 {
-  width: 23.8%; }
-
-.span-1-of-8 {
-  width: 11.1%; }
-
-/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
-@media only screen and (max-width: 480px) {
-  .span-8-of-8 {
-    width: 100%; }
-  .span-7-of-8 {
-    width: 100%; }
-  .span-6-of-8 {
-    width: 100%; }
-  .span-5-of-8 {
-    width: 100%; }
-  .span-4-of-8 {
-    width: 100%; }
-  .span-3-of-8 {
-    width: 100%; }
-  .span-2-of-8 {
-    width: 100%; }
-  .span-1-of-8 {
-    width: 100%; } }
-
-/*  GRID OF NINE   ============================================================================= */
-.span-9-of-9 {
-  width: 100%; }
-
-.span-8-of-9 {
-  width: 88.71%; }
-
-.span-7-of-9 {
-  width: 77.42%; }
-
-.span-6-of-9 {
-  width: 66.13%; }
-
-.span-5-of-9 {
-  width: 54.84%; }
-
-.span-4-of-9 {
-  width: 43.55%; }
-
-.span-3-of-9 {
-  width: 32.26%; }
-
-.span-2-of-9 {
-  width: 20.97%; }
-
-.span-1-of-9 {
-  width: 9.68%; }
-
-/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
-@media only screen and (max-width: 480px) {
-  .span-9-of-9 {
-    width: 100%; }
-  .span-8-of-9 {
-    width: 100%; }
-  .span-7-of-9 {
-    width: 100%; }
-  .span-6-of-9 {
-    width: 100%; }
-  .span-5-of-9 {
-    width: 100%; }
-  .span-4-of-9 {
-    width: 100%; }
-  .span-3-of-9 {
-    width: 100%; }
-  .span-2-of-9 {
-    width: 100%; }
-  .span-1-of-9 {
-    width: 100%; } }
-
-/*  GRID OF TEN   ============================================================================= */
-.span-10-of-10 {
-  width: 100%; }
-
-.span-9-of-10 {
-  width: 89.84%; }
-
-.span-8-of-10 {
-  width: 79.68%; }
-
-.span-7-of-10 {
-  width: 69.52%; }
-
-.span-6-of-10 {
-  width: 59.36%; }
-
-.span-5-of-10 {
-  width: 49.2%; }
-
-.span-4-of-10 {
-  width: 39.04%; }
-
-.span-3-of-10 {
-  width: 28.88%; }
-
-.span-2-of-10 {
-  width: 18.72%; }
-
-.span-1-of-10 {
-  width: 8.56%; }
-
-/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
-@media only screen and (max-width: 480px) {
-  .span-10-of-10 {
-    width: 100%; }
-  .span-9-of-10 {
-    width: 100%; }
-  .span-8-of-10 {
-    width: 100%; }
-  .span-7-of-10 {
-    width: 100%; }
-  .span-6-of-10 {
-    width: 100%; }
-  .span-5-of-10 {
-    width: 100%; }
-  .span-4-of-10 {
-    width: 100%; }
-  .span-3-of-10 {
-    width: 100%; }
-  .span-2-of-10 {
-    width: 100%; }
-  .span-1-of-10 {
-    width: 100%; } }
-
-/*  GRID OF ELEVEN   ============================================================================= */
-.span-11-of-11 {
-  width: 100%; }
-
-.span-10-of-11 {
-  width: 90.76%; }
-
-.span-9-of-11 {
-  width: 81.52%; }
-
-.span-8-of-11 {
-  width: 72.29%; }
-
-.span-7-of-11 {
-  width: 63.05%; }
-
-.span-6-of-11 {
-  width: 53.81%; }
-
-.span-5-of-11 {
-  width: 44.58%; }
-
-.span-4-of-11 {
-  width: 35.34%; }
-
-.span-3-of-11 {
-  width: 26.1%; }
-
-.span-2-of-11 {
-  width: 16.87%; }
-
-.span-1-of-11 {
-  width: 7.63%; }
-
-/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
-@media only screen and (max-width: 480px) {
-  .span-11-of-11 {
-    width: 100%; }
-  .span-10-of-11 {
-    width: 100%; }
-  .span-9-of-11 {
-    width: 100%; }
-  .span-8-of-11 {
-    width: 100%; }
-  .span-7-of-11 {
-    width: 100%; }
-  .span-6-of-11 {
-    width: 100%; }
-  .span-5-of-11 {
-    width: 100%; }
-  .span-4-of-11 {
-    width: 100%; }
-  .span-3-of-11 {
-    width: 100%; }
-  .span-2-of-11 {
-    width: 100%; }
-  .span-1-of-11 {
-    width: 100%; } }
-
-/*  GRID OF TWELVE   ============================================================================= */
-.span-12-of-12 {
-  width: 100%; }
-
-.span-11-of-12 {
-  width: 91.53%; }
-
-.span-10-of-12 {
-  width: 83.06%; }
-
-.span-9-of-12 {
-  width: 74.6%; }
-
-.span-8-of-12 {
-  width: 66.13%; }
-
-.span-7-of-12 {
-  width: 57.66%; }
-
-.span-6-of-12 {
-  width: 49.2%; }
-
-.span-5-of-12 {
-  width: 40.73%; }
-
-.span-4-of-12 {
-  width: 32.26%; }
-
-.span-3-of-12 {
-  width: 23.8%; }
-
-.span-2-of-12 {
-  width: 15.33%; }
-
-.span-1-of-12 {
-  width: 6.86%; }
-
-/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
-@media only screen and (max-width: 480px) {
-  .span-12-of-12 {
-    width: 100%; }
-  .span-11-of-12 {
-    width: 100%; }
-  .span-10-of-12 {
-    width: 100%; }
-  .span-9-of-12 {
-    width: 100%; }
-  .span-8-of-12 {
-    width: 100%; }
-  .span-7-of-12 {
-    width: 100%; }
-  .span-6-of-12 {
-    width: 100%; }
-  .span-5-of-12 {
-    width: 100%; }
-  .span-4-of-12 {
-    width: 100%; }
-  .span-3-of-12 {
-    width: 100%; }
-  .span-2-of-12 {
-    width: 100%; }
-  .span-1-of-12 {
-    width: 100%; } }
-
 /*
   	Flaticon icon font: Flaticon
   	Creation date: 10/03/2016 20:44
@@ -3174,7 +2831,7 @@ hr {
   word-spacing: 0.5px;
   font-size: 80%; }
 
-/* style for whole page container exlucing mobile-nav */
+/* style for whole page container excluding mobile-nav */
 #container {
   width: 100%;
   position: absolute;
@@ -3201,7 +2858,6 @@ hr {
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out; }
 
-/***************************************************************************/
 #nav-toggle {
   display: none;
   position: absolute;
@@ -3243,7 +2899,9 @@ hr {
   z-index: 100;
   background-color: #fafafa;
   -webkit-box-shadow: inset 0px -1px 3px rgba(0, 0, 0, 0.3);
-          box-shadow: inset 0px -1px 3px rgba(0, 0, 0, 0.3); }
+          box-shadow: inset 0px -1px 3px rgba(0, 0, 0, 0.3);
+  -webkit-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out; }
 
 .ianarber {
   position: relative;
@@ -3251,16 +2909,16 @@ hr {
   font-size: 250%;
   letter-spacing: 5px;
   font-weight: 700;
-  -webkit-transition: font-size 0.3s ease-in-out;
-  transition: font-size 0.3s ease-in-out; }
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
 
 .composer,
 .film {
   position: relative;
   font-size: 70%;
   font-weight: 700;
-  -webkit-transition: font-size 0.3s ease-in-out;
-  transition: font-size 0.3s ease-in-out; }
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
 
 #logo {
   text-align: center;
@@ -3269,8 +2927,7 @@ hr {
   #logo .composer {
     display: table;
     margin: 0 auto;
-    top: 6px;
-    /* pseudo classes for line-out style */ }
+    top: 6px; }
     #logo .composer:before, #logo .composer:after {
       border-top: 2px solid #0d2f52;
       content: '';
@@ -3278,10 +2935,8 @@ hr {
       position: relative;
       top: 7px;
       width: 37.2%;
-      -webkit-transition: top 0.3s ease-in-out;
-      transition: top 0.3s ease-in-out;
-      -webkit-transition: width 0.3s ease-in-out;
-      transition: width 0.3s ease-in-out; }
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
     #logo .composer:before {
       right: 1.8%; }
     #logo .composer:after {
@@ -3297,72 +2952,69 @@ hr {
       position: relative;
       top: 7px;
       width: 28.5%;
-      -webkit-transition: top 0.3s ease-in-out;
-      transition: top 0.3s ease-in-out;
-      -webkit-transition: width 0.3s ease-in-out;
-      transition: width 0.3s ease-in-out; }
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
     #logo .film:before {
       right: 1.8%; }
     #logo .film:after {
       right: -1.4%; }
 
 /* pre-written classes to allow collapseHeader.js file to remove/add pesudo classes */
-.jscomposer {
-  display: table;
-  margin: 0 auto;
-  top: -5px; }
-  .jscomposer:before, .jscomposer:after {
-    border-top: 2px solid #0d2f52;
-    content: '';
-    display: table-cell;
-    position: relative;
-    top: 4px;
-    width: 37.1%;
-    -webkit-transition: top 0.3s ease-in-out;
-    transition: top 0.3s ease-in-out;
-    -webkit-transition: width 0.3s ease-in-out;
-    transition: width 0.3s ease-in-out; }
-  .jscomposer:before {
-    right: 1.7%; }
-  .jscomposer:after {
-    right: -1%; }
+/***************************************************************************/
+/*** shrink class that will be applied to header via collapseHeader.js on scroll ***/
+#header.shunk-header {
+  height: 60px; }
 
-.jsfilm {
-  display: table;
-  margin: 0 auto;
-  top: -14px; }
-  .jsfilm:before, .jsfilm:after {
-    border-top: 2px solid #0d2f52;
-    content: '';
-    display: table-cell;
-    position: relative;
-    top: 4px;
-    width: 28.7%;
-    -webkit-transition: top 0.3s ease-in-out;
-    transition: top 0.3s ease-in-out;
-    -webkit-transition: width 0.3s ease-in-out;
-    transition: width 0.3s ease-in-out; }
-  .jsfilm:before {
-    right: 1.8%; }
-  .jsfilm:after {
-    right: -1.5%; }
+#header.shunk-header .ianarber {
+  top: -12px;
+  font-size: 150%; }
 
-.jscomposer,
-.jsfilm {
-  position: relative;
-  font-size: 45%;
-  font-weight: 700;
-  -webkit-transition: font-size 0.3s ease-in-out;
-  transition: font-size 0.3s ease-in-out;
-  -webkit-transition: top 0.3s ease-in-out;
-  transition: top 0.3s ease-in-out; }
+#header.shunk-header .menu-list-1,
+#header.shunk-header .menu-list-2 {
+  margin-top: 0px; }
+
+#header.shunk-header .menu-items-1,
+#header.shunk-header .menu-items-2 {
+  font-size: 65%; }
+
+#header.shunk-header .composer {
+  top: -7px; }
+
+#header.shunk-header .composer:before,
+#header.shunk-header .composer:after {
+  top: 4px;
+  width: 37.1%; }
+
+#header.shunk-header .composer:before {
+  right: 1.7%; }
+
+#header.shunk-header .composer:after {
+  right: -1%; }
+
+#header.shunk-header .film {
+  top: -15px; }
+
+#header.shunk-header .film:before,
+#header.shunk-header .film:after {
+  top: 4px;
+  width: 28.9%; }
+
+#header.shunk-header .film:before {
+  right: 1.8%; }
+
+#header.shunk-header .film:after {
+  right: -1.5%; }
+
+#header.shunk-header .composer,
+#header.shunk-header .film {
+  font-size: 45%; }
 
 /***************************************************************************/
 .menu-list-1,
 .menu-list-2 {
   margin-top: 30px;
-  -webkit-transition: margin-top 0.3s ease-in-out;
-  transition: margin-top 0.3s ease-in-out; }
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
 
 .menu-list-1 {
   margin-right: 10px; }
@@ -3378,14 +3030,12 @@ hr {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 75%;
-  -webkit-transition: font-size 0.3s ease-in-out;
-  transition: font-size 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   letter-spacing: 2px; }
   .menu-items-1:nth-child(-n+2),
   .menu-items-2:nth-child(-n+2) {
-    margin-right: 35px;
-    -webkit-transition: margin-right 0.3s ease-in-out;
-    transition: margin-right 0.3s ease-in-out; }
+    margin-right: 35px; }
 
 .menu-items-2:last-child {
   margin-right: 20px; }
@@ -3403,6 +3053,7 @@ hr {
 /**futher stylings in globals.scss**/
 .profile-pic {
   width: 90%;
+  /* TODO: get actual background images */
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(../img/mission-impossible-5-bg.png);
   background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/mission-impossible-5-bg.png);
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/mission-impossible-5-bg.png);
@@ -3456,52 +3107,6 @@ hr {
   text-align: right;
   background-color: rgba(0, 0, 0, 0.8); }
 
-/* .social-slide{
-    height: 48px;
-    width: 48px;
-    margin: 10px;
-    float: left;
-    transition: all 0.3s ease-in-out;
-	&:hover{
-		background-position: 0px -48px;
-		//box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.8);
-		transition: all 0.3s ease-in-out;
-	}
-}
-
-.social-btns{
-	width: 40%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 515px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	a{
-		flex: auto;
-	}
-}
-
-.twitter-hover{
-    background-image: url(../img/twitter-hover.png);
-}
-
-.facebook-hover{
-    margin-left: 22px;
-    background-image: url(../img/facebook-hover.png);
-}
-
-.soundcloud-hover{
-    background-image: url(../img/soundcloud-hover.png);
-}
-
-.skype-hover{
-    background-image: url(../img/skype-hover.png);
-}
-
-.linkedin-hover{
-    background-image: url(../img/linkedin-hover.png);
-} */
 .showreel-background {
   background-color: #fafafa;
   height: 995px;
@@ -3549,6 +3154,7 @@ hr {
   overflow: hidden;
   max-height: 305px; }
 
+/* TODO: fix styling due to position changes using liquid template */
 .poster-caption {
   display: block;
   position: absolute;
@@ -3607,69 +3213,6 @@ hr {
   width: 80%;
   height: 450px; }
 
-/*********************************************************
------------ORIGINAL MOUSE OVER STYLINGS-------------
-
-.poster-caption{
-	position: absolute;
-	z-index: 3;
-	top: 195px;
-	left: -8px;
-	p{
-		display: inline-block;
-		background: rgba(242, 242, 242, 1);
-		color: rgba(0, 0, 0, 0.8);
-		transform: translate3d(30px,0,0);
-		margin: 0 0 2px;
-    	padding: 3px 8px;
-    	font-size: 75%;
-		font-weight: 600;
-		transition: transform 0.35s;
-		transform: translate3d(-160px,0,0);
-	}
-	.controls{
-		transform: translate3d(30px,0,0);
-		transition: transform 0.35s;
-		transform: translate3d(-160px,0,0);
-		i{
-			font-size: 120%;
-			background: rgba(242, 242, 242, 1);
-			color: rgba(0, 0, 0, 0.8);
-			margin-top: 2px;
-    		padding: 5px 10px;
-			cursor: pointer;
-		}
-	}
-}
-
-.poster:hover .poster-caption p,
-.poster:hover .poster-caption .controls{
-	transform: translate3d(22px,0,0);
-}
-.poster:hover img{
-	transform: scale3d(1.03,1.03,1);
-}
-
-//.poster:hover .poster-figure{
-	//box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.8);
-	//transition: box-shadow 0.5s;
-//}
-
-.poster-caption p:first-child{
-	transition-delay: 0s;
-}
-
-.poster-caption p:nth-of-type(2){
-	transition-delay: 0.05s;
-}
-
-.poster-caption .controls{
-	transition-delay: 0.10s;
-}
-
-
-
-/***********************************************************/
 .news {
   height: 445px;
   background-color: #efefef; }
@@ -3722,29 +3265,6 @@ hr {
     .news-preview .post-byline li {
       margin-bottom: 5px; }
 
-/* #social-feeds{
-    width: 70%;
-    height: 300px;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid black;
-    #twitterfeed{
-        float: left;
-        border: 1px solid blue;
-        width: 60%;
-        height: auto;
-        padding-left: 60px;
-        padding-right: 60px;
-
-    }
-    #instafeed{
-        float: left;
-        border: 1px solid red;
-        width: 40%;
-        height: auto;
-    }
-} */
 .form {
   height: 390px;
   background-color: #fafafa; }
@@ -3780,7 +3300,8 @@ hr {
 
 .direct {
   margin-top: 25px;
-  position: relative; }
+  position: relative;
+  /* will overlay when mail icon is clicked */ }
   .direct i {
     cursor: pointer;
     margin: 10px 0px;
@@ -3898,6 +3419,8 @@ hr {
   .footer a {
     color: #efefef; }
 
+/* set width equal to data-pos attribute. will need to be reduced as browser
+width decreases */
 .testimonials {
   position: absolute;
   width: 1055px;
@@ -3912,6 +3435,7 @@ hr {
   .testimonials i {
     font-size: 75%; }
 
+/* set width to 5 times the data-pos attribute value to fit 5 testimonials */
 #testimonial-wrapper {
   width: 5275px;
   font-size: 70%;
@@ -4028,6 +3552,7 @@ hr {
   word-spacing: 2px;
   color: #898989; }
 
+/* TODO: clean up mquery file */
 /* 961px to 1060px */
 @media only screen and (max-width: 1232px) {
   .news {
@@ -4037,45 +3562,27 @@ hr {
   #header {
     height: 110px; }
   #logo .ianarber {
-    font-size: 220%;
-    -webkit-transition: font-size 0.3s ease-in-out;
-    transition: font-size 0.3s ease-in-out; }
+    font-size: 220%; }
   #logo .composer,
   #logo .film {
-    font-size: 60%;
-    -webkit-transition: font-size 0.3s ease-in-out;
-    transition: font-size 0.3s ease-in-out; }
+    font-size: 60%; }
   #logo .composer:before, #logo .composer:after {
     top: 5px;
-    width: 37.7%;
-    -webkit-transition: top 0.3s ease-in-out;
-    transition: top 0.3s ease-in-out;
-    -webkit-transition: width 0.3s ease-in-out;
-    transition: width 0.3s ease-in-out; }
+    width: 37.7%; }
   #logo .film:before, #logo .film:after {
     top: 5px;
-    width: 29.6%;
-    -webkit-transition: top 0.3s ease-in-out;
-    transition: top 0.3s ease-in-out;
-    -webkit-transition: width 0.3s ease-in-out;
-    transition: width 0.3s ease-in-out; }
+    width: 29.6%; }
   .menu-list-1,
   .menu-list-2 {
-    margin-top: 23px;
-    -webkit-transition: margin-top 0.3s ease-in-out;
-    transition: margin-top 0.3s ease-in-out; }
+    margin-top: 23px; }
   .menu-list-1 li:not(:last-child) {
     margin-right: 40px; }
   .menu-items-1,
   .menu-items-2 {
-    font-size: 70%;
-    -webkit-transition: font-size 0.3s ease-in-out;
-    transition: font-size 0.3s ease-in-out; }
+    font-size: 70%; }
     .menu-items-1:nth-child(-n+2),
     .menu-items-2:nth-child(-n+2) {
-      margin-right: 30px;
-      -webkit-transition: margin-right 0.3s ease-in-out;
-      transition: margin-right 0.3s ease-in-out; }
+      margin-right: 30px; }
   .intro {
     top: 100px; }
   .profile-pic #welcome-intro {
@@ -4145,21 +3652,26 @@ hr {
 /* 761px to 860px */
 @media only screen and (max-width: 1005px) {
   #header {
-    height: 70px; }
+    height: 60px; }
   #logo .ianarber {
-    font-size: 160%; }
+    top: -12px;
+    font-size: 150%; }
   #logo .composer,
   #logo .film {
-    font-size: 50%; }
+    font-size: 45%; }
   #logo .composer:before, #logo .composer:after {
     top: 4px;
-    width: 36.7%; }
+    width: 37.1%; }
   #logo .film:before, #logo .film:after {
     top: 4px;
-    width: 27.8%; }
+    width: 28.9%; }
+  #logo .composer {
+    top: -7px; }
+  #logo .film {
+    top: -15px; }
   .menu-list-1,
   .menu-list-2 {
-    margin-top: 3px; }
+    margin-top: 0px; }
   .menu-list-1 li:not(:last-child) {
     margin-right: 30px; }
   .menu-items-1,
@@ -4191,26 +3703,8 @@ hr {
 @media only screen and (max-width: 895px) {
   .main-nav {
     display: none; }
-  #header {
-    height: 60px; }
   #logo {
     width: 100%; }
-    #logo .ianarber {
-      font-size: 150%;
-      top: -12px; }
-    #logo .composer,
-    #logo .film {
-      font-size: 45%; }
-    #logo .composer {
-      top: -7px; }
-      #logo .composer:before, #logo .composer:after {
-        top: 4px;
-        width: 37.1%; }
-    #logo .film {
-      top: -15px; }
-      #logo .film:before, #logo .film:after {
-        top: 4px;
-        width: 28.9%; }
   #nav-toggle {
     display: block; }
   .intro {
@@ -4511,7 +4005,9 @@ hr {
 
 .grid-gallery {
   width: 80%;
-  margin: 0 auto; }
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto; }
   .grid-gallery figure {
     margin: 0; }
     .grid-gallery figure img {

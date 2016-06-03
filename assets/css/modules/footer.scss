@@ -9,8 +9,9 @@
     }
 }
 
+/* set width equal to data-pos attribute. will need to be reduced as browser
+width decreases */
 .testimonials{
-    //border: 1px solid red;
 	position: absolute;
 	width: 1055px;
 	top: 5px;
@@ -27,6 +28,7 @@
 	}
 }
 
+/* set width to 5 times the data-pos attribute value to fit 5 testimonials */
 #testimonial-wrapper{
 	width: 5275px;
 	font-size: 70%;
@@ -59,7 +61,6 @@
 			color: #898989;
 		}
 	}
-
 }
 
 #navLinks {
@@ -91,7 +92,6 @@
     color: #FFFFFF;
     outline-width: 7px;
 }
-
 
 .footer-info,
 .copyright{
@@ -137,7 +137,6 @@
 	}
 }
 
-
 .foot-social{
 	.social-icons{
 		margin-top: 40px;
@@ -157,24 +156,9 @@
 	}
 }
 
-
 .copyright{
 	top: 385px;
 	font-size: 60%;
 	word-spacing: 2px;
 	color: #898989;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

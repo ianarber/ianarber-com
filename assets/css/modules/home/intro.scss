@@ -10,15 +10,14 @@
 	margin-top: 520px;
 }
 
-
 /**futher stylings in globals.scss**/
 .profile-pic{
     width: 90%;
+    /* TODO: get actual background images */
 	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/mission-impossible-5-bg.png);
 	background-size: cover;
 	background-position: center;
 }
-
 
 .profile-pic{	
 	#welcome-intro{
@@ -69,56 +68,3 @@
 		background-color: rgba(0, 0, 0, 0.8);
 	}
 }
-
-
-
-
-
-
-
-/* .social-slide{
-    height: 48px;
-    width: 48px;
-    margin: 10px;
-    float: left;
-    transition: all 0.3s ease-in-out;
-	&:hover{
-		background-position: 0px -48px;
-		//box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.8);
-		transition: all 0.3s ease-in-out;
-	}
-}
-
-.social-btns{
-	width: 40%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 515px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	a{
-		flex: auto;
-	}
-}
-
-.twitter-hover{
-    background-image: url(../img/twitter-hover.png);
-}
-
-.facebook-hover{
-    margin-left: 22px;
-    background-image: url(../img/facebook-hover.png);
-}
-
-.soundcloud-hover{
-    background-image: url(../img/soundcloud-hover.png);
-}
-
-.skype-hover{
-    background-image: url(../img/skype-hover.png);
-}
-
-.linkedin-hover{
-    background-image: url(../img/linkedin-hover.png);
-} */

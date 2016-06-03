@@ -2,9 +2,8 @@
 	<div class="section-header">
 		<h4>Recent Credits</h4>
 	</div>
-	<!-- 5 movie posters defined in one row -->
+
 	<div class="poster-row">
-	
 
 	    {% for post in site.categories.credits limit:5 %}
 		<div class="poster" >
@@ -21,13 +20,13 @@
 						</ul>
 						<div id="seperator"></div>
 						<div id="credit-brief">{{ post.synopsis }}</div>
-						<!-- ~30s audio samples -->
+						<!-- TODO: Get 30s audio samples -->
 						<audio id="player">
 							<source src="assets/media/sample.ogg" type="audio/ogg">
 							<source src="assets/media/sample.mp3" type="audio/mp3"> Your browser does not support the audio element.
 						</audio>
 						<div class="controls">
-							<!-- REMOVE INLINE SCRIPTING!! -->
+							<!-- TODO: REMOVE INLINE SCRIPTING!! -->
 							<i class="fa fa-play-circle" onclick="document.getElementById('player').play()"></i>
 						</div>
 					</div>
@@ -35,14 +34,7 @@
 			</figure>
 		</div>
 	    {% endfor %}
-		
-		
-		
-		
-		
-		
-		
-		
+	
 	</div>	
 	
 	<div class="section-footer">
@@ -57,12 +49,5 @@
 	
 	<div class="section-footer">
 		<a href="#">Hear more</a>
-	</div>
-	
-	
-	
-	
-	
-	
+	</div>	
 </section>
-

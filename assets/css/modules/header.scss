@@ -6,6 +6,7 @@
 	z-index: 100;
 	background-color: $backgroundColor;
 	box-shadow: inset 0px -1px 3px rgba(0, 0, 0, 0.3);
+    transition: height 0.3s ease-in-out;
 }
 
 .ianarber {
@@ -15,8 +16,7 @@
     letter-spacing: 5px;
     font-weight: 700;
     //text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
-	transition: font-size 0.3s ease-in-out;
-	//transition: top 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
 .composer,
@@ -24,7 +24,7 @@
 	position: relative;
     font-size: 70%;
     font-weight: 700;
-	transition: font-size 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
 #logo{
@@ -35,7 +35,6 @@
         display: table;
         margin: 0 auto;
 		top: 6px;
-		/* pseudo classes for line-out style */
         &:before, &:after{
             border-top: 2px solid $mainFontColor;
             content: '';
@@ -44,8 +43,7 @@
             top: 7px;
             //width: 37.4%;
 			width: 37.2%;
-			transition: top 0.3s ease-in-out;
-			transition: width 0.3s ease-in-out;
+			transition: all 0.3s ease-in-out;
         }
         &:before { right: 1.8%; }
         &:after {
@@ -63,8 +61,7 @@
             position: relative;
             top: 7px;
             width: 28.5%;
-			transition: top 0.3s ease-in-out;
-			transition: width 0.3s ease-in-out;
+			transition: all 0.3s ease-in-out;
         }
         &:before { right: 1.8%; }
         &:after {
@@ -74,58 +71,130 @@
 }
 
 /* pre-written classes to allow collapseHeader.js file to remove/add pesudo classes */
-.jscomposer{
-	display: table;
-	margin: 0 auto;
-	top: -5px;
-	&:before, &:after{
-		border-top: 2px solid $mainFontColor;
-		content: '';
-		display: table-cell;
-		position: relative;
-		top: 4px;
-		width: 37.1%;
-		transition: top 0.3s ease-in-out;
-		transition: width 0.3s ease-in-out;
-	}
-	&:before { right: 1.7%; }
-	&:after {
-		right: -1%;
-	}
+//.jscomposer{
+//	display: table;
+//	margin: 0 auto;
+//	top: -5px;
+//	&:before, &:after{
+//		border-top: 2px solid $mainFontColor;
+//		content: '';
+//		display: table-cell;
+//		position: relative;
+//		top: 4px;
+//		width: 37.1%;
+//		transition: top 0.3s ease-in-out;
+//		transition: width 0.3s ease-in-out;
+//	}
+//	&:before { right: 1.7%; }
+//	&:after {
+//		right: -1%;
+//	}
+//}
+//.jsfilm{
+//	display: table;
+//	margin: 0 auto;
+//	top: -14px;
+//	&:before, &:after{
+//		border-top: 2px solid $mainFontColor;
+//		content: '';
+//		display: table-cell;
+//		position: relative;
+//		top: 4px;
+//		width: 28.7%;
+//		transition: top 0.3s ease-in-out;
+//		transition: width 0.3s ease-in-out;
+//	}
+//	&:before { right: 1.8%; }
+//	&:after {
+//		right: -1.5%;
+//	}
+//}
+//.jscomposer,
+//.jsfilm{
+//	position: relative;
+//    font-size: 45%;
+//    font-weight: 700;
+//	transition: font-size 0.3s ease-in-out;
+//	transition: top 0.3s ease-in-out;
+//}
+/***************************************************************************/
+
+
+/*** shrink class that will be applied to header via collapseHeader.js on scroll ***/
+
+#header.shunk-header{
+    height: 60px;
+
 }
-.jsfilm{
-	display: table;
-	margin: 0 auto;
-	top: -14px;
-	&:before, &:after{
-		border-top: 2px solid $mainFontColor;
-		content: '';
-		display: table-cell;
-		position: relative;
-		top: 4px;
-		width: 28.7%;
-		transition: top 0.3s ease-in-out;
-		transition: width 0.3s ease-in-out;
-	}
-	&:before { right: 1.8%; }
-	&:after {
-		right: -1.5%;
-	}
+
+#header.shunk-header .ianarber{
+    top: -12px;
+    font-size: 150%;
 }
-.jscomposer,
-.jsfilm{
-	position: relative;
+   
+
+#header.shunk-header .menu-list-1,
+#header.shunk-header .menu-list-2{
+    margin-top: 0px;
+}
+
+#header.shunk-header .menu-items-1,
+#header.shunk-header .menu-items-2{
+    font-size: 65%;
+}
+
+#header.shunk-header .composer{
+    top: -7px;
+
+}
+
+#header.shunk-header .composer:before,
+#header.shunk-header .composer:after{
+    top: 4px;
+    width: 37.1%;
+
+}
+
+#header.shunk-header .composer:before {
+    right: 1.7%;
+}
+
+#header.shunk-header .composer:after {
+    right: -1%;
+}
+
+#header.shunk-header .film{
+    top: -15px;
+
+}
+
+#header.shunk-header .film:before,
+#header.shunk-header .film:after{
+    top: 4px;
+    width: 28.9%;
+
+}
+
+#header.shunk-header .film:before {
+    right: 1.8%;
+}
+
+#header.shunk-header .film:after {
+    right: -1.5%;
+}
+
+#header.shunk-header .composer,
+#header.shunk-header .film{
     font-size: 45%;
-    font-weight: 700;
-	transition: font-size 0.3s ease-in-out;
-	transition: top 0.3s ease-in-out;
+
 }
+
 /***************************************************************************/
 
 .menu-list-1,
 .menu-list-2{
     margin-top: 30px;
-	transition: margin-top 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
 .menu-list-1{
@@ -145,11 +214,10 @@
     text-transform: uppercase;
     font-weight: 600;
     font-size: 75%;
-	transition: font-size 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
     letter-spacing: 2px;
     &:nth-child(-n+2){
         margin-right: 35px;
-		transition: margin-right 0.3s ease-in-out;
     }
 }
 

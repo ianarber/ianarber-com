@@ -1,7 +1,4 @@
 .showreel-background{
-	//background-image: url(../img/showreelBackground.png);
-	//background-size: cover;
-	//background-position: center;
 	background-color: $backgroundColor;
 	height: 995px;
 	margin-top: 110px;
@@ -15,7 +12,6 @@
 	display: flex;
 	flex-flow: wrap;
 	justify-content: space-around;
-    //TODO: When posters wrap in flex-box they need to be centered
 	.poster{
 		float: left;
 		flex: auto;
@@ -43,6 +39,7 @@
 	max-height: 305px;
 }
 
+/* TODO: fix styling due to position changes using liquid template */
 .poster-caption{
 	display: block;
 	position: absolute;
@@ -99,7 +96,6 @@
 	height: 100%;
 }
 
-
 .sc-player-frame{
 	display: block;
 	margin-top: 20px;
@@ -112,74 +108,3 @@
     width: 80%;
     height: 450px;
 }
-
-
-
-
-
-
-/*********************************************************
------------ORIGINAL MOUSE OVER STYLINGS-------------
-
-.poster-caption{
-	position: absolute;
-	z-index: 3;
-	top: 195px;
-	left: -8px;
-	p{
-		display: inline-block;
-		background: rgba(242, 242, 242, 1);
-		color: rgba(0, 0, 0, 0.8);
-		transform: translate3d(30px,0,0);
-		margin: 0 0 2px;
-    	padding: 3px 8px;
-    	font-size: 75%;
-		font-weight: 600;
-		transition: transform 0.35s;
-		transform: translate3d(-160px,0,0);
-	}
-	.controls{
-		transform: translate3d(30px,0,0);
-		transition: transform 0.35s;
-		transform: translate3d(-160px,0,0);
-		i{
-			font-size: 120%;
-			background: rgba(242, 242, 242, 1);
-			color: rgba(0, 0, 0, 0.8);
-			margin-top: 2px;
-    		padding: 5px 10px;
-			cursor: pointer;
-		}
-	}
-}
-
-.poster:hover .poster-caption p,
-.poster:hover .poster-caption .controls{
-	transform: translate3d(22px,0,0);
-}
-.poster:hover img{
-	transform: scale3d(1.03,1.03,1);
-}
-
-//.poster:hover .poster-figure{
-	//box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.8);
-	//transition: box-shadow 0.5s;
-//}
-
-.poster-caption p:first-child{
-	transition-delay: 0s;
-}
-
-.poster-caption p:nth-of-type(2){
-	transition-delay: 0.05s;
-}
-
-.poster-caption .controls{
-	transition-delay: 0.10s;
-}
-
-
-
-/***********************************************************/
-
-
