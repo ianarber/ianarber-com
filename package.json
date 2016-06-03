@@ -30,7 +30,20 @@
     "homepage": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync",
     "_aerobatic": {
         "build": {
-            "engine": "jekyll"
+            "engine": "jekyll",
         }
+        "router": [
+            {
+                "module": "basic-auth",
+                "path": "/clientarea",
+                "options": {
+                    "username": "$BASIC_AUTH_USERNAME",
+                    "password": "$BASIC_AUTH_PASSWORD"
+                }
+      },
+        {
+        "module": "webpage"
+      }
+    ]
     }
 }
