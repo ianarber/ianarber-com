@@ -1,7 +1,7 @@
 ---
 layout: credit-info
 title: We Love Paleo
-thumbnail: assets/img/credits-grid/credit-we-love-paleo.png
+thumbnail: assets/img/credits-grid/credit-we-love-paleo.jpg
 category: credits
 role: Composer
 type: Documentary

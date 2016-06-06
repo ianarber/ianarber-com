@@ -1,7 +1,7 @@
 ---
 layout: credit-info
 title: The Island of Dolls
-thumbnail: assets/img/credits-grid/credit-the-island-of-dolls.png
+thumbnail: assets/img/credits-grid/credit-the-island-of-dolls.jpg
 category: credits
 role: Composer
 type: Feature Film

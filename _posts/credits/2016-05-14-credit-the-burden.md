@@ -1,7 +1,7 @@
 ---
 layout: credit-info
 title: The Burden
-thumbnail: assets/img/credits-grid/credit-the-burden.png
+thumbnail: assets/img/credits-grid/credit-the-burden.jpg
 category: credits
 role: Composer
 type: Feature Film

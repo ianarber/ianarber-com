@@ -1,7 +1,7 @@
 ---
 layout: credit-info
 title: Indifferent
-thumbnail: assets/img/credits-grid/credit-indifferent.png
+thumbnail: assets/img/credits-grid/credit-indifferent.jpg
 category: credits
 role: Composer
 type: Feature Film
