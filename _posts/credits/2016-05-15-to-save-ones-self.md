@@ -1,7 +1,7 @@
 ---
 layout: credit-info
 title: To Save One's Self
-thumbnail: assets/img/credits-grid/credit-to-save-ones-self.jpg
+thumbnail: assets/img/credits-grid/to-save-ones-self.jpg
 category: credits
 role: Composer
 type: Short Film

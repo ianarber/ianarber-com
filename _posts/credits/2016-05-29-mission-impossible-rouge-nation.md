@@ -1,7 +1,7 @@
 ---
 layout: credit-info
 title: Mission Impossible - Rouge Nation
-thumbnail: assets/img/credits-grid/credit-mission-impossible-rouge-nation.jpg
+thumbnail: assets/img/credits-grid/mission-impossible-rouge-nation.jpg
 category: credits
 role: Assistant Composer
 type: Feature Film

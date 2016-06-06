@@ -1,12 +1,13 @@
 ---
 layout: credit-info
 title: Indifferent
-thumbnail: assets/img/credits-grid/credit-indifferent.jpg
+thumbnail: assets/img/credits-grid/indifferent.jpg
 category: credits
 role: Composer
 type: Feature Film
 year: 2016
 imdb: http://www.imdb.com/title/tt3004644
+sample: assets/media/indifferent_60s.mp3
 genre: Drama/Fanatasy
 director: Adam Lipsius
 writers: Emma Raine Walker

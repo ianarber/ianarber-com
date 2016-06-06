@@ -11,7 +11,7 @@ $(document).ready(function () {
     $(".credit-brief").each(function (i) {
         len = $(this).text().length;
         if (len > 110) {
-            $(this).text($(this).text().substr(0, 110) + '...');
+            $(this).text($(this).text().substr(0, 120) + '...');
         }
     });
 

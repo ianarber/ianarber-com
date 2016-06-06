@@ -1,7 +1,7 @@
 ---
 layout: credit-info
 title: Samsung Product Film
-thumbnail: assets/img/credits-grid/credit-samsung-product-film.jpg
+thumbnail: assets/img/credits-grid/samsung-product-film.jpg
 category: credits
 role: Composer
 type: Product Film

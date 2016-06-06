@@ -1,7 +1,7 @@
 ---
 layout: credit-info
 title: Changing Hands
-thumbnail: assets/img/credits-grid/credit-changing-hands.jpg
+thumbnail: assets/img/credits-grid/changing-hands.jpg
 category: credits
 type: Feature Film
 year: 2012

@@ -1,7 +1,7 @@
 ---
 layout: credit-info
 title: Turf Battles
-thumbnail: assets/img/credits-grid/credit-turf-battles.jpg
+thumbnail: assets/img/credits-grid/turf-battles.jpg
 category: credits
 role: Composer
 type: Video Game

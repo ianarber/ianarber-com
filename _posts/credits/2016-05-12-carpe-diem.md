@@ -1,7 +1,7 @@
 ---
 layout: credit-info
 title: Carpe Diem
-thumbnail: assets/img/credits-grid/credit-carpe-diem.jpg
+thumbnail: assets/img/credits-grid/carpe-diem.jpg
 category: credits
 role: Composer
 imdb: http://www.imdb.com/title/tt3271326

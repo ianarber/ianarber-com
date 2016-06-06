@@ -416,10 +416,12 @@ th {
   width: 32.26%; }
 
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 895px) {
   .span-3-of-3 {
     width: 100%; }
   .span-2-of-3 {
+    width: 100%; }
+  .span-1-of-3 {
     width: 100%; } }
 
 /*  GRID OF FOUR   ============================================================================= */
@@ -2784,8 +2786,8 @@ hr {
       margin-left: 30px;
       padding-bottom: 5px;
       font-weight: 300; }
-    .post-container blockquote a {
-      color: #5f5f5f; }
+  .post-container a {
+    color: #5f5f5f; }
 
 .post-image,
 .post-credit-image {
@@ -2805,6 +2807,20 @@ hr {
   line-height: 28px;
   word-spacing: 0.5px;
   font-size: 80%; }
+
+.post-navigation {
+  margin-top: 30px;
+  font-size: 70%;
+  width: auto; }
+  .post-navigation a {
+    width: 50%;
+    float: left;
+    text-decoration: underline; }
+  .post-navigation #prev {
+    padding-left: 5px; }
+  .post-navigation #next {
+    text-align: right;
+    padding-right: 5px; }
 
 /* style for whole page container excluding mobile-nav */
 #container {
@@ -3800,17 +3816,6 @@ width decreases */
 .post {
   margin: 20px 15px 0 15px; }
 
-.post-navigation {
-  margin-top: 30px;
-  font-size: 70%;
-  width: auto; }
-  .post-navigation a {
-    width: 50%;
-    float: left;
-    text-decoration: underline; }
-  .post-navigation #next {
-    text-align: right; }
-
 .bio {
   position: relative;
   top: 110px;
@@ -3971,20 +3976,17 @@ width decreases */
 .credit-post {
   margin: 5px 15px 0 15px; }
 
-.post-credit-image {
-  float: left;
-  width: 25%; }
+.post-credit-image img {
+  border: 2px solid #e2e2e2;
+  border-radius: 3px; }
 
-.post-credit-audio {
-  width: 75%;
-  float: left; }
-  .post-credit-audio iframe {
-    display: block;
-    border: none;
-    width: 100%;
-    margin: 0 auto;
-    height: 300px;
-    padding: 0% 10% 0% 5%; }
+.post-credit-audio iframe {
+  display: block;
+  border: none;
+  width: 100%;
+  margin: 0 auto;
+  height: 300px;
+  padding: 0% 10% 0% 5%; }
 
 .post-credit-header {
   margin-bottom: 10px; }

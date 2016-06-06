@@ -1,7 +1,7 @@
-$('#elm').hover(
-	function(){ $(this).addClass('hover') },
-	function(){ $(this).removeClass('hover') }
-)
+//$('#elm').hover(
+//	function(){ $(this).addClass('hover') },
+//	function(){ $(this).removeClass('hover') }
+//)
 
 
 /*Code for Audio player*/

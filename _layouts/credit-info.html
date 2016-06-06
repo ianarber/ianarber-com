@@ -24,20 +24,20 @@
         <div id="wrapper" class="slide">
 
             <div class="row post-container">
-                <div class="post-credit-header">
-                    <figure class="post-credit-image">
+                <div class="row post-credit-header">
+                    <figure class="col span-1-of-3 post-credit-image">
                         <img src="/{{ page.thumbnail }}" alt="Photo" />
                     </figure>
-
+                   
                     {% if page.soundcloud %}
-                    <div class="post-credit-audio">
+                    <div class="col span-2-of-3 post-credit-audio">
                         <iframe class="frame" src="{{ page.soundcloud }}"></iframe>
                     </div>
                     {% endif %}
                    
                 </div>
                 
-                <div class="section"></div>
+<!--                <div class="section"></div>-->
                 <hr>
 
                 <div class="post-title">

@@ -1,7 +1,7 @@
 ---
 layout: credit-info
 title: Jim 'The Fish'
-thumbnail: assets/img/credits-grid/credit-jim-the-fish.jpg
+thumbnail: assets/img/credits-grid/jim-the-fish.jpg
 category: credits
 role: Composer
 type: Short Film

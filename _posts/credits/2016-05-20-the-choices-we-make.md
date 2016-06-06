@@ -1,7 +1,7 @@
 ---
 layout: credit-info
 title: The Choices We Make
-thumbnail: assets/img/credits-grid/credit-the-choices-we-make.jpg
+thumbnail: assets/img/credits-grid/the-choices-we-make.jpg
 category: credit
 type: Feature Film
 year: 2013

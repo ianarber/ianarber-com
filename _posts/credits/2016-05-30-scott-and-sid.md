@@ -1,7 +1,7 @@
 ---
 layout: credit-info
 title: Scott and Sid
-thumbnail: assets/img/credits-grid/credit-scott-and-sid.jpg
+thumbnail: assets/img/credits-grid/scott-and-sid.jpg
 category: credits
 role: Composer
 type: Feature Film

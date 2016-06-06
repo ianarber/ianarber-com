@@ -22,8 +22,7 @@
 						<div class="credit-brief">{{ post.synopsis }}</div>
 						<!-- TODO: Get 30s audio samples -->
 						<audio id="player">
-							<source src="assets/media/sample.ogg" type="audio/ogg">
-							<source src="assets/media/sample.mp3" type="audio/mp3"> Your browser does not support the audio element.
+							<source src="{{ post.sample }}" type="audio/mp3"> Your browser does not support the audio element.
 						</audio>
 						<div class="controls">
 							<!-- TODO: REMOVE INLINE SCRIPTING!! -->

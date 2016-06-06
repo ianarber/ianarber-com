@@ -1,7 +1,7 @@
 ---
 layout: credit-info
 title: Time Baraistas
-thumbnail: assets/img/credits-grid/credit-time-baristas.jpg
+thumbnail: assets/img/credits-grid/time-baristas.jpg
 category: credits
 role: Composer
 type: Web Series

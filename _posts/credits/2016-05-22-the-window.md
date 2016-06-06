@@ -1,7 +1,7 @@
 ---
 layout: credit-info
 title: The Window
-thumbnail: assets/img/credits-grid/credit-the-window.jpg
+thumbnail: assets/img/credits-grid/the-window.jpg
 category: credits
 role: Composer
 type: Feature Film
