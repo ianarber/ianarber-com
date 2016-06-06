@@ -1,17 +1,9 @@
-.post-container{
-    //border: 1px solid black;
-    hr{
-        margin-top: 40px;
-        margin-bottom: 20px;
-    }
-}
-
 .credit-post{
     margin: 5px 15px 0 15px;
 }
 
 .post-credit-image{
-    //border: 1px solid red inset;
+   // border: 1px solid red inset;
     img{
         //width: auto;
         border: 2px solid #e2e2e2;
@@ -23,7 +15,7 @@
     //border: 1px solid blue;
     //min-width: 75%;
     //float: left;
-
+    
     
     
     iframe{           
@@ -32,7 +24,7 @@
         width: 100%;
         margin: 0 auto;
         height: 300px;
-        padding: 0% 10% 0% 5%;;
+        padding: 0% 5% 0% 5%;;
     }
 }
 
@@ -47,4 +39,8 @@
         margin: 0 auto;
         //padding: 2% 0%;
     }
+}
+
+#credit-hr{
+    margin-top: 20px;
 }

@@ -349,6 +349,20 @@
     }
     
     
+    .post-container{
+	    width: 90%;
+    }
+    
+    .post-credit-audio{
+        iframe{           
+            padding: 0%;
+        }
+    }
+    
+    
+    
+    
+    
     
      /*******************************************************/
     
@@ -537,6 +551,10 @@
             width: 100%;
         }
     }
+    
+    .post-container{
+	    width: 95%;
+    }
 }
 
 
@@ -601,8 +619,6 @@
 
 
 
-
-
 /* --- to 400px */
 @media only screen and (max-width: 400px){
 	.profile-pic{
@@ -615,4 +631,16 @@
 			display: none;
 		}
 	} 
+    
+    .footer{
+        height: 640px;
+    }
+    
+    .foot-lower{
+        top: 320px;
+    }
+    
+    .copyright{
+	    top: 615px;
+    }
 }
