@@ -15,16 +15,14 @@
     //border: 1px solid blue;
     //min-width: 75%;
     //float: left;
-    
-    
-    
     iframe{           
         display: block;
         border: none;
         width: 100%;
         margin: 0 auto;
         height: 300px;
-        padding: 0% 5% 0% 5%;;
+        padding: 0% 5% 0% 5%;
+        background: url(/assets/img/spinner.gif) no-repeat center center;
     }
 }
 

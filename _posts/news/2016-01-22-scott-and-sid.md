@@ -1,7 +1,7 @@
 ---
 layout: news
 title: Scott and Sid
-thumbnail: /assets/img/fill-murray-900x450.jpg
+thumbnail: /assets/img/news-posts/scott-and-sid.jpg
 category: news
 caption: The lads - scott and sid
 heading: Ian will meet scott and sid to make music

@@ -1,13 +1,13 @@
 .intro{
 	position: relative;
-	top: 110px;
-	height: 595px;
+	top: 85px;
+	height: 625px;
 	background-color: #efefef;
 	border-top: 1px solid #efefef;
 }
 
 .intro .social{
-	margin-top: 520px;
+	margin-top: 550px;
 }
 
 /**futher stylings in globals.scss**/
@@ -17,6 +17,7 @@
 	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/mission-impossible-5-bg.jpg);
 	background-size: cover;
 	background-position: center;
+    margin-top: 30px;
 }
 
 .profile-pic{	

@@ -62,7 +62,7 @@
 	}
 	
 	.intro{
-		top: 100px;
+		top: 75px;
 	}
 	
 	.profile-pic{
@@ -79,7 +79,7 @@
 	}	
     
     .showreel-background{
-        margin-top: 100px;
+        margin-top: 75px;
     }
 
 }
@@ -146,11 +146,11 @@
 	}
 	
 	.intro{
-		top: 75px;
+		top: 45px;
 	}
 	
     .showreel-background{
-        margin-top: 75px;
+        margin-top: 45px;
     }
     
     
@@ -255,7 +255,7 @@
 	}
 	
 	.intro{
-		top: 60px;
+		top: 20px;
 	}
 	
 	.profile-pic{
@@ -277,7 +277,7 @@
 	}
     
     .showreel-background{
-        margin-top: 60px;
+        margin-top: 20px;
     }
     
     .grid-wrap{
@@ -312,8 +312,8 @@
     }
 	
 	.intro{
-		top: 60px;
-		height: 575px;
+		top: 40px;
+		height: 595px;
 	}
 	
 	.profile-pic{
@@ -324,13 +324,18 @@
 	}
     
     .intro .social{
-        margin-top: 500px;
+        margin-top: 525px;
+//        .social-icons{
+//            div:not(:last-child){
+//                margin-right: 15px;
+//            }
+//        }
     }
 
 	
-//	.email-contact{
-//		//margin-top: 495px;
-//	}	
+    .showreel-background{
+        margin-top: 40px;
+    }
     
     .form{
 	    height: 595px;
@@ -439,7 +444,13 @@
         }
     }
     
-    
+    .intro .social{
+        .social-icons{
+            div:not(:last-child){
+                margin-right: 15px;
+            }
+        }
+    }
     
     /*******************************************************/
     
@@ -493,12 +504,12 @@
 
 @media only screen and (max-width: 618px){
     .news{
-        height: 1140px;
+        height: 1155px;
     }
 }
 @media only screen and (max-width: 612px){
     .news{
-        height: 1485px;
+        height: 1500px;
     }
 }
 
@@ -511,8 +522,11 @@
 	}
 	
 	.intro{
-		top: 50px;
-		height: 565px;
+		top: 20px;
+		height: 585px;
+        .social{
+            margin-top: 520px;
+        }
 	}
 	
 	.profile-pic{
@@ -533,9 +547,9 @@
 			right: 25px;
 		}
 	}
-	
-    .intro .social{
-        margin-top: 500px;
+    
+    .showreel-background{
+        margin-top: 20px;
     }
 
      .form .social{
@@ -564,6 +578,13 @@
         height: 2320px;
     }
     
+    .intro{
+//        .social-icons{
+//            div:not(:last-child){
+//                margin-right: 100px;
+//            }
+//        }
+	}
     
     /*******************************************************/
     

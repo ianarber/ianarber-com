@@ -2,7 +2,7 @@
 	<div class="section-header">
 		<h4>Latest News</h4>
 	</div>
-	
+
 	<div class="news-container">
 	    {% for post in site.categories.news limit:4 %}
 	    <article class="news-preview">		
@@ -15,14 +15,11 @@
 			    <ul class="fa-ul">
 			        <li><i class="fa-li fa fa-calendar-o"></i>{{ post.date | date_to_string }}</li>
 			    </ul>
-			</div>	
+			</div>
 		</article>
         {% endfor %}		
 	</div>
    
     <!-- FUTURE: add twitter and instagram content via API */ -->
 
-	<div class="section-footer">
-		<a href="#">Read more</a>
-	</div>
 </section>

@@ -1,7 +1,7 @@
 .showreel-background{
 	background-color: $backgroundColor;
 	height: 995px;
-	margin-top: 110px;
+	margin-top: 85px;
 }
 
 /* individual posters will flex expand when width increases */
@@ -104,4 +104,5 @@
 .showreel-background iframe{
     width: 80%;
     height: 450px;
+    background: url(/assets/img/spinner.gif) no-repeat center center;
 }

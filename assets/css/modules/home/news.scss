@@ -1,5 +1,5 @@
 .news{
-	height: 445px;
+	height: 440px;
 	background-color: #efefef;
 }
 
@@ -10,6 +10,7 @@
 	display: flex;
 	flex-flow: wrap;
 	justify-content: space-around;
+
 }
 
 .news-preview{
@@ -38,7 +39,7 @@
         margin-top: 2px;
 		margin-left: 15px;
 		margin-right: 15px;
-        height: 80px;
+        //height: 80px;
 		font-size: 70%;
 	}
     .post-byline{
