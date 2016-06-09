@@ -2954,7 +2954,7 @@ hr {
 
 #header.shunk-header .menu-list-1,
 #header.shunk-header .menu-list-2 {
-  margin-top: 0px; }
+  margin-top: -4px; }
 
 #header.shunk-header .menu-items-1,
 #header.shunk-header .menu-items-2 {
@@ -2995,16 +2995,115 @@ hr {
 /***************************************************************************/
 .menu-list-1,
 .menu-list-2 {
-  margin-top: 30px;
+  margin-top: 25px;
   transition: all 0.3s ease-in-out; }
 
 .menu-list-1 {
-  margin-right: 10px; }
+  margin-right: -10px;
+  text-align: right; }
   .menu-list-1 li:not(:last-child) {
     margin-right: 45px; }
 
-.menu-list-1 {
-  text-align: right; }
+.menu-list-1 li:nth-child(1) {
+  position: relative; }
+  .menu-list-1 li:nth-child(1):before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    background: url(/assets/img/musical-note.png);
+    background-repeat: no-repeat;
+    background-position: 117% 60%;
+    opacity: 0;
+    transition: opacity 0.3s; }
+
+.menu-list-1 li:nth-child(2) {
+  position: relative; }
+  .menu-list-1 li:nth-child(2):before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    background: url(/assets/img/musical-note.png);
+    background-repeat: no-repeat;
+    background-position: 113% 60%;
+    opacity: 0;
+    transition: opacity 0.3s; }
+
+.menu-list-1 li:nth-child(3) {
+  position: relative; }
+  .menu-list-1 li:nth-child(3):before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    background: url(/assets/img/musical-note.png);
+    background-repeat: no-repeat;
+    background-position: 114% 60%;
+    opacity: 0;
+    transition: opacity 0.3s; }
+
+.menu-list-2 li:nth-child(1) {
+  position: relative; }
+  .menu-list-2 li:nth-child(1):before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    background: url(/assets/img/musical-note.png);
+    background-repeat: no-repeat;
+    background-position: 111% 60%;
+    opacity: 0;
+    transition: opacity 0.3s; }
+
+.menu-list-2 li:nth-child(2) {
+  position: relative; }
+  .menu-list-2 li:nth-child(2):before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    background: url(/assets/img/musical-note.png);
+    background-repeat: no-repeat;
+    background-position: 110% 60%;
+    opacity: 0;
+    transition: opacity 0.3s; }
+
+.menu-list-2 li:nth-child(3) {
+  position: relative; }
+  .menu-list-2 li:nth-child(3):before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    background: url(/assets/img/musical-note.png);
+    background-repeat: no-repeat;
+    background-position: 107% 60%;
+    opacity: 0;
+    transition: opacity 0.3s; }
+
+.menu-list-1 li:hover:before,
+.menu-list-2 li:hover:before {
+  opacity: 1;
+  transition: opacity 0.3s; }
 
 .menu-items-1,
 .menu-items-2 {
@@ -3013,13 +3112,16 @@ hr {
   font-weight: 600;
   font-size: 75%;
   transition: all 0.3s ease-in-out;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  padding: 10px 10px 10px 10px; }
   .menu-items-1:nth-child(-n+2),
   .menu-items-2:nth-child(-n+2) {
     margin-right: 35px; }
 
-.menu-items-2:last-child {
-  margin-right: 20px; }
+.menu-items-2 {
+  margin-left: -20px; }
+  .menu-items-2:last-child {
+    margin-right: 20px; }
 
 .intro {
   position: relative;
@@ -3181,7 +3283,7 @@ hr {
 .showreel-background iframe {
   width: 80%;
   height: 450px;
-  background: url(/assets/img/spinner.gif) no-repeat center center; }
+  background: url(https://site-ianarber.aerobatic.io/assets/img/spinner.gif) no-repeat center center; }
 
 .news {
   height: 440px;
@@ -3519,7 +3621,7 @@ width decreases */
     width: 29.6%; }
   .menu-list-1,
   .menu-list-2 {
-    margin-top: 23px; }
+    margin-top: 19px; }
   .menu-list-1 li:not(:last-child) {
     margin-right: 40px; }
   .menu-items-1,
@@ -3566,9 +3668,9 @@ width decreases */
       width: 28.3%; }
   .menu-list-1,
   .menu-list-2 {
-    margin-top: 10px; }
+    margin-top: 5px; }
   .menu-list-1 li:not(:last-child) {
-    margin-right: 35px; }
+    margin-right: 25px; }
   .menu-items-1,
   .menu-items-2 {
     font-size: 65%; }
@@ -3612,9 +3714,9 @@ width decreases */
     top: -15px; }
   .menu-list-1,
   .menu-list-2 {
-    margin-top: 0px; }
+    margin-top: -4px; }
   .menu-list-1 li:not(:last-child) {
-    margin-right: 30px; }
+    margin-right: 10px; }
   .menu-items-1,
   .menu-items-2 {
     font-size: 65%;
@@ -4006,7 +4108,7 @@ width decreases */
   margin: 0 auto;
   height: 300px;
   padding: 0% 5% 0% 5%;
-  background: url(/assets/img/spinner.gif) no-repeat center center; }
+  background: url(https://site-ianarber.aerobatic.io/assets/img/spinner.gif) no-repeat center center; }
 
 .post-credit-header {
   margin-bottom: 10px; }
@@ -4017,3 +4119,56 @@ width decreases */
 
 #credit-hr {
   margin-top: 20px; }
+
+.masonry-grid {
+  height: auto;
+  margin-top: 70px;
+  background-color: #fafafa; }
+
+.grid-gallery {
+  width: 80%;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto; }
+  .grid-gallery figure {
+    margin: 0; }
+    .grid-gallery figure img {
+      display: block;
+      width: 100%; }
+
+.grid-wrap {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 16px 30px; }
+
+.grid-wrap > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.grid {
+  margin: 0 auto; }
+  .grid figure {
+    padding: 15px;
+    transition: opacity 0.2s; }
+  .grid figcaption {
+    background: #efefef;
+    padding: 10px;
+    text-align: center; }
+    .grid figcaption p[id="role"] {
+      font-style: italic;
+      font-size: 75%;
+      margin-bottom: 5px;
+      color: #0d2f52; }
+    .grid figcaption p {
+      color: #313131;
+      font-size: 70%;
+      margin-bottom: 1px; }
+
+.grid > li {
+  width: 25%;
+  float: left;
+  cursor: pointer; }
+
+.grid > li:hover figure {
+  opacity: 0.7; }

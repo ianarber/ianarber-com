@@ -1,0 +1,44 @@
+
+{% comment %}--- Initiate values for liquid templating to generate li elements {% endcomment %}
+
+{% comment %}--- Calculate the number of credits to process {% endcomment %}
+{% assign numberOfCredits = site.categories.credits %} 
+
+<section class="section masonry-grid">
+ 
+    
+    <div id="grid-gallery" class="grid-gallery">
+        <section class="grid-wrap">
+            <ul class="grid">
+                <li class="grid-sizer"></li>  
+                {% for post in numberOfCredits %}
+                <li>
+                    <a href="{{ post.url }}">
+                    <figure>
+                        <img src="{{ post.thumbnail }}" alt="Grid Poster" />
+                        <figcaption>
+                            <h5>{{ post.title }} ({{ post.year }})</h5>
+                            <p id="role">{{ post.role }}</p>
+                            <p><b>Genre:</b> {{ post.genre }}</p>
+                            
+                            {% if post.director %}
+                                <p><b>Director:</b> {{ post.director }}</p>
+                            {% endif %}
+                            
+                            {% if post.writers %}
+                                <p><b>Writers:</b> {{ post.writers }}</p>
+                            {% endif %}
+                            
+                            {% if post.producers %}
+                                <p><b>Producers:</b> {{ post.producers }}</p>
+                            {% endif %}
+
+                        </figcaption>
+                    </figure>
+                    </a>
+                </li>
+                {% endfor %}             
+            </ul>
+        </section>
+    </div>
+</section>
