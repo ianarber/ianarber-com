@@ -4120,6 +4120,27 @@ width decreases */
 #credit-hr {
   margin-top: 20px; }
 
+.listen-submenu {
+  margin-top: 60px; }
+
+.listen-menu ul {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 85%; }
+
+.listen-menu li {
+  position: relative;
+  display: inline-block;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s; }
+  .listen-menu li:not(:last-child) {
+    margin-right: 15px; }
+  .listen-menu li:hover:nth-child(odd) {
+    -webkit-transform: translateY(-3px);
+            transform: translateY(-3px);
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s; }
+
 .masonry-grid {
   height: auto;
   margin-top: 70px;
