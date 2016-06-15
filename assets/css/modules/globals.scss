@@ -185,10 +185,6 @@ hr{
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-
-
-
-
 /**********************POST TEXT CONTAINER STYLINGS - NEWS AND ABOUT PAGES*********************/
 
 
@@ -280,5 +276,32 @@ hr{
         text-align: right;
         padding-right: 5px;
     }
+}
+
+
+/**********************STYLING FOR CREDITS AND LISTEN MASONRY GRIDS*********************/
+
+
+.grid-gallery{
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid-wrap{
+	max-width: 1300px;
+	margin: 0 auto;
+	padding: 0 16px 30px;
+}
+
+.grid-wrap > ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.grid{
+	margin: 0 auto;
 }
 

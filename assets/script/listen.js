@@ -18,33 +18,32 @@ $(function () {
         $('#genres li').removeClass('added');
         $('#genres-all').addClass('added');
         
-        $('.sc-audio').css('opacity', '1');
-        
+        $('.sc-audio iframe, .sc-audio .bg-iframe-info, .sc-audio .fg-cover').removeClass('disabled');     
     })
     
-    $('#genres-drama').on('click', function(){
-        $('#genres li').removeClass('added');
-        $('#genres-drama').addClass('added');
-        
-        $('.sc-audio').css('opacity', '1');
-        $('.sc-audio').not('.sc-drama').css('opacity', '0.1');
-    })
+//    $('#genres-drama').on('click', function(){
+//        $('#genres li').removeClass('added');
+//        $('#genres-drama').addClass('added');
+//        
+//        $('.sc-audio').css('opacity', '1');
+//        $('.sc-audio').not('.sc-drama').css('opacity', '0.1');
+//    })
     
     $('#genres-actadv').on('click', function(){
         $('#genres li').removeClass('added');
         $('#genres-actadv').addClass('added');
         
-        $('.sc-audio').css('opacity', '1');
-        $('.sc-audio').not('.sc-actadv').css('opacity', '0.1');
+        $('.sc-audio iframe, .sc-audio .bg-iframe-info, .sc-audio .fg-cover').removeClass('disabled');
+        $('.sc-audio iframe, .sc-audio .bg-iframe-info, .sc-audio .fg-cover').not('.sc-actadv iframe, .sc-actadv .bg-iframe-info, .sc-actadv .fg-cover').addClass('disabled');
     })
     
-    $('#genres-epic').on('click', function(){
-        $('#genres li').removeClass('added');
-        $('#genres-epic').addClass('added');
-        
-        $('.sc-audio').css('opacity', '1');
-        $('.sc-audio').not('.sc-epic').css('opacity', '0.1');
-    })
+//    $('#genres-epic').on('click', function(){
+//        $('#genres li').removeClass('added');
+//        $('#genres-epic').addClass('added');
+//        
+//        $('.sc-audio').css('opacity', '1');
+//        $('.sc-audio').not('.sc-epic').css('opacity', '0.1');
+//    })
     
     
     
