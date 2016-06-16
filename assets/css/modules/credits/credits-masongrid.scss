@@ -4,51 +4,54 @@
     background-color: $backgroundColor;
     .grid-gallery{
         width: 80%;
+        figure {
+            margin: 0;
+            img {
+                display: block;
+                width: 100%;
+            }
+        } 
     }
+    
+    .grid{
+        figure{
+            padding: 15px;
+            transition: opacity 0.2s;
+        }
+        figcaption{
+            background: #efefef;
+            padding: 10px;
+            text-align: center;
+            p[id="role"]{
+                font-style: italic;
+                font-size: 75%;
+                margin-bottom: 5px;
+                color: $mainFontColor;
+            }
+            p{
+                color: #313131;
+                font-size: 70%;
+                margin-bottom: 1px;
+            }
+        }
+    }
+
+    .grid > li{
+        width: 25%;
+        float: left;
+        cursor: pointer;
+    }
+
+    .grid > li:hover figure{
+        opacity: 0.7;
+    }
+    
+    
 }
 
 /****COMMON GRID STYLINGS WITH THE LISTEN GRID SET IN GLOBALS.SCSS****/
 
-.grid-gallery{
-    figure {
-        margin: 0;
-        img {
-            display: block;
-            width: 100%;
-        }
-    } 
-}
 
-.grid{
-    figure{
-        padding: 15px;
-        transition: opacity 0.2s;
-    }
-    figcaption{
-        background: #efefef;
-        padding: 10px;
-        text-align: center;
-        p[id="role"]{
-            font-style: italic;
-            font-size: 75%;
-            margin-bottom: 5px;
-            color: $mainFontColor;
-        }
-        p{
-            color: #313131;
-            font-size: 70%;
-            margin-bottom: 1px;
-        }
-    }
-}
 
-.grid > li{
-    width: 25%;
-    float: left;
-    cursor: pointer;
-}
 
-.grid > li:hover figure{
-	opacity: 0.7;
-}
 

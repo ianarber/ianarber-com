@@ -10,7 +10,9 @@
 /* all page elements apart from header will slide */
 .slide{
     transition: all .2s linear;
-    transform: translate3d(0,0,0);
+    //transform: translate3d(0,0,0);
+    /***ABOVE COMMENTED OUT FOR NOW DUE TO FIXED POSITION ELEMENTS IN THE #CONTAINER NOT
+        ABLE TO REMAINED FIXED (LISTEN GENRE MENU)*/
 }
 
 /* active class styles */

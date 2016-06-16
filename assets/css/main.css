@@ -2890,8 +2890,8 @@ hr {
 /* all page elements apart from header will slide */
 .slide {
   transition: all .2s linear;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0); }
+  /***ABOVE COMMENTED OUT FOR NOW DUE TO FIXED POSITION ELEMENTS IN THE #CONTAINER NOT
+        ABLE TO REMAINED FIXED (LISTEN GENRE MENU)*/ }
 
 /* active class styles */
 #container.active .slide {
@@ -4100,40 +4100,35 @@ width decreases */
   background-color: #fafafa; }
   .masonry-grid .grid-gallery {
     width: 80%; }
+    .masonry-grid .grid-gallery figure {
+      margin: 0; }
+      .masonry-grid .grid-gallery figure img {
+        display: block;
+        width: 100%; }
+  .masonry-grid .grid figure {
+    padding: 15px;
+    transition: opacity 0.2s; }
+  .masonry-grid .grid figcaption {
+    background: #efefef;
+    padding: 10px;
+    text-align: center; }
+    .masonry-grid .grid figcaption p[id="role"] {
+      font-style: italic;
+      font-size: 75%;
+      margin-bottom: 5px;
+      color: #0d2f52; }
+    .masonry-grid .grid figcaption p {
+      color: #313131;
+      font-size: 70%;
+      margin-bottom: 1px; }
+  .masonry-grid .grid > li {
+    width: 25%;
+    float: left;
+    cursor: pointer; }
+  .masonry-grid .grid > li:hover figure {
+    opacity: 0.7; }
 
 /****COMMON GRID STYLINGS WITH THE LISTEN GRID SET IN GLOBALS.SCSS****/
-.grid-gallery figure {
-  margin: 0; }
-  .grid-gallery figure img {
-    display: block;
-    width: 100%; }
-
-.grid figure {
-  padding: 15px;
-  transition: opacity 0.2s; }
-
-.grid figcaption {
-  background: #efefef;
-  padding: 10px;
-  text-align: center; }
-  .grid figcaption p[id="role"] {
-    font-style: italic;
-    font-size: 75%;
-    margin-bottom: 5px;
-    color: #0d2f52; }
-  .grid figcaption p {
-    color: #313131;
-    font-size: 70%;
-    margin-bottom: 1px; }
-
-.grid > li {
-  width: 25%;
-  float: left;
-  cursor: pointer; }
-
-.grid > li:hover figure {
-  opacity: 0.7; }
-
 .credit-post {
   margin: 5px 15px 0 15px; }
 
@@ -4188,6 +4183,8 @@ width decreases */
     margin-bottom: 20px; }
   .listen-grid ul {
     list-style: none; }
+  .listen-grid hr {
+    margin-bottom: 6px; }
   .listen-grid .listen-clear {
     clear: both; }
 
@@ -4196,28 +4193,37 @@ width decreases */
   margin: 0 auto; }
 
 .genre-menu {
-  min-width: 152px; }
+  border: 1px solid black;
+  min-width: 152px;
+  position: fixed; }
+  .genre-menu h5 {
+    text-align: center;
+    margin-bottom: 5px; }
 
-#genres li {
+#genres li,
+#categories li {
   text-align: center;
   font-size: 70%;
-  text-transform: uppercase;
   width: 100%;
   min-width: 150px;
   cursor: pointer;
   background: #ffffff;
   box-shadow: 0px 0px 1px 1px #aaa, 1px 0px 0px 0px rgba(255, 255, 255, 0.9) inset, 0px 1px 2px rgba(0, 0, 0, 0.2);
   border-radius: 2px;
-  padding: 4px 0px; }
-  #genres li:not(:last-child) {
-    margin-bottom: 8px; }
+  padding: 4px 0px;
+  margin-bottom: 8px; }
 
-#genres li.added {
+#genres li.added,
+#categories li.added {
   box-shadow: 0px 0px 6px 1px #aaa, 1px 0px 0px 0px rgba(255, 255, 255, 0.9) inset, 0px 1px 2px rgba(0, 0, 0, 0.2);
   font-weight: bold; }
 
 #listen-gallery {
-  margin-top: 0px; }
+  width: 85%;
+  float: right;
+  margin-top: 0px;
+  margin-right: 10px;
+  border: 1px solid red; }
   #listen-gallery .grid > li {
     width: 50%;
     float: left; }
@@ -4225,11 +4231,11 @@ width decreases */
 .playlist-header {
   text-align: center;
   text-transform: uppercase;
-  font-size: 90%;
+  font-size: 95%;
   font-weight: bold;
   letter-spacing: 2px;
   margin-top: 3px;
-  margin-bottom: 4px; }
+  margin-bottom: 8px; }
 
 .bg-iframe {
   position: relative; }
@@ -4237,16 +4243,21 @@ width decreases */
     padding: 10px;
     border: none;
     width: 100%;
-    height: 400px;
     transition: opacity 0.3s; }
+
+#play-frame {
+  height: 400px; }
+
+#filmtv-frame {
+  height: auto; }
 
 .disabled {
   opacity: 0.1;
   transition: opacity 0.3s; }
 
 .bg-iframe-info {
-  margin-top: -10px;
-  margin-bottom: 10px;
+  margin-top: -12px;
+  margin-bottom: 20px;
   text-align: center;
   transition: opacity 0.3s; }
   .bg-iframe-info p {

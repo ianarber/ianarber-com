@@ -3,153 +3,141 @@
         <h4>Listen</h4>
     </div>
 
-    <div class="row listen-wrapper">
-         <div class="genre-menu col span-1-of-6">
+    <div class="listen-wrapper">
+        <nav class="genre-menu">
             <ul id="genres">
-                <li id="genres-all">All</li>
-                <li id="genres-drama">Drama</li>
-                <li id="genres-actadv">Action/Adventure</li>
-                <li id="genres-epic">Epic</li>
-                <li id="genres-horror">Horror</li>
-                <li id="genres-romfan">Romantic/Fantasy</li>
-                <li id="genres-elec">Electronic</li>
+                <h5>Genres</h5>
+                <li id="genres-all" rel="sc-audio">All</li>
+                <li id="genres-drama" rel="sc-drama">Drama</li>
+                <li id="genres-actadv" rel="sc-actadv">Action/Adventure</li>
+                <li id="genres-epic" rel="sc-epic">Epic</li>
+                <li id="genres-horror" rel="sc-horror">Horror</li>
+                <li id="genres-romfan" rel="sc-romfan">Romantic/Fantasy</li>
+                <li id="genres-elec" rel="sc-elec">Electronic</li>
+                <li id="genres-com" rel="sc-com">Comedy</li>
             </ul>
-        </div>
+            <ul id="categories">
+                <h5>Categories</h5>
+                <li id="cat-play" rel="sc-play">Playlists</li>
+                <li id="cat-ffilms" rel="sc-ffilms">Features Films</li>
+                <li id="cat-sfilms" rel="sc-sfilms">Short Films</li>
+                <li id="cat-tv" rel="sc-tv">TV/Documentary</li>
+            </ul>
+        </nav>
        
-        <div id="listen-gallery" class="col span-5-of-6 grid-gallery">
+        <div id="listen-gallery" class="grid-gallery">
             <section class="grid-wrap">
                 <ul class="grid">
-                    <div class="playlist-header">Playlists</div><hr>
+                    <div class="playlist-header sc-play">Playlists</div><hr>
+                
+                    {% for playlists in site.data.listen.playlists %}
+                   
+                    <li class="sc-audio sc-{{ playlists.classname }}">
+                        <div class="bg-iframe">
+                            <iframe id="play-frame" src="{{ playlists.soundcloud }}"></iframe>
+                            <div class="bg-iframe-info">
+                                <h5>{{ playlists.genre }}</h5>
+                                <p>{{ playlists.featuring }}</p>
+                            </div>
+                            <div class="fg-cover">
+                                <div class="fg-cover-info">
+                                    <p>Playlist</p>
+                                    <p>&#45;</p>
+                                    <p>{{ playlists.genre }}</p>
+                                </div>
+                            </div>                           
+                        </div>                     
+                    </li>
                     
-                    <li class="sc-audio sc-actadv">
-                        <div class="bg-iframe">
-                            <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/3250282&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-                            <div class="bg-iframe-info">
-                                <h5>To Save Ones Self</h5>
-                                <p>Drama &middot; 2013</p>
-                                <p>Directed by John Snow</p>
-                            </div>
-                            <div class="fg-cover">
-                                <div class="fg-cover-info">
-                                    <p>To Save Ones Self</p>
-                                    <p>&#45;</p>
-                                    <p>Drama</p>
-                                </div>
-                            </div>                           
-                        </div>                     
-                    </li>
-                    <li class="sc-audio sc-drama">
-                        <div class="bg-iframe">
-                            <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/3250282&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-                            <div class="bg-iframe-info">
-                                <h5>To Save Ones Self</h5>
-                                <p>Drama &middot; 2013</p>
-                                <p>Directed by John Snow</p>
-                            </div>
-                            <div class="fg-cover">
-                                <div class="fg-cover-info">
-                                    <p>To Save Ones Self</p>
-                                    <p>&#45;</p>
-                                    <p>Drama</p>
-                                </div>
-                            </div>                           
-                        </div>                     
-                    </li>
-                    <li class="sc-audio sc-actadv">
-                        <div class="bg-iframe">
-                            <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/3250282&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-                            <div class="bg-iframe-info">
-                                <h5>To Save Ones Self</h5>
-                                <p>Drama &middot; 2013</p>
-                                <p>Directed by John Snow</p>
-                            </div>
-                            <div class="fg-cover">
-                                <div class="fg-cover-info">
-                                    <p>To Save Ones Self</p>
-                                    <p>&#45;</p>
-                                    <p>Drama</p>
-                                </div>
-                            </div>                           
-                        </div>                     
-                    </li>
+                    {% endfor %}
+               
                 </ul>
                 
                 <div class="listen-clear"></div>
                 
                 <ul class="grid">
-                    <div class="playlist-header">Films</div><hr>
-                    <li class="sc-audio sc-epic">
+                    <div class="playlist-header sc-ffilms">Feature Films</div><hr>
+                    
+                    {% for featurefilms in site.data.listen.featurefilms %}
+                   
+                    <li class="sc-audio sc-{{ featurefilms.classname }}">
                         <div class="bg-iframe">
-                            <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/3250282&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                            <iframe id="filmtv-frame" src="{{ featurefilms.soundcloud }}"></iframe>
                             <div class="bg-iframe-info">
-                                <h5>To Save Ones Self</h5>
-                                <p>Drama &middot; 2013</p>
-                                <p>Directed by John Snow</p>
+                                <h5>{{ featurefilms.title }}</h5>
+                                <p>{{ featurefilms.genre }}, {{ featurefilms.year }}</p>
+                                <p>Directed by {{ featurefilms.director }}</p>
                             </div>
                             <div class="fg-cover">
                                 <div class="fg-cover-info">
-                                    <p>To Save Ones Self</p>
+                                    <p>{{ featurefilms.title }}</p>
                                     <p>&#45;</p>
-                                    <p>Drama</p>
+                                    <p>{{ featurefilms.genre }}</p>
                                 </div>
                             </div>                           
                         </div>                     
                     </li>
-                    <li class="sc-audio sc-horror">
-                        <div class="bg-iframe">
-                            <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/3250282&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-                            <div class="bg-iframe-info">
-                                <h5>To Save Ones Self</h5>
-                                <p>Drama &middot; 2013</p>
-                                <p>Directed by John Snow</p>
-                            </div>
-                            <div class="fg-cover">
-                                <div class="fg-cover-info">
-                                    <p>To Save Ones Self</p>
-                                    <p>&#45;</p>
-                                    <p>Drama</p>
-                                </div>
-                            </div>                           
-                        </div>                     
-                    </li>
+                    
+                    {% endfor %}
+                    
                 </ul>
                 
+                <div class="listen-clear"></div>
+                
                 <ul class="grid">
-                    <div class="playlist-header">Television</div><hr>
-                    <li class="sc-audio sc-actadv">
+                    <div class="playlist-header sc-sfilms">Short Films</div><hr>
+                    
+                    {% for shortfilms in site.data.listen.films %}
+                   
+                    <li class="sc-audio sc-{{ shortfilms.classname }}">
                         <div class="bg-iframe">
-                            <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/3250282&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                            <iframe id="filmtv-frame" src="{{ shortfilms.soundcloud }}"></iframe>
                             <div class="bg-iframe-info">
-                                <h5>To Save Ones Self</h5>
-                                <p>Drama &middot; 2013</p>
-                                <p>Directed by John Snow</p>
+                                <h5>{{ shortfilms.title }}</h5>
+                                <p>{{ shortfilms.genre }}, {{ shortfilms.year }}</p>
+                                <p>Directed by {{ shortfilms.director }}</p>
                             </div>
                             <div class="fg-cover">
                                 <div class="fg-cover-info">
-                                    <p>To Save Ones Self</p>
+                                    <p>{{ shortfilms.title }}</p>
                                     <p>&#45;</p>
-                                    <p>Drama</p>
+                                    <p>{{ shortfilms.genre }}</p>
                                 </div>
                             </div>                           
                         </div>                     
                     </li>
-                    <li class="sc-audio sc-elec">
+                    
+                    {% endfor %}
+                    
+                </ul>
+                
+                <div class="listen-clear"></div>
+                
+                <ul class="grid">
+                    <div class="playlist-header sc-tv">Television/Documentary</div><hr>
+                    
+                    {% for television in site.data.listen.television %}
+                   
+                    <li class="sc-audio sc-{{ television.classname }}">
                         <div class="bg-iframe">
-                            <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/3250282&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                            <iframe id="filmtv-frame" src="{{ television.soundcloud }}"></iframe>
                             <div class="bg-iframe-info">
-                                <h5>To Save Ones Self</h5>
-                                <p>Drama &middot; 2013</p>
-                                <p>Directed by John Snow</p>
+                                <h5>{{ television.title }}</h5>
+                                <p>{{ television.genre }}, {{ television.year }}</p>
+                                <p>Directed by {{ television.director }}</p>
                             </div>
                             <div class="fg-cover">
                                 <div class="fg-cover-info">
-                                    <p>To Save Ones Self</p>
+                                    <p>{{ television.title }}</p>
                                     <p>&#45;</p>
-                                    <p>Drama</p>
+                                    <p>{{ television.genre }}</p>
                                 </div>
                             </div>                           
                         </div>                     
                     </li>
+                    
+                    {% endfor %}
+                    
                 </ul>
             </section>
         </div>
