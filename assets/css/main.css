@@ -2626,7 +2626,7 @@ th {
 body {
   background-color: #fafafa;
   font-size: 20px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Oswald", sans-serif;
   color: #0d2f52;
   font-weight: 400;
   overflow-x: hidden;
@@ -3067,7 +3067,7 @@ hr {
     left: 0;
     right: 0;
     pointer-events: none;
-    background: url(/assets/img/musical-note.png);
+    background: url(assets/img/musical-note.png);
     background-repeat: no-repeat;
     background-position: 117% 60%;
     opacity: 0;
@@ -3083,7 +3083,7 @@ hr {
     left: 0;
     right: 0;
     pointer-events: none;
-    background: url(/assets/img/musical-note.png);
+    background: url(assets/img/musical-note.png);
     background-repeat: no-repeat;
     background-position: 113% 60%;
     opacity: 0;
@@ -3099,7 +3099,7 @@ hr {
     left: 0;
     right: 0;
     pointer-events: none;
-    background: url(/assets/img/musical-note.png);
+    background: url(assets/img/musical-note.png);
     background-repeat: no-repeat;
     background-position: 114% 60%;
     opacity: 0;
@@ -3115,7 +3115,7 @@ hr {
     left: 0;
     right: 0;
     pointer-events: none;
-    background: url(/assets/img/musical-note.png);
+    background: url(assets/img/musical-note.png);
     background-repeat: no-repeat;
     background-position: 111% 60%;
     opacity: 0;
@@ -3131,7 +3131,7 @@ hr {
     left: 0;
     right: 0;
     pointer-events: none;
-    background: url(/assets/img/musical-note.png);
+    background: url(assets/img/musical-note.png);
     background-repeat: no-repeat;
     background-position: 110% 60%;
     opacity: 0;
@@ -3147,7 +3147,7 @@ hr {
     left: 0;
     right: 0;
     pointer-events: none;
-    background: url(/assets/img/musical-note.png);
+    background: url(assets/img/musical-note.png);
     background-repeat: no-repeat;
     background-position: 107% 60%;
     opacity: 0;
@@ -4193,7 +4193,6 @@ width decreases */
   margin: 0 auto; }
 
 .genre-menu {
-  border: 1px solid black;
   min-width: 152px;
   position: fixed; }
   .genre-menu h5 {
@@ -4222,8 +4221,7 @@ width decreases */
   width: 85%;
   float: right;
   margin-top: 0px;
-  margin-right: 10px;
-  border: 1px solid red; }
+  margin-right: 10px; }
   #listen-gallery .grid > li {
     width: 50%;
     float: left; }

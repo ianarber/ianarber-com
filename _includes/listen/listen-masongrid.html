@@ -8,6 +8,15 @@
             <ul id="genres">
                 <h5>Genres</h5>
                 <li id="genres-all" rel="sc-audio">All</li>
+                
+                {% for playlists in site.data.listen.playlists %}
+                
+                <li id="genres-{{ playlists.classname }}" rel="sc-{{ playlists.classname }}">{{ playlists.genre }}</li>
+                
+                {% endfor %}
+                
+<!--
+                <li id="genres-all" rel="sc-audio">All</li>
                 <li id="genres-drama" rel="sc-drama">Drama</li>
                 <li id="genres-actadv" rel="sc-actadv">Action/Adventure</li>
                 <li id="genres-epic" rel="sc-epic">Epic</li>
@@ -15,6 +24,7 @@
                 <li id="genres-romfan" rel="sc-romfan">Romantic/Fantasy</li>
                 <li id="genres-elec" rel="sc-elec">Electronic</li>
                 <li id="genres-com" rel="sc-com">Comedy</li>
+-->
             </ul>
             <ul id="categories">
                 <h5>Categories</h5>
@@ -87,7 +97,7 @@
                 <ul class="grid">
                     <div class="playlist-header sc-sfilms">Short Films</div><hr>
                     
-                    {% for shortfilms in site.data.listen.films %}
+                    {% for shortfilms in site.data.listen.shortfilms %}
                    
                     <li class="sc-audio sc-{{ shortfilms.classname }}">
                         <div class="bg-iframe">
