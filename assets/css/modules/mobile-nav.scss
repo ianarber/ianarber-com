@@ -1,36 +1,30 @@
 /* style for whole page container excluding mobile-nav */
-#container{
+#page-container{
 	width:100%;
     position:absolute;
     left:0px;
     top:0px;
 	z-index: 105;
+    transition: transform 0.3s ease-in-out;
 }
 
 /* all page elements apart from header will slide */
 .slide{
-    transition: all .2s linear;
+    transition: transform 0.3s ease-in-out;
     //transform: translate3d(0,0,0);
-    /***ABOVE COMMENTED OUT FOR NOW DUE TO FIXED POSITION ELEMENTS IN THE #CONTAINER NOT
+    /***ABOVE COMMENTED OUT FOR NOW DUE TO FIXED POSITION ELEMENTS IN THE #PAGE-CONTAINER NOT
         ABLE TO REMAINED FIXED (LISTEN GENRE MENU)*/
 }
 
 /* active class styles */
-#container.active .slide{
+#page-container.active .slide{
     transform: translate3d(-200px,0,0);
+    transition: transform 0.3s ease-in-out;
 }
 
 .mobile-nav.active{
     transform: translate(-200px,0);
-    transition: all .2s ease-in-out;
-}
-
-#nav-toggle{
-	display: none;
-    position: absolute;
-    top: 8px;
-    right: 10px;
-	z-index: 102;
+    transition: transform 0.3s ease-in-out;
 }
 
 .mobile-nav{
@@ -42,8 +36,8 @@
     width: 200px;
     background-color: #333;
 	box-shadow: 0 0 5px 5px #222 inset;
-	transform: translate(0,0);
-    transition: all .2s ease-in-out;
+	//transform: translate(0,0);
+    transition: transform 0.3s ease-in-out;
     .mobile-nav-list{
         list-style: none; 
         .mobile-nav-item{

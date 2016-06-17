@@ -12,7 +12,7 @@
 
 $(function () {
 	$('#nav-toggle').click(function () {
-		$('#container').toggleClass('active');
+		$('#page-container').toggleClass('active');
 		$('.mobile-nav').toggleClass('active');
 	});
     
