@@ -1,12 +1,14 @@
 ---
 layout: credit-info
 title: The Island of Dolls
+iden: theislandofdolls
 thumbnail: assets/img/credits-grid/the-island-of-dolls.jpg
 category: credits
 role: Composer
 type: Feature Film
 year: 2016
 imdb: http://www.imdb.com/title/tt4423788
+sample: assets/media/the_island_of_the_dolls_60s
 genre: Horror/Mystery
 director: Javier Solorzano Casarin
 producers: Christian Mejia Acosta, SJ Evans & Emma Raine Walker

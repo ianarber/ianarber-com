@@ -3,7 +3,8 @@ $backgroundColor: #fafafa;
 $mainFontColor: #0d2f52;
 /*Fonts*/
 $mainFontSize: 20px;
-$mainFontStyle: 'Open Sans', sans-serif;
+//$mainFontStyle: 'Open Sans', sans-serif;
+$mainFontStyle: 'Oswald', sans-serif;
 $logoFontStyle: 'Droid Serif', serif;
 
 /****************************FULL PAGE SELECTORS********************/
@@ -133,7 +134,7 @@ hr{
 	text-transform: uppercase;
 	text-align: center;
 	padding-top: 17px;
-	letter-spacing: 1px;
+	letter-spacing: 5px;
 	h4{
 		margin: 0 auto;
 		display: table;
@@ -146,7 +147,7 @@ hr{
 			top: 14px;
 			width: 100px;
 		}
-		&:before { right: 1.5% };
+		&:before { right: 2.5% };
 		&:after { right: -1.5% };
 	}
 }
@@ -168,6 +169,40 @@ hr{
 		color: #efefef;
 		transition: all 0.3s;
 	}
+}
+
+/******************STYLINGS FOR IMAGE AND QUOTE SLIDER NAV BUTTONS*****************/
+
+#navLinks,
+#nav-scroll-btns {
+    text-align: center;
+	ul{
+		display: inline-block;
+	}
+}
+
+#navLinks ul li,
+#nav-scroll-btns ul li{
+    float: left;
+    text-align: center;
+    margin: 10px;
+    list-style: none;
+    cursor: pointer;
+    background-color: #898989;
+    padding: 4px;
+    border-radius: 50%;
+}
+
+#navLinks ul li:hover,
+#nav-scroll-btns ul li:hover{
+    background-color: #484848;
+}
+
+#navLinks ul li.active,
+#nav-scroll-btns ul li.active{
+    background-color: #d1d1d1;
+    color: #FFFFFF;
+    outline-width: 7px;
 }
 
 /******************FEATURE IMAGE STYLINGS FOR HOME PAGE INTRO AND ABOUT PAGES*****************/
@@ -218,7 +253,7 @@ hr{
 		p{
 			margin-left: 10px;
             padding: 3px 0px;
-            font-weight: 600;
+            font-weight: 500;
 		}
         footer{
 			margin-top: -5px;
@@ -256,7 +291,9 @@ hr{
 .credit-post{
 	line-height: 28px;
 	word-spacing: 0.5px;
+    letter-spacing: 0.5px;
     font-size: 80%;
+    font-weight: 300;
 }
 
 .post-navigation{
@@ -282,26 +319,5 @@ hr{
 /**********************STYLING FOR CREDITS AND LISTEN MASONRY GRIDS*********************/
 
 
-.grid-gallery{
-    margin-top: 15px;
-    margin-left: auto;
-    margin-right: auto;
-}
 
-.grid-wrap{
-	max-width: 1300px;
-	margin: 0 auto;
-	padding: 0 16px 30px;
-}
-
-.grid-wrap > ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-
-.grid{
-	margin: 0 auto;
-}
 

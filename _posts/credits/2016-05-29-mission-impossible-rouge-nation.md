@@ -1,6 +1,7 @@
 ---
 layout: credit-info
 title: Mission Impossible - Rouge Nation
+iden: mi5rougenation
 thumbnail: assets/img/credits-grid/mission-impossible-rouge-nation.jpg
 category: credits
 role: Assistant Composer

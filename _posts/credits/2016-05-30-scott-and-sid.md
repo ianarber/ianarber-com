@@ -1,12 +1,14 @@
 ---
 layout: credit-info
 title: Scott and Sid
+iden: scottandsid
 thumbnail: assets/img/credits-grid/scott-and-sid.jpg
 category: credits
 role: Composer
 type: Feature Film
 year: 2016
 imdb: http://www.imdb.com/title/tt4702346
+sample: assets/media/scott_and_sid_60s
 genre: Coming-of-age Drama
 director: Scott Elliot
 producers: Sid Sadowskyj

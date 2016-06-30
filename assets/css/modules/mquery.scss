@@ -280,9 +280,12 @@
         margin-top: 20px;
     }
     
-    .grid-wrap{
-        .grid li {
-            width: 33.3%;
+
+    #grid-gallery{
+        .grid{
+            li{
+                width: 33.3%;
+            }
         }
     }
   
@@ -492,8 +495,8 @@
     }
     
     
-    .grid-wrap{
-        .grid li {
+    #grid-gallery{
+        .grid > li{
             width: 50%;
         }
     }
@@ -560,8 +563,8 @@
         }
     }
     
-    .grid-wrap{
-        .grid li {
+    #grid-gallery{
+        .grid > li{
             width: 100%;
         }
     }

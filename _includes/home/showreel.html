@@ -20,14 +20,17 @@
 						</ul>
 						<div class="seperator"></div>
 						<div class="credit-brief">{{ post.synopsis }}</div>
-						<!-- TODO: Get 30s audio samples -->
-						<audio id="player">
-							<source src="{{ post.sample }}" type="audio/mp3"> Your browser does not support the audio element.
+						{% if post.sample %}
+						<audio class="{{ post.iden }}">
+						    <source src="{{ post.sample }}.ogg" type="audio/ogg">
+							<source src="{{ post.sample }}.mp3" type="audio/mp3">
+							Your browser does not support the audio element.
 						</audio>
 						<div class="controls">
-							<!-- TODO: REMOVE INLINE SCRIPTING!! -->
-							<i class="fa fa-play-circle" onclick="document.getElementById('player').play()"></i>
+							<i id="{{ post.iden }}" class="fa fa-play-circle active"></i>
+							<i id="{{ post.iden }}-stop" class="fa fa-stop-circle"></i>
 						</div>
+						{% endif %}
 					</div>
 				</figcaption>
 			</figure>
