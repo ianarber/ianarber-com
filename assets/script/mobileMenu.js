@@ -11,22 +11,11 @@
 
 
 $(function () {
+    
 	$('#nav-toggle').click(function () {
 		$('#page-container').toggleClass('active');
 		$('.mobile-nav').toggleClass('active');
-	});
-    
-    /* TODO: move into different JS file */
-    $('.fa-envelope, .tooltip-form').click(function(event) {
-        event.stopPropagation();
-        $('.tooltip-form').addClass('active');    
-    });
-    
-    $(document).click(function () {
-        $('.tooltip-form').removeClass('active');
-    })
-    
-    
+	});  
     
 });
 

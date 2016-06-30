@@ -62,7 +62,8 @@
             transition: width 0.3s;
         }
         li:hover figure{
-            opacity: 0.7;
+            opacity: 0.8;
+            transition: opacity 0.3s;
         }
     }
 }
