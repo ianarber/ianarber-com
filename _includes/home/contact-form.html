@@ -12,7 +12,7 @@
                 <div id="tooltip-form">
                     <!-- form will be sent via formspree.io -->
                     <!-- TODO: authorize Ian's email with formspree and change below -->
-                    <form id="submit-form" action="//formspree.io/test@gmail.com" method="POST">
+                    <form id="submit-form" method="POST">
                         <div>
                             <label>Name:</label>
                             <input type="text" placeholder="Your name"/>
@@ -24,7 +24,8 @@
                         </div>
                         <div>
                             <label id="message">Message:</label>
-                            <textarea name="message" placeholder="Your message"></textarea>
+                            <textarea id="qw" name="message" placeholder="Your message"></textarea>
+                            <br id="submit-break">
                             <input type="submit" value="Send"/>
                         </div>                  
                     </form>

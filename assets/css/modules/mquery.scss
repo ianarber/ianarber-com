@@ -169,38 +169,25 @@
     /*******************************************************/
     
     .testimonials{
-        width: 800px;
+        width: 810px;
         .content{
-            width: 800px;
+            width: 810px;
         }
         #navLinks {
-            width: 800px;
+            width: 810px;
         }
     }
 
     #testimonial-wrapper{
-        width: 4000px;
+        width: 4050px;
     }
+    
+  
         
     
     /*******************************************************/
     
-    
-//    .post-container{
-//        .post-credit-image{
-//            float: none;
-//        }
-//
-//        .post-credit-audio{
-//            float: none;
-//        }
-//    }
-    
-    
-
-    
-    
-    
+ 
     
     
     
@@ -302,12 +289,23 @@
 
 }
 
-//@media screen and (max-width: 960px) {
-//	/* responsive columns; see "Element sizing" on http://masonry.desandro.com/options.html */
-//	.grid li {
-//		width: 33.3%;
-//	}
-//}
+@media screen and (max-width: 945px) {
+
+    #tooltip-form{
+        label:first-of-type{
+            margin-left: -20px;
+        }
+        input[type=text],
+        input[type=email]{
+            width: 125px;
+        }
+        textarea{
+            height: 90px;
+            width: 290px;
+        }
+    }
+    
+}
 
 /* 481px to 760px */
 @media only screen and (max-width: 895px){
@@ -337,11 +335,6 @@
     
     .intro .social{
         margin-top: 525px;
-//        .social-icons{
-//            div:not(:last-child){
-//                margin-right: 15px;
-//            }
-//        }
     }
 
 	
@@ -350,7 +343,19 @@
     }
     
     .form{
-	    height: 595px;
+	    height: 635px;
+    }
+    
+    #tooltip-form{
+        input[type=text],
+        input[type=email]{
+            width: 200px;
+        }
+        textarea{
+            margin-top: 15px;
+            height: 100px;
+            width: 350px;
+        }
     }
     
     .direct{
@@ -523,6 +528,18 @@
     .news{
         height: 1500px;
     }
+    
+    #tooltip-form{
+        input[type=text],
+        input[type=email]{
+            width: 120px;
+        }
+        textarea{
+            margin-top: 5px;
+            height: 100px;
+            width: 230px;
+        }
+    }
 }
 
 
@@ -563,6 +580,8 @@
     .showreel-background{
         margin-top: 20px;
     }
+    
+
 
      .form .social{
         .social-icons{
@@ -590,13 +609,29 @@
         height: 2320px;
     }
     
-    .intro{
-//        .social-icons{
-//            div:not(:last-child){
-//                margin-right: 100px;
-//            }
-//        }
-	}
+    #tooltip-form{
+        input[type=text],
+        input[type=email]{
+            width: 200px;
+        }
+        label{
+            margin-left: -30px;
+            &:nth-of-type(2):before{
+                content: "\a";
+                white-space: pre;
+            }
+            
+        }    
+        #submit-break{
+            display: block;
+        }
+        textarea{
+            width: 200px;
+        }
+        
+        
+        
+    }
     
     /*******************************************************/
     
@@ -663,7 +698,24 @@
 		#welcome-text{
 			display: none;
 		}
-	} 
+	}
+    
+//    #tooltip-form{
+//        label:nth-of-type(2):before{
+//            content: "\a";
+//            white-space: pre;
+//        }
+// 
+//        input[type=text],
+//        input[type=email]{
+//            width: 120px;
+//        }
+//        textarea{
+//            margin-top: 5px;
+//            height: 100px;
+//            width: 230px;
+//        }
+//    }
     
     .footer{
         height: 640px;

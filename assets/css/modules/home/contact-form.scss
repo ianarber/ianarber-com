@@ -68,7 +68,7 @@
             content: " ";
             height: 0;
             left: 50%;
-            margin-left: -13px;
+            margin-left: -14px;
             position: absolute;
             width: 0;
         }
@@ -135,6 +135,9 @@
             color: $backgroundColor;
             transition: all 0.3s;
         }
+    }
+    #submit-break{
+        display: none;
     }
 }
 

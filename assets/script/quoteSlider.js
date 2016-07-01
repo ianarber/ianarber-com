@@ -50,7 +50,7 @@ $(function(){
         } else if ( window.innerWidth <= 1120 && window.innerWidth > 895) {
             
             quoteId = parseInt(link.itemID);        
-            position = alterPosition(position, quoteId, positionMultiplier);  
+            position = alterPosition(position, quoteId, (positionMultiplier - 10));  
             
             createTranslateCss(position);
             
