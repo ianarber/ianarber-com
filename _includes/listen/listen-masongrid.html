@@ -4,27 +4,18 @@
     </div>
 
     <div class="listen-wrapper">
+        <div id="arrow"><i class="fa fa-arrow-right"></i></div>
         <nav class="genre-menu">
             <ul id="genres">
                 <h5>Genres</h5>
-                <li id="genres-all" rel="sc-audio">All</li>
+                <li id="genres-all" class="added" rel="sc-audio">All</li>
                 
                 {% for playlists in site.data.listen.playlists %}
                 
                 <li id="genres-{{ playlists.classname }}" rel="sc-{{ playlists.classname }}">{{ playlists.genre }}</li>
                 
                 {% endfor %}
-                
-<!--
-                <li id="genres-all" rel="sc-audio">All</li>
-                <li id="genres-drama" rel="sc-drama">Drama</li>
-                <li id="genres-actadv" rel="sc-actadv">Action/Adventure</li>
-                <li id="genres-epic" rel="sc-epic">Epic</li>
-                <li id="genres-horror" rel="sc-horror">Horror</li>
-                <li id="genres-romfan" rel="sc-romfan">Romantic/Fantasy</li>
-                <li id="genres-elec" rel="sc-elec">Electronic</li>
-                <li id="genres-com" rel="sc-com">Comedy</li>
--->
+
             </ul>
             <ul id="categories">
                 <h5>Categories</h5>
@@ -33,7 +24,9 @@
                 <li id="cat-sfilms" rel="sc-sfilms">Short Films</li>
                 <li id="cat-tv" rel="sc-tv">TV/Documentary</li>
             </ul>
+<!--            <div><i class="fa fa-arrow-right"></i></div>-->
         </nav>
+        
        
         <div id="listen-gallery" class="grid-gallery">
             <section class="grid-wrap">
@@ -44,11 +37,12 @@
                    
                     <li class="sc-audio sc-{{ playlists.classname }}">
                         <div class="bg-iframe">
-                            <iframe id="play-frame" src="about:blank" data-src="{{ playlists.soundcloud }}"></iframe>
                             <div class="bg-iframe-info">
                                 <h5>{{ playlists.genre }}</h5>
                                 <p>{{ playlists.featuring }}</p>
                             </div>
+                            <img src="assets/img/sc-click-to-load.jpg" alt="soundcloud click to load"/>
+                            <iframe class="play-frame" src="about:blank" data-src="{{ playlists.soundcloud }}"></iframe>
                             <div class="fg-cover">
                                 <div class="fg-cover-info">
                                     <p>Playlist</p>
@@ -71,13 +65,14 @@
                     {% for featurefilms in site.data.listen.featurefilms %}
                    
                     <li class="sc-audio sc-{{ featurefilms.classname }}">
-                        <div class="bg-iframe">
-                            <iframe id="filmtv-frame" src="about:blank" data-src="{{ featurefilms.soundcloud }}"></iframe>
+                        <div class="bg-iframe film-tv">
                             <div class="bg-iframe-info">
                                 <h5>{{ featurefilms.title }}</h5>
                                 <p>{{ featurefilms.genre }}, {{ featurefilms.year }}</p>
                                 <p>Directed by {{ featurefilms.director }}</p>
                             </div>
+                            <img src="assets/img/sc-click-to-load.jpg" alt="soundcloud click to load"/>
+                            <iframe class="filmtv-frame" src="about:blank" data-src="{{ featurefilms.soundcloud }}"></iframe>
                             <div class="fg-cover">
                                 <div class="fg-cover-info">
                                     <p>{{ featurefilms.title }}</p>
@@ -100,13 +95,14 @@
                     {% for shortfilms in site.data.listen.shortfilms %}
                    
                     <li class="sc-audio sc-{{ shortfilms.classname }}">
-                        <div class="bg-iframe">
-                            <iframe id="filmtv-frame" src="about:blank" data-src="{{ shortfilms.soundcloud }}"></iframe>
+                        <div class="bg-iframe film-tv">
                             <div class="bg-iframe-info">
                                 <h5>{{ shortfilms.title }}</h5>
                                 <p>{{ shortfilms.genre }}, {{ shortfilms.year }}</p>
                                 <p>Directed by {{ shortfilms.director }}</p>
                             </div>
+                            <img src="assets/img/sc-click-to-load.jpg" alt="soundcloud click to load"/>
+                            <iframe id="filmtv-frame" src="about:blank" data-src="{{ shortfilms.soundcloud }}"></iframe>      
                             <div class="fg-cover">
                                 <div class="fg-cover-info">
                                     <p>{{ shortfilms.title }}</p>
@@ -129,13 +125,14 @@
                     {% for television in site.data.listen.television %}
                    
                     <li class="sc-audio sc-{{ television.classname }}">
-                        <div class="bg-iframe">
-                            <iframe id="filmtv-frame" src="about:blank" data-src="{{ television.soundcloud }}"></iframe>
+                        <div class="bg-iframe film-tv">
                             <div class="bg-iframe-info">
                                 <h5>{{ television.title }}</h5>
                                 <p>{{ television.genre }}, {{ television.year }}</p>
                                 <p>Directed by {{ television.director }}</p>
                             </div>
+                            <img src="assets/img/sc-click-to-load.jpg" alt="soundcloud click to load"/>
+                            <iframe id="filmtv-frame" src="about:blank" data-src="{{ television.soundcloud }}"></iframe>
                             <div class="fg-cover">
                                 <div class="fg-cover-info">
                                     <p>{{ television.title }}</p>

@@ -1,4 +1,7 @@
 .listen-grid {
+    //border: 1px solid red;
+    max-width: 1440px;
+    margin: 0 auto;
     height: auto;
     .section-header{
         margin-top: 60px;
@@ -21,15 +24,78 @@
 }
 
 .genre-menu{
-    //border: 1px solid black;
-    min-width: 152px;
+    //min-width: 152px;
+    border: 1px solid red;
     position: fixed;
+    //top: 170px;
+    //left: -140px;
+    //width: 15%;
+    
+    //animation: genre-menu-pulse 2s linear infinite;
+    //animation-play-state: paused;
+    
+    transform: translateX(-410px);
+    
+    
+    
     h5{
         text-align: center;
         margin-bottom: 5px;
         letter-spacing: 0.5px;
     }
 }
+
+@keyframes hvr-hang {
+  0% {
+    transform: translateX(-395px);
+  }
+
+  50% {
+    transform: translateX(-400px);
+  }
+
+  100% {
+    transform: translateX(-395px);
+  }
+}
+@keyframes hvr-hang-sink {
+  100% {
+    transform: translateX(-395px);
+  }
+}
+
+#arrow:hover + .genre-menu{
+    animation-name: hvr-hang-sink, hvr-hang;
+    animation-duration: .3s, 1.5s;
+    animation-delay: 0s, .3s;
+    animation-timing-function: ease-out, ease-in-out;
+    animation-iteration-count: 1, infinite;
+}
+
+
+
+
+
+
+
+#arrow{
+    position: fixed;
+    left: 20px;
+    top: 360px;
+    font-size: 150%;
+}
+
+//@keyframes genre-menu-pulse{
+//    0% { left: -140px; }
+//    100% { left: -130px; }
+//}
+
+
+
+
+
+
+
 
 
 #genres,
@@ -53,17 +119,19 @@
 #genres li.added,
 #categories li.added{
     box-shadow: 0px 0px 6px 1px #aaa, 1px 0px 0px 0px rgba(255, 255, 255, 0.9) inset, 0px 1px 2px rgba(0, 0, 0, 0.2);
-    font-weight: 500;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 #listen-gallery{
-    width: 85%;
+    //border: 1px solid red;
+    width: 100%;
+    //max-width: 1140px;
     float: right;
     margin-top: 0px;
-    margin-right: 10px;
-    //border: 1px solid red;
+    //margin-right: 10px;
     .grid > li{
-        width: 50%;
+        width: 33%;
         float: left;
     } 
 }
@@ -76,23 +144,45 @@
     letter-spacing: 2px;
     margin-top: 3px;
     margin-bottom: 8px;
-
 }
 
 .bg-iframe{
     position: relative;   
+    background: url(https://site-ianarber.aerobatic.io/assets/img/spinner.gif) no-repeat center center;
     iframe{
         padding: 10px;
         border: none;
         width: 100%;
         transition: opacity 0.3s;
+        
     } 
+    img{
+        border: 2px solid #3c3c3c;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        width: 200px;
+        transform: translateY(-50%);
+        margin: 0 auto;
+        padding: 20px;
+    }
 }
 
-#play-frame{
+.disable-image{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.temp-disable-image{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.play-frame{
     height: 400px;
 }
-#filmtv-frame{
+.filmtv-frame{
     height: auto;
 }
 
@@ -106,8 +196,7 @@
 
 
 .bg-iframe-info{
-    margin-top: -12px;
-    margin-bottom: 20px;
+    margin-top: 10px;
     text-align: center;
     transition: opacity 0.3s;
     p{
@@ -116,22 +205,44 @@
     }
 }
 
+.film-tv{
+    img{
+        width: 130px;
+        padding: 10px;
+        transform: translateY(-40%);
+    }
+}
 
 
 
 .fg-cover{
+    //border: 1px solid green;
     position: absolute;
     top: 0px;
     left: 0px;
     width: 100%;
     height: 100%;
-    padding: 160px 90px;
+    //padding: 160px 90px;
+    padding: 70px 70px;
     cursor: auto;
     pointer-events: none;
     opacity: 0;
     transform: translateY(10px);
     transition: all 0.3s;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .fg-cover.disabled{
     pointer-events: all;
@@ -147,17 +258,14 @@
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    border: 2px solid rgba(51, 51, 51, 0.5);
+    border: 2px solid #3c3c3c;
     border-radius: 0px;
+    background-color: #fff;
     p{
-        color: rgba(51, 51, 51, 0.5);
+        color: #3c3c3c;
         text-align: center;
         font-size: 70%;
         font-weight: 800;
-        //letter-spacing: 0.5px;
-        &:last-child{
-            //margin-top: 15px;
-        }
     }
 }
 
