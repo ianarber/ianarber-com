@@ -1,6 +1,6 @@
 .listen-grid {
     //border: 1px solid red;
-    max-width: 1440px;
+    max-width: 1840px;
     margin: 0 auto;
     height: auto;
     .section-header{
@@ -19,22 +19,27 @@
 }
 
 .listen-wrapper{
-    width: 80%;
+    width: 95%;
     margin: 0 auto;
 }
 
 .genre-menu{
     //min-width: 152px;
-    border: 1px solid red;
     position: fixed;
+    z-index: 1;
     //top: 170px;
     //left: -140px;
     //width: 15%;
-    
+    background-color: $backgroundColor;
+    //border: 10px solid $backgroundColor;
+    box-shadow: 0px 0px 2px 5px $backgroundColor;
+    padding-left: 10px;
+    padding-right: 10px;
+    backface-visibility: hidden;
     //animation: genre-menu-pulse 2s linear infinite;
     //animation-play-state: paused;
-    
-    transform: translateX(-410px);
+    transform: translateY(-30px);
+    //transform: translateX(-410px);
     
     
     
@@ -45,32 +50,32 @@
     }
 }
 
-@keyframes hvr-hang {
-  0% {
-    transform: translateX(-395px);
-  }
+//@keyframes hvr-hang {
+//  0% {
+//    transform: translateX(-395px);
+//  }
+//
+//  50% {
+//    transform: translateX(-400px);
+//  }
+//
+//  100% {
+//    transform: translateX(-395px);
+//  }
+//}
+//@keyframes hvr-hang-sink {
+//  100% {
+//    transform: translateX(-395px);
+//  }
+//}
 
-  50% {
-    transform: translateX(-400px);
-  }
-
-  100% {
-    transform: translateX(-395px);
-  }
-}
-@keyframes hvr-hang-sink {
-  100% {
-    transform: translateX(-395px);
-  }
-}
-
-#arrow:hover + .genre-menu{
-    animation-name: hvr-hang-sink, hvr-hang;
-    animation-duration: .3s, 1.5s;
-    animation-delay: 0s, .3s;
-    animation-timing-function: ease-out, ease-in-out;
-    animation-iteration-count: 1, infinite;
-}
+//#arrow:hover + .genre-menu{
+//    animation-name: hvr-hang-sink, hvr-hang;
+//    animation-duration: .3s, 1.5s;
+//    animation-delay: 0s, .3s;
+//    animation-timing-function: ease-out, ease-in-out;
+//    animation-iteration-count: 1, infinite;
+//}
 
 
 
@@ -80,10 +85,25 @@
 
 #arrow{
     position: fixed;
-    left: 20px;
-    top: 360px;
-    font-size: 150%;
+    z-index: 2;
+    top: 70px;
+    margin-left: 20px;
 }
+
+.arrow-rotate{
+    transform: rotate(90deg);
+}
+
+#menu-info{
+    position: fixed;
+    z-index: 2;
+    top: 70px;
+    float: right;
+    font-size: 70%;
+    margin-left: 45px;
+    opacity: 1;
+}
+
 
 //@keyframes genre-menu-pulse{
 //    0% { left: -140px; }
@@ -108,7 +128,7 @@
         width: 100%;
         min-width: 150px;
         cursor: pointer;
-        background: #ffffff;
+        background: $backgroundColor;
         box-shadow: 0px 0px 1px 1px #aaa, 1px 0px 0px 0px rgba(255, 255, 255, 0.9) inset, 0px 1px 2px rgba(0, 0, 0, 0.2);
         border-radius: 2px;
         padding: 4px 0px;
@@ -130,7 +150,7 @@
     float: right;
     margin-top: 0px;
     //margin-right: 10px;
-    .grid > li{
+    .listen-grid-elements > li{
         width: 33%;
         float: left;
     } 
@@ -260,7 +280,7 @@
     height: 100%;
     border: 2px solid #3c3c3c;
     border-radius: 0px;
-    background-color: #fff;
+    background-color: $backgroundColor;
     p{
         color: #3c3c3c;
         text-align: center;

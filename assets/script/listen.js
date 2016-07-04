@@ -6,7 +6,15 @@ $(function () {
     
     var $categories = $('#categories');
     
+    var $menuInfo = $('#menu-info');
     var $genreMenu = $('.genre-menu');
+    var $arrow = $('#arrow');
+    
+    $menuInfo.delay(5000).fadeOut('slow');
+    $genreMenu.delay(5000).slideUp('slow');
+    $arrow.hover(function(){
+        $menuInfo.fadeToggle('slow'); 
+    });
     
     $('#genres li').on('click', function(){
         //highlight genre button the user has clicked on
@@ -27,6 +35,8 @@ $(function () {
         $liToShow.find('iframe').addClass('disabled');
         $liToShow.find('.bg-iframe-info').addClass('disabled');
         $liToShow.find('.fg-cover').addClass('disabled');
+        
+        setTimeout(slideGenreMenu, 500);
     });
     
     
@@ -42,6 +52,8 @@ $(function () {
         $('html, body').animate({
             scrollTop: $('.' + category).offset().top -70
         }, 2000);
+        
+        setTimeout(slideGenreMenu, 500);
     })
     
     
@@ -67,10 +79,13 @@ $(function () {
     
     
     $('#arrow').on('click', function(){
-         $genreMenu.css('transform', 'translateX(100px)');
+        slideGenreMenu();
     });
     
-    
+    function slideGenreMenu(){
+        $genreMenu.slideToggle();
+        $arrow.toggleClass('arrow-rotate');
+    }
     
     
     

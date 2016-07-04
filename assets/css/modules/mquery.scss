@@ -11,6 +11,12 @@
     .news{
         height: 770px;
     }
+    
+    #listen-gallery{
+        .listen-grid-elements > li{
+            width: 50%;
+        } 
+    }
 }
 
 
@@ -381,8 +387,12 @@
         }
     }
     
-    
-    
+    #listen-gallery{
+        .listen-grid-elements > li{
+            width: 100%;
+        } 
+    }
+
     
     
     
