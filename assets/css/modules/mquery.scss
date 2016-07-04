@@ -387,6 +387,20 @@
         }
     }
     
+    .listen-grid {
+        .section-header{
+            display: none;
+        }
+    }
+    
+    .genre-menu{
+        transform: translateY(20px);
+    }
+        
+    .listen-wrapper{
+        margin-top: 80px;
+    }
+        
     #listen-gallery{
         .listen-grid-elements > li{
             width: 100%;

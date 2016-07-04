@@ -71,13 +71,6 @@ $(function () {
     });
     
     
-//    $('#arrow').toggle(function(){
-//         $genreMenu.css('transform', 'translateX(100px)');
-//    }, function(){
-//         $genreMenu.css('transform', 'translateX(-410px)');
-//    });
-    
-    
     $('#arrow').on('click', function(){
         slideGenreMenu();
     });
@@ -86,6 +79,23 @@ $(function () {
         $genreMenu.slideToggle();
         $arrow.toggleClass('arrow-rotate');
     }
+    
+    
+    $(window).scroll(function(){
+        
+        if ($(window).scrollTop() + $(window).height() > $('.footer').offset().top){
+            $genreMenu.fadeOut('slow');
+            $arrow.fadeOut('slow');
+        } else {
+            $arrow.fadeIn('slow');
+        }
+        
+    });
+    
+    
+    
+    
+    
     
     
     
@@ -98,3 +108,21 @@ $(function () {
   
     
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

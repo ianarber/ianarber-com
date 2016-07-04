@@ -20,7 +20,8 @@
 
 .listen-wrapper{
     width: 95%;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .genre-menu{
@@ -38,9 +39,9 @@
     backface-visibility: hidden;
     //animation: genre-menu-pulse 2s linear infinite;
     //animation-play-state: paused;
-    transform: translateY(-30px);
+    transform: translateY(-20px);
     //transform: translateX(-410px);
-    
+    //margin-top: 10px;
     
     
     h5{
@@ -86,8 +87,15 @@
 #arrow{
     position: fixed;
     z-index: 2;
-    top: 70px;
+    top: 75px;
     margin-left: 20px;
+    font-size: 130%;
+    opacity: 0.3;
+    transition: opacity 0.3s;
+    &:hover{
+        opacity: 1;
+        transition: opacity 0.3s;
+    }
 }
 
 .arrow-rotate{
@@ -97,11 +105,13 @@
 #menu-info{
     position: fixed;
     z-index: 2;
-    top: 70px;
+    top: 77px;
     float: right;
     font-size: 70%;
-    margin-left: 45px;
-    opacity: 1;
+    margin-left: 50px;
+    color: $backgroundColor;
+    background-color: $mainFontColor;
+    padding: 0px 3px;
 }
 
 
@@ -120,7 +130,9 @@
 
 #genres,
 #categories{
+    float: left;
     li{
+        //display: inline-block;
         text-align: center;
         font-size: 70%;
         font-weight: 300;
@@ -141,6 +153,10 @@
     box-shadow: 0px 0px 6px 1px #aaa, 1px 0px 0px 0px rgba(255, 255, 255, 0.9) inset, 0px 1px 2px rgba(0, 0, 0, 0.2);
     font-weight: 600;
     letter-spacing: 0.5px;
+}
+
+#categories{
+    margin-left: 10px;
 }
 
 #listen-gallery{
