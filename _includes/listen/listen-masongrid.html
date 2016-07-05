@@ -4,7 +4,7 @@
     </div>
 
     <div class="listen-wrapper">
-        <i id="arrow" class="fa fa-arrow-circle-right"></i><p id="menu-info">Click to apply Genre Filters</p>
+        <i id="arrow" class="fa fa-arrow-circle-right"></i><p id="menu-info">Filter by Genre</p>
         <nav class="genre-menu">
             <ul id="genres">
                 <h5>Filter Genre</h5>
@@ -40,14 +40,17 @@
                                 <h5>{{ playlists.genre }}</h5>
                                 <p>{{ playlists.featuring }}</p>
                             </div>
-                            <img src="assets/img/sc-click-to-load.jpg" alt="soundcloud click to load"/>
-                            <iframe class="play-frame" src="/blank.html" data-src="{{ playlists.soundcloud }}"></iframe>
+<!--                            <div id="sc-load-icon-wrapper"><i class="fa fa-soundcloud"></i><p id="sc-load-icon">Click to Load</p></div>-->
+<!--                            <img src="assets/img/sc-click-to-load.jpg" alt="soundcloud click to load"/>-->
+                            <iframe class="play-frame" src="{{ playlists.soundcloud }}"></iframe>
                             <div class="fg-cover">
+<!--
                                 <div class="fg-cover-info">
+                                    <p><i class="fa fa-soundcloud"></i></p>
                                     <p>Playlist</p>
-                                    <p>&#45;</p>
                                     <p>{{ playlists.genre }}</p>
                                 </div>
+-->
                             </div>                           
                         </div>                     
                     </li>
@@ -70,14 +73,16 @@
                                 <p>{{ featurefilms.genre }}, {{ featurefilms.year }}</p>
                                 <p>Directed by {{ featurefilms.director }}</p>
                             </div>
-                            <img src="assets/img/sc-click-to-load.jpg" alt="soundcloud click to load"/>
-                            <iframe class="filmtv-frame" src="/blank.html" data-src="{{ featurefilms.soundcloud }}"></iframe>
+<!--                            <img src="assets/img/sc-click-to-load.jpg" alt="soundcloud click to load"/>-->
+                            <iframe class="filmtv-frame" src="{{ featurefilms.soundcloud }}" data-src="{{ featurefilms.soundcloud }}"></iframe>
                             <div class="fg-cover">
+<!--
                                 <div class="fg-cover-info">
                                     <p>{{ featurefilms.title }}</p>
                                     <p>&#45;</p>
                                     <p>{{ featurefilms.genre }}</p>
                                 </div>
+-->
                             </div>                           
                         </div>                     
                     </li>
@@ -100,14 +105,16 @@
                                 <p>{{ shortfilms.genre }}, {{ shortfilms.year }}</p>
                                 <p>Directed by {{ shortfilms.director }}</p>
                             </div>
-                            <img src="assets/img/sc-click-to-load.jpg" alt="soundcloud click to load"/>
-                            <iframe id="filmtv-frame" src="/blank.html" data-src="{{ shortfilms.soundcloud }}"></iframe>      
+<!--                            <img src="assets/img/sc-click-to-load.jpg" alt="soundcloud click to load"/>-->
+                            <iframe id="filmtv-frame" src="{{ shortfilms.soundcloud }}" data-src="{{ shortfilms.soundcloud }}"></iframe>      
                             <div class="fg-cover">
+<!--
                                 <div class="fg-cover-info">
                                     <p>{{ shortfilms.title }}</p>
                                     <p>&#45;</p>
                                     <p>{{ shortfilms.genre }}</p>
                                 </div>
+-->
                             </div>                           
                         </div>                     
                     </li>
@@ -130,14 +137,16 @@
                                 <p>{{ television.genre }}, {{ television.year }}</p>
                                 <p>Directed by {{ television.director }}</p>
                             </div>
-                            <img src="assets/img/sc-click-to-load.jpg" alt="soundcloud click to load"/>
-                            <iframe id="filmtv-frame" src="/blank.html" data-src="{{ television.soundcloud }}"></iframe>
+<!--                            <img src="assets/img/sc-click-to-load.jpg" alt="soundcloud click to load"/>-->
+                            <iframe id="filmtv-frame" src="{{ television.soundcloud }}" data-src="{{ television.soundcloud }}"></iframe>
                             <div class="fg-cover">
+<!--
                                 <div class="fg-cover-info">
                                     <p>{{ television.title }}</p>
                                     <p>&#45;</p>
                                     <p>{{ television.genre }}</p>
                                 </div>
+-->
                             </div>                           
                         </div>                     
                     </li>

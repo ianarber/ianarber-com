@@ -10,11 +10,15 @@ $(function () {
     var $genreMenu = $('.genre-menu');
     var $arrow = $('#arrow');
     
+    
+    //fade out elements after page load
     $menuInfo.delay(5000).fadeOut('slow');
     $genreMenu.delay(5000).slideUp('slow');
+    
     $arrow.hover(function(){
         $menuInfo.fadeToggle('slow'); 
     });
+       
     
     $('#genres li').on('click', function(){
         //highlight genre button the user has clicked on
@@ -28,12 +32,12 @@ $(function () {
         
         //reset disabled classes
         $listenGallery.find('.disabled').removeClass('disabled');
-        $listenGallery.find('.temp-disable-image').removeClass('temp-disable-image');
+        //$listenGallery.find('.temp-disable-image').removeClass('temp-disable-image');
 
         //add disabled classes to LI elements not of the genre user has clicked on
-        $liToShow.find('img').addClass('temp-disable-image');
+        //$liToShow.find('img').addClass('temp-disable-image');
         $liToShow.find('iframe').addClass('disabled');
-        $liToShow.find('.bg-iframe-info').addClass('disabled');
+        //$liToShow.find('.bg-iframe-info').addClass('disabled');
         $liToShow.find('.fg-cover').addClass('disabled');
         
         setTimeout(slideGenreMenu, 500);
@@ -57,35 +61,39 @@ $(function () {
     })
     
     
-    $('img').on('click', function(){
-
-        //set full opacity to click to load image (via css)
-        $(this).addClass('disable-image');
-        //search for nearest iframe
-        var $iframe = $(this).siblings('iframe');
-        //populate src att with data stored in data-src
-        var src = $iframe.attr('data-src');
-        $iframe.attr('src', src); 
-        //sc widget iframe will now load
-        
-    });
+//    $('img').on('click', function(){
+//
+//        //set full opacity to click to load image (via css)
+//        $(this).addClass('disable-image');
+//        //search for nearest iframe
+//        var $iframe = $(this).siblings('iframe');
+//        //populate src att with data stored in data-src
+//        var src = $iframe.attr('data-src');
+//        $iframe.attr('src', src); 
+//        //sc widget iframe will now load
+//        
+//    });
     
     
     $('#arrow').on('click', function(){
         slideGenreMenu();
     });
     
+    
+    //toggle genre menu slide action
     function slideGenreMenu(){
         $genreMenu.slideToggle();
         $arrow.toggleClass('arrow-rotate');
     }
     
     
+    //listen for scroll event to footer then fade out genre menu and related elements
     $(window).scroll(function(){
         
         if ($(window).scrollTop() + $(window).height() > $('.footer').offset().top){
             $genreMenu.fadeOut('slow');
             $arrow.fadeOut('slow');
+            $menuInfo.fadeOut('slow');
         } else {
             $arrow.fadeIn('slow');
         }

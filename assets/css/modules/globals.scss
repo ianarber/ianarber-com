@@ -191,6 +191,7 @@ hr{
     background-color: #898989;
     padding: 4px;
     border-radius: 50%;
+    transition: background-color 0.3s;
 }
 
 #navLinks ul li:hover,
@@ -201,7 +202,8 @@ hr{
 #navLinks ul li.active,
 #nav-scroll-btns ul li.active{
     background-color: #d1d1d1;
-    color: #FFFFFF;
+    transition: background-color 0.3s;
+    //color: #FFFFFF;
     outline-width: 7px;
 }
 

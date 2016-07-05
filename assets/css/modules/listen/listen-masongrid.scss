@@ -184,36 +184,85 @@
 
 .bg-iframe{
     position: relative;   
-    background: url(https://site-ianarber.aerobatic.io/assets/img/spinner.gif) no-repeat center center;
+    
     iframe{
         padding: 10px;
         border: none;
         width: 100%;
+        background: url(https://site-ianarber.aerobatic.io/assets/img/spinner.gif) no-repeat center center;
         transition: opacity 0.3s;
         
     } 
-    img{
-        border: 2px solid #3c3c3c;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 50%;
-        width: 200px;
-        transform: translateY(-50%);
-        margin: 0 auto;
-        padding: 20px;
-    }
+//    img{
+//        border: 2px solid #3c3c3c;
+//        position: absolute;
+//        left: 0;
+//        right: 0;
+//        top: 50%;
+//        width: 200px;
+//        transform: translateY(-50%);
+//        margin: 0 auto;
+//        padding: 20px;
+//    }
+//    i{
+//        position: absolute;
+//        top: 50%;
+//        transform: translateY(-50%);
+//        left: 35%;
+//        color: #333;
+//        font-size: 650%;
+//        cursor: pointer;
+//        transition: transform 0.3s;
+////        &:hover{
+////            transform: translateY(-60%);
+////            transition: transform 0.3s;
+////        }
+////        &:hover + #sc-load-icon{
+////            transform: translateY(90%);
+////            opacity: 1;
+////            transition: all 0.3s;
+////        }
+//    }
+//    #sc-load-icon{
+//        position: absolute;
+//        top: 50%;
+//        transform: translateY(20%);
+//        left: 42%;
+//        color: #333;
+//        font-size: 80%;
+//        cursor: pointer;
+//        letter-spacing: 1px;
+//        opacity: 0;
+//        transition: all 0.3s;
+//    }
+//    #sc-load-icon-wrapper:hover > i{
+//        transform: translateY(-60%);
+//            transition: transform 0.3s;
+//    }
+//    #sc-load-icon-wrapper:hover > p{
+//        transform: translateY(90%);
+//        opacity: 1;
+//        transition: all 0.3s;
+//    }
 }
 
-.disable-image{
-    opacity: 0;
-    pointer-events: none;
-}
 
-.temp-disable-image{
-    opacity: 0;
-    pointer-events: none;
-}
+
+
+
+
+
+
+
+//.disable-image{
+//    opacity: 0;
+//    pointer-events: none;
+//}
+//
+//.temp-disable-image{
+//    opacity: 0;
+//    pointer-events: none;
+//}
 
 .play-frame{
     height: 400px;
@@ -225,8 +274,10 @@
 
 
 .disabled{
+    pointer-events: none;
     opacity: 0.1;
     transition: opacity 0.3s;
+    filter: blur(2px);
 }
 
 
@@ -289,21 +340,21 @@
 
 
 
-.fg-cover-info{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    border: 2px solid #3c3c3c;
-    border-radius: 0px;
-    background-color: $backgroundColor;
-    p{
-        color: #3c3c3c;
-        text-align: center;
-        font-size: 70%;
-        font-weight: 800;
-    }
-}
+//.fg-cover-info{
+//    display: flex;
+//    flex-direction: column;
+//    justify-content: center;
+//    height: 100%;
+//    //border: 2px solid #3c3c3c;
+//    border-radius: 0px;
+//    //background-color: $backgroundColor;
+//    p{
+//        color: #3c3c3c;
+//        text-align: center;
+//        font-size: 70%;
+//        font-weight: 800;
+//    }
+//}
 
 
 
