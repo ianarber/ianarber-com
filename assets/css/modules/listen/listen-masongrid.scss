@@ -149,6 +149,7 @@
 }
 
 .bg-iframe{
+    //border: 1px solid red;
     position: relative;   
     //background: url(https://site-ianarber.aerobatic.io/assets/img/spinner.gif) no-repeat center center;
     iframe{
@@ -158,8 +159,17 @@
         
         transition: opacity 0.3s;
         
-    } 
-
+    }
+    img{
+        position: absolute;
+        top: 28%;
+        transform: translateY(-28%);
+        left: 50%;
+        transform: translateX(-50%);
+        width: 350px;
+        margin: 0 auto;
+        filter: blur(2px);
+    }
     i{
         position: absolute;
         top: 40%;
@@ -167,7 +177,7 @@
         //transform: translateY(-10%);
         transform: translateX(-50%);
         color: #333;
-        background-color: $backgroundColor;
+        //background-color: $backgroundColor;
         font-size: 450%;
         cursor: pointer;
         transition: transform 0.3s;
@@ -176,7 +186,7 @@
         }
 
     }
-
+    transition: opacity 0.3s;
 }
 
 
@@ -186,16 +196,19 @@
 
 .disable-play-icon{
     opacity: 0;
+    transition: opacity 0.3s;
     pointer-events: none;
 }
-
 
 
 
 .temp-disable-icon{
-    opacity: 0;
+    opacity: 0.2;
+    filter: blur(2px);
     pointer-events: none;
 }
+
+
 
 .play-frame{
     height: 400px;
@@ -246,38 +259,52 @@
     padding: 70px 70px;
     cursor: auto;
     pointer-events: none;
-    opacity: 0;
+    //opacity: 0;
     transform: translateY(10px);
     transition: all 0.3s;
 }
 
 
+//
+//
+//
+//.fg-cover.disabled{
+//    pointer-events: all;
+//    opacity: 1;
+//    transform: translateY(0px);
+//    transition: all 0.3s;
+//}
+//
+//
+//
+//    
 
 
-
-
-
-
-
-
-
-
-
-
-.fg-cover.disabled{
-    pointer-events: all;
-    opacity: 1;
-    transform: translateY(0px);
-    transition: all 0.3s;
+#expand-wrapper{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 85%;
+    //line-height: 3px;
 }
 
+#see-more{
+    font-size: 170%;
+    //margin: 0 auto;
+    cursor: pointer;
+    transition: transform 0.3s;
+    &:hover{
+        transform: translateY(5px);
+    }
+}
 
+#see-more.rotated{
+    transform: rotate(180deg);
+    transition: transform 0.3s;
+}
 
-    
-
-
-
-
+#listen-more-expand{
+    display: none;
+}
 
 
 

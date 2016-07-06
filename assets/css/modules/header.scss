@@ -156,48 +156,48 @@
 
 /***Mixin function for positioning of image next to header links***/
 
-@mixin headerMenuIcon($hpos, $vpos){
-    position: relative;
-    &:before{
-        content: '';
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        pointer-events: none;
-        background: url(../../assets/img/musical-note.png);
-        background-repeat: no-repeat;
-        background-position: $hpos $vpos;
-        opacity: 0;
-        transition: opacity 0.3s;
-    }
-}
-
-.menu-list-1 li:nth-child(1){
-    @include headerMenuIcon(117%, 60%);
-}
-.menu-list-1 li:nth-child(2){
-    @include headerMenuIcon(113%, 60%);
-}
-.menu-list-1 li:nth-child(3){
-    @include headerMenuIcon(114%, 60%);
-}
-.menu-list-2 li:nth-child(1){
-    @include headerMenuIcon(111%, 60%);
-}
-.menu-list-2 li:nth-child(2){
-    @include headerMenuIcon(110%, 60%);
-}
-.menu-list-2 li:nth-child(3){
-    @include headerMenuIcon(107%, 60%);
-}
-
-.menu-list-1 li:hover:before,
-.menu-list-2 li:hover:before{
-    opacity: 1;
-    transition: opacity 0.3s;
-}
+//@mixin headerMenuIcon($hpos, $vpos){
+//    position: relative;
+//    &:before{
+//        content: '';
+//        position: absolute;
+//        top: 0;
+//        bottom: 0;
+//        left: 0;
+//        right: 0;
+//        pointer-events: none;
+//        background: url(../../assets/img/musical-note.png);
+//        background-repeat: no-repeat;
+//        background-position: $hpos $vpos;
+//        opacity: 0;
+//        transition: opacity 0.3s;
+//    }
+//}
+//
+//.menu-list-1 li:nth-child(1){
+//    @include headerMenuIcon(117%, 60%);
+//}
+//.menu-list-1 li:nth-child(2){
+//    @include headerMenuIcon(113%, 60%);
+//}
+//.menu-list-1 li:nth-child(3){
+//    @include headerMenuIcon(114%, 60%);
+//}
+//.menu-list-2 li:nth-child(1){
+//    @include headerMenuIcon(111%, 60%);
+//}
+//.menu-list-2 li:nth-child(2){
+//    @include headerMenuIcon(110%, 60%);
+//}
+//.menu-list-2 li:nth-child(3){
+//    @include headerMenuIcon(107%, 60%);
+//}
+//
+//.menu-list-1 li:hover:before,
+//.menu-list-2 li:hover:before{
+//    opacity: 1;
+//    transition: opacity 0.3s;
+//}
 
 .menu-items-1,
 .menu-items-2{

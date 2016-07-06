@@ -44,7 +44,7 @@ $(function () {
         $listenGallery.find('.temp-disable-icon').removeClass('temp-disable-icon');
 
         //add disabled classes to LI elements not of the genre user has clicked on
-        $liToShow.find('i').addClass('temp-disable-icon');
+        $liToShow.find('i').not('.disable-play-icon').addClass('temp-disable-icon');
         $liToShow.find('iframe').addClass('disabled');
         //$liToShow.find('.bg-iframe-info').addClass('disabled');
         $liToShow.find('.fg-cover').addClass('disabled');
@@ -83,10 +83,12 @@ $(function () {
     
     
     
-    $listenGallery.find('i').on('click', function(){
+    $listenGallery.find('i').not('#see-more').on('click', function(){
 
         //set full opacity to click to load image (via css)
         $(this).addClass('disable-play-icon');
+        
+        $(this).siblings('img').addClass('disable-play-icon');
         //search for nearest iframe
         var $iframe = $(this).siblings('iframe');
            
@@ -96,11 +98,11 @@ $(function () {
         //sc widget iframe will now load
 
         
-        var widget = SC.Widget(document.getElementById($iframe.attr('id')));
-        
-        widget.bind(SC.Widget.Events.READY, function(){
-            widget.play();
-        });
+//        var widget = SC.Widget(document.getElementById($iframe.attr('id')));
+//        
+//        widget.bind(SC.Widget.Events.READY, function(){
+//            widget.play();
+//        });
         
         
   
@@ -156,7 +158,10 @@ $(function () {
     
     
     
-    
+    $('#see-more').on('click', function(){
+        $('#listen-more-expand').slideToggle('slow');
+        $(this).toggleClass('rotated');
+    });
     
     
     
