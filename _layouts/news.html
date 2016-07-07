@@ -1,73 +1,38 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+---
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{{ page.title }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+{% contentfor header %}
+    {% include header.html shrunkclass="shunk-header" %}
+{% endcontentfor %}
 
-    <link rel="stylesheet" href="/assets/css/main.css">
+<div class="post-container">
+    <figure class="post-image">
+        <img src="{{ page.thumbnail }}" alt="Photo" />
+    </figure>
 
-<!--    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800,700|Droid+Serif:400,700' rel='stylesheet' type='text/css'>-->
-        <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700|Droid+Serif:400,700' rel='stylesheet' type='text/css'>
-        
-</head>
-
-<body>
-
-    {% include mobile-nav.html %}
-
-    <div id="page-container">
-
-        {% include shrunk-header.html %}
-
-        <div id="page-wrapper" class="slide">
-
-            <div class="post-container">
-                <figure class="post-image">
-                    <img src="{{ page.thumbnail }}" alt="Photo" />
-<!--
-                    <figcaption class="post-caption">
-                        <p><i class="fa fa-picture-o"></i>{{ page.caption }}</p>
-                    </figcaption>
--->
-                </figure>
-
-                <div class="post-title">
-                    <h2>{{ page.title }}</h2>
-                </div>
-                <div class="post-date">
-                    <ul class="fa-ul">
-                        <li><i class="fa-li fa fa-calendar-o"></i>{{ page.date | date_to_string }}</li>
-                    </ul>
-                </div>
-
-                <div class="post-heading">
-                    {{ page.heading }}
-                </div>
-
-                <div class="post">
-                    {{ content }}
-                </div>
-
-                <!--<div id="post-seperator"></div>-->
-                <hr>
-
-                <div class="post-navigation">
-                    {% if page.previous.url %}
-                    <a id="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a> {% endif %} {% if page.next.url %}
-                    <a id="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a> {% endif %}
-                </div>
-            </div>
-
-            {% include footer.html %}
-
-        </div>
+    <div class="post-title">
+        <h2>{{ page.title }}</h2>
+    </div>
+    <div class="post-date">
+        <ul class="fa-ul">
+            <li><i class="fa-li fa fa-calendar-o"></i>{{ page.date | date_to_string }}</li>
+        </ul>
     </div>
 
-    {% include global-scripts.html %}
+    <div class="post-heading">
+        {{ page.heading }}
+    </div>
 
-</body>
+    <div class="post">
+        {{ content }}
+    </div>
 
-</html>
+    <hr>
+
+    <div class="post-navigation">
+        {% if page.previous.url %}
+        <a id="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a> {% endif %} {% if page.next.url %}
+        <a id="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a> {% endif %}
+    </div>
+</div>

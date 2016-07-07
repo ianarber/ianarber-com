@@ -1,101 +1,71 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+---
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{{ page.title }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+{% contentfor header %}
+    {% include header.html shrunkclass="shunk-header" %}
+{% endcontentfor %}
 
-    <link rel="stylesheet" href="/assets/css/main.css">
+<div class="row post-container">
+    <div class="row post-credit-header">
+        <figure class="col span-1-of-3 post-credit-image">
+            <img src="/{{ page.thumbnail }}" alt="Photo" />
+        </figure>
 
-<!--    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800,700|Droid+Serif:400,700' rel='stylesheet' type='text/css'>-->
-        <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700|Droid+Serif:400,700' rel='stylesheet' type='text/css'>
-        
-</head>
-
-<body>
-
-    {% include mobile-nav.html %}
-
-    <div id="page-container">
-
-        {% include shrunk-header.html %}
-
-        <div id="page-wrapper" class="slide">
-            
-            <div class="row post-container">
-                <div class="row post-credit-header">
-                    <figure class="col span-1-of-3 post-credit-image">
-                        <img src="/{{ page.thumbnail }}" alt="Photo" />
-                    </figure>
-                   
-                    {% if page.soundcloud %}
-                    <div class="col span-2-of-3 post-credit-audio">
-                        <iframe class="frame" src="{{ page.soundcloud }}"></iframe>
-                    </div>
-                    {% endif %}
-                   
-                </div>
-                
-<!--                <div class="section"></div>-->
-                <hr>
-
-                <div class="post-title">
-                    <h2>{{ page.title }}</h2>
-                </div>
-                <div class="post-date">
-                    <ul class="fa-ul">
-                        <li><i class="fa-li fa fa-calendar-o"></i>{{ page.date | date_to_string }}</li>
-                        <li><i class="fa-li fa fa-user"></i>{{ page.role }}</li>
-                        <li><i class="fa-li fa fa-info"></i><a href="{{ page.imdb }}" target="_blank">IMDb</a></li>
-                    </ul>
-                </div>
-
-                <div class="post-heading">
-                    {{ page.synopsis }}
-                </div>
-                
-                <div class="credit-post">
-                    <blockquote>
-                        <p>
-                            Genre: {{ page.genre }}<br/>
-                            Director: {{ page.director }}<br/>
-                            
-                            {% if page.writer %}
-                                Writer: {{ page.writer }}<br/>
-                            {% endif %}
-                                
-                            {% if page.producers %}
-                                Producers: {{ page.producers }}
-                            {% endif %}
-                        </p>
-                    </blockquote>
-                    {{ content }}
-                </div>
-
-                <hr id="credit-hr">
-
-                <div class="post-navigation">
-                   
-                    {% if page.next_in_category != nil %}
-                    <a id="prev" href="{{page.next_in_category.url}}">&laquo; {{page.previous.title}}</a>
-                    {% endif %}
-                    
-                    {% if page.previous_in_category != nil %}
-                    <a id="next" href="{{page.previous_in_category.url}}">{{page.next.title}} &raquo;</a>
-                    {% endif %}
-                    
-                </div>
-            </div>
-
-            {% include footer.html %}
-
+        {% if page.soundcloud %}
+        <div class="col span-2-of-3 post-credit-audio">
+            <iframe class="frame" src="{{ page.soundcloud }}"></iframe>
         </div>
+        {% endif %}
+
     </div>
 
-    {% include global-scripts.html %}
+    <hr>
 
-</body>
+    <div class="post-title">
+        <h2>{{ page.title }}</h2>
+    </div>
+    <div class="post-date">
+        <ul class="fa-ul">
+            <li><i class="fa-li fa fa-calendar-o"></i>{{ page.date | date_to_string }}</li>
+            <li><i class="fa-li fa fa-user"></i>{{ page.role }}</li>
+            <li><i class="fa-li fa fa-info"></i><a href="{{ page.imdb }}" target="_blank">IMDb</a></li>
+        </ul>
+    </div>
 
-</html>
+    <div class="post-heading">
+        {{ page.synopsis }}
+    </div>
+
+    <div class="credit-post">
+        <blockquote>
+            <p>
+                Genre: {{ page.genre }}<br/>
+                Director: {{ page.director }}<br/>
+
+                {% if page.writer %}
+                    Writer: {{ page.writer }}<br/>
+                {% endif %}
+
+                {% if page.producers %}
+                    Producers: {{ page.producers }}
+                {% endif %}
+            </p>
+        </blockquote>
+        {{ content }}
+    </div>
+
+    <hr id="credit-hr">
+
+    <div class="post-navigation">
+
+        {% if page.next_in_category != nil %}
+        <a id="prev" href="{{page.next_in_category.url}}">&laquo; {{page.previous.title}}</a>
+        {% endif %}
+
+        {% if page.previous_in_category != nil %}
+        <a id="next" href="{{page.previous_in_category.url}}">{{page.next.title}} &raquo;</a>
+        {% endif %}
+
+    </div>
+</div>

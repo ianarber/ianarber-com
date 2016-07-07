@@ -13,6 +13,7 @@
 /**futher stylings in globals.scss**/
 .profile-pic{
     width: 90%;
+    height: 450px;
     /* TODO: get actual background images */
 	//background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/home-header-img/quacks.jpg);
 	background-size: cover;
@@ -40,7 +41,7 @@
 		word-spacing: 1px;
         letter-spacing: 1px;
 		text-transform: uppercase;
-		background-color: rgba(242, 242, 242, 0.8);
+		background-color: rgba(242, 242, 242, 0.6);
 		color: rgba(0, 0, 0, 0.8);
 	}
 	#welcome-text{
@@ -52,7 +53,7 @@
         letter-spacing: 0.5px;
 		width: 75%;
 		padding: 2px 8px;
-		background-color: rgba(242, 242, 242, 0.8);
+		background-color: rgba(242, 242, 242, 0.6);
 	}
 	#quote{
 		position: absolute;
@@ -65,26 +66,21 @@
         letter-spacing: 0.5px;
 		padding: 3px 8px;
 		text-align: right;
-		background-color: rgba(0, 0, 0, 0.8);
+		background-color: rgba(0, 0, 0, 0.6);
         opacity: 1;
 	}
 	#cite{
 		position: absolute;
 		color: #f2f2f2;
-		bottom: 20px;
+		bottom: 18px;
 		right: 50px;
 		width: auto;
 		font-size: 80%;
         letter-spacing: 0.5px;
 		padding: 3px 8px;
 		text-align: right;
-		background-color: rgba(0, 0, 0, 0.8);
+		background-color: rgba(0, 0, 0, 0.6);
 	}
-}
-
-
-#slider-container{
-    
 }
 
 

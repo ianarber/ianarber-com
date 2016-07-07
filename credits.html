@@ -1,6 +1,14 @@
 ---
-layout: credits
+layout: default
 title: Ian Arber - Credits
 ---
 
+{% contentfor header %}
+    {% include header.html shrunkclass="shunk-header" %}
+{% endcontentfor %}
+
 {% include credits/credits-masongrid.html %}
+
+{% contentfor scripts %}
+    {% include credits/scripts.html %}
+{% endcontentfor %}

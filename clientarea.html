@@ -1,6 +1,10 @@
 ---
-layout: clientarea
+layout: default
 title: Ian Arber - Client Area
 ---
+
+{% contentfor header %}
+    {% include header.html shrunkclass="shunk-header" %}
+{% endcontentfor %}
 
 {% include clientarea/client.html %}

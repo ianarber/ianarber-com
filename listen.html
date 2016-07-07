@@ -1,6 +1,14 @@
 ---
-layout: listen
+layout: default
 title: Ian Arber - Listen
 ---
 
+{% contentfor header %}
+    {% include header.html shrunkclass="shunk-header" %}
+{% endcontentfor %}
+
 {% include listen/listen-masongrid.html %}
+
+{% contentfor scripts %}
+    {% include listen/scripts.html %}
+{% endcontentfor %}

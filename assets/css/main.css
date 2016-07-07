@@ -3106,6 +3106,7 @@ hr {
 /**futher stylings in globals.scss**/
 .profile-pic {
   width: 90%;
+  height: 450px;
   /* TODO: get actual background images */
   background-size: cover;
   background-position: top;
@@ -3129,7 +3130,7 @@ hr {
   word-spacing: 1px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  background-color: rgba(242, 242, 242, 0.8);
+  background-color: rgba(242, 242, 242, 0.6);
   color: rgba(0, 0, 0, 0.8); }
 
 .profile-pic #welcome-text {
@@ -3141,7 +3142,7 @@ hr {
   letter-spacing: 0.5px;
   width: 75%;
   padding: 2px 8px;
-  background-color: rgba(242, 242, 242, 0.8); }
+  background-color: rgba(242, 242, 242, 0.6); }
 
 .profile-pic #quote {
   position: absolute;
@@ -3154,20 +3155,20 @@ hr {
   letter-spacing: 0.5px;
   padding: 3px 8px;
   text-align: right;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
   opacity: 1; }
 
 .profile-pic #cite {
   position: absolute;
   color: #f2f2f2;
-  bottom: 20px;
+  bottom: 18px;
   right: 50px;
   width: auto;
   font-size: 80%;
   letter-spacing: 0.5px;
   padding: 3px 8px;
   text-align: right;
-  background-color: rgba(0, 0, 0, 0.8); }
+  background-color: rgba(0, 0, 0, 0.6); }
 
 #nav-scroll-btns {
   margin-top: 540px; }
@@ -4211,13 +4212,17 @@ width decreases */
     display: block; }
   .intro {
     top: 40px;
-    height: 595px; }
+    height: 455px; }
   .profile-pic {
-    top: 30px; }
+    width: 93%;
+    top: 15px;
+    height: 360px; }
     .profile-pic #welcome-intro {
-      font-size: 105%; }
-  .intro .social {
-    margin-top: 525px; }
+      font-size: 105%;
+      top: 20px;
+      left: 20px; }
+  #nav-scroll-btns {
+    margin-top: 415px; }
   .showreel-background {
     margin-top: 40px; }
   .form {
@@ -4279,8 +4284,21 @@ width decreases */
     height: 1655px; }
     .showreel-background iframe {
       width: 80%; }
-  .intro .social .social-icons div:not(:last-child) {
-    margin-right: 15px; }
+  .intro {
+    top: 40px;
+    height: 335px; }
+  .profile-pic {
+    width: 90%;
+    height: 250px; }
+    .profile-pic #welcome-intro {
+      font-size: 95%;
+      word-spacing: normal; }
+    .profile-pic #welcome-text,
+    .profile-pic #quote,
+    .profile-pic #cite {
+      display: none; }
+  #nav-scroll-btns {
+    margin-top: 300px; }
   /*******************************************************/
   .testimonials {
     width: 400px; }
@@ -4326,24 +4344,20 @@ width decreases */
     top: 10px;
     right: -25px; }
   .intro {
-    top: 20px;
-    height: 585px; }
-    .intro .social {
-      margin-top: 520px; }
-  .profile-pic #welcome-intro {
-    top: 15px;
-    left: 20px;
-    word-spacing: normal; }
-  .profile-pic #welcome-text {
-    width: 95%; }
-  .profile-pic #quote {
-    bottom: 52px; }
-  .profile-pic #cite {
-    width: 70%;
-    bottom: 10px;
-    right: 25px; }
+    top: 30px;
+    height: 275px; }
+  .profile-pic {
+    width: 93%;
+    height: 190px; }
+    .profile-pic #welcome-intro {
+      font-size: 90%;
+      word-spacing: normal;
+      top: 10px;
+      left: 10px; }
+  #nav-scroll-btns {
+    margin-top: 240px; }
   .showreel-background {
-    margin-top: 20px; }
+    margin-top: 30px; }
   .form .social .social-icons div:not(:last-child) {
     margin-right: 5px; }
   #grid-gallery .grid > li {
@@ -4392,12 +4406,6 @@ width decreases */
 
 /* --- to 400px */
 @media only screen and (max-width: 400px) {
-  .profile-pic #welcome-intro {
-    top: 15px;
-    left: 20px;
-    word-spacing: normal; }
-  .profile-pic #welcome-text {
-    display: none; }
   .footer {
     height: 640px; }
   .foot-lower {

@@ -329,18 +329,22 @@
 	
 	.intro{
 		top: 40px;
-		height: 595px;
+		height: 455px;
 	}
 	
 	.profile-pic{
-		top: 30px;
+        width: 93%;
+		top: 15px;
+        height: 360px;
         #welcome-intro{
 			font-size: 105%;
+            top: 20px;
+		    left: 20px;
 		}
 	}
     
-    .intro .social{
-        margin-top: 525px;
+    #nav-scroll-btns {
+        margin-top: 415px;
     }
 
 	
@@ -457,21 +461,7 @@
     .copyright{
 	    top: 470px;
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-	
+    	
 	
 }
 
@@ -485,13 +475,32 @@
         }
     }
     
-    .intro .social{
-        .social-icons{
-            div:not(:last-child){
-                margin-right: 15px;
-            }
+    
+    
+   .intro{
+		top: 40px;
+		height: 335px;
+	}
+	
+	.profile-pic{
+        width: 90%;
+        height: 250px;
+        #welcome-intro{
+            font-size: 95%;
+            word-spacing: normal;
         }
+        #welcome-text,
+        #quote,
+        #cite{
+			display: none;
+		}
+	}
+    
+    #nav-scroll-btns {
+        margin-top: 300px;
     }
+    
+    
     
     /*******************************************************/
     
@@ -574,40 +583,34 @@
 		right: -25px;
 	}
 	
-	.intro{
-		top: 20px;
-		height: 585px;
-        .social{
-            margin-top: 520px;
-        }
+   .intro{
+		top: 30px;
+		height: 275px;
 	}
 	
 	.profile-pic{
-		#welcome-intro{
-			top: 15px;
-			left: 20px;
-			word-spacing: normal;
-		}
-		#welcome-text{
-			width: 95%;
-		}
-		#quote{
-			bottom: 52px;
-		}
-		#cite{
-			width: 70%;
-			bottom: 10px;
-			right: 25px;
-		}
+        width: 93%;
+        height: 190px;
+        #welcome-intro{
+            font-size: 90%;
+            word-spacing: normal;
+            top: 10px;
+		    left: 10px;
+        }
 	}
     
+    #nav-scroll-btns {
+        margin-top: 240px;
+    }
+    
+    
     .showreel-background{
-        margin-top: 20px;
+        margin-top: 30px;
     }
     
 
 
-     .form .social{
+    .form .social{
         .social-icons{
             div:not(:last-child){
                 margin-right: 5px;
@@ -713,33 +716,7 @@
 
 /* --- to 400px */
 @media only screen and (max-width: 400px){
-	.profile-pic{
-		#welcome-intro{
-			top: 15px;
-			left: 20px;
-			word-spacing: normal;
-		}
-		#welcome-text{
-			display: none;
-		}
-	}
-    
-//    #tooltip-form{
-//        label:nth-of-type(2):before{
-//            content: "\a";
-//            white-space: pre;
-//        }
-// 
-//        input[type=text],
-//        input[type=email]{
-//            width: 120px;
-//        }
-//        textarea{
-//            margin-top: 5px;
-//            height: 100px;
-//            width: 230px;
-//        }
-//    }
+
     
     .footer{
         height: 640px;
