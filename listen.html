@@ -1,14 +1,9 @@
 ---
 layout: default
 title: Ian Arber - Listen
+headerstatus: shunk-header
+scripts: |
+  <script type="text/javascript" src="/assets/script/listen.js"></script>
 ---
 
-{% contentfor header %}
-    {% include header.html shrunkclass="shunk-header" %}
-{% endcontentfor %}
-
-{% include listen/listen-masongrid.html %}
-
-{% contentfor scripts %}
-    {% include listen/scripts.html %}
-{% endcontentfor %}
+{% include listen/listen-grid.html %}

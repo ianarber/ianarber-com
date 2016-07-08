@@ -1,17 +1,16 @@
 ---
 layout: default
 title: Ian Arber - Composer
+headerstatus: no-shrink
+scripts: |
+  <script type="text/javascript" src="/assets/script/collapseHeader.js"></script>
+  <script type="text/javascript" src="/assets/script/introSlider.js"></script>
+  <script type="text/javascript" src="/assets/script/audioPlayer.js"></script>
+  <script type="text/javascript" src="/assets/script/posterOverlay.js"></script>
+  <script type="text/javascript" src="/assets/script/tooltipForm.js"></script>
 ---
-
-{% contentfor header %}
-    {% include header.html shrunkclass="no-shrink" %}
-{% endcontentfor %}
 
 {% include home/intro.html %}
 {% include home/showreel.html %}
 {% include home/news.html %}
 {% include home/contact-form.html %}
-
-{% contentfor scripts %}
-    {% include home/scripts.html %}
-{% endcontentfor %}

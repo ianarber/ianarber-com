@@ -1,14 +1,16 @@
 ---
 layout: default
 title: Ian Arber - Credits
+headerstatus: shunk-header
+scripts: |
+  <!-- scripts libraries -->
+  <script type="text/javascript" src="/assets/script/imagesloaded.pkgd.min.js"></script>
+  <script type="text/javascript" src="/assets/script/masonry.pkgd.min.js"></script>
+  <!-- custom scripts -->
+  <script type="text/javascript" src="/assets/script/cbpGridGallery.js"></script>
+  <script>
+      new CBPGridGallery( document.getElementById( 'grid-gallery' ) );
+  </script>
 ---
 
-{% contentfor header %}
-    {% include header.html shrunkclass="shunk-header" %}
-{% endcontentfor %}
-
 {% include credits/credits-masongrid.html %}
-
-{% contentfor scripts %}
-    {% include credits/scripts.html %}
-{% endcontentfor %}

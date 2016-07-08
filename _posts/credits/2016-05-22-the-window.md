@@ -1,6 +1,8 @@
 ---
 layout: credit-info
+headerstatus: shunk-header
 title: The Window
+iden: thewindow
 thumbnail: assets/img/credits-grid/the-window.jpg
 category: credits
 role: Composer

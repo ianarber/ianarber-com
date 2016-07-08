@@ -1,9 +1,9 @@
 ---
 layout: news
+headerstatus: shunk-header
 title: Mission Impossible - Rogue Nation
 thumbnail: /assets/img/fill-murray-900x450.jpg
 category: news
-caption: Joe Krammer
 heading: Ian will assist Joe Krammer scoring MI5
 excerpt_separator: <!--more-->
 ---

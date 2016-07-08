@@ -1,6 +1,8 @@
 ---
 layout: credit-info
+headerstatus: shunk-header
 title: Time Baraistas
+iden: timebaraistas
 thumbnail: assets/img/credits-grid/time-baristas.jpg
 category: credits
 role: Composer

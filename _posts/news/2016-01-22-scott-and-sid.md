@@ -1,9 +1,9 @@
 ---
 layout: news
+headerstatus: shunk-header
 title: Scott and Sid
 thumbnail: /assets/img/news-posts/scott-and-sid.jpg
 category: news
-caption: The lads - scott and sid
 heading: Ian will meet scott and sid to make music
 excerpt_separator: <!--more-->
 ---

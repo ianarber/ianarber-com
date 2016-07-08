@@ -1,6 +1,8 @@
 ---
 layout: credit-info
+headerstatus: shunk-header
 title: Samsung Product Film
+iden: samsungproductfilm
 thumbnail: assets/img/credits-grid/samsung-product-film.jpg
 category: credits
 role: Composer

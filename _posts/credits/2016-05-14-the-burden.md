@@ -1,6 +1,8 @@
 ---
 layout: credit-info
+headerstatus: shunk-header
 title: The Burden
+iden: theburden
 thumbnail: assets/img/credits-grid/the-burden.jpg
 category: credits
 role: Composer

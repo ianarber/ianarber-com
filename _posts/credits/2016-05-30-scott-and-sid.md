@@ -1,5 +1,6 @@
 ---
 layout: credit-info
+headerstatus: shunk-header
 title: Scott and Sid
 iden: scottandsid
 thumbnail: assets/img/credits-grid/scott-and-sid.jpg

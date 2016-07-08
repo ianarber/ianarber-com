@@ -1,5 +1,6 @@
 ---
 layout: credit-info
+headerstatus: shunk-header
 title: The Island of Dolls
 iden: theislandofdolls
 thumbnail: assets/img/credits-grid/the-island-of-dolls.jpg

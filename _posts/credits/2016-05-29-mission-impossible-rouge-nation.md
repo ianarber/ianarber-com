@@ -1,5 +1,6 @@
 ---
 layout: credit-info
+headerstatus: shunk-header
 title: Mission Impossible - Rouge Nation
 iden: mi5rougenation
 thumbnail: assets/img/credits-grid/mission-impossible-rouge-nation.jpg

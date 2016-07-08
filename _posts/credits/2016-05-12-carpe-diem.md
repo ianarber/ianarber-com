@@ -1,6 +1,8 @@
 ---
 layout: credit-info
+headerstatus: shunk-header
 title: Carpe Diem
+iden: carpediem
 thumbnail: assets/img/credits-grid/carpe-diem.jpg
 category: credits
 role: Composer

@@ -1,5 +1,6 @@
 ---
 layout: credit-info
+headerstatus: shunk-header
 title: Indifferent
 iden: indifferent
 thumbnail: assets/img/credits-grid/indifferent.jpg

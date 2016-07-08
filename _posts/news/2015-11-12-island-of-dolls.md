@@ -1,9 +1,9 @@
 ---
 layout: news
+headerstatus: shunk-header
 title: The Island of Dolls
 thumbnail: /assets/img/news-posts/the-island-of-dolls.jpg
 category: news
-caption: Loads of dolls
 heading: Scary Island with Dolls is next!
 excerpt_separator: <!--more-->
 ---

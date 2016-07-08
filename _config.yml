@@ -1,3 +1,3 @@
 name: Anthony Desmier
 exclude: ["node_modules", "gulpfile.js", "package.json", ".brackets.json"]
-gems: [jekyll-contentblocks]
+cssToImport: main.css

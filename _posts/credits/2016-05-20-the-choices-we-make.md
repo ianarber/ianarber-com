@@ -1,6 +1,8 @@
 ---
 layout: credit-info
+headerstatus: shunk-header
 title: The Choices We Make
+iden: thechoiceswemake
 thumbnail: assets/img/credits-grid/the-choices-we-make.jpg
 category: credits
 type: Feature Film
