@@ -3,7 +3,28 @@ $(function () {
     var $navBtns = $('#nav-scroll-btns li');
     var current = 1;
     var sliderNextNum = 2;
+    
+    
+    
+    var topHeight = 165;
+    var height = $(window.top).height() - 15;
+    var final = height - topHeight;
+    var $profilePic = $('.profile-pic');
+    var $navButtons = $('#nav-scroll-btns');
+    var navHeight = final + 100;
 
+    $profilePic.css('height', final + 'px');
+    $navButtons.css('top', navHeight + 'px');
+    
+    $(window).on('resize', function(){
+        height = $(window.top).height() - 15;
+        final = height - topHeight;
+        $profilePic.css('height', final + 'px');
+    });
+    
+    
+    
+    
     //initally fade out all images
     $("img[id^='img-slide-']").fadeOut(0);
     //fade in first slide

@@ -1,7 +1,7 @@
 .intro{
 	position: relative;
 	top: 85px;
-	height: 580px;
+	height: 980px;
 	background-color: #efefef;
 	border-top: 1px solid #efefef;
 }
@@ -12,13 +12,13 @@
 
 /**futher stylings in globals.scss**/
 .profile-pic{
-    width: 90%;
-    height: 450px;
+    width: 96%;
+    min-height: 450px;
     /* TODO: get actual background images */
 	//background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/home-header-img/quacks.jpg);
 	background-size: cover;
 	background-position: top;
-    margin-top: 30px;
+    margin-top: 5px;
     overflow-y: hidden;
     img{
         position: absolute;
@@ -36,10 +36,10 @@
 		width: auto;
 		margin-right: 40px;
 		padding: 0 8px;
-		font-size: 160%;
+		font-size: 230%;
 		font-weight: 600;
 		word-spacing: 1px;
-        letter-spacing: 1px;
+        letter-spacing: 2px;
 		text-transform: uppercase;
 		background-color: rgba(242, 242, 242, 0.6);
 		color: rgba(0, 0, 0, 0.8);
@@ -58,11 +58,11 @@
 	#quote{
 		position: absolute;
 		color: #f2f2f2;
-		bottom: 50px;
+		bottom: 55px;
 		right: 20px;
 		margin-left: 20px;
 		width: auto;
-		font-size: 90%;
+		font-size: 120%;
         letter-spacing: 0.5px;
 		padding: 3px 8px;
 		text-align: right;
@@ -72,10 +72,10 @@
 	#cite{
 		position: absolute;
 		color: #f2f2f2;
-		bottom: 18px;
+		bottom: 20px;
 		right: 50px;
 		width: auto;
-		font-size: 80%;
+		font-size: 90%;
         letter-spacing: 0.5px;
 		padding: 3px 8px;
 		text-align: right;
@@ -87,7 +87,11 @@
 
 
 #nav-scroll-btns {
-    margin-top: 540px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
