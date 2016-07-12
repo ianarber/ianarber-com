@@ -73,7 +73,7 @@
 	
 	.profile-pic{
 		#welcome-intro{
-			font-size: 135%;
+			font-size: 180%;
 		}
 		#quote{
 			font-size: 75%;
@@ -159,6 +159,16 @@
 	
 	.intro{
 		top: 45px;
+	}
+    
+    .profile-pic{
+		#welcome-intro{
+			font-size: 165%;
+		}
+        img{
+            left: -100px;
+            width: 140%;
+        }
 	}
 	
     .showreel-background{
@@ -262,19 +272,19 @@
 	
 	.profile-pic{
 		#welcome-intro{
-			font-size: 115%;
+			font-size: 145%;
 		}
 		#welcome-text{
 			font-size: 60%;
 			width: 80%;
 		}
 		#quote{
-			width: 90%;
-			font-size: 70%;
+			//width: 80%;
+			//font-size: 100%;
 		}
 		#cite{
-			bottom: 25px;
-			font-size: 60%;
+			//bottom: 25px;
+			//font-size: 70%;
 		}
 	}
     
@@ -328,23 +338,27 @@
     }
 	
 	.intro{
-		top: 40px;
-		height: 455px;
+		//top: 40px;
+		//height: 455px;
 	}
 	
 	.profile-pic{
-        width: 93%;
-		top: 15px;
-        height: 360px;
+        //width: 93%;
+		//top: 15px;
+        //height: 360px;
         #welcome-intro{
-			font-size: 105%;
+			//font-size: 105%;
             top: 20px;
 		    left: 20px;
 		}
+        img{
+            left: -300px;
+            width: 265%;
+        }
 	}
     
     #nav-scroll-btns {
-        margin-top: 415px;
+        //margin-top: 415px;
     }
 
 	
@@ -478,26 +492,21 @@
     
     
    .intro{
-		top: 40px;
-		height: 335px;
+		//top: 40px;
+		//height: 335px;
 	}
 	
 	.profile-pic{
-        width: 90%;
-        height: 250px;
+        //width: 90%;
+        //height: 250px;
         #welcome-intro{
-            font-size: 95%;
+            //font-size: 95%;
             word-spacing: normal;
         }
-        #welcome-text,
-        #quote,
-        #cite{
-			display: none;
-		}
 	}
     
     #nav-scroll-btns {
-        margin-top: 300px;
+        //margin-top: 300px;
     }
     
     
@@ -584,23 +593,48 @@
 	}
 	
    .intro{
-		top: 30px;
-		height: 275px;
+		//top: 30px;
+		//height: 275px;
 	}
 	
 	.profile-pic{
-        width: 93%;
-        height: 190px;
+        //width: 93%;
+        //height: 190px;
         #welcome-intro{
-            font-size: 90%;
-            word-spacing: normal;
+            position: static;
+            //font-size: 90%;
+            //word-spacing: normal;
             top: 10px;
 		    left: 10px;
+            background-color: transparent;
+            p > p{
+                background-color: rgba(242, 242, 242, 0.6);
+                padding: 0px 8px;
+                &:first-child{
+                    position: absolute;
+                    top: 10px;
+                    width: 95%;
+                }
+                &:last-child{
+                    position: absolute;
+                    bottom: 10px;
+                    width: 95%;
+                }
+            }
+        }
+        #welcome-text,
+        #quote,
+        #cite{
+			display: none;
+		}
+        img{
+            //left: -300px;
+            width: 360%;
         }
 	}
     
     #nav-scroll-btns {
-        margin-top: 240px;
+        //margin-top: 240px;
     }
     
     

@@ -1,7 +1,7 @@
 .intro{
 	position: relative;
 	top: 85px;
-	height: 980px;
+	min-height: 565px;
 	background-color: #efefef;
 	border-top: 1px solid #efefef;
 }
@@ -14,12 +14,13 @@
 .profile-pic{
     width: 96%;
     min-height: 450px;
+    max-height: 820px;
     /* TODO: get actual background images */
 	//background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/home-header-img/quacks.jpg);
 	background-size: cover;
 	background-position: top;
     margin-top: 5px;
-    overflow-y: hidden;
+    overflow: hidden;
     img{
         position: absolute;
         top: 0px;
@@ -41,8 +42,8 @@
 		word-spacing: 1px;
         letter-spacing: 2px;
 		text-transform: uppercase;
-		background-color: rgba(242, 242, 242, 0.6);
-		color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(242, 242, 242, 0.6);
+        color: rgba(0, 0, 0, 0.8);
 	}
 	#welcome-text{
 		position: absolute;
@@ -54,6 +55,7 @@
 		width: 75%;
 		padding: 2px 8px;
 		background-color: rgba(242, 242, 242, 0.6);
+        color: rgba(0, 0, 0, 0.8);
 	}
 	#quote{
 		position: absolute;
@@ -90,6 +92,7 @@
     position: absolute;
     left: 0;
     right: 0;
+    top: 520px;
     margin-left: auto;
     margin-right: auto;
 }

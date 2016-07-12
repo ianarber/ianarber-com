@@ -186,6 +186,9 @@ hr{
     float: left;
     text-align: center;
     margin: 10px;
+    &:not(:last-of-type){
+        margin-right: 25px;
+    }
     list-style: none;
     cursor: pointer;
     background-color: #898989;
@@ -203,8 +206,7 @@ hr{
 #nav-scroll-btns ul li.active{
     background-color: #d1d1d1;
     transition: background-color 0.3s;
-    //color: #FFFFFF;
-    outline-width: 7px;
+    //outline-width: 7px;
 }
 
 /******************FEATURE IMAGE STYLINGS FOR HOME PAGE INTRO AND ABOUT PAGES*****************/

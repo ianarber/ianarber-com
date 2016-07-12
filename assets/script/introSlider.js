@@ -1,26 +1,73 @@
 $(function () {
 
-    var $navBtns = $('#nav-scroll-btns li');
+    //variables for image slider and nav buttons
+    var $navBtns = $('#nav-scroll-btns');
+    var $navBtnsLi = $navBtns.find('li');
     var current = 1;
     var sliderNextNum = 2;
     
-    
-    
+    //variables for intro slider height calculation
     var topHeight = 165;
-    var height = $(window.top).height() - 15;
-    var final = height - topHeight;
+    var offset = 30;
+    var windowHeight = 0;
+    var finalHeight = 0;
+    var navHeight = 0;
     var $profilePic = $('.profile-pic');
-    var $navButtons = $('#nav-scroll-btns');
-    var navHeight = final + 100;
-
-    $profilePic.css('height', final + 'px');
-    $navButtons.css('top', navHeight + 'px');
+    var $intro = $('.intro');
+    
+    recalculateHeight();
     
     $(window).on('resize', function(){
-        height = $(window.top).height() - 15;
-        final = height - topHeight;
-        $profilePic.css('height', final + 'px');
+        recalculateHeight();
+        changeWelcomeText();
     });
+    
+    
+    function recalculateHeight(){
+        
+        if ( window.innerWidth > 1220 ) {
+            offset = 30;
+        } else if ( window.innerWidth <= 1220 && window.innerWidth > 1120 ) {
+            offset = 25;
+        } else if ( window.innerWidth <= 1120 && window.innerWidth > 1005 ) {
+            offset = -5;
+        } else if ( window.innerWidth <= 1005 ) {
+            offset = -30;
+        }
+        
+        
+        windowHeight = $(window.top).height() - offset;
+        finalHeight = windowHeight - topHeight;
+        navHeight = finalHeight + 70;
+        $profilePic.css('height', finalHeight + 'px');
+        $intro.css('height', (finalHeight + 115) + 'px');
+        //console.log(finalHeight);   
+        if( navHeight >= 520 ){
+            $navBtns.css('top', navHeight + 'px');
+        }
+    }
+    
+    
+    
+    
+    
+    function changeWelcomeText(){
+        if ( window.innerWidth <= 480 ) {
+//            $profilePic.find('#welcome-intro p:first').html(
+//                'Welcome<br/> to the home of<br/>'
+//            )
+            var html = '<p>Welcome to the home of</p><p>film composer Ian Arber</p>';
+            $profilePic.find('#welcome-intro p:first').html(html);
+            
+        } else if ( window.innerWidth > 480 ) {
+            $profilePic.find('#welcome-intro p:first').html(
+                'Welcome to the home of film composer Ian Arber.'
+            )
+        }
+    }
+    
+    
+    
     
     
     
@@ -54,7 +101,7 @@ $(function () {
     }
     
 
-    $navBtns.on('click', function () {
+    $navBtnsLi.on('click', function () {
         //cancel the interval
         stopInterval()
         //increment index value
@@ -67,7 +114,7 @@ $(function () {
             //fade in img based on index value
             $('#img-slide-' + index).fadeIn(1000).addClass('active');
             //add and remove class on nav buttons
-            $navBtns.removeClass('active');
+            $navBtnsLi.removeClass('active');
             $(this).addClass('active');
         }
         
@@ -98,7 +145,7 @@ $(function () {
 
     
     function highlightNavBtns(imageRel){
-        $navBtns.each(function(){
+        $navBtnsLi.each(function(){
             if($(this).attr('rel') === imageRel){
                 $(this).addClass('active');
             } else {
