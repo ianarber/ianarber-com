@@ -1,21 +1,34 @@
 $(function () {
 
-    //variables for image slider and nav buttons
-    var $navBtns = $('#nav-scroll-btns');
-    var $navBtnsLi = $navBtns.find('li');
-    var current = 1;
-    var sliderNextNum = 2;
+    //jQuery dom caching
+    var $intro = $('.intro');
     
     //variables for intro slider height calculation
+    var $profilePic = $intro.find('.profile-pic');
     var topHeight = 165;
     var offset = 30;
     var windowHeight = 0;
     var finalHeight = 0;
     var navHeight = 0;
-    var $profilePic = $('.profile-pic');
-    var $intro = $('.intro');
+    
+    //variables for image slider and nav buttons
+    var isMobile = 0;
+    var $navBtns = $intro.find('#nav-scroll-btns');
+    var $navBtnsLi = $intro.find('li');
+    var current = 1;
+    var sliderNextNum = 2;
+    
+    
+    if( jQuery.browser.mobile ){
+        isMobile = 1;
+        $profilePic.css('minheight', '400px');
+    } else {
+        isMobile = 0;
+    }
+   
     
     recalculateHeight();
+    changeWelcomeText();
     
     $(window).on('resize', function(){
         recalculateHeight();
@@ -41,21 +54,16 @@ $(function () {
         navHeight = finalHeight + 70;
         $profilePic.css('height', finalHeight + 'px');
         $intro.css('height', (finalHeight + 115) + 'px');
-        //console.log(finalHeight);   
+
         if( navHeight >= 520 ){
             $navBtns.css('top', navHeight + 'px');
         }
+        
     }
-    
-    
-    
     
     
     function changeWelcomeText(){
         if ( window.innerWidth <= 480 ) {
-//            $profilePic.find('#welcome-intro p:first').html(
-//                'Welcome<br/> to the home of<br/>'
-//            )
             var html = '<p>Welcome to the home of</p><p>film composer Ian Arber</p>';
             $profilePic.find('#welcome-intro p:first').html(html);
             
@@ -70,14 +78,16 @@ $(function () {
     
     
     
-    
-    
     //initally fade out all images
     $("img[id^='img-slide-']").fadeOut(0);
     //fade in first slide
     $('#img-slide-' + current).fadeIn(1000);  
     //start slider loop
     var loop = setInterval(imageSlider, 7000);
+    
+    
+    
+    
     
     //interval function
     function imageSlider(){
