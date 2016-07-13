@@ -21,7 +21,7 @@ $(function () {
     
     if( jQuery.browser.mobile ){
         isMobile = 1;
-        $profilePic.css('minheight', '400px');
+        //$profilePic.css('minheight', '400px');
     } else {
         isMobile = 0;
     }
@@ -46,6 +46,9 @@ $(function () {
             offset = -5;
         } else if ( window.innerWidth <= 1005 ) {
             offset = -30;
+            if( isMobile > 0 ){
+                offset = 0;
+            }
         }
         
         

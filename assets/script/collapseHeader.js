@@ -1,7 +1,8 @@
 var cbpAnimatedHeader = (function() {
 
 	var docElem = document.documentElement,
-		header = document.querySelector( '#header' ),
+		//header = document.querySelector( '#header' ),
+        $header = $('#header');
 		didScroll = false,
 		changeHeaderOn = 500;
 
@@ -17,10 +18,12 @@ var cbpAnimatedHeader = (function() {
 	function scrollPage() {
 		var sy = scrollY();
 		if ( sy >= changeHeaderOn ) {
-			classie.add( header, 'shunk-header' );
+			//classie.add( header, 'shunk-header' );
+            $header.addClass('shunk-header');
 		}
 		else {
-			classie.remove( header, 'shunk-header' );
+			//classie.remove( header, 'shunk-header' );
+            $header.removeClass('shunk-header');
 		}
 		didScroll = false;
 	}

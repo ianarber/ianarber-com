@@ -1,0 +1,111 @@
+.main-contact-form{
+    height: 500px;
+    //margin: 0 auto;
+    .section-header:first-of-type{
+        margin-top: 60px;
+        margin-bottom: 5px;
+    }
+    hr{
+        width: 900px;  
+        margin: 40px auto;
+        margin-bottom: 15px;
+    }
+}
+
+
+#main-form{
+    max-width: 800px;
+    margin: 0 auto;
+    height: 210px;
+    
+    input,
+    textarea{
+        font-size: 70%;
+        padding: 5px;
+        letter-spacing: 0.2px;
+        border-radius: 2px;
+        border: 1px solid $mainFontColor;
+        outline: none;   
+    }
+    input[type=text],
+    input[type=email],
+    textarea{
+        padding-left: 30px;
+        transition: background-color 0.3s;
+        &:focus{
+            background-color: #efefef;
+            transition: background-color 0.3s;
+        }
+    }
+    input[type=submit]{
+        display: block;
+        margin: 10px auto 0px auto;
+        width: 70px;
+        background-color: #efefef;
+        &:hover{
+            transition: box-shadow 0.3s;
+            box-shadow: 0px 0px 1px 1px;
+        }
+    }
+
+}
+
+#main-agent{
+    margin-left: 0%;
+    margin-bottom: 30px;
+}
+
+#form-lb-name,
+#form-lb-email,
+#form-lb-msg{
+    position: relative;
+    &:before{
+        font-size: 90%;
+        color: #143a62;
+        font-family: FontAwesome;
+        position: absolute;
+        top: 7px;
+        left: 28px;
+    }
+}
+
+#form-lb-name{
+    &:before{
+        content:"\f007";
+    }
+}
+
+#form-lb-email{
+    &:before{
+        content:"\f0e0";
+    }
+}
+
+#form-lb-msg{
+    &:before{
+        content:"\f040";
+    }
+}
+
+
+.user-details{
+    margin: 0 auto;
+    input{
+        display: block;
+        margin: 0 auto;
+        width: 90%;
+    }
+}
+
+
+.message{
+    margin: 0 auto;
+    textarea{
+        display: block;
+        margin: 0 auto;
+        width: 95%;
+        resize: none;
+        height: 100px;
+    }
+}
+

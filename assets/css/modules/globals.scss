@@ -320,7 +320,25 @@ hr{
 }
 
 
-/**********************STYLING FOR CREDITS AND LISTEN MASONRY GRIDS*********************/
+/**********************STYLING FOR CONTACT ME BUTTONS ON BLOG PAGES*********************/
+
+.contact-me-btn{
+    display: block;
+    width: 90px;
+    margin: 15px auto 0pc auto;
+    border: 1px solid $mainFontColor;
+    background-color: #efefef;
+    font-size: 70%;
+    color: $mainFontColor;
+    padding: 5px;
+    letter-spacing: 0.2px;
+    border-radius: 2px;
+    transition: box-shadow 0.3s;
+    &:hover{
+        transition: box-shadow 0.3s;
+        box-shadow: 0px 0px 1px 1px;
+    }
+}
 
 
 
