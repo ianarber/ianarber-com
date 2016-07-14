@@ -3855,6 +3855,8 @@ width decreases */
     margin-bottom: 6px; }
   .listen-grid .listen-clear {
     clear: both; }
+  .listen-grid button:last-of-type {
+    margin-bottom: 30px; }
 
 .listen-wrapper {
   width: 95%;
@@ -4035,6 +4037,7 @@ width decreases */
 
 #expand-wrapper {
   text-align: center;
+  margin-top: 20px;
   margin-bottom: 20px;
   font-size: 85%; }
 
@@ -4092,7 +4095,8 @@ width decreases */
     display: block;
     margin: 10px auto 0px auto;
     width: 70px;
-    background-color: #efefef; }
+    background-color: #efefef;
+    transition: box-shadow 0.3s; }
     #main-form input[type=submit]:hover {
       transition: box-shadow 0.3s;
       box-shadow: 0px 0px 1px 1px; }
@@ -4399,6 +4403,8 @@ width decreases */
   #form-lb-msg:before {
     top: 8px;
     left: 28px; }
+  .main-contact-form hr {
+    width: 450px; }
   .thank-you div {
     width: 600px; }
   /*******************************************************/
@@ -4523,6 +4529,8 @@ width decreases */
   #form-lb-msg:before {
     top: 7px;
     left: 23px; }
+  .main-contact-form hr {
+    width: 300px; }
   .thank-you {
     height: 460px; }
     .thank-you div {

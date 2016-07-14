@@ -453,6 +453,12 @@
         }
     }
     
+    .main-contact-form{
+        hr{
+            width: 450px;
+        }
+    }
+    
     .thank-you{
         div{
             width: 600px;
@@ -717,6 +723,12 @@
         &:before{
             top: 7px;
             left: 23px;
+        }
+    }
+    
+    .main-contact-form{
+        hr{
+            width: 300px;
         }
     }
     

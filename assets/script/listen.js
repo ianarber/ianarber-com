@@ -12,8 +12,8 @@ $(function () {
     
     
     //fade out elements after page load
-    $menuInfo.delay(5000).fadeOut('slow');
-    $genreMenu.delay(5000).slideUp('slow');
+    $menuInfo.delay(3000).fadeOut('slow');
+    $genreMenu.delay(3000).slideUp('slow');
     
     $arrow.hover(function(){
         $menuInfo.fadeToggle('slow'); 

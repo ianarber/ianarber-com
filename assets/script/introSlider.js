@@ -19,12 +19,12 @@ $(function () {
     var sliderNextNum = 2;
     
     
-    if( jQuery.browser.mobile ){
-        isMobile = 1;
-        //$profilePic.css('minheight', '400px');
-    } else {
-        isMobile = 0;
-    }
+//    if( jQuery.browser.mobile ){
+//        isMobile = 1;
+//        //$profilePic.css('minheight', '400px');
+//    } else {
+//        isMobile = 0;
+//    }
    
     
     recalculateHeight();
@@ -46,9 +46,9 @@ $(function () {
             offset = -5;
         } else if ( window.innerWidth <= 1005 ) {
             offset = -30;
-            if( isMobile > 0 ){
-                offset = 20;
-            }
+//            if( isMobile > 0 ){
+//                offset = 20;
+//            }
         }
         
         
