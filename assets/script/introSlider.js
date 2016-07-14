@@ -47,7 +47,7 @@ $(function () {
         } else if ( window.innerWidth <= 1005 ) {
             offset = -30;
             if( isMobile > 0 ){
-                offset = 0;
+                offset = 20;
             }
         }
         

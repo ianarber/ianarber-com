@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -3456,7 +3457,6 @@ hr {
   #submit-form input[type=text],
   #submit-form input[type=email],
   #submit-form textarea {
-    border: 1px solid #0d2f52;
     border-radius: 2px;
     padding: 5px;
     margin-bottom: 8px;
@@ -3488,6 +3488,12 @@ hr {
       box-shadow: 0px 0px 1px 1px; }
   #submit-form #submit-break {
     display: none; }
+
+.border-colour {
+  border: 1px solid #0d2f52; }
+
+.tooltip-notvalid {
+  border: 1px solid #d31515; }
 
 .form .social {
   margin-top: 25px; }
@@ -4090,33 +4096,56 @@ width decreases */
     #main-form input[type=submit]:hover {
       transition: box-shadow 0.3s;
       box-shadow: 0px 0px 1px 1px; }
+  #main-form input[name=_gotcha] {
+    display: none; }
 
 #main-agent {
   margin-left: 0%;
   margin-bottom: 30px; }
 
-#form-lb-name,
-#form-lb-email,
+#form-lb-name {
+  position: relative; }
+  #form-lb-name:before {
+    font-size: 90%;
+    color: #143a62;
+    font-family: FontAwesome;
+    position: absolute;
+    top: 7px;
+    left: 28px;
+    content: ""; }
+
+#form-lb-email {
+  position: relative; }
+  #form-lb-email:before {
+    font-size: 90%;
+    color: #143a62;
+    font-family: FontAwesome;
+    position: absolute;
+    top: 7px;
+    left: 28px;
+    content: ""; }
+
 #form-lb-msg {
   position: relative; }
-  #form-lb-name:before,
-  #form-lb-email:before,
   #form-lb-msg:before {
     font-size: 90%;
     color: #143a62;
     font-family: FontAwesome;
     position: absolute;
     top: 7px;
-    left: 28px; }
+    left: 28px;
+    content: ""; }
 
-#form-lb-name:before {
-  content: "\f007"; }
-
-#form-lb-email:before {
-  content: "\f0e0"; }
-
-#form-lb-msg:before {
-  content: "\f040"; }
+.notValid {
+  position: relative; }
+  .notValid:after {
+    font-size: 90%;
+    color: #d31515;
+    font-family: FontAwesome;
+    position: absolute;
+    top: 8px;
+    right: 30px;
+    content: "\f06a"; }
 
 .user-details {
   margin: 0 auto; }
@@ -4133,6 +4162,26 @@ width decreases */
     width: 95%;
     resize: none;
     height: 100px; }
+
+.thank-you {
+  height: 420px;
+  margin-top: 100px; }
+  .thank-you div {
+    width: 800px;
+    margin: 0 auto; }
+    .thank-you div p, .thank-you div i {
+      font-size: 150%;
+      letter-spacing: 0.5px;
+      text-align: center; }
+    .thank-you div i {
+      display: block;
+      font-size: 250%;
+      margin: 20px 0px; }
+    .thank-you div iframe {
+      display: block;
+      border: none;
+      width: 90%;
+      margin: 30px auto; }
 
 /* TODO: clean up mquery file */
 /* 961px to 1060px */
@@ -4334,6 +4383,24 @@ width decreases */
     margin-top: 80px; }
   #listen-gallery .listen-grid-elements > li {
     width: 100%; }
+  .main-contact-form hr {
+    width: 600px;
+    margin-top: 70px; }
+  #main-form {
+    max-width: 400px; }
+    #main-form textarea {
+      width: 360px; }
+    #main-form input[type=text],
+    #main-form input[type=email],
+    #main-form textarea {
+      padding-left: 28px; }
+  #form-lb-name:before,
+  #form-lb-email:before,
+  #form-lb-msg:before {
+    top: 8px;
+    left: 28px; }
+  .thank-you div {
+    width: 600px; }
   /*******************************************************/
   .testimonials {
     width: 600px; }
@@ -4381,19 +4448,21 @@ width decreases */
     width: 2000px; }
   /*******************************************************/
   .footer {
-    height: 565px; }
+    height: 555px; }
   .foot-upper {
     top: 240px; }
   .foot-lower {
     top: 260px; }
   .copyright {
-    top: 540px; }
+    top: 530px; }
   #grid-gallery .grid > li {
     width: 50%; } }
 
 @media only screen and (max-width: 618px) {
   .news {
-    height: 1155px; } }
+    height: 1155px; }
+  .thank-you div {
+    width: 400px; } }
 
 @media only screen and (max-width: 612px) {
   .news {
@@ -4440,7 +4509,24 @@ width decreases */
   #grid-gallery .grid > li {
     width: 100%; }
   .post-container {
-    width: 95%; } }
+    width: 95%; }
+  #main-form {
+    max-width: 300px; }
+    #main-form textarea {
+      width: 270px; }
+    #main-form input[type=text],
+    #main-form input[type=email],
+    #main-form textarea {
+      padding-left: 27px; }
+  #form-lb-name:before,
+  #form-lb-email:before,
+  #form-lb-msg:before {
+    top: 7px;
+    left: 23px; }
+  .thank-you {
+    height: 460px; }
+    .thank-you div {
+      width: 300px; } }
 
 @media only screen and (max-width: 459px) {
   .showreel-background {

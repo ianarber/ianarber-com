@@ -11,10 +11,6 @@ $(function () {
     var $arrow = $('#arrow');
     
     
-    
-    
-    
-    
     //fade out elements after page load
     $menuInfo.delay(5000).fadeOut('slow');
     $genreMenu.delay(5000).slideUp('slow');
@@ -23,11 +19,6 @@ $(function () {
         $menuInfo.fadeToggle('slow'); 
     });
        
-    
-    
-    
-    
-    
     
     $('#genres li').on('click', function(){
         //highlight genre button the user has clicked on
@@ -53,13 +44,6 @@ $(function () {
     });
     
     
-    
-    
-    
-    
-    
-    
-    
     $('#categories li').on('click', function(){
         //highlight category button the user has clicked on
         $categories.find('.added').removeClass('added');
@@ -77,12 +61,6 @@ $(function () {
     })
     
     
-    
-    
-    
-    
-    
-    
     $listenGallery.find('i').not('#see-more').on('click', function(){
 
         //set full opacity to click to load image (via css)
@@ -95,26 +73,8 @@ $(function () {
         //populate src att with data stored in data-src
         var src = $iframe.attr('data-src');
         $iframe.attr('src', src); 
-        //sc widget iframe will now load
-
-        
-//        var widget = SC.Widget(document.getElementById($iframe.attr('id')));
-//        
-//        widget.bind(SC.Widget.Events.READY, function(){
-//            widget.play();
-//        });
-        
-        
-  
         
     });
-    
-    
-    
-    
-    
-    
-    
     
     
     $('#arrow').on('click', function(){
@@ -122,24 +82,11 @@ $(function () {
     });
     
     
-    
-    
-    
-    
-    
-    
-    
     //toggle genre menu slide action
     function slideGenreMenu(){
         $genreMenu.slideToggle();
         $arrow.toggleClass('arrow-rotate');
     }
-    
-    
-    
-    
-    
-    
     
     
     //listen for scroll event to footer then fade out genre menu and related elements
@@ -156,22 +103,10 @@ $(function () {
     });
     
     
-    
-    
     $('#see-more').on('click', function(){
         $('#listen-more-expand').slideToggle('slow');
         $(this).toggleClass('rotated');
     });
-    
-    
-    
-    
-    
-    
-    
-    
-    
-  
     
 });
 

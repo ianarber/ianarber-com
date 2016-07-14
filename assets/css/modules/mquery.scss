@@ -425,8 +425,39 @@
         } 
     }
 
+    .main-contact-form{
+        hr{ 
+            width: 600px;
+            margin-top: 70px;
+        }
+    }
     
+    #main-form{
+        max-width: 400px;
+        textarea{
+            width: 360px;
+        }
+        input[type=text],
+        input[type=email],
+        textarea{
+            padding-left: 28px;
+        }
+    }
     
+    #form-lb-name,
+    #form-lb-email,
+    #form-lb-msg{
+        &:before{
+            top: 8px;
+            left: 28px;
+        }
+    }
+    
+    .thank-you{
+        div{
+            width: 600px;
+        }
+    }
     
      /*******************************************************/
     
@@ -535,7 +566,7 @@
     /*******************************************************/
     
     .footer{
-        height: 565px;
+        height: 555px;
     }
         
     .foot-upper{
@@ -547,7 +578,7 @@
     }
 
     .copyright{
-	    top: 540px;
+	    top: 530px;
     }
     
     
@@ -564,6 +595,12 @@
 @media only screen and (max-width: 618px){
     .news{
         height: 1155px;
+    }
+    
+    .thank-you{
+        div{
+            width: 400px;
+        }
     }
 }
 @media only screen and (max-width: 612px){
@@ -661,6 +698,35 @@
     .post-container{
 	    width: 95%;
     }
+    
+    #main-form{
+        max-width: 300px;
+        textarea{
+            width: 270px;
+        }
+        input[type=text],
+        input[type=email],
+        textarea{
+            padding-left: 27px;
+        }
+    }
+    
+    #form-lb-name,
+    #form-lb-email,
+    #form-lb-msg{
+        &:before{
+            top: 7px;
+            left: 23px;
+        }
+    }
+    
+    .thank-you{
+        height: 460px;
+        div{
+            width: 300px;
+        }
+    }
+    
 }
 
 

@@ -16,5 +16,53 @@ $(function () {
     $(document).click(function () {
         $('#tooltip-form').removeClass('active');
     })
+    
+    //jQuery cache DOM
+    var $form = $('#submit-form');
+    
+    $form.submit(function(event){
+        if( validateForm() ){
+            return;
+        } else {
+            event.preventDefault();
+        }
+    });
+    
+    function validateForm(){
+        var name = $form.find('input:first').val();
+        var email = $form.find('input:eq(1)').val();
+        var msg = $form.find('textarea').val();
+        
+        if( name == '' ){
+            $form.find('input:first').addClass('tooltip-notvalid');
+            return false;
+        } else {
+            $form.find('input:first').removeClass('tooltip-notvalid');
+        }
+        
+        if( email == ''){
+            $form.find('input:eq(1)').addClass('tooltip-notvalid');
+            return false;
+        } else {
+            var atPos = email.indexOf('@');
+            var dotPos = email.indexOf('.');
+
+            if( atPos < 1 || ( dotPos - atPos < 2 )){
+                $form.find('input:eq(1)').addClass('tooltip-notvalid');
+                return false;
+            } else {
+                $form.find('input:eq(1)').removeClass('tooltip-notvalid');
+            }
+        }
+        
+        if( msg == '' ){
+            $form.find('textarea').addClass('tooltip-notvalid');
+            return false;
+        } else {
+            $form.find('textarea').removeClass('tooltip-notvalid');
+        }
+        
+        return true;
+    }
        
 });

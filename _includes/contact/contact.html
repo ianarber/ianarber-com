@@ -11,10 +11,13 @@
             <label id="form-lb-email" class="col span-1-of-2">
                 <input type="email" name="_replyto" placeholder="Email"/>
             </label>
+            <input type="hidden" name="_subject" value="Message from Website"/>
+            <input type="hidden" name="_next" value="http://localhost:3000/thankyou.html"/>
+            <input type="text" name="_gotcha"/>
         </div>
         <div class="row message">
             <label id="form-lb-msg" class="col span-2-of-2">
-                <textarea name="message" placeholder="Message"></textarea>
+                <textarea name="message" placeholder="Message" maxlength="200"></textarea>
             </label>
         </div>
         <input type="submit" value="Send"/>

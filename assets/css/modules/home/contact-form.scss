@@ -100,7 +100,7 @@
     input[type=text],
     input[type=email],
     textarea{
-        border: 1px solid $mainFontColor;
+        //border: 1px solid $mainFontColor;
         border-radius: 2px;
         padding: 5px;
         margin-bottom: 8px;
@@ -121,28 +121,15 @@
         vertical-align: middle;    
     }
     input[type=submit]{
-//        border: none;
-//        background-color: $backgroundColor;
         padding: 3px 6px;
         margin-left: 2px;
-//        text-transform: uppercase;
-//        font-size: 75%;
         font-weight: 500;
         text-align: center;
-//        transition: all 0.3s;
-//        &:hover{
-//            background-color: $mainFontColor;
-//            color: $backgroundColor;
-//            transition: all 0.3s;
-//        }
         font-size: 70%;
-//        padding: 5px;
         letter-spacing: 0.2px;
         border-radius: 2px;
         border: 1px solid $mainFontColor;
         outline: none; 
-//        display: block;
-//        margin: 10px auto 0px auto;
         width: 50px;
         background-color: #efefef;
         &:hover{
@@ -153,6 +140,14 @@
     #submit-break{
         display: none;
     }
+}
+
+
+.border-colour{
+    border: 1px solid $mainFontColor;
+}
+.tooltip-notvalid{
+    border: 1px solid #d31515;
 }
 
 .form .social{

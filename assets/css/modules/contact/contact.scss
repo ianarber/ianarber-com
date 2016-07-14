@@ -47,6 +47,9 @@
             box-shadow: 0px 0px 1px 1px;
         }
     }
+    input[name=_gotcha]{
+        display: none;
+    }
 
 }
 
@@ -55,9 +58,8 @@
     margin-bottom: 30px;
 }
 
-#form-lb-name,
-#form-lb-email,
-#form-lb-msg{
+
+@mixin setFieldIcon($iconCode){
     position: relative;
     &:before{
         font-size: 90%;
@@ -66,24 +68,30 @@
         position: absolute;
         top: 7px;
         left: 28px;
+        content: $iconCode;
     }
 }
 
 #form-lb-name{
-    &:before{
-        content:"\f007";
-    }
+    @include setFieldIcon("\f007");
 }
-
 #form-lb-email{
-    &:before{
-        content:"\f0e0";
-    }
+    @include setFieldIcon("\f0e0");
+}
+#form-lb-msg{
+    @include setFieldIcon("\f040");
 }
 
-#form-lb-msg{
-    &:before{
-        content:"\f040";
+.notValid{
+    position: relative;
+    &:after{
+        font-size: 90%;
+        color: #d31515;
+        font-family: FontAwesome;
+        position: absolute;
+        top: 8px;
+        right: 30px;
+        content: "\f06a";
     }
 }
 
