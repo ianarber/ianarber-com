@@ -1,12 +1,5 @@
 /* TODO: clean up mquery file */
 
-/* 961px to 1060px */
-@media only screen and (max-width: 1645px){
-    .grid-wrap {
-        //max-width: 100%;
-    }
-}
-
 @media only screen and (max-width: 1232px){
     .news{
         height: 770px;
@@ -87,6 +80,33 @@
     .showreel-background{
         margin-top: 75px;
     }
+    
+    
+    .bio{
+        .bio-pic{
+            width: 1000px;
+        }
+        #nav-scroll-btns {
+            top: 680px;
+        }
+    }
+
+    .bio-text{
+        max-width: 1000px;
+    }
+    
+    .bio-profile{
+        img{
+            width: 120px;
+        }
+        p{
+            height: 120px;
+        }
+    }
+    
+    
+    
+    
 
 }
 
@@ -179,6 +199,23 @@
         textarea{
             width: 270px;
         }
+    }
+    
+    
+    
+    .bio{
+        height: 625px;
+        .bio-pic{
+            height: 500px;
+            width: 900px;
+        }
+        #nav-scroll-btns {
+            top: 580px;
+        }
+    }
+    
+    .bio-text{
+        max-width: 900px;
     }
     
     
@@ -363,7 +400,7 @@
 
 	
     .showreel-background{
-        margin-top: 40px;
+        margin-top: 20px;
     }
     
     .form{
@@ -520,33 +557,17 @@
 
 @media only screen and (max-width: 680px){
     .showreel-background{
-        height: 1655px;
+        height: 1665px;
         iframe{
             width: 80%;
         }
     }
-    
-    
-    
-   .intro{
-		//top: 40px;
-		//height: 335px;
-	}
 	
-	.profile-pic{
-        //width: 90%;
-        //height: 250px;
+	.profile-pic{;
         #welcome-intro{
-            //font-size: 95%;
             word-spacing: normal;
         }
 	}
-    
-    #nav-scroll-btns {
-        //margin-top: 300px;
-    }
-    
-    
     
     /*******************************************************/
     
@@ -682,7 +703,7 @@
     
     
     .showreel-background{
-        margin-top: 30px;
+        margin-top: 20px;
     }
     
 
@@ -745,7 +766,7 @@
 
 @media only screen and (max-width: 459px){
     .showreel-background{
-        height: 2320px;
+        height: 2330px;
     }
     
     #tooltip-form{
@@ -841,4 +862,14 @@
     .copyright{
 	    top: 615px;
     }
+}
+
+
+
+/* --- iPhone 5 */
+@media only screen and (max-width: 320px){
+
+
+    
+    
 }

@@ -135,7 +135,8 @@ hr{
 	text-align: center;
 	padding-top: 17px;
 	letter-spacing: 5px;
-	h4{
+    font-size: 70%;
+	h1{
 		margin: 0 auto;
 		display: table;
 		white-space: nowrap;
@@ -145,10 +146,10 @@ hr{
 			display: table-cell;
 			position: relative;
 			top: 14px;
-			width: 50px;
+			width: 40px;
 		}
 		&:before { right: 2.5% };
-		&:after { right: -1.5% };
+		&:after { right: -0.5% };
 	}
 }
 
@@ -214,14 +215,30 @@ hr{
 .profile-pic,
 .bio-pic{
 	position: absolute;
-	height: 450px;
-	margin: 0 auto;
+	margin: 5px auto 0px auto;
 	top: 50px;
 	left: 0;
 	right: 0;
 	border: 4px solid #fff;
 	border-radius: 3px;
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    min-height: 450px;
+    max-height: 820px;
+    overflow: hidden;
+    img{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+    }
+}
+
+#nav-scroll-btns {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /**********************POST TEXT CONTAINER STYLINGS - NEWS AND ABOUT PAGES*********************/
@@ -322,7 +339,7 @@ hr{
 
 /**********************STYLING FOR CONTACT ME BUTTONS ON BLOG PAGES*********************/
 
-.contact-me-btn{
+.main-btn-style{
     display: block;
     width: 90px;
     margin: 15px auto 0pc auto;

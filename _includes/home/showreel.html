@@ -1,6 +1,6 @@
 <section class="section showreel-background">
 	<div class="section-header">
-		<h4>Recent Credits</h4>
+		<h1>Recent Credits</h1>
 	</div>
 
 	<div class="poster-row">
@@ -22,8 +22,8 @@
 						<div class="credit-brief">{{ post.synopsis }}</div>
 						{% if post.sample %}
 						<audio class="{{ post.iden }}">
+                            <source src="{{ post.sample }}.mp3" type="audio/mpeg">
 						    <source src="{{ post.sample }}.ogg" type="audio/ogg">
-							<source src="{{ post.sample }}.mp3" type="audio/mp3">
 							Your browser does not support the audio element.
 						</audio>
 						<div class="controls">
@@ -39,17 +39,13 @@
 	
 	</div>	
 	
-	<div class="section-footer">
-		<a href="/credits.html">View more</a>
-	</div>
+    <a href="/contact.html"><button class="main-btn-style">View More</button></a>
 	
 	<div class="section-header">
-		<h4>Showreel</h4>
+		<h1>Showreel</h1>
 	</div>
 	
 	<iframe class="sc-player-frame" src="https://w.soundcloud.com/player/?url=https://api.soundcloud.com/playlists/46688832&amp;amp%3bauto_play=false&amp;amp%3bhide_related=false&amp;amp%3bshow_comments=true&amp;amp%3bshow_user=true&amp;amp%3bshow_reposts=false&amp;amp%3bvisual=true&amp;visual=false&amp;auto_play=false"></iframe>
 	
-	<div class="section-footer">
-		<a href="/listen.html">Hear more</a>
-	</div>	
+	<a href="/contact.html"><button class="main-btn-style">Hear More</button></a>	
 </section>

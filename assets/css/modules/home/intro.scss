@@ -11,25 +11,9 @@
 }
 
 /**futher stylings in globals.scss**/
-.profile-pic{
-    width: 96%;
-    min-height: 450px;
-    max-height: 820px;
-    /* TODO: get actual background images */
-	//background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/home-header-img/quacks.jpg);
-	background-size: cover;
-	background-position: top;
-    margin-top: 5px;
-    overflow: hidden;
-    img{
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 100%;
-    }
-}
 
 .profile-pic{	
+    width: 96%;
 	#welcome-intro{
 		position: absolute;
 		top: 35px;
@@ -85,17 +69,12 @@
 	}
 }
 
-
-
-
 #nav-scroll-btns {
-    position: absolute;
-    left: 0;
-    right: 0;
     top: 520px;
-    margin-left: auto;
-    margin-right: auto;
 }
+
+
+
 
 
 
