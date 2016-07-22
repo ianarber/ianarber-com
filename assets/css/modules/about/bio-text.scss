@@ -1,9 +1,11 @@
 .bio-text{
 	background-color: $backgroundColor;
-	height: 1000px;
+    height: auto;
     max-width: 1140px;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 30px;
     hr{
         margin-bottom: 25px;
     }
@@ -36,6 +38,7 @@
 #bio-post-container{
     width: 100%;
     margin-top: 25px;
+    margin-bottom: 30px;
 }
 
 #bio-post-text{
@@ -49,7 +52,11 @@
 	} 
 }
 
-
+#about-listen-btn{
+	line-height: normal;
+    font-size: 125%;
+    font-weight: 400;
+}
 
 
 

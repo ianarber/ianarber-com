@@ -1,0 +1,39 @@
+#clientarea-wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    height: auto;
+    .section-header{
+        margin-top: 60px;
+        margin-bottom: 20px;
+    }
+    ul{
+        list-style: none;
+    }
+
+}
+
+.sub-header{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 100%;
+    letter-spacing: 2px;
+    margin-top: 3px;
+    margin-bottom: 8px;
+}
+
+#yt-showreel-wrapper{
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    
+    iframe{
+        margin: 20px 0px;
+        width: 100%;
+        height: 550px;
+    }
+}
+
+#iframe-wrapper{
+    width: 80%;
+    margin: 0px auto 30px auto;
+}

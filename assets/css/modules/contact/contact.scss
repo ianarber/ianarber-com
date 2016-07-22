@@ -5,10 +5,32 @@
         margin-top: 60px;
         margin-bottom: 5px;
     }
-    hr{
-        width: 900px;  
+    hr:first-of-type{
+        width: 70%;  
         margin: 40px auto;
         margin-bottom: 15px;
+    }
+    hr:last-of-type{
+        width: 70%;  
+        margin: 20px auto;
+        margin-bottom: 20px;
+    }
+    h2{
+        font-size: 90%;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+    .social-icons{
+        i{
+            border: 2px solid $mainFontColor;
+            border-radius: 50%;
+            transition: all 0.3s;
+            &:hover{
+                background: $mainFontColor;
+                color: $backgroundColor;
+                transition: all 0.3s;
+            }
+        }
     }
 }
 

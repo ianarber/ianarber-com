@@ -28,6 +28,7 @@
 		z-index: 1;
 		width: 200px;
 		transition: transform 1s;
+        //border: 2px solid #e2e2e2;
 	}
 }
 
@@ -37,6 +38,7 @@
 	display: inline-block;
 	overflow: hidden;
 	max-height: 305px;
+    border: 2px solid #e2e2e2;
 }
 
 /* TODO: fix styling due to position changes using liquid template */

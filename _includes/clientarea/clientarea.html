@@ -1,0 +1,50 @@
+<section id="clientarea-wrapper" class="section">
+    <div class="section-header">
+        <h1>Client Area</h1>
+    </div>
+    
+    <h2 class="sub-header">Un-Edited Showreel (2015-2016)</h2><hr>
+    
+    <div id="yt-showreel-wrapper">
+        <iframe src="https://www.youtube.com/embed/ImfjZaJQAHk" frameborder="0" allowfullscreen></iframe>
+    </div>
+    
+    <h2 class="sub-header">Full Scores</h2><hr>
+    
+    <div id="iframe-wrapper">
+        <ul>
+           
+            {% for fullscores in site.data.clientarea.fullscores %}
+
+            <li>
+                <div class="bg-iframe">
+                    <div class="bg-iframe-info">
+                        <h5>{{ fullscores.title }}</h5>
+                        <p>{{ fullscores.genre }}, {{ fullscores.year }}</p>
+                        <p>Directed by {{ fullscores.director }}</p>
+                    </div>
+                    <i class="fa fa-play-circle-o"></i>
+                    <!--                            <img src="assets/img/sc-click-to-load.jpg" alt="soundcloud click to load"/>-->
+                    <iframe id="{{ fullscores.shorttitle }}" height="{{ fullscores.height }}" src="/blank.html" data-src="{{ fullscores.soundcloud }}"></iframe>
+                </div>
+            </li>
+
+            {% endfor %}
+            
+        </ul>
+        
+        <a href="/contact.html"><button class="main-btn-style">Contact Me</button></a>
+        
+    </div>
+    
+    
+
+</section>
+
+
+
+
+
+
+
+
