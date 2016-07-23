@@ -16,16 +16,7 @@ $(function () {
     var $navBtns = $intro.find('#nav-scroll-btns');
     var $navBtnsLi = $intro.find('li');
     var current = 1;
-    var sliderNextNum = 2;
-    
-    
-//    if( jQuery.browser.mobile ){
-//        isMobile = 1;
-//        //$profilePic.css('minheight', '400px');
-//    } else {
-//        isMobile = 0;
-//    }
-   
+    var sliderNextNum = 2;  
     
     recalculateHeight();
     changeWelcomeText();
@@ -82,7 +73,7 @@ $(function () {
     
     
     //initally fade out all images
-    $("img[id^='img-slide-']").fadeOut(0);
+    $("div[id^='img-slide-']").fadeOut(0);
     //fade in first slide
     $('#img-slide-' + current).fadeIn(1000);  
     //start slider loop
@@ -123,7 +114,7 @@ $(function () {
         //only execute if current slide is different from clicked nav button
         if( current != index ){
             //remove all active classes from img elements
-            $("img[id^='img-slide-']").fadeOut(1000).removeClass('active');
+            $("div[id^='img-slide-']").fadeOut(1000).removeClass('active');
             //fade in img based on index value
             $('#img-slide-' + index).fadeIn(1000).addClass('active');
             //add and remove class on nav buttons
@@ -131,7 +122,7 @@ $(function () {
             $(this).addClass('active');
         }
         
-        //set variables based on index uder clicked
+        //set variables based on index user clicked
         current = index;
         sliderNextNum = ++index;
         //check for end of element array

@@ -70,12 +70,23 @@
 	}
 }
 
+.img-slide a{
+    position: absolute;
+    bottom: 140px;
+    right: 20px;
+    margin-left: 20px;
+    padding: 3px 8px;
+    font-size: 100%;
+    font-weight: 600;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    background-color: rgba(242, 242, 242, 0.6);
+    color: rgba(0, 0, 0, 0.8);
+}
+
 #nav-scroll-btns {
     top: 520px;
 }
-
-
-
 
 
 

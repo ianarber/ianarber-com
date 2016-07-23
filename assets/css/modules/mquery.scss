@@ -1,10 +1,6 @@
 /* TODO: clean up mquery file */
 
-@media only screen and (max-width: 1232px){
-    .news{
-        height: 770px;
-    }
-    
+@media only screen and (max-width: 1232px){  
     #listen-gallery{
         .listen-grid-elements > li{
             width: 50%;
@@ -677,22 +673,14 @@
 }
 
 
-@media only screen and (max-width: 618px){
-    .news{
-        height: 1155px;
-    }
-    
+@media only screen and (max-width: 618px){   
     .thank-you{
         div{
             width: 400px;
         }
     }
 }
-@media only screen and (max-width: 612px){
-    .news{
-        height: 1500px;
-    }
-    
+@media only screen and (max-width: 612px){   
     #tooltip-form{
         input[type=text],
         input[type=email]{

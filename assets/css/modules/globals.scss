@@ -299,6 +299,8 @@ hr{
     overflow: hidden;
     img{
         display: block;
+        border: 2px solid #e2e2e2;
+        border-radius: 3px;
     }
 }
 
@@ -315,6 +317,10 @@ hr{
     letter-spacing: 0.5px;
     font-size: 80%;
     font-weight: 300;
+    a{
+        color: $mainFontColor;
+        text-decoration: underline;
+    }
 }
 
 .post-navigation{

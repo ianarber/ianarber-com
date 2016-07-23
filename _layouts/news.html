@@ -4,7 +4,7 @@ layout: default
 
 <div class="post-container">
     <figure class="post-image">
-        <img src="{{ page.thumbnail }}" alt="Photo" />
+        <img src="{{ page.medium }}" alt="Photo" />
     </figure>
 
     <div class="post-title">
@@ -12,6 +12,7 @@ layout: default
     </div>
     <div class="post-date">
         <ul class="fa-ul">
+            <li><i class="fa-li fa fa-film"></i>{{ page.film }}</li>
             <li><i class="fa-li fa fa-calendar-o"></i>{{ page.date | date_to_string }}</li>
         </ul>
     </div>
@@ -25,12 +26,25 @@ layout: default
     </div>
 
     <a href="/contact.html"><button class="main-btn-style">Contact Me</button></a>
-   
+
     <hr>
 
+<!--
     <div class="post-navigation">
         {% if page.previous.url %}
         <a id="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a> {% endif %} {% if page.next.url %}
         <a id="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a> {% endif %}
+    </div>
+-->
+    <div class="post-navigation">
+
+        {% if page.next_in_category != nil %}
+        <a id="prev" href="{{page.next_in_category.url}}">&laquo; {{page.next_in_category.title}}</a>
+        {% endif %}
+
+        {% if page.previous_in_category != nil %}
+        <a id="next" href="{{page.previous_in_category.url}}">{{page.previous_in_category.title}} &raquo;</a>
+        {% endif %}
+
     </div>
 </div>

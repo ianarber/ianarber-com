@@ -58,11 +58,11 @@ layout: default
     <div class="post-navigation">
 
         {% if page.next_in_category != nil %}
-        <a id="prev" href="{{page.next_in_category.url}}">&laquo; {{page.previous.title}}</a>
+        <a id="prev" href="{{page.next_in_category.url}}">&laquo; {{page.next_in_category.title}}</a>
         {% endif %}
 
         {% if page.previous_in_category != nil %}
-        <a id="next" href="{{page.previous_in_category.url}}">{{page.next.title}} &raquo;</a>
+        <a id="next" href="{{page.previous_in_category.url}}">{{page.previous_in_category.title}} &raquo;</a>
         {% endif %}
 
     </div>
