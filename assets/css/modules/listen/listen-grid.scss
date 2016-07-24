@@ -154,7 +154,6 @@
 .bg-iframe{
     //border: 1px solid red;
     position: relative;   
-    //background: url(https://site-ianarber.aerobatic.io/assets/img/spinner.gif) no-repeat center center;
     iframe{
         padding: 10px;
         border: none;
@@ -190,6 +189,10 @@
 
     }
     transition: opacity 0.3s;
+}
+
+.bg-iframe.spinner{
+    background: url(https://site-ianarber.aerobatic.io/assets/img/spinner.gif) no-repeat center center;
 }
 
 

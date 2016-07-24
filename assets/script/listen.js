@@ -40,6 +40,8 @@ $(function () {
         //$liToShow.find('.bg-iframe-info').addClass('disabled');
         $liToShow.find('.fg-cover').addClass('disabled');
         
+        $liToShow.children('div.bg-iframe').removeClass('spinner');
+        
         setTimeout(slideGenreMenu, 500);
     });
     
@@ -66,6 +68,8 @@ $(function () {
         //set full opacity to click to load image (via css)
         $(this).addClass('disable-play-icon');
         
+        $(this).closest('.bg-iframe').addClass('spinner');
+        
         $(this).siblings('img').addClass('disable-play-icon');
         //search for nearest iframe
         var $iframe = $(this).siblings('iframe');
@@ -74,6 +78,10 @@ $(function () {
         var src = $iframe.attr('data-src');
         $iframe.attr('src', src); 
         
+//        $iframe.ready(function(){
+//            console.log('here');
+//            $iframe.closest('.bg-iframe').removeClass('spinner');
+//        });
     });
     
     

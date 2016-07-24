@@ -20,8 +20,8 @@
             <ul id="categories">
                 <h5>Scroll to Category</h5>
                 <li id="cat-play" rel="sc-play">Playlists</li>
-                <li id="cat-ffilms" rel="sc-ffilms">Features Films</li>
-                <li id="cat-sfilms" rel="sc-sfilms">Short Films</li>
+                <li id="cat-ffilms" rel="sc-ffilms">Films</li>
+<!--                <li id="cat-sfilms" rel="sc-sfilms">Short Films</li>-->
                 <li id="cat-tv" rel="sc-tv">TV/Documentary</li>
             </ul>
         </nav>
@@ -40,7 +40,7 @@
                             <h5>{{ playlists.genre }}</h5>
                             <p>{{ playlists.featuring }}</p>
                         </div>
-                        <img src="assets/img/sc-previews/playlist-drama.jpg" alt="SC Widget Preview"/>
+                        <img src="assets/img/sc-previews/playlist-{{ playlists.classname }}.jpg" alt="SC Widget Preview"/>
                         <i class="fa fa-play-circle-o"></i>
                         <iframe id="widget-{{ playlists.classname }}" class="play-frame" src="/blank.html" data-src="{{ playlists.soundcloud }}"></iframe>                          
                         <div class="fg-cover"></div>
@@ -59,20 +59,20 @@
            
             <div id="listen-more-expand">
                 <ul class="listen-grid-elements">
-                    <h2 class="playlist-header sc-play">Feature Films</h2><hr>
+                    <h2 class="playlist-header sc-ffilms">Films</h2><hr>
 
-                    {% for featurefilms in site.data.listen.featurefilms %}
+                    {% for films in site.data.listen.films %}
 
-                    <li class="sc-audio sc-{{ featurefilms.classname }}">
+                    <li class="sc-audio sc-{{ films.classname }}">
                         <div class="bg-iframe film-tv">
                             <div class="bg-iframe-info">
-                                <h5>{{ featurefilms.title }}</h5>
-                                <p>{{ featurefilms.genre }}, {{ featurefilms.year }}</p>
-                                <p>Directed by {{ featurefilms.director }}</p>
+                                <h5>{{ films.title }}</h5>
+                                <p>{{ films.genre }}, {{ films.year }}</p>
+                                <p>Directed by {{ films.director }}</p>
                             </div>
                             <i class="fa fa-play-circle-o"></i>
     <!--                            <img src="assets/img/sc-click-to-load.jpg" alt="soundcloud click to load"/>-->
-                            <iframe id="widget-{{ featurefilms.shorttitle }}" class="filmtv-frame" src="/blank.html" data-src="{{ featurefilms.soundcloud }}"></iframe>                          
+                            <iframe id="widget-{{ films.shorttitle }}" class="filmtv-frame" src="/blank.html" data-src="{{ films.soundcloud }}"></iframe>                          
                         </div>                     
                     </li>
 
@@ -82,8 +82,9 @@
 
                 <div class="listen-clear"></div>
 
+<!--
                 <ul class="listen-grid-elements">
-                    <h2 class="playlist-header sc-play">Short Films</h2><hr>
+                    <h2 class="playlist-header sc-sfilms">Short Films</h2><hr>
 
                     {% for shortfilms in site.data.listen.shortfilms %}
 
@@ -95,7 +96,7 @@
                                 <p>Directed by {{ shortfilms.director }}</p>
                             </div>
                             <i class="fa fa-play-circle-o"></i>
-    <!--                            <img src="assets/img/sc-click-to-load.jpg" alt="soundcloud click to load"/>-->
+                                <img src="assets/img/sc-click-to-load.jpg" alt="soundcloud click to load"/>
                             <iframe id="widget-{{ shortfilms.shorttitle }}" class="filmtv-frame" src="/blank.html" data-src="{{ shortfilms.soundcloud }}"></iframe>                                
                         </div>                     
                     </li>
@@ -105,9 +106,10 @@
                 </ul>
 
                 <div class="listen-clear"></div>
+-->
 
                 <ul class="listen-grid-elements">
-                    <h2 class="playlist-header sc-play">Television/Documentary</h2><hr>
+                    <h2 class="playlist-header sc-tv">Television/Documentary</h2><hr>
 
                     {% for television in site.data.listen.television %}
 

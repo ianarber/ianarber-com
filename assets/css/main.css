@@ -3005,8 +3005,9 @@ hr {
       margin-left: 30px;
       padding-bottom: 5px;
       font-weight: 300; }
-  .post-container a {
-    color: #5f5f5f; }
+      .post-container blockquote footer a {
+        color: #5f5f5f;
+        text-decoration: none; }
   .post-container hr {
     margin-top: 35px;
     margin-bottom: 20px; }
@@ -3045,6 +3046,7 @@ hr {
   font-size: 70%;
   width: auto; }
   .post-navigation a {
+    color: #5f5f5f;
     width: 50%;
     float: left;
     text-decoration: underline; }
@@ -3871,7 +3873,7 @@ width decreases */
 .post-image {
   margin-bottom: 10px; }
   .post-image img {
-    width: 60%;
+    width: 70%;
     margin: 0 auto; }
 
 .post-heading {
@@ -4188,6 +4190,9 @@ width decreases */
     transition: transform 0.3s, -webkit-transform 0.3s; }
     .bg-iframe i:hover {
       color: #ff4b00; }
+
+.bg-iframe.spinner {
+  background: url(https://site-ianarber.aerobatic.io/assets/img/spinner.gif) no-repeat center center; }
 
 .disable-play-icon {
   opacity: 0;
@@ -4723,10 +4728,10 @@ width decreases */
   .testimonials {
     width: 600px; }
     .testimonials #testimonial-container {
-      height: 110px; }
+      height: 108px; }
     .testimonials .content {
       width: 600px;
-      height: 110px; }
+      height: 108px; }
     .testimonials #navLinks {
       width: 600px; }
   #testimonial-wrapper {
@@ -4775,10 +4780,10 @@ width decreases */
   .testimonials {
     width: 400px; }
     .testimonials #testimonial-container {
-      height: 165px; }
+      height: 150px; }
     .testimonials .content {
       width: 400px;
-      height: 165px; }
+      height: 150px; }
     .testimonials #navLinks {
       width: 400px; }
   #testimonial-wrapper {
@@ -4845,6 +4850,8 @@ width decreases */
     width: 100%; }
   .post-container {
     width: 95%; }
+  .post-image img {
+    width: 80%; }
   #main-form {
     max-width: 300px; }
     #main-form textarea {
@@ -4892,10 +4899,10 @@ width decreases */
   .testimonials {
     width: 300px; }
     .testimonials #testimonial-container {
-      height: 205px; }
+      height: 190px; }
     .testimonials .content {
       width: 300px;
-      height: 205px; }
+      height: 190px; }
     .testimonials #navLinks {
       width: 300px; }
   #testimonial-wrapper {
