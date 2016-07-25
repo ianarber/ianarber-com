@@ -153,6 +153,15 @@
 	}
 }
 
+.menu-list-1,
+.menu-list-2{
+    a:hover{
+        //transform: translateY(-1.5px);
+        //letter-spacing: 0px;
+        color: #333;
+    }
+}
+
 
 /***Mixin function for positioning of image next to header links***/
 

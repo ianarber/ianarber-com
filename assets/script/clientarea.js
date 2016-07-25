@@ -7,8 +7,9 @@ $(function () {
 
         //set full opacity to click to load image (via css)
         $(this).addClass('disable-play-icon');
+        $(this).closest('.bg-iframe').addClass('spinner');
         
-        $(this).siblings('img').addClass('disable-play-icon');
+        //$(this).siblings('img').addClass('disable-play-icon');
         //search for nearest iframe
         var $iframe = $(this).siblings('iframe');
            

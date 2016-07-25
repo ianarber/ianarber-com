@@ -179,11 +179,15 @@
 			font-size: 165%;
 		}
         img{
-            left: -100px;
+            left: -220px;
             width: 140%;
         }
 	}
-	
+    
+    .img-slide a{
+        font-size: 90%;
+    }
+    
     .showreel-background{
         margin-top: 45px;
     }
@@ -382,6 +386,11 @@
             width: 265%;
         }
 	}
+    
+    .img-slide a{
+        font-size: 80%;
+        letter-spacing: 0.5px;
+    }
 	
     .showreel-background{
         margin-top: 20px;
@@ -733,6 +742,10 @@
         }
 	}
     
+    .img-slide a{
+        font-size: 75%;
+    }
+    
     .showreel-background{
         margin-top: 20px;
     }
@@ -903,6 +916,15 @@
 /* --- to 400px */
 @media only screen and (max-width: 400px){
 
+    .bio{
+        height: 265px;
+        .bio-pic{
+            height: 150px;
+        }
+        #nav-scroll-btns {
+            top: 225px;
+        }
+    }
     
     .footer{
         height: 640px;
@@ -927,8 +949,64 @@
 
 /* --- iPhone 5 */
 @media only screen and (max-width: 320px){
+    .section-header{
+        h1{
+            &:before, &:after{
+                width: 30px;
+            }
+        }
+    }
 
+    .profile-pic{
+        img{
+            width: 430%;
+        }
+	}
 
+    .direct{
+        i{
+            font-size: 80%;
+        }
+    }
     
+    #submit-form{
+        #message{
+            display: none;
+        }
+    }
+    
+    .form .social{
+        .social-icons{
+            font-size: 80%;
+            div:not(:last-child){
+                margin-right: 3px;
+            }
+        }
+    }
+    
+    .main-contact-form .social{
+        .social-icons{
+            font-size: 80%;
+            div:not(:last-child){
+                margin-right: 3px;
+            }
+        }
+    }
+    
+    .foot-social{
+        .social-icons{
+            font-size: 75%;
+            div:not(:last-child){
+                margin-right: 3px;
+            }
+        }
+    }
+
+    .footer-info li{
+        font-size: 90%;
+    }
+    
+
+   
     
 }
