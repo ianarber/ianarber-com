@@ -7,7 +7,7 @@ film: Mission Impossible - Rogue Nation
 image: /assets/img/news-posts/opengraph/indifferent.jpg
 thumbnail: /assets/img/thumbnail/indifferent.jpg
 medium: /assets/img/news-posts/medium/indifferent.jpg
-header: /assets/img/news-posts/header/indifferent.jpg
+header: /assets/img/news-posts/header/mission-impossible-rouge-nation.jpg
 heading: Ian assisted Joe Kraemer scoring MI5
 excerpt_separator: <!--more-->
 ---

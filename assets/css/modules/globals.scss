@@ -94,38 +94,36 @@ hr{
         i{ padding: 12px 14px; }
     }
     div:nth-child(5){
-        i{ padding: 12px 14px; }
+        i{ padding: 12px 8px; }
     }
-    div:nth-child(6){
-        i{ padding: 12px 14px; }
+//    div:nth-child(6){
+//        i{ padding: 12px 14px; }
+//    }
+}
+
+.social-icons div:last-of-type{
+    margin-bottom: 5px;
+    i{
+        font-size: 70%;
+        font-style: normal;
     }
 }
 
-/***SOCIAL ICONS PULSE ANIMATION*****/
-
-//@keyframes pulse {
-//  25% {
-//	transform: scale(0.9);
-//  }
-//
-//  75% {
-//    transform: scale(1.1);
-//  }
-//}
-//
-//.pulse {
-//	display: inline-block;
-//	vertical-align: middle;
-//	transform: translateZ(0);
-//	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-//	backface-visibility: hidden;
-//}
-//
-//.pulse:hover, .pulse:focus, .pulse:active {
-//	animation-name: pulse;
-//	animation-duration: 1s;
-//	animation-timing-function: linear;
-//	animation-iteration-count: infinite;
+//.social-icons div:last-of-type{
+//    font-size: 70%;
+//    border: 2px solid #efefef;
+//    border-radius: 50%;
+//    padding: 12px 8px;
+//    transition: all 0.3s;
+//    &:hover,
+//    &:hover > a{
+//        color: #333;
+//        transition: all 0.3s;
+//    }
+//    &:hover{
+//        background: #efefef;
+//        cursor: pointer;
+//    }
 //}
 
 /**********************SECTION HEADERS AND FOOTERS*********************/

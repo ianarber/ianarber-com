@@ -981,6 +981,10 @@
             div:not(:last-child){
                 margin-right: 3px;
             }
+            div:last-of-type{
+                margin-bottom: 4px;
+                i{ padding: 13px 10px; }
+            }
         }
     }
     
@@ -990,6 +994,10 @@
             div:not(:last-child){
                 margin-right: 3px;
             }
+            div:last-of-type{
+                margin-bottom: 3px;
+                i{ padding: 13px 9px; }
+            }
         }
     }
     
@@ -998,6 +1006,10 @@
             font-size: 75%;
             div:not(:last-child){
                 margin-right: 3px;
+            }
+            div:last-of-type{
+                margin-bottom: 3px;
+                i{ padding: 12px 9px; }
             }
         }
     }

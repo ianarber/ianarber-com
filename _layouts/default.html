@@ -19,19 +19,23 @@
     <meta property="og:title" content="{{ page.title }}">
     
     <meta name="description" content="{{ finalDescription }}">
-    <meta name="og:description" content="{{ finalDescription }}">
+    <meta property="og:description" content="{{ finalDescription }}">
     
     <link rel="canonical" href="{{ site.myurl }}{{ page.url | replace:'index.html',''}}">
-    <!--  Comment added for testing  -->
-    <link rel="canonical" href="https://thisisatest.url.com">
+    
+    {% if page.layout == 'news' %}
+        <meta property="og:type" content="article">
+        <meta property="article:published_time" content="{{ page.date }}">
+        <meta property="article:author" content="{{ site.myurl }}/about/">
+    {% endif %}
     
     <meta property="og:url" content="{{ site.myurl }}{{ page.url | replace:'index.html',''}}">
     <meta property="og:site_name" content="{{ site.name }}">
     <meta property="og:image" content="{{ site.myurl }}{{ page.image }}">
+    <meta property="og:image:type" content="image/jpeg">
 
     <link rel="stylesheet" href="/assets/css/{{ site.cssToImport }}">
-    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700|Droid+Serif:400,700' rel='stylesheet' type='text/css'>
-        
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700|Droid+Serif:400,700' rel='stylesheet' type='text/css'> 
 </head>
 
 <body>

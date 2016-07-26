@@ -4,7 +4,7 @@
 	    <div id="slider-container">
             
             {% assign slideId = 1 %}
-            {% for post in site.categories.news limit:4 %}
+            {% for post in site.categories.news limit:5 %}
             
             <div class="img-slide" id="img-slide-{{slideId}}">
                 <img src="{{ post.header }}" alt="{{ post.title }}"/>
@@ -24,20 +24,25 @@
 			</div>
 		</div>
 		<div id="quote">
-			<q>Working with Ian is and was a true joy and privilege. 
-			His imagination is only revaled by his brilliance and work ethic.</q>	
+			<q>...It was my pleasure, and an honor, to have him on the team for Mission: Impossible - Rogue Nation.</q>	
 		</div>
 		<div id="cite">
-            Jonathan Moch, Director - <cite>Unto Me &amp; The Burden</cite>
+            Joe Kraemer, Composer - <cite>Mission: Impossible - Rogue Nation</cite>
 		</div>
 	</div>
 	
 	<div id="nav-scroll-btns">
         <ul>
             <li class="active" rel="img-slide-1"></li>
-            <li rel="img-slide-2"></li>
-            <li rel="img-slide-3"></li>
-            <li rel="img-slide-4"></li>
+            
+            {% assign navId = 2 %}
+            {% for post in site.categories.news limit:4 %}
+            
+                <li rel="img-slide-{{navId}}"></li>
+                       
+            {% assign navId = navId | plus: 1 %}
+            {% endfor %}
+            
         </ul>
     </div>
 </section>

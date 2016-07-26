@@ -3,7 +3,7 @@
     //margin: 0 auto;
     .section-header:first-of-type{
         margin-top: 60px;
-        margin-bottom: 5px;
+        //margin-bottom: -5px;
     }
     hr:first-of-type{
         width: 70%;  
@@ -30,6 +30,9 @@
                 color: $backgroundColor;
                 transition: all 0.3s;
             }
+        }
+        div:last-of-type{
+            margin-bottom: 6px;
         }
     }
 }
