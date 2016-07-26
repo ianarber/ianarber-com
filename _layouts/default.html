@@ -21,11 +21,13 @@
     <meta name="description" content="{{ finalDescription }}">
     <meta name="og:description" content="{{ finalDescription }}">
     
-    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
+    <link rel="canonical" href="{{ site.myurl }}{{ page.url | replace:'index.html',''}}">
     
-    <meta property="og:url" content="{{ site.url }}{{ page.url | replace:'index.html',''}}">
+    <link rel="canonical" href="https://thisisatest.url.com">
+    
+    <meta property="og:url" content="{{ site.myurl }}{{ page.url | replace:'index.html',''}}">
     <meta property="og:site_name" content="{{ site.name }}">
-    <meta property="og:image" content="{{ site.url }}{{ page.image }}">
+    <meta property="og:image" content="{{ site.myurl }}{{ page.image }}">
 
     <link rel="stylesheet" href="/assets/css/{{ site.cssToImport }}">
     <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700|Droid+Serif:400,700' rel='stylesheet' type='text/css'>

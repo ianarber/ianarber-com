@@ -2,7 +2,7 @@ name: Ian Arber
 author: Ian Arber
 exclude: ["node_modules", "gulpfile.js", "package.json", ".brackets.json"]
 cssToImport: main.css
-url: https://site-ianarber.aerobatic.io
+myurl: https://site-ianarber.aerobatic.io
 permalink: /:categories/:day/:month/:year/:title/
 #gems:
 #  - jekyll-seo-tag
