@@ -3,7 +3,7 @@ layout: credit-info
 headerstatus: shunk-header
 title: Jim 'The Fish'
 iden: jimthefish
-thumbnail: assets/img/credits-grid/jim-the-fish.jpg
+thumbnail: /assets/img/credits-grid/jim-the-fish.jpg
 category: credits
 role: Composer
 type: Short Film

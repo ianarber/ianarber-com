@@ -3,7 +3,7 @@ layout: credit-info
 headerstatus: shunk-header
 title: Indifferent
 iden: indifferent
-thumbnail: assets/img/credits-grid/indifferent.jpg
+thumbnail: /assets/img/credits-grid/indifferent.jpg
 category: credits
 role: Composer
 type: Feature Film

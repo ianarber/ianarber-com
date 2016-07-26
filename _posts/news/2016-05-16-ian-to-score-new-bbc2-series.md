@@ -4,6 +4,7 @@ category: news
 headerstatus: shunk-header
 title: Ian to Score new BBC 2 Series
 film: Quacks
+image: /assets/img/news-posts/opengraph/quacks.jpg
 thumbnail: /assets/img/news-posts/thumbnail/quacks.jpg
 medium: /assets/img/news-posts/medium/quacks.jpg
 header: /assets/img/news-posts/header/quacks.jpg

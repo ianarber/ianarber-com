@@ -3,7 +3,7 @@ layout: credit-info
 headerstatus: shunk-header
 title: Changing Hands
 iden: changinghands
-thumbnail: assets/img/credits-grid/changing-hands.jpg
+thumbnail: /assets/img/credits-grid/changing-hands.jpg
 category: credits
 type: Feature Film
 year: 2012

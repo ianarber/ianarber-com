@@ -3,7 +3,7 @@ layout: credit-info
 headerstatus: shunk-header
 title: We Love Paleo
 iden: welovepaleo
-thumbnail: assets/img/credits-grid/we-love-paleo.jpg
+thumbnail: /assets/img/credits-grid/we-love-paleo.jpg
 category: credits
 role: Composer
 type: Documentary

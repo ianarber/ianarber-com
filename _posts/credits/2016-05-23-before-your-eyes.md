@@ -1,7 +1,7 @@
 ---
 layout: credit-info
 title: Before Your Eyes
-thumbnail: assets/img/credits-grid/before-your-eyes.jpg
+thumbnail: /assets/img/credits-grid/before-your-eyes.jpg
 category: credits
 role: Composer
 type: Short Film

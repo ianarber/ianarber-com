@@ -3,7 +3,7 @@ layout: credit-info
 headerstatus: shunk-header
 title: To Save One's Self
 iden: tosaveonesself
-thumbnail: assets/img/credits-grid/to-save-ones-self.jpg
+thumbnail: /assets/img/credits-grid/to-save-ones-self.jpg
 category: credits
 role: Composer
 type: Short Film

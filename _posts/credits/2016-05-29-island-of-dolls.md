@@ -3,7 +3,7 @@ layout: credit-info
 headerstatus: shunk-header
 title: The Island of Dolls
 iden: theislandofdolls
-thumbnail: assets/img/credits-grid/the-island-of-dolls.jpg
+thumbnail: /assets/img/credits-grid/the-island-of-dolls.jpg
 category: credits
 role: Composer
 type: Feature Film
