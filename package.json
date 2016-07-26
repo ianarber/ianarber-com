@@ -15,21 +15,22 @@
         "url": "https://adesmier@bitbucket.org/adesmier/site-ianarber.git"
     }, 
     "_aerobatic": {
-    "router": [
-      {
-        "module": "basic-auth",
-        "path": "/clientarea",
-        "options": {
-          "username": "$BASIC_AUTH_USERNAME",
-          "password": "$BASIC_AUTH_PASSWORD"
-        }
-      },
-      {
-        "module": "webpage"
-      }
-    ],
-       "build": {
-      "engine": "jekyll"
+        "omitClientConfigVar": true,
+        "router": [
+          {
+            "module": "basic-auth",
+            "path": "/clientarea",
+            "options": {
+              "username": "$BASIC_AUTH_USERNAME",
+              "password": "$BASIC_AUTH_PASSWORD"
+            }
+          },
+          {
+            "module": "webpage"
+          }
+        ],
+        "build": {
+        "engine": "jekyll"
     } 
   }  
 }
