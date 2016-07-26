@@ -1,15 +1,31 @@
 {% assign header = page.headerstatus %}
 
+{% if page.description %}
+    {% assign finalDescription = page.description %}     
+    {% elsif page.excerpt %}
+    {% assign finalDescription = page.excerpt | remove: '<p>' | remove: '</p>' | strip_newlines %} 
+{% endif %}
+ 
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<!--    <title>{{ page.title }}</title>-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    {% seo %}
+    <title>{{ page.title }}</title>
+    <meta property="og:title" content="{{ page.title }}">
+    
+    <meta name="description" content="{{ finalDescription }}">
+    <meta name="og:description" content="{{ finalDescription }}">
+    
+    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
+    
+    <meta property="og:url" content="{{ site.url }}{{ page.url | replace:'index.html',''}}">
+    <meta property="og:site_name" content="{{ site.name }}">
+    <meta property="og:image" content="{{ site.url }}{{ page.image }}">
 
     <link rel="stylesheet" href="/assets/css/{{ site.cssToImport }}">
     <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700|Droid+Serif:400,700' rel='stylesheet' type='text/css'>

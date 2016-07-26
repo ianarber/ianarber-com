@@ -15,7 +15,6 @@
         "url": "https://adesmier@bitbucket.org/adesmier/site-ianarber.git"
     }, 
     "_aerobatic": {
-        "omitClientConfigVar": true,
         "router": [
           {
             "module": "basic-auth",
