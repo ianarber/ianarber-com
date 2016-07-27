@@ -2,7 +2,7 @@
 layout: news
 category: news
 headerstatus: shunk-header
-title: Ian signed to Score new Horror Feature
+title: Ian to Score new Horror Feature
 film: The Island of Dolls
 image: /assets/img/news-posts/opengraph/the-island-of-dolls.jpg
 thumbnail: /assets/img/news-posts/thumbnail/the-island-of-dolls.jpg

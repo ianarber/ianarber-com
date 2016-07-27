@@ -1,7 +1,15 @@
 .showreel-background{
 	background-color: $backgroundColor;
-	height: 1005px;
+	//height: 1060px;
+    height: auto;
 	margin-top: 85px;
+    margin-bottom: 20px;
+}
+
+#imdb-logo{
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
 }
 
 /* individual posters will flex expand when width increases */
