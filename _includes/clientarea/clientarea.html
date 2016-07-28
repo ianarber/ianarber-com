@@ -17,15 +17,15 @@
             {% for fullscores in site.data.clientarea.fullscores %}
 
             <li>
-                <div class="bg-iframe">
+                <div class="bg-iframe spinner">
                     <div class="bg-iframe-info">
                         <h5>{{ fullscores.title }}</h5>
                         <p>{{ fullscores.genre }}, {{ fullscores.year }}</p>
                         <p>Directed by {{ fullscores.director }}</p>
                     </div>
-                    <i class="fa fa-play-circle-o"></i>
+<!--                    <i class="fa fa-play-circle-o"></i>-->
                     <!--                            <img src="assets/img/sc-click-to-load.jpg" alt="soundcloud click to load"/>-->
-                    <iframe id="{{ fullscores.shorttitle }}" height="{{ fullscores.height }}" src="/blank.html" data-src="{{ fullscores.soundcloud }}"></iframe>
+                    <iframe id="{{ fullscores.shorttitle }}" height="{{ fullscores.height }}" src="{{ fullscores.soundcloud }}"></iframe>
                 </div>
             </li>
 

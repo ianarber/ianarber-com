@@ -67,10 +67,7 @@
     font-size: 130%;
     opacity: 0.3;
     transition: opacity 0.3s;
-    &:hover{
-        opacity: 1;
-        transition: opacity 0.3s;
-    }
+    cursor: pointer;
 }
 
 .arrow-rotate{
@@ -87,11 +84,27 @@
     color: $backgroundColor;
     background-color: $mainFontColor;
     padding: 0px 3px;
+    opacity: 0.3;
+    transition: opacity 0.3s;
 }
 
+.arrow-filter-active{
+    color: #6f0404;
+}
+.info-filter-active{
+    background-color: #6f0404 !important;
+}
 
-
-
+#filter-wrapper{
+    &:hover > #arrow{
+        opacity: 1;
+        transition: opacity 0.3s;
+    }
+    &:hover > #menu-info{
+        opacity: 1;
+        transition: opacity 0.3s;
+    }
+}
 
 
 

@@ -12,12 +12,12 @@ $(function () {
     
     
     //fade out elements after page load
-    $menuInfo.delay(3000).fadeOut('slow');
+    //$menuInfo.delay(3000).fadeOut('slow');
     $genreMenu.delay(3000).slideUp('slow');
     
-    $arrow.hover(function(){
-        $menuInfo.fadeToggle('slow'); 
-    });
+    //$arrow.hover(function(){
+    //    $menuInfo.fadeToggle('slow'); 
+    //});
        
     
     $('#genres li').on('click', function(){
@@ -41,6 +41,12 @@ $(function () {
         $liToShow.find('.fg-cover').addClass('disabled');
         
         $liToShow.children('div.bg-iframe').removeClass('spinner');
+        
+        if($(this).text() != 'All'){
+            filterActive();
+        } else {
+            filterNotActive();
+        }        
         
         setTimeout(slideGenreMenu, 500);
     });
@@ -109,6 +115,18 @@ $(function () {
         }
         
     });
+    
+    function filterActive(){
+        $arrow.addClass('arrow-filter-active');
+        $menuInfo.addClass('info-filter-active');
+        $menuInfo.text($menuInfo.data('swap'));
+    }
+    
+    function filterNotActive(){
+        $arrow.removeClass('arrow-filter-active');
+        $menuInfo.removeClass('info-filter-active');
+        $menuInfo.text($menuInfo.data('original'));
+    }
     
     
     $('#see-more').on('click', function(){
