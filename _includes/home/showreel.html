@@ -3,14 +3,18 @@
 		<h1>Recent Credits</h1>
 	</div>
 	
-    <a href="http://www.imdb.com/name/nm4725072/" target="_blank"><img id="imdb-logo" src="/assets/img/imdb.png" alt="IMDb logo"/></a>
+    <div id="imdb-logo">
+        <a href="http://www.imdb.com/name/nm4725072/" target="_blank">
+            <img src="/assets/img/imdb.png" alt="Logo link to Ian Arber's IMDb profile"/>
+        </a>
+    </div>
 
 	<div class="poster-row">
 
 	    {% for post in site.categories.credits limit:5 %}
 		<div class="poster" >
 			<figure class="poster-figure">
-				<img src="{{ post.thumbnail }}" alt="Poster" />
+				<img src="{{ post.thumbnail }}" alt="{{ post.title }} Recent Credits Poster" />
 				<!-- figcaption elements will overlay on mouseover -->
 				<figcaption class="poster-caption">
 					<div>

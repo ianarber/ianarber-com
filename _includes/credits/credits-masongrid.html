@@ -10,7 +10,11 @@
         <h1>Credits</h1>
     </div>
     
-    <a href="http://www.imdb.com/name/nm4725072/" target="_blank"><img id="imdb-logo" src="/assets/img/imdb.png" alt="IMDb logo"/></a>
+    <div id="imdb-logo">
+        <a href="http://www.imdb.com/name/nm4725072/" target="_blank">
+            <img src="/assets/img/imdb.png" alt="Logo link to Ian Arber's IMDb profile"/>
+        </a>
+    </div>
     
     <div id="grid-gallery" class="grid-gallery">
         <section class="grid-wrap">
@@ -20,7 +24,7 @@
                 <li>
                     <a href="{{ post.url }}">
                     <figure>
-                        <img src="{{ post.thumbnail }}" alt="Grid Poster" />
+                        <img src="{{ post.thumbnail }}" alt="{{ post.title }} Credits Poster" />
                         <figcaption>
                             <h5>{{ post.title }} ({{ post.year }})</h5>
                             <p id="role">{{ post.role }}</p>

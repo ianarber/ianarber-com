@@ -7,10 +7,7 @@ $(function () {
     var $navBtnsLi = $bio.find('li');
     var current = 1;
     var sliderNextNum = 2;
-    
-
-
-    
+    var count = $bio.find('.img-slide > img').length;
     
     
     //initally fade out all images
@@ -27,7 +24,7 @@ $(function () {
     //interval function
     function imageSlider(){
         
-        var count = $bio.find('.img-slide > img').length;
+        //var count = $bio.find('.img-slide > img').length;
         var relToMatch;
         var nextSlide;
         //fade out current slide
@@ -63,11 +60,11 @@ $(function () {
             $(this).addClass('active');
         }
         
-        //set variables based on index uder clicked
+        //set variables based on index user clicked
         current = index;
         sliderNextNum = ++index;
         //check for end of element array
-        if( sliderNextNum > 4 ){
+        if( sliderNextNum > count ){
             sliderNextNum = 1;
         }
         //restart interval

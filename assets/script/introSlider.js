@@ -16,7 +16,8 @@ $(function () {
     var $navBtns = $intro.find('#nav-scroll-btns');
     var $navBtnsLi = $intro.find('li');
     var current = 1;
-    var sliderNextNum = 2;  
+    var sliderNextNum = 2;
+    var count = $intro.find('.img-slide > img').length;
     
     recalculateHeight();
     changeWelcomeText();
@@ -73,9 +74,9 @@ $(function () {
     
     
     //initally fade out all images
-    $("div[id^='img-slide-']").fadeOut(0);
+    $intro.find("div[id^='img-slide-']").fadeOut(0);
     //fade in first slide
-    $('#img-slide-' + current).fadeIn(1000);  
+    $intro.find('#img-slide-' + current).fadeIn(1000);  
     //start slider loop
     var loop = setInterval(imageSlider, 7000);
     
@@ -86,11 +87,11 @@ $(function () {
     //interval function
     function imageSlider(){
         
-        var count = $('.img-slide > img').length;
+        //var count = $('.img-slide > img').length;
         var relToMatch;
         var nextSlide;
         //fade out current slide
-        $('#img-slide-' + current).fadeOut(1000).removeClass('active');
+        $intro.find('#img-slide-' + current).fadeOut(1000).removeClass('active');
         //set next slide variable
         nextSlide = '#img-slide-' + sliderNextNum;
         //fade the next slide in
@@ -114,9 +115,9 @@ $(function () {
         //only execute if current slide is different from clicked nav button
         if( current != index ){
             //remove all active classes from img elements
-            $("div[id^='img-slide-']").fadeOut(1000).removeClass('active');
+            $intro.find("div[id^='img-slide-']").fadeOut(1000).removeClass('active');
             //fade in img based on index value
-            $('#img-slide-' + index).fadeIn(1000).addClass('active');
+            $intro.find('#img-slide-' + index).fadeIn(1000).addClass('active');
             //add and remove class on nav buttons
             $navBtnsLi.removeClass('active');
             $(this).addClass('active');
@@ -126,7 +127,7 @@ $(function () {
         current = index;
         sliderNextNum = ++index;
         //check for end of element array
-        if( sliderNextNum > 4 ){
+        if( sliderNextNum > count ){
             sliderNextNum = 1;
         }
         //restart interval

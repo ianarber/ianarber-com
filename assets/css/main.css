@@ -1222,9 +1222,12 @@ hr {
   margin-bottom: 20px; }
 
 #imdb-logo {
-  display: block;
+  width: 90px;
   margin: 0 auto;
   margin-top: 10px; }
+  #imdb-logo img {
+    display: block;
+    margin: 0 auto; }
 
 /* individual posters will flex expand when width increases */
 .poster-row {
