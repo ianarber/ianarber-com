@@ -1,5 +1,5 @@
 {
-    "name": "site-ianarber",
+    "name": "ianarber",
     "version": "0.0.0",
     "description": "Bio wesbite for composer Ian Arber. Built on Jekyll using Gulp",
     "main": "gulpfile.js",
