@@ -1,4 +1,4 @@
 Website for Ian Arber
 =============================
 
-Using: jekyll, gulp, sass, browser-sync
+Built on Jekyll using Gulp workflow with Aerobatic hosting
