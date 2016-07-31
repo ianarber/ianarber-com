@@ -1409,7 +1409,7 @@ hr {
 .showreel-background iframe {
   width: 80%;
   height: 450px;
-  background: url("/assets/img/spinner.gif") no-repeat center center; }
+  background: url("https://ianarber.aerobatic.io/assets/img/spinner.gif") no-repeat center center; }
 
 .news {
   height: auto;
@@ -1959,7 +1959,7 @@ width decreases */
   margin: 0 auto;
   height: 300px;
   padding: 0% 5% 0% 5%;
-  background: url(https://site-ianarber.aerobatic.io/assets/img/spinner.gif) no-repeat center center; }
+  background: url("https://ianarber.aerobatic.io/assets/img/spinner.gif") no-repeat center center; }
 
 .post-credit-header {
   margin-bottom: 10px; }
@@ -2145,7 +2145,7 @@ width decreases */
       color: #ff4b00; }
 
 .bg-iframe.spinner {
-  background: url("/assets/img/spinner.gif") no-repeat center center; }
+  background: url("https://ianarber.aerobatic.io/assets/img/spinner.gif") no-repeat center center; }
 
 .disable-play-icon {
   opacity: 0;
@@ -2420,7 +2420,7 @@ width decreases */
   width: 70%;
   text-align: center;
   margin: 0 auto;
-  background: url("/assets/img/spinner.gif") no-repeat center center; }
+  background: url("https://ianarber.aerobatic.io/assets/img/spinner.gif") no-repeat center center; }
   #yt-showreel-wrapper iframe {
     margin: 20px 0px;
     width: 100%;
