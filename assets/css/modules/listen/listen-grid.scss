@@ -1,5 +1,4 @@
 .listen-grid {
-    //border: 1px solid red;
     max-width: 1840px;
     margin: 0 auto;
     height: auto;
@@ -28,36 +27,20 @@
 }
 
 .genre-menu{
-    //min-width: 152px;
     position: fixed;
     z-index: 1;
-    //top: 170px;
-    //left: -140px;
-    //width: 15%;
     background-color: $backgroundColor;
-    //border: 10px solid $backgroundColor;
     box-shadow: 0px 0px 2px 5px $backgroundColor;
     padding-left: 10px;
     padding-right: 10px;
     backface-visibility: hidden;
-    //animation: genre-menu-pulse 2s linear infinite;
-    //animation-play-state: paused;
     transform: translateY(-20px);
-    //transform: translateX(-410px);
-    //margin-top: 10px;
-    
-    
     h5{
         text-align: center;
         margin-bottom: 5px;
         letter-spacing: 0.5px;
     }
 }
-
-
-
-
-
 
 #arrow{
     position: fixed;
@@ -106,15 +89,10 @@
     }
 }
 
-
-
-
-
 #genres,
 #categories{
     float: left;
     li{
-        //display: inline-block;
         text-align: center;
         font-size: 70%;
         font-weight: 300;
@@ -142,12 +120,9 @@
 }
 
 #listen-gallery{
-    //border: 1px solid red;
     width: 100%;
-    //max-width: 1140px;
     float: right;
     margin-top: 0px;
-    //margin-right: 10px;
     .listen-grid-elements > li{
         width: 33%;
         float: left;
@@ -165,7 +140,6 @@
 }
 
 .bg-iframe{
-    //border: 1px solid red;
     position: relative;   
     iframe{
         padding: 10px;
@@ -189,29 +163,21 @@
         position: absolute;
         top: 40%;
         left: 50%;
-        //transform: translateY(-10%);
         transform: translateX(-50%);
         color: #333;
-        //background-color: $backgroundColor;
         font-size: 450%;
         cursor: pointer;
         transition: transform 0.3s;
         &:hover{
             color: #ff4b00;
         }
-
     }
     transition: opacity 0.3s;
 }
 
 .bg-iframe.spinner{
-    background: url(https://site-ianarber.aerobatic.io/assets/img/spinner.gif) no-repeat center center;
+    background: url('/assets/img/spinner.gif') no-repeat center center;
 }
-
-
-
-
-
 
 .disable-play-icon{
     opacity: 0;
@@ -219,15 +185,11 @@
     pointer-events: none;
 }
 
-
-
 .temp-disable-icon{
     opacity: 0.2;
     filter: blur(2px);
     pointer-events: none;
 }
-
-
 
 .play-frame{
     height: 400px;
@@ -244,8 +206,6 @@
     transition: opacity 0.3s;
     filter: blur(2px);
 }
-
-
 
 .bg-iframe-info{
     margin-top: 10px;
@@ -265,55 +225,38 @@
     }
 }
 
-
-
 .fg-cover{
-    //border: 1px solid green;
     position: absolute;
     top: 0px;
     left: 0px;
     width: 100%;
     height: 100%;
-    //padding: 160px 90px;
     padding: 70px 70px;
     cursor: auto;
     pointer-events: none;
-    //opacity: 0;
     transform: translateY(10px);
     transition: all 0.3s;
 }
 
-
-//
-//
-//
-//.fg-cover.disabled{
-//    pointer-events: all;
-//    opacity: 1;
-//    transform: translateY(0px);
-//    transition: all 0.3s;
-//}
-//
-//
-//
-//    
-
-
 #expand-wrapper{
+    position: relative;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 20px;
     font-size: 85%;
-    //line-height: 3px;
 }
 
 #see-more{
     font-size: 170%;
-    //margin: 0 auto;
     cursor: pointer;
     transition: transform 0.3s;
     &:hover{
         transform: translateY(5px);
+    }
+    &:hover + #span-expand{
+        opacity: 1;
+        transform: translateY(0px);
+        transition: all 0.3s;
     }
 }
 
@@ -322,15 +265,22 @@
     transition: transform 0.3s;
 }
 
+#span-expand{
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    width: 100px;
+    font-size: 90%;
+    background-color: transparent;
+    color: $mainFontColor;
+    text-align: center;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -50px;
+    transform: translateY(5px);
+    transition: all 0.3s;
+}
+
 #listen-more-expand{
     display: none;
 }
-
-
-
-
-
-
-
-
-

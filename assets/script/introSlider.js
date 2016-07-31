@@ -59,11 +59,11 @@ $(function () {
     
     function changeWelcomeText(){
         if ( window.innerWidth <= 480 ) {
-            var html = '<p>Welcome to the home of</p><p>film composer Ian Arber</p>';
-            $profilePic.find('#welcome-intro p:first').html(html);
+            var html = '<h1>Welcome to the home of</h1><h1>film composer Ian Arber</h1>';
+            $profilePic.find('#welcome-intro h1:first').html(html);
             
         } else if ( window.innerWidth > 480 ) {
-            $profilePic.find('#welcome-intro p:first').html(
+            $profilePic.find('#welcome-intro h1:first').html(
                 'Welcome to the home of film composer Ian Arber.'
             )
         }

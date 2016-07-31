@@ -1,5 +1,6 @@
 ---
 layout: credit-info
+headerstatus: shunk-header
 title: Before Your Eyes
 thumbnail: /assets/img/credits-grid/before-your-eyes.jpg
 category: credits

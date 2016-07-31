@@ -84,10 +84,6 @@ $(function () {
         var src = $iframe.attr('data-src');
         $iframe.attr('src', src); 
         
-//        $iframe.ready(function(){
-//            console.log('here');
-//            $iframe.closest('.bg-iframe').removeClass('spinner');
-//        });
     });
     
     
@@ -112,6 +108,7 @@ $(function () {
             $menuInfo.fadeOut('slow');
         } else {
             $arrow.fadeIn('slow');
+            $menuInfo.fadeIn('slow');
         }
         
     });

@@ -91,7 +91,7 @@ width decreases */
     top: 200px;
 }
 
-.foot-about{	
+.foot-about{
 	img{
 		width: 50px;
         border: 2px solid #3c3c3c;
@@ -103,6 +103,13 @@ width decreases */
         padding: 0 30px;
         letter-spacing: 0.2px;
 	}
+    a{
+        transition: color 0.3s;
+        &:hover{
+            transition: color 0.3s;
+            color: #898989;
+        }
+    }
 }
 
 .foot-upper{
@@ -118,6 +125,13 @@ width decreases */
         margin-left: 2px;
         letter-spacing: 1px;
 	}
+    a{
+        transition: color 0.3s;
+        &:hover{
+            transition: color 0.3s;
+            color: #898989;
+        }
+    }
 }
 
 .foot-social{
@@ -130,6 +144,7 @@ width decreases */
         i{
             border: 2px solid #efefef;
             border-radius: 50%;
+            transition: all 0.3s;
             &:hover{
                 background: #efefef;
                 color: #333;
@@ -145,4 +160,12 @@ width decreases */
 	word-spacing: 1px;
     letter-spacing: 0.2px;
 	color: #898989;
+    a{
+        color: #898989;
+        transition: color 0.3s;
+        &:hover{
+            transition: color 0.3s;
+            color: #efefef;
+        }
+    }
 }

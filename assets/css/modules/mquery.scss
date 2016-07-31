@@ -103,23 +103,6 @@
 
 }
 
-
-@media only screen and (max-width: 1132px){
-    
-    .showreel-background{
-        //height: 1335px;
-        
-       
-    }
-    
-    
-    
-}
-
-
-
-
-
 /* 861px to 960px */
 @media only screen and (max-width: 1120px){
 	#header{
@@ -210,9 +193,6 @@
         }
     }
     
-    
-    /*******************************************************/
-    
     .testimonials{
         width: 810px;
         .content{
@@ -226,11 +206,6 @@
     #testimonial-wrapper{
         width: 4050px;
     }
-    
-  
-        
-    
-    /*******************************************************/
     
     #yt-showreel-wrapper{
         iframe{
@@ -521,8 +496,6 @@
         }
     }
     
-     /*******************************************************/
-    
     .testimonials{
         width: 600px;
         #testimonial-container{
@@ -540,9 +513,6 @@
     #testimonial-wrapper{
         width: 3000px;
     }
-    
-    
-    /*******************************************************/
     
     .footer{
         height: 495px;
@@ -627,8 +597,6 @@
         }
     }
     
-    /*******************************************************/
-    
     .testimonials{
         width: 400px;
         #testimonial-container{
@@ -646,9 +614,6 @@
     #testimonial-wrapper{
         width: 2000px;
     }
-    
-    
-    /*******************************************************/
     
     .footer{
         height: 555px;
@@ -717,7 +682,7 @@
             top: 10px;
 		    left: 10px;
             background-color: transparent;
-            p > p{
+            h1 > h1{
                 background-color: rgba(242, 242, 242, 0.6);
                 padding: 0px 8px;
                 &:first-child{
@@ -859,8 +824,6 @@
         
     }
     
-    /*******************************************************/
-    
     .testimonials{
         width: 300px;
         #testimonial-container{
@@ -877,11 +840,7 @@
 
     #testimonial-wrapper{
         width: 1500px;
-    }
-    
-    
-    /*******************************************************/
-    
+    }    
     
     .footer{
         height: 610px;
@@ -915,6 +874,21 @@
 
 /* --- to 400px */
 @media only screen and (max-width: 400px){
+    
+    #genres,
+    #categories{
+        li{
+            min-width: 110px;
+        }
+    }
+    
+    .bg-iframe{
+        img{
+            top: 34%;
+            transform: translateY(-34%);
+            width: 260px;
+        }
+    }
 
     .bio{
         height: 265px;

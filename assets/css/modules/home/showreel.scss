@@ -1,6 +1,5 @@
 .showreel-background{
 	background-color: $backgroundColor;
-	//height: 1060px;
     height: auto;
 	margin-top: 85px;
     margin-bottom: 20px;
@@ -19,7 +18,6 @@
 /* individual posters will flex expand when width increases */
 .poster-row{
 	margin: 0 auto;
-	//max-width: 1500px;
 	max-width: 95%;
 	display: flex;
 	flex-flow: wrap;
@@ -40,7 +38,6 @@
 		z-index: 1;
 		width: 200px;
 		transition: transform 1s;
-        //border: 2px solid #e2e2e2;
 	}
 }
 
@@ -51,6 +48,7 @@
 	overflow: hidden;
 	max-height: 305px;
     border: 2px solid #e2e2e2;
+    border-radius: 2px;
 }
 
 /* TODO: fix styling due to position changes using liquid template */
@@ -146,5 +144,5 @@
 .showreel-background iframe{
     width: 80%;
     height: 450px;
-    background: url(https://site-ianarber.aerobatic.io/assets/img/spinner.gif) no-repeat center center;
+    background: url('/assets/img/spinner.gif') no-repeat center center;
 }
