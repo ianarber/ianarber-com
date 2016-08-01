@@ -22,11 +22,7 @@
             "options": {
               "username": "$BASIC_AUTH_USERNAME",
               "password": "$BASIC_AUTH_PASSWORD"
-            },
-              "module": "redirect",
-              "options": {
-                  "https://www.ianarber.aerobatic.io/": "https://ianarber.aerobatic.io/"
-              }
+            }
           },
           {
             "module": "webpage"
