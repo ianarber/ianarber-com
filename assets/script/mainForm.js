@@ -1,6 +1,14 @@
 //use JS to set action attribute to prevent spam
 var mainForm = document.getElementById('main-form');
-mainForm.setAttribute('action', '//formspree.io/' + 'anthonydesmier' + '@' + 'hotmail' + '.' + 'com');
+mainForm.setAttribute('action', '//formspree.io/' + 'contact' + '@' + 'ianarber' + '.' + 'com');
+
+var contactEmail1 = document.getElementById('email-carolynne');
+contactEmail1.setAttribute('href', 'mailto:' + 'carolynne' + '@' + 'smatalent' + '.' + 'com');
+contactEmail1.innerHTML = 'carolynne' + '@' + 'smatalent' + '.' + 'com';
+
+var contactEmail2 = document.getElementById('email-lesley');
+contactEmail2.setAttribute('href', 'mailto:' + 'lesley' + '@' + 'smatalent' + '.' + 'com');
+contactEmail2.innerHTML = 'lesley' + '@' + 'smatalent' + '.' + 'com';
 
 $(function(){
     
