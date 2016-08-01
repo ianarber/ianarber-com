@@ -1,6 +1,6 @@
 name: Ian Arber - Composer
 author: Ian Arber
 exclude: ["node_modules", "gulpfile.js", "package.json", ".brackets.json"]
-cssToImport: main.min.css
-myurl: https://ianarber.com
+cssToImport: main.css
+myurl: https://www.ianarber.com
 permalink: /:categories/:day/:month/:year/:title/
