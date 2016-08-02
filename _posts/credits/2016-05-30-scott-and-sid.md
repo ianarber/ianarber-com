@@ -3,6 +3,7 @@ layout: credit-info
 headerstatus: shunk-header
 title: Scott and Sid
 iden: scottandsid
+weight: 2
 thumbnail: /assets/img/credits-grid/scott-and-sid.jpg
 image: /assets/img/credits-grid/opengraph/scott-and-sid.jpg
 image_size: 3

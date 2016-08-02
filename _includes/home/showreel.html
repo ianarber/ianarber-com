@@ -11,30 +11,31 @@
 
 	<div class="poster-row">
 
-	    {% for post in site.categories.credits limit:5 %}
+        {% assign credits = site.categories.credits | sort: "weight" %}
+	    {% for p in credits limit:5 %}
 		<div class="poster" >
 			<figure class="poster-figure">
-				<img src="{{ post.thumbnail }}" alt="{{ post.title }} Recent Credits Poster" />
+				<img src="{{ p.thumbnail }}" alt="{{ p.title }} Recent Credits Poster" />
 				<!-- figcaption elements will overlay on mouseover -->
 				<figcaption class="poster-caption">
 					<div>
 						<ul class="fa-ul">
-							<li><i class="fa-li fa fa-film"></i>{{ post.title }}</li>
-							<li><i class="fa-li fa fa-calendar-o"></i>{{ post.year }}</li>
-							<li><i class="fa-li fa fa-user"></i>{{ post.role }}</li>
-							<li><i class="fa-li fa fa-info"></i><a href="{{ post.url }}">More Info &raquo;</a></li>
+							<li><i class="fa-li fa fa-film"></i>{{ p.title }}</li>
+							<li><i class="fa-li fa fa-calendar-o"></i>{{ p.year }}</li>
+							<li><i class="fa-li fa fa-user"></i>{{ p.role }}</li>
+							<li><i class="fa-li fa fa-info"></i><a href="{{ p.url }}">More Info &raquo;</a></li>
 						</ul>
 						<div class="seperator"></div>
-						<div class="credit-brief">{{ post.synopsis }}</div>
-						{% if post.sample %}
-						<audio class="{{ post.iden }}">
-                            <source src="{{ post.sample }}.mp3" type="audio/mpeg">
-						    <source src="{{ post.sample }}.ogg" type="audio/ogg">
+						<div class="credit-brief">{{ p.synopsis }}</div>
+						{% if p.sample %}
+						<audio class="{{ p.iden }}">
+                            <source src="{{ p.sample }}.mp3" type="audio/mpeg">
+						    <source src="{{ p.sample }}.ogg" type="audio/ogg">
 							Your browser does not support the audio element.
 						</audio>
 						<div class="controls">
-							<i id="{{ post.iden }}" class="fa fa-play-circle active"></i>
-							<i id="{{ post.iden }}-stop" class="fa fa-stop-circle"></i>
+							<i id="{{ p.iden }}" class="fa fa-play-circle active"></i>
+							<i id="{{ p.iden }}-stop" class="fa fa-stop-circle"></i>
 						</div>
 						{% endif %}
 					</div>

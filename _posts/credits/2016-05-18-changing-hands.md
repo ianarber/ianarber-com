@@ -3,6 +3,7 @@ layout: credit-info
 headerstatus: shunk-header
 title: Changing Hands
 iden: changinghands
+weight: 13
 thumbnail: /assets/img/credits-grid/changing-hands.jpg
 image: /assets/img/credits-grid/opengraph/changing-hands.jpg
 image_size: 3

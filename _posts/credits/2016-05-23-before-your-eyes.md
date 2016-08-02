@@ -2,6 +2,8 @@
 layout: credit-info
 headerstatus: shunk-header
 title: Before Your Eyes
+iden: beforeyoureyes
+weight: 17
 thumbnail: /assets/img/credits-grid/before-your-eyes.jpg
 image: /assets/img/credits-grid/opengraph/before-your-eyes.jpg
 image_size: 3

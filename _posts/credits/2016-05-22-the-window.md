@@ -3,6 +3,7 @@ layout: credit-info
 headerstatus: shunk-header
 title: The Window
 iden: thewindow
+weight: 16
 thumbnail: /assets/img/credits-grid/the-window.jpg
 image: /assets/img/credits-grid/opengraph/the-window.jpg
 image_size: 3
