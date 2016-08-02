@@ -11,6 +11,9 @@ var contactEmail2 = document.getElementById('email-lesley');
 contactEmail2.setAttribute('href', 'mailto:' + 'lesley' + '@' + 'smatalent' + '.' + 'com');
 contactEmail2.innerHTML = 'lesley' + '@' + 'smatalent' + '.' + 'com';
 
+var contactEmail3 = document.getElementById('email-ian');
+contactEmail3.innerHTML = 'contact' + '@' + 'ianarber' + '.' + 'com';
+
 
 $(function () {
 

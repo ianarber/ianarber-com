@@ -4,6 +4,8 @@ headerstatus: shunk-header
 title: Jim 'The Fish'
 iden: jimthefish
 thumbnail: /assets/img/credits-grid/jim-the-fish.jpg
+image: /assets/img/credits-grid/opengraph/jim-the-fish.jpg
+image_size: 3
 category: credits
 role: Composer
 type: Short Film
@@ -13,5 +15,3 @@ soundcloud: https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tr
 genre: Drama/Romance
 director: Andrew Tulloch
 ---
-
-

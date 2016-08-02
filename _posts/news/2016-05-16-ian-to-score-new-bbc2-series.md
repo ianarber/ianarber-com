@@ -5,6 +5,7 @@ headerstatus: shunk-header
 title: Ian to Score new BBC 2 Series
 film: Quacks
 image: /assets/img/news-posts/opengraph/quacks.jpg
+image_size: 1
 header: /assets/img/news-posts/header/quacks.jpg
 heading: Ian will score upcoming series "Quacks" for BBC2
 excerpt_separator: <!--more-->

@@ -4,6 +4,8 @@ headerstatus: shunk-header
 title: The Burden
 iden: theburden
 thumbnail: /assets/img/credits-grid/the-burden.jpg
+image: /assets/img/credits-grid/opengraph/the-burden.jpg
+image_size: 3
 category: credits
 role: Composer
 type: Feature Film
@@ -15,5 +17,3 @@ director: Jonathan Moch
 writers: Jonathan Moch
 synopsis: A man gifted with the ability to heal others by touch, carries the burden of saving the world.
 ---
-
-

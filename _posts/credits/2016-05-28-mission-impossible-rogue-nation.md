@@ -4,6 +4,8 @@ headerstatus: shunk-header
 title: Mission Impossible - Rouge Nation
 iden: mi5rougenation
 thumbnail: /assets/img/credits-grid/mission-impossible-rouge-nation.jpg
+image: /assets/img/credits-grid/opengraph/mission-impossible-rouge-nation.jpg
+image_size: 3
 category: credits
 role: Assistant Composer
 type: Feature Film
@@ -14,5 +16,3 @@ director: Christopher McQuarrie
 producers: Paramount Pictures, Skydance Productions
 synopsis: Ethan and team take on their most impossible mission yet, eradicating the Syndicate - an International rogue organization as highly skilled as they are, committed to destroying the IMF.
 ---
-
-

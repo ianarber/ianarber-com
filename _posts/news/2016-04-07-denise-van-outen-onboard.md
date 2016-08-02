@@ -5,6 +5,7 @@ headerstatus: shunk-header
 title: Denise Van-Outen Onboard
 film: Indifferent
 image: /assets/img/news-posts/opengraph/indifferent.jpg
+image_size: 2
 header: /assets/img/news-posts/header/indifferent.jpg
 heading: Denise Van-Outen has joined Hollywood greats Julian Glover and Isla Blair on the cast of feature-film Indifferent.
 excerpt_separator: <!--more-->

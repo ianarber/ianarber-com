@@ -4,6 +4,8 @@ headerstatus: shunk-header
 title: To Save One's Self
 iden: tosaveonesself
 thumbnail: /assets/img/credits-grid/to-save-ones-self.jpg
+image: /assets/img/credits-grid/opengraph/to-save-ones-self.jpg
+image_size: 3
 category: credits
 role: Composer
 type: Short Film
@@ -15,5 +17,3 @@ director: Matthew Campbell
 writers: Matthew Campbell
 synopsis: The comforts of home are sacred, sweet and beloved. Mark had all of that... a beautiful wife, an angelic daughter, a purpose.
 ---
-
-

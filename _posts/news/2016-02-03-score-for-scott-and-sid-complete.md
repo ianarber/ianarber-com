@@ -5,6 +5,7 @@ headerstatus: shunk-header
 title: Score for Scott and Sid Complete
 film: Scott and Sid
 image: /assets/img/news-posts/opengraph/scott-and-sid.jpg
+image_size: 1
 header: /assets/img/news-posts/header/scott-and-sid.jpg
 heading: Ian has finished scoring British coming-of-age drama Scott and Sid
 excerpt_separator: <!--more-->

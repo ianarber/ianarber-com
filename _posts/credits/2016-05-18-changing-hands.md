@@ -4,6 +4,8 @@ headerstatus: shunk-header
 title: Changing Hands
 iden: changinghands
 thumbnail: /assets/img/credits-grid/changing-hands.jpg
+image: /assets/img/credits-grid/opengraph/changing-hands.jpg
+image_size: 3
 category: credits
 type: Feature Film
 year: 2012
@@ -15,5 +17,3 @@ director: Scott L. Schwartz
 writers: Scott L. Schwartz
 synopsis: Sometimes the origin of a gun is a dubious journey. What goes around, comes around. Such a true statement in every effect. Changing Hands tells the story of a gun, and the path it takes on its journey through different hands.
 ---
-
-

@@ -4,6 +4,8 @@ headerstatus: shunk-header
 title: Time Baraistas
 iden: timebaraistas
 thumbnail: /assets/img/credits-grid/time-baristas.jpg
+image: /assets/img/credits-grid/opengraph/time-baristas.jpg
+image_size: 3
 category: credits
 role: Composer
 type: Web Series
@@ -15,5 +17,3 @@ director: Adam Lipsius
 writers: Sean O'Neill, Alex Young
 synopsis: Time Travel. Bionic Women. Murder. A comedic web series about two slackers who inadvertently turn their coffee-maker into a time machine.
 ---
-
-

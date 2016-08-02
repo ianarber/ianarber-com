@@ -4,6 +4,8 @@ headerstatus: shunk-header
 title: Carpe Diem
 iden: carpediem
 thumbnail: /assets/img/credits-grid/carpe-diem.jpg
+image: /assets/img/credits-grid/opengraph/carpe-diem.jpg
+image_size: 3
 category: credits
 role: Composer
 type: Feature Film
@@ -15,5 +17,3 @@ director: Eric Hinwood
 writers: Eric Hinwood
 synopsis: Three high school graduates search for their best friend while backpacking through Europe after he gets lost in a train station bathroom.
 ---
-
-

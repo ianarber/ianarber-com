@@ -4,6 +4,8 @@ headerstatus: shunk-header
 title: Samsung Product Film
 iden: samsungproductfilm
 thumbnail: /assets/img/credits-grid/samsung-product-film.jpg
+image: /assets/img/credits-grid/opengraph/samsung-product-film.jpg
+image_size: 3
 category: credits
 role: Composer
 type: Product Film
@@ -12,5 +14,3 @@ soundcloud: https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tr
 genre: Drama/Fanatasy
 director: Ekstasy Films
 ---
-
-

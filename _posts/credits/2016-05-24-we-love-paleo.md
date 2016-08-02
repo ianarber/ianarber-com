@@ -4,6 +4,8 @@ headerstatus: shunk-header
 title: We Love Paleo
 iden: welovepaleo
 thumbnail: /assets/img/credits-grid/we-love-paleo.jpg
+image: /assets/img/credits-grid/opengraph/we-love-paleo.jpg
+image_size: 3
 category: credits
 role: Composer
 type: Documentary
@@ -14,5 +16,3 @@ genre: Lifestyle Documentary
 director: Caroleen Moise
 synopsis: Doctors, nutritionists, authors and entrepreneurs from 4 countries share why they choose to go against conventional health wisdom to promote Paleo.
 ---
-
-

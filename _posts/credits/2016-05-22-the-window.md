@@ -4,6 +4,8 @@ headerstatus: shunk-header
 title: The Window
 iden: thewindow
 thumbnail: /assets/img/credits-grid/the-window.jpg
+image: /assets/img/credits-grid/opengraph/the-window.jpg
+image_size: 3
 category: credits
 role: Composer
 type: Feature Film
@@ -15,5 +17,3 @@ director: Steve Spel
 writers: Steve Spel
 synopsis: Nelson has a vivid nightmare of a woman being murdered and discovers that this is the beginning of a string of actual serial murders.
 ---
-
-
