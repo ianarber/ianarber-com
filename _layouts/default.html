@@ -2,8 +2,10 @@
 
 {% if page.description %}
     {% assign finalDescription = page.description %}     
-    {% elsif page.excerpt %}
-    {% assign finalDescription = page.excerpt | remove: '<p>' | remove: '</p>' | strip_newlines %} 
+    {% elsif page.layout == 'news' %}
+    {% assign finalDescription = page.excerpt | remove: '<p>' | remove: '</p>' | strip_newlines %}
+    {% elsif page.layout == 'credit-info' %}
+    {% assign finalDescription = 'New credit annoucement from Ian Arber: ' | append: page.title %} 
 {% endif %}
 
 <!DOCTYPE html>
@@ -22,7 +24,7 @@
     <meta name="description" content="{{ finalDescription }}">
     <meta property="og:description" content="{{ finalDescription }}">
     <meta name="twitter:description" content="{{ finalDescription }}">
-    <meta name="keywords" content="Ian Arber, Film, Movie, Television, Music, Composer, London, Los Angeles, Original, Score, Mission Impossible, Rogue Nation, Joe Kraemer">
+    <meta name="keywords" content="Ian Arber, Composer, Film, Movie, Television, Music, London, Los Angeles, Original, Score, Mission Impossible, Rogue Nation, Joe Kraemer">
        
     <link rel="canonical" href="{{ site.myurl }}{{ page.url | replace:'index.html',''}}">
     
