@@ -23,9 +23,12 @@ layout: default
     </div>
     <div class="post-date">
         <ul class="fa-ul">
+            <li><i class="fa-li fa fa-film"></i>{{ page.type }}</li>
             <li><i class="fa-li fa fa-calendar-o"></i>{{ page.date | date_to_string }}</li>
             <li><i class="fa-li fa fa-user"></i>{{ page.role }}</li>
-            <li><i class="fa-li fa fa-info"></i><a href="{{ page.imdb }}" target="_blank">IMDb</a></li>
+            {% if page.imdb %}
+                <li><i class="fa-li fa fa-info"></i><a href="{{ page.imdb }}" target="_blank">IMDb</a></li>
+            {% endif %}
         </ul>
     </div>
 
@@ -37,7 +40,9 @@ layout: default
         <blockquote>
             <p>
                 Genre: {{ page.genre }}<br/>
-                Director: {{ page.director }}<br/>
+                {% if page.director %}
+                    Director: {{ page.director }}<br/>
+                {% endif %}
 
                 {% if page.writer %}
                     Writer: {{ page.writer }}<br/>

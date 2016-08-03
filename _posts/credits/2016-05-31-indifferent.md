@@ -3,7 +3,8 @@ layout: credit-info
 headerstatus: shunk-header
 title: Indifferent
 iden: indifferent
-weight: 0
+showreel_weight: 100
+credits_weight: 100
 thumbnail: /assets/img/credits-grid/indifferent.jpg
 image: /assets/img/credits-grid/opengraph/indifferent.jpg
 image_size: 3

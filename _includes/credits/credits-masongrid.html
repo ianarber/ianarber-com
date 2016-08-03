@@ -1,9 +1,7 @@
 
 {% comment %}--- Initiate values for liquid templating to generate li elements {% endcomment %}
 
-{% comment %}--- Calculate the number of credits to process {% endcomment %}
-{% assign numberOfCredits = site.categories.credits %} 
-   
+{% assign credits = site.categories.credits | sort: "credits_weight" %}   
 
 <section class="section masonry-grid">
     <div class="section-header">
@@ -20,26 +18,26 @@
         <section class="grid-wrap">
             <ul class="grid">
                 <li class="grid-sizer"></li>  
-                {% for post in numberOfCredits %}
+                {% for p in credits %}
                 <li>
-                    <a href="{{ post.url }}">
+                    <a href="{{ p.url }}">
                     <figure>
-                        <img src="{{ post.thumbnail }}" alt="{{ post.title }} Credits Poster" />
+                        <img src="{{ p.thumbnail }}" alt="{{ p.title }} Credits Poster" />
                         <figcaption>
-                            <h5>{{ post.title }} ({{ post.year }})</h5>
-                            <p id="role">{{ post.role }}</p>
-                            <p><b>Genre:</b> {{ post.genre }}</p>
+                            <h5>{{ p.title }} ({{ p.year }})</h5>
+                            <p id="role">{{ p.role }}</p>
+                            <p><b>Genre:</b> {{ p.genre }}</p>
                             
-                            {% if post.director %}
-                                <p><b>Director:</b> {{ post.director }}</p>
+                            {% if p.director %}
+                                <p><b>Director:</b> {{ p.director }}</p>
                             {% endif %}
                             
-                            {% if post.writers %}
-                                <p><b>Writers:</b> {{ post.writers }}</p>
+                            {% if p.writers %}
+                                <p><b>Writers:</b> {{ p.writers }}</p>
                             {% endif %}
                             
-                            {% if post.producers %}
-                                <p><b>Producers:</b> {{ post.producers }}</p>
+                            {% if p.producers %}
+                                <p><b>Producers:</b> {{ p.producers }}</p>
                             {% endif %}
 
                         </figcaption>

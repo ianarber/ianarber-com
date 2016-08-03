@@ -11,7 +11,7 @@
 
 	<div class="poster-row">
 
-        {% assign credits = site.categories.credits | sort: "weight" %}
+        {% assign credits = site.categories.credits | sort: "showreel_weight" %}
 	    {% for p in credits limit:5 %}
 		<div class="poster" >
 			<figure class="poster-figure">

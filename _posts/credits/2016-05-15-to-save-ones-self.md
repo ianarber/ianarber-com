@@ -2,8 +2,8 @@
 layout: credit-info
 headerstatus: shunk-header
 title: To Save One's Self
-iden: tosaveonesself
-weight: 9
+showreel_weight: 109
+credits_weight: 111
 thumbnail: /assets/img/credits-grid/to-save-ones-self.jpg
 image: /assets/img/credits-grid/opengraph/to-save-ones-self.jpg
 image_size: 3

@@ -2,8 +2,8 @@
 layout: credit-info
 headerstatus: shunk-header
 title: Jim 'The Fish'
-iden: jimthefish
-weight: 18
+showreel_weight: 118
+credits_weight: 106
 thumbnail: /assets/img/credits-grid/jim-the-fish.jpg
 image: /assets/img/credits-grid/opengraph/jim-the-fish.jpg
 image_size: 3

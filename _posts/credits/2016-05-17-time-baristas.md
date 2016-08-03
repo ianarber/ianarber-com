@@ -2,8 +2,8 @@
 layout: credit-info
 headerstatus: shunk-header
 title: Time Baraistas
-iden: timebaraistas
-weight: 15
+showreel_weight: 115
+credits_weight: 118
 thumbnail: /assets/img/credits-grid/time-baristas.jpg
 image: /assets/img/credits-grid/opengraph/time-baristas.jpg
 image_size: 3

@@ -33,14 +33,15 @@
                 {% for playlists in site.data.listen.playlists %}
 
                 <li class="sc-audio sc-{{ playlists.classname }}">
-                    <div class="bg-iframe">
+                    <div class="bg-iframe spinner">
                         <div class="bg-iframe-info">
                             <h5>{{ playlists.genre }}</h5>
                             <p>{{ playlists.featuring }}</p>
                         </div>
-                        <img src="{{ site.myurl }}/assets/img/sc-previews/playlist-{{ playlists.classname }}.jpg" alt="SC Widget Preview"/>
-                        <i class="fa fa-play-circle-o"></i>
-                        <iframe id="widget-{{ playlists.classname }}" class="play-frame" src="/blank.html" data-src="{{ playlists.soundcloud }}"></iframe>                          
+<!--                        <img src="{{ site.myurl }}/assets/img/sc-previews/playlist-{{ playlists.classname }}.jpg" alt="SC Widget Preview"/>-->
+<!--                        <i class="fa fa-play-circle-o"></i>-->
+<!--                        <iframe id="widget-{{ playlists.classname }}" class="play-frame" src="/blank.html" data-src="{{ playlists.soundcloud }}"></iframe>                          -->
+                        <iframe id="widget-{{ playlists.classname }}" class="play-frame" src="{{ playlists.soundcloud }}" data-src="{{ playlists.soundcloud }}"></iframe>                          
                         <div class="fg-cover"></div>
                     </div>                     
                 </li>
