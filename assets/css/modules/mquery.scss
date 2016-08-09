@@ -582,12 +582,13 @@
             img{
                 float: none;
                 display: block;
-                margin: 0 auto;
+                margin: 0px auto 10px auto;
             }
             p{
-                margin-top: 15px;
-                display: inline-block;
+                //margin-top: 205px;
+                display: inline;
             }
+            padding: 0px 10px;
         }
         hr:first-of-type{
             margin-bottom: 20px;
