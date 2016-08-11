@@ -29,6 +29,9 @@
                 transition: all 0.3s;
             }
         }
+        div:not(:last-child){
+            margin-right: 5px;
+        }
         div:last-of-type{
             margin-bottom: 6px;
         }
