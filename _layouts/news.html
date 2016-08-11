@@ -13,7 +13,7 @@ layout: default
     <div class="post-date">
         <ul class="fa-ul">
             <li><i class="fa-li fa fa-film"></i>{{ page.film }}</li>
-            <li><i class="fa-li fa fa-calendar-o"></i>{{ page.date | date_to_string }}</li>
+            <li><i class="fa-li fa fa-calendar-o"></i>{{ page.date | date: '%b %Y' }}</li>
         </ul>
     </div>
 

@@ -2,6 +2,7 @@
 layout: credit-info
 headerstatus: shunk-header
 title: Mission Impossible - Rouge Nation
+short_title: MI5 Rouge Nation
 iden: mi5rougenation
 showreel_weight: 103
 credits_weight: 103
@@ -11,7 +12,6 @@ image_size: 3
 category: credits
 role: Assistant Composer
 type: Feature Film
-year: 2015
 imdb: http://www.imdb.com/title/tt2381249
 genre: Drama/Fanatasy
 director: Christopher McQuarrie

@@ -11,7 +11,6 @@ image_size: 3
 category: credits
 role: Composer
 type: Feature Film
-year: 2016
 imdb: http://www.imdb.com/title/tt3004644
 sample: assets/media/indifferent_60s
 genre: Drama/Fanatasy

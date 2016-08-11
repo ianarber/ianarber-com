@@ -10,6 +10,5 @@ image_size: 3
 category: credits
 role: Composer
 type: Video Game
-year: 2012
 genre: RPG
 ---

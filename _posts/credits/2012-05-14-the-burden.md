@@ -10,7 +10,6 @@ image_size: 3
 category: credits
 role: Composer
 type: Feature Film
-year: 2012
 imdb: http://www.imdb.com/title/tt2854562
 soundcloud: https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/86952891&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false
 genre: Super-Hero/Action

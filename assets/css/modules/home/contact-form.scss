@@ -67,11 +67,8 @@
             border-bottom: solid $mainFontColor 10px;
             top: -10px;
             content: " ";
-            //height: 0;
-            //left: 50%;
             margin-left: -14px;
             position: absolute;
-            //width: 0;
         }
     }
 }
@@ -101,7 +98,6 @@
     input[type=text],
     input[type=email],
     textarea{
-        //border: 1px solid $mainFontColor;
         border-radius: 2px;
         padding: 5px;
         margin-bottom: 8px;
@@ -159,7 +155,7 @@
             margin-right: 10px;
         }
         div:last-of-type{
-            margin-bottom: 6px;
+            margin-bottom: 8px;
             i{
                 font-size: 65%;
             }

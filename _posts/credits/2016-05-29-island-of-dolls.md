@@ -11,7 +11,6 @@ image_size: 3
 category: credits
 role: Composer
 type: Feature Film
-year: 2016
 imdb: http://www.imdb.com/title/tt4423788
 sample: assets/media/the_island_of_the_dolls_60s
 genre: Horror/Mystery

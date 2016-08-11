@@ -11,7 +11,6 @@ image_size: 3
 category: credits
 role: Composer
 type: Feature Film
-year: 2016
 imdb: http://www.imdb.com/title/tt4702346
 sample: assets/media/scott_and_sid_60s
 genre: Coming-of-age Drama

@@ -10,7 +10,6 @@ image_size: 3
 category: credits
 role: Composer
 type: Short Film
-year: 2012
 imdb: http://www.imdb.com/title/tt2217988
 soundcloud: https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/3250282&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false
 genre: Horror

@@ -19,9 +19,13 @@
 				<!-- figcaption elements will overlay on mouseover -->
 				<figcaption class="poster-caption">
 					<div>
-						<ul class="fa-ul">
-							<li><i class="fa-li fa fa-film"></i>{{ p.title }}</li>
-							<li><i class="fa-li fa fa-calendar-o"></i>{{ p.year }}</li>
+						<ul class="fa-ul"> 
+						    {% if p.short_title %}
+						        <li><i class="fa-li fa fa-film"></i>{{ p.short_title }}</li>
+                                {% elsif p.title %}
+                                <li><i class="fa-li fa fa-film"></i>{{ p.title }}</li>
+				            {% endif %}
+							<li><i class="fa-li fa fa-calendar-o"></i>{{ p.date | date: '%Y' }}</li>
 							<li><i class="fa-li fa fa-user"></i>{{ p.role }}</li>
 							<li><i class="fa-li fa fa-info"></i><a href="{{ p.url }}">More Info &raquo;</a></li>
 						</ul>
