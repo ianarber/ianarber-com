@@ -254,8 +254,7 @@
         transform: translateY(5px);
     }
     &:hover + #span-expand{
-        opacity: 1;
-        transform: translateY(0px);
+        opacity: 0;
         transition: all 0.3s;
     }
 }
@@ -268,7 +267,7 @@
 #span-expand{
     position: absolute;
     z-index: 1;
-    opacity: 0;
+    opacity: 1;
     width: 100px;
     font-size: 90%;
     background-color: transparent;
@@ -277,7 +276,7 @@
     bottom: 100%;
     left: 50%;
     margin-left: -50px;
-    transform: translateY(5px);
+    margin-bottom: 2px;
     transition: all 0.3s;
 }
 
