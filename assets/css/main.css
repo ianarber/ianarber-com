@@ -1254,6 +1254,9 @@ hr {
     text-align: right;
     background-color: rgba(0, 0, 0, 0.6); }
 
+.clear-welcome-text {
+  opacity: 0; }
+
 .img-slide a {
   position: absolute;
   bottom: 140px;
@@ -1266,6 +1269,33 @@ hr {
   letter-spacing: 1px;
   background-color: rgba(242, 242, 242, 0.6);
   color: rgba(0, 0, 0, 0.8); }
+
+.img-slide i {
+  position: absolute;
+  font-size: 400%;
+  color: rgba(242, 242, 242, 0.4);
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+  .img-slide i:hover {
+    cursor: pointer; }
+
+.img-slide .video-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  pointer-events: none; }
+  .img-slide .video-wrapper iframe {
+    border: solid 4px #37474F;
+    width: 600px;
+    height: 300px; }
 
 #nav-scroll-btns {
   top: 520px; }

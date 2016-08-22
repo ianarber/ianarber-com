@@ -38,9 +38,6 @@ $(function () {
             offset = -5;
         } else if ( window.innerWidth <= 1005 ) {
             offset = -30;
-//            if( isMobile > 0 ){
-//                offset = 20;
-//            }
         }
         
         
@@ -78,6 +75,8 @@ $(function () {
     //fade in first slide
     $intro.find('#img-slide-' + current).fadeIn(1000);  
     //start slider loop
+    
+    
     var loop = setInterval(imageSlider, 7000);
     
     
@@ -108,7 +107,7 @@ $(function () {
 
     $navBtnsLi.on('click', function () {
         //cancel the interval
-        stopInterval()
+        stopInterval();
         //increment index value
         var index = $(this).index() + 1;
         
@@ -133,6 +132,84 @@ $(function () {
         //restart interval
         startInterval();
     });
+    
+    
+    
+    //**START**YouTube API code load for intro video*****//
+    
+    var tag = document.createElement('script');
+    tag.id = 'intro-video';
+    tag.src = 'https://www.youtube.com/iframe_api';
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var player;
+
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('existing-iframe-example', {
+            events: {
+              'onReady': onPlayerReady,
+              'onStateChange': onPlayerStateChange
+            }
+        });
+    }
+    
+      function onPlayerReady(event) {
+          document.getElementById('existing-iframe-example').style.borderColor = '#FF6D00';
+      }
+
+      function changeBorderColor(playerStatus) {
+          var color;
+          if (playerStatus == -1) {
+              color = "#37474F"; // unstarted = gray
+          } else if (playerStatus == 0) {
+              color = "#FFFF00"; // ended = yellow
+          } else if (playerStatus == 1) {
+              color = "#33691E"; // playing = green
+          } else if (playerStatus == 2) {
+              color = "#DD2C00"; // paused = red
+          } else if (playerStatus == 3) {
+              color = "#AA00FF"; // buffering = purple
+          } else if (playerStatus == 5) {
+              color = "#FF6DOO"; // video cued = orange
+          }
+          if (color) {
+              document.getElementById('existing-iframe-example').style.borderColor = color;
+          }
+      }
+
+      function onPlayerStateChange(event) {
+          changeBorderColor(event.data);
+      }
+    
+    
+    
+    
+  
+//    $profilePic.find('i').on('click', function(){
+//        
+//        stopInterval();
+//        
+////        $profilePic.css('background-color', 'black');
+////        $profilePic.find('#welcome-intro, #quote, #cite').css('opacity', 0);
+//        
+//        //set full opacity to click to load image (via css)
+//        $(this).addClass('disable-play-icon');
+//        
+//        $(this).siblings('img').addClass('disable-play-icon');
+//        $(this).siblings('.video-wrapper').css('pointer-events', 'all');
+//        //search for nearest iframe
+//        var $iframe = $profilePic.find('iframe');
+//           
+//        //populate src att with data stored in data-src
+//        var src = $iframe.attr('data-src');
+//        $iframe.attr('src', src); 
+//        
+//    });
+    
+    //**END**YouTube API code load for intro video*****//
+    
+    
 
     
     function stopInterval(){
