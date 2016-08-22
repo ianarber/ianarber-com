@@ -681,11 +681,13 @@
                 padding: 0px 8px;
                 &:first-child{
                     position: absolute;
+                    z-index: 2;
                     top: 10px;
                     width: 95%;
                 }
                 &:last-child{
                     position: absolute;
+                    z-index: 2;
                     bottom: 10px;
                     width: 95%;
                 }
