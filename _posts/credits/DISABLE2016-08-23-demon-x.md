@@ -4,7 +4,7 @@ headerstatus: shunk-header
 title: Demon X
 iden: demonx
 showreel_weight: 130
-credits_weight: 99
+credits_weight: 98
 thumbnail: /assets/img/credits-grid/demonx.jpg
 image: /assets/img/credits-grid/opengraph/demonx.jpg
 image_size: 3

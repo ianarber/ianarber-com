@@ -3,7 +3,7 @@ layout: credit-info
 headerstatus: shunk-header
 title: Before Your Eyes
 showreel_weight: 117
-credits_weight: 108
+credits_weight: 170
 thumbnail: /assets/img/credits-grid/before-your-eyes.jpg
 image: /assets/img/credits-grid/opengraph/before-your-eyes.jpg
 image_size: 3

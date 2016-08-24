@@ -3,7 +3,7 @@ layout: credit-info
 headerstatus: shunk-header
 title: The Burden
 showreel_weight: 108
-credits_weight: 116
+credits_weight: 260
 thumbnail: /assets/img/credits-grid/the-burden.jpg
 image: /assets/img/credits-grid/opengraph/the-burden.jpg
 image_size: 3

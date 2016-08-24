@@ -3,7 +3,7 @@ layout: credit-info
 headerstatus: shunk-header
 title: The Window
 showreel_weight: 116
-credits_weight: 110
+credits_weight: 190
 thumbnail: /assets/img/credits-grid/the-window.jpg
 image: /assets/img/credits-grid/opengraph/the-window.jpg
 image_size: 3

@@ -3,7 +3,7 @@ layout: credit-info
 headerstatus: shunk-header
 title: Changing Hands
 showreel_weight: 113
-credits_weight: 112
+credits_weight: 212
 thumbnail: /assets/img/credits-grid/changing-hands.jpg
 image: /assets/img/credits-grid/opengraph/changing-hands.jpg
 image_size: 3
