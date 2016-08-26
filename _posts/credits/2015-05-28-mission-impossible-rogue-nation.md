@@ -1,11 +1,12 @@
 ---
 layout: credit-info
 headerstatus: shunk-header
+valid: 1
 title: Mission Impossible - Rouge Nation
 short_title: MI5 Rouge Nation
 iden: mi5rougenation
-showreel_weight: 109
-credits_weight: 130
+showreel_weight: 3
+credits_weight: 8
 thumbnail: /assets/img/credits-grid/mission-impossible-rouge-nation.jpg
 image: /assets/img/credits-grid/opengraph/mission-impossible-rouge-nation.jpg
 image_size: 3

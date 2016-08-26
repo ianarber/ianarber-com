@@ -11,41 +11,48 @@
 
 	<div class="poster-row">
 
-        {% assign credits = site.categories.credits | sort: "showreel_weight" %}
-	    {% for p in credits limit:5 %}
-		<div class="poster" >
-			<figure class="poster-figure">
-				<img src="{{ p.thumbnail }}" alt="{{ p.title }} Recent Credits Poster" />
-				<!-- figcaption elements will overlay on mouseover -->
-				<figcaption class="poster-caption">
-					<div>
-						<ul class="fa-ul"> 
-						    {% if p.short_title %}
-						        <li><i class="fa-li fa fa-film"></i>{{ p.short_title }}</li>
-                                {% elsif p.title %}
-                                <li><i class="fa-li fa fa-film"></i>{{ p.title }}</li>
-				            {% endif %}
-							<li><i class="fa-li fa fa-calendar-o"></i>{{ p.date | date: '%Y' }}</li>
-							<li><i class="fa-li fa fa-user"></i>{{ p.role }}</li>
-							<li><i class="fa-li fa fa-info"></i><a href="{{ p.url }}">More Info &raquo;</a></li>
-						</ul>
-						<div class="seperator"></div>
-						<div class="credit-brief">{{ p.synopsis }}</div>
-						{% if p.sample %}
-						<audio class="{{ p.iden }}">
-                            <source src="{{ p.sample }}.mp3" type="audio/mpeg">
-						    <source src="{{ p.sample }}.ogg" type="audio/ogg">
-							Your browser does not support the audio element.
-						</audio>
-						<div class="controls">
-							<i id="{{ p.iden }}" class="fa fa-play-circle active"></i>
-							<i id="{{ p.iden }}-stop" class="fa fa-stop-circle"></i>
-						</div>
-						{% endif %}
-					</div>
-				</figcaption>
-			</figure>
-		</div>
+        {% assign credits = site.categories.credits | sort: 'showreel_weight' %}
+        
+	    {% for p in credits %}
+            {% if p.showreel_weight %}
+                {% if p.valid == 1 %}
+                
+                <div class="poster" >
+                    <figure class="poster-figure">
+                        <img src="{{ p.thumbnail }}" alt="{{ p.title }} Recent Credits Poster" />
+                        <!-- figcaption elements will overlay on mouseover -->
+                        <figcaption class="poster-caption">
+                            <div>
+                                <ul class="fa-ul"> 
+                                    {% if p.short_title %}
+                                        <li><i class="fa-li fa fa-film"></i>{{ p.short_title }}</li>
+                                        {% elsif p.title %}
+                                        <li><i class="fa-li fa fa-film"></i>{{ p.title }}</li>
+                                    {% endif %}
+                                    <li><i class="fa-li fa fa-calendar-o"></i>{{ p.date | date: '%Y' }}</li>
+                                    <li><i class="fa-li fa fa-user"></i>{{ p.role }}</li>
+                                    <li><i class="fa-li fa fa-info"></i><a href="{{ p.url }}">More Info &raquo;</a></li>
+                                </ul>
+                                <div class="seperator"></div>
+                                <div class="credit-brief">{{ p.synopsis }}</div>
+                                {% if p.sample %}
+                                <audio class="{{ p.iden }}">
+                                    <source src="{{ p.sample }}.mp3" type="audio/mpeg">
+                                    <source src="{{ p.sample }}.ogg" type="audio/ogg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                                <div class="controls">
+                                    <i id="{{ p.iden }}" class="fa fa-play-circle active"></i>
+                                    <i id="{{ p.iden }}-stop" class="fa fa-stop-circle"></i>
+                                </div>
+                                {% endif %}
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+               
+                {% endif %}
+            {% endif %}
 	    {% endfor %}
 	
 	</div>	

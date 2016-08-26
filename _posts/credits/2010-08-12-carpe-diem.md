@@ -1,9 +1,8 @@
 ---
 layout: credit-info
 headerstatus: shunk-header
+valid: 1
 title: Carpe Diem
-showreel_weight: 319
-credits_weight: 282
 thumbnail: /assets/img/credits-grid/carpe-diem.jpg
 image: /assets/img/credits-grid/opengraph/carpe-diem.jpg
 image_size: 3

@@ -1,10 +1,10 @@
 ---
 layout: credit-info
 headerstatus: shunk-header
+valid: 1
 title: Ambulance
 iden: ambulance
-showreel_weight: 130
-credits_weight: 155
+credits_weight: 4
 thumbnail: /assets/img/credits-grid/ambulance.jpg
 image: /assets/img/credits-grid/opengraph/ambulance.jpg
 image_size: 3

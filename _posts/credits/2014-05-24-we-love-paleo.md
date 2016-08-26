@@ -1,9 +1,9 @@
 ---
 layout: credit-info
 headerstatus: shunk-header
+valid: 1
 title: We Love Paleo
-showreel_weight: 203
-credits_weight: 180
+credits_weight: 2
 thumbnail: /assets/img/credits-grid/we-love-paleo.jpg
 image: /assets/img/credits-grid/opengraph/we-love-paleo.jpg
 image_size: 3

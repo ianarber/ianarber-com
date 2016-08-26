@@ -1,10 +1,11 @@
 ---
 layout: credit-info
 headerstatus: shunk-header
+valid: 1
 title: The Island of Dolls
 iden: theislandofdolls
-showreel_weight: 106
-credits_weight: 80
+showreel_weight: 4
+credits_weight: 10
 thumbnail: /assets/img/credits-grid/the-island-of-dolls.jpg
 image: /assets/img/credits-grid/opengraph/the-island-of-dolls.jpg
 image_size: 3

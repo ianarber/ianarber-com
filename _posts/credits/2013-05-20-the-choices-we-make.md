@@ -1,9 +1,8 @@
 ---
 layout: credit-info
 headerstatus: shunk-header
+valid: 1
 title: The Choices We Make
-showreel_weight: 311
-credits_weight: 220
 thumbnail: /assets/img/credits-grid/the-choices-we-make.jpg
 image: /assets/img/credits-grid/opengraph/the-choices-we-make.jpg
 image_size: 3

@@ -1,10 +1,11 @@
 ---
 layout: credit-info
 headerstatus: shunk-header
+valid: 1
 title: Scott and Sid
 iden: scottandsid
-showreel_weight: 108
-credits_weight: 120
+showreel_weight: 2
+credits_weight: 9
 thumbnail: /assets/img/credits-grid/scott-and-sid.jpg
 image: /assets/img/credits-grid/opengraph/scott-and-sid.jpg
 image_size: 3

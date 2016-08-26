@@ -1,9 +1,8 @@
 ---
 layout: credit-info
 headerstatus: shunk-header
+valid: 1
 title: Samsung Product Film
-showreel_weight: 310
-credits_weight: 200
 thumbnail: /assets/img/credits-grid/samsung-product-film.jpg
 image: /assets/img/credits-grid/opengraph/samsung-product-film.jpg
 image_size: 3

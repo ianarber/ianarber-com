@@ -1,8 +1,3 @@
-
-{% comment %}--- Initiate values for liquid templating to generate li elements {% endcomment %}
-
-{% assign credits = site.categories.credits | sort: "credits_weight" %}   
-
 <section class="section masonry-grid">
     <div class="section-header">
         <h1>Credits</h1>
@@ -18,33 +13,41 @@
         <section class="grid-wrap">
             <ul class="grid">
                 <li class="grid-sizer"></li>  
+                
+                {% assign credits = site.categories.credits | sort: 'credits_weight' | reverse %}
+                
                 {% for p in credits %}
-                <li>
-                    <a href="{{ p.url }}">
-                    <figure>
-                        <img src="{{ p.thumbnail }}" alt="{{ p.title }} Credits Poster" />
-                        <figcaption>
-                            <h5>{{ p.title }} ({{ p.date | date: '%Y' }})</h5>
-                            <p id="role">{{ p.role }}</p>
-                            <p><b>Genre:</b> {{ p.genre }}</p>
-                            
-                            {% if p.director %}
-                                <p><b>Director:</b> {{ p.director }}</p>
-                            {% endif %}
-                            
-                            {% if p.writers %}
-                                <p><b>Writers:</b> {{ p.writers }}</p>
-                            {% endif %}
-                            
-                            {% if p.producers %}
-                                <p><b>Producers:</b> {{ p.producers }}</p>
-                            {% endif %}
+                    {% if p.valid == 1 %}
+                
+                    <li>
+                        <a href="{{ p.url }}">
+                        <figure>
+                            <img src="{{ p.thumbnail }}" alt="{{ p.title }} Credits Poster" />
+                            <figcaption>
+                                <h5>{{ p.title }} ({{ p.date | date: '%Y' }})</h5>
+                                <p id="role">{{ p.role }}</p>
+                                <p><b>Genre:</b> {{ p.genre }}</p>
 
-                        </figcaption>
-                    </figure>
-                    </a>
-                </li>
-                {% endfor %}             
+                                {% if p.director %}
+                                    <p><b>Director:</b> {{ p.director }}</p>
+                                {% endif %}
+
+                                {% if p.writers %}
+                                    <p><b>Writers:</b> {{ p.writers }}</p>
+                                {% endif %}
+
+                                {% if p.producers %}
+                                    <p><b>Producers:</b> {{ p.producers }}</p>
+                                {% endif %}
+
+                            </figcaption>
+                        </figure>
+                        </a>
+                    </li>
+                  
+                    {% endif %}
+                {% endfor %}  
+                           
             </ul>
         </section>
     </div>
