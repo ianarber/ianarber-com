@@ -197,10 +197,10 @@ function onYouTubeIframeAPIReady() {
     });
     
     function onPlayerStateChange(event) {
-        changeBorderColor(event.data);
+        controlVideo(event.data);
     }
     
-    function changeBorderColor(playerStatus) {
+    function controlVideo(playerStatus) {
         if (playerStatus == 0) {
             // ended
             playState = playerStatus;

@@ -13,7 +13,6 @@ category: credits
 role: Composer
 type: Feature Film
 imdb: http://www.imdb.com/title/tt4702346
-sample: assets/media/scott_and_sid_60s
 genre: Coming-of-age Drama
 director: Scott Elliot
 producers: Sid Sadowskyj

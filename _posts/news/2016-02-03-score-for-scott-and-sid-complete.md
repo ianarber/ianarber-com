@@ -2,6 +2,7 @@
 layout: news
 category: news
 headerstatus: shunk-header
+valid: 1
 title: Score for Scott and Sid Complete
 film: Scott and Sid
 image: /assets/img/news-posts/opengraph/scott-and-sid.jpg

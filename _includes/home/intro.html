@@ -4,24 +4,35 @@
 	    <div id="slider-container">
             
             {% assign slideId = 1 %}
-            {% for post in site.categories.news limit:5 %}
+            {% assign intro = site.categories.news %}
             
-            <div class="img-slide" id="img-slide-{{slideId}}">
-                <img src="{{ post.header }}" alt="{{ post.title }} Intro Slider Poster"/>
-                
-                {% if post.videolink %}
-                    <i class="fa fa-play-circle-o"></i>
-                    <div class="video-wrapper">
-                        <iframe id="trailer-video" src="{{ post.videolink }}"></iframe>
-                    </div>
-                {% endif %}
-                
-                <p><a href="{{ post.url }}">{{ post.film }} - {{ post.title }}</a></p>
-            </div>
-                       
-            {% assign slideId = slideId | plus: 1 %}
-            {% endfor %}
+            {% for p in intro %}
            
+                {% if slideId > 5 %}
+                    {% break %}
+                {% endif %}
+
+                {% if p.valid == 1 %}
+            
+                <div class="img-slide" id="img-slide-{{slideId}}">
+                    <img src="{{ p.header }}" alt="{{ p.title }} Intro Slider Poster"/>
+
+                    {% if p.videolink %}
+                        <i class="fa fa-play-circle-o"></i>
+                        <div class="video-wrapper">
+                            <iframe id="trailer-video" src="{{ p.videolink }}"></iframe>
+                        </div>
+                    {% endif %}
+
+                    <p><a href="{{ p.url }}">{{ p.film }} - {{ p.title }}</a></p>
+                </div>
+
+                {% assign slideId = slideId | plus: 1 %}
+            
+                {% endif %}
+            
+            {% endfor %}
+            
         </div>
 	
 		<div id="welcome-intro">

@@ -2,6 +2,7 @@
 layout: news
 category: news
 headerstatus: shunk-header
+valid: 1
 title: Denise Van-Outen Onboard
 film: Indifferent
 image: /assets/img/news-posts/opengraph/indifferent.jpg

@@ -4,25 +4,46 @@
 	</div>
 
 	<div class="news-container">
-	    {% for post in site.categories.news limit:4 %}
-	    <article class="news-preview">
-	        <a href="{{ post.url }}">	
-            <figure>
-                <img src="{{ post.image }}" alt="{{ post.title }} Blog Post Thumnail Preview"/>
-            </figure>
-            <p>{{ post.film }}</p>
-            <p>{{ post.title }}</p>
-            {{ post.excerpt }}
-            <div class="post-byline">
-                <ul class="fa-ul">
-                    <li><i class="fa-li fa fa-calendar-o"></i>{{ post.date | date_to_string }}</li>
-                </ul>
-            </div>
-            </a>
-		</article>
-        {% endfor %}		
+    
+        {% assign newsCounter = 1 %}
+        {% assign news = site.categories.news %}
+        
+	    {% for p in news %}
+           
+            {% if newsCounter > 4 %}
+                {% break %}
+            {% endif %}
+               
+            {% if p.valid == 1 %}
+
+            <article class="news-preview">
+                <a href="{{ p.url }}">	
+                <figure>
+                    <img src="{{ p.image }}" alt="{{ p.title }} Blog Post Thumnail Preview"/>
+                </figure>
+                <p>{{ p.film }}</p>
+                <p>{{ p.title }}</p>
+                {{ p.excerpt }}
+                <div class="post-byline">
+                    <ul class="fa-ul">
+                        <li><i class="fa-li fa fa-calendar-o"></i>{{ p.date | date: '%b %Y' }}</li>
+                    </ul>
+                </div>
+                </a>
+            </article>
+
+            {% assign newsCounter = newsCounter | plus: 1 %}
+
+            {% endif %}
+            
+        {% endfor %}
+        		
 	</div>
    
     <div class="news-clear"></div>
 
 </section>
+
+
+
+

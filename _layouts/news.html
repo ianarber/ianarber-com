@@ -24,18 +24,20 @@ layout: default
     <div class="post">
         {{ content }}
     </div>
-
+    
+    {% if page.videolink %}
+    
+    <div class="video-wrapper">
+        <iframe src="{{ page.videolink }}" frameborder="0"></iframe>
+    </div>
+    
+    {% endif %}
+    
     <a href="/contact"><button class="main-btn-style">Contact Me</button></a>
 
     <hr>
 
-<!--
-    <div class="post-navigation">
-        {% if page.previous.url %}
-        <a id="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a> {% endif %} {% if page.next.url %}
-        <a id="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a> {% endif %}
-    </div>
--->
+   
     <div class="post-navigation">
 
         {% if page.next_in_category != nil %}

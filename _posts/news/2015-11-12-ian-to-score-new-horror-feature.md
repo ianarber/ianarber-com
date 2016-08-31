@@ -2,6 +2,7 @@
 layout: news
 category: news
 headerstatus: shunk-header
+valid: 1
 title: Ian to Score new Horror Feature
 film: The Island of Dolls
 image: /assets/img/news-posts/opengraph/the-island-of-dolls.jpg
