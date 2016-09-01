@@ -14,9 +14,61 @@
             <ul class="grid">
                 <li class="grid-sizer"></li>  
                 
-                {% assign credits = site.categories.credits | sort: 'credits_weight' | reverse %}
                 
-                {% for p in credits %}
+                {% assign creditsArray = "" | split:"|"  %}
+                {% for item in site.categories.credits %}
+                    {% if item.credits_weight %}
+                   
+                        {% assign creditsArray = creditsArray | push: item %}
+                    
+                    {% endif %}
+                {% endfor %}
+                {% assign creditsArray = creditsArray | sort: 'credits_weight' | reverse %}
+                
+                
+                {% assign creditsArrayNoWeight = "" | split:"|"  %}
+                {% for item in site.categories.credits %}
+                    {% unless item.credits_weight %}
+                   
+                        {% assign creditsArrayNoWeight = creditsArrayNoWeight | push: item %}
+                    
+                    {% endunless %}
+                {% endfor %}
+                
+                
+                {% for p in creditsArray %}
+                    {% if p.valid == 1 %}
+                
+                    <li>
+                        <a href="{{ p.url }}">
+                        <figure>
+                            <img src="{{ p.thumbnail }}" alt="{{ p.title }} Credits Poster" />
+                            <figcaption>
+                                <h5>{{ p.title }} ({{ p.date | date: '%Y' }})</h5>
+                                <p id="role">{{ p.role }}</p>
+                                <p><b>Genre:</b> {{ p.genre }}</p>
+
+                                {% if p.director %}
+                                    <p><b>Director:</b> {{ p.director }}</p>
+                                {% endif %}
+
+                                {% if p.writers %}
+                                    <p><b>Writers:</b> {{ p.writers }}</p>
+                                {% endif %}
+
+                                {% if p.producers %}
+                                    <p><b>Producers:</b> {{ p.producers }}</p>
+                                {% endif %}
+
+                            </figcaption>
+                        </figure>
+                        </a>
+                    </li>
+                  
+                    {% endif %}
+                {% endfor %}
+                          
+                {% for p in creditsArrayNoWeight %}
                     {% if p.valid == 1 %}
                 
                     <li>
