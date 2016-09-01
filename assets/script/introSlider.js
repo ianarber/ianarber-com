@@ -46,7 +46,7 @@ function onYouTubeIframeAPIReady() {
     var sliderNextNum = 2;
     var count = $intro.find('.img-slide > img').length;
     
-    var playState;
+    //var playState;
     
     recalculateHeight();
     changeWelcomeText();
@@ -182,17 +182,20 @@ function onYouTubeIframeAPIReady() {
   
     $profilePic.find('i').on('click', function(){
         
+        var $playVidBtn = $(this);
+        
         stopInterval();
         
         $profilePic.css('background-color', 'black');
         
-        //set full opacity to click to load image (via css)
-        $(this).addClass('disable-play-icon');
-        
-        $(this).siblings('img').addClass('disable-play-icon');
-        $(this).siblings('.video-wrapper').css('pointer-events', 'all');
+        $playVidBtn.addClass('disable-play-icon');
         
         player.playVideo();
+        
+        setTimeout(function(){
+            $playVidBtn.siblings('.video-wrapper').css('pointer-events', 'all');
+            $playVidBtn.siblings('img').addClass('disable-play-icon');
+        }, 200);    
         
     });
     
@@ -203,7 +206,7 @@ function onYouTubeIframeAPIReady() {
     function controlVideo(playerStatus) {
         if (playerStatus == 0) {
             // ended
-            playState = playerStatus;
+            //playState = playerStatus;
             startInterval();
             $profilePic.css('background-color', 'transparent');
             $profilePic.find('#welcome-intro, #quote, #cite').fadeToggle('slow');
@@ -212,7 +215,7 @@ function onYouTubeIframeAPIReady() {
             });
         } else if (playerStatus == 1) {
             // playing
-            playState = playerStatus;
+            //playState = playerStatus;
             stopInterval();
             $profilePic.css('background-color', 'black');
             $profilePic.find('#welcome-intro, #quote, #cite').fadeToggle('slow');
@@ -222,7 +225,7 @@ function onYouTubeIframeAPIReady() {
             
         } else if (playerStatus == 2) {
             // paused
-            playState = playerStatus;
+            //playState = playerStatus;
             startInterval();
             $profilePic.css('background-color', 'transparent');
             $profilePic.find('#welcome-intro, #quote, #cite').fadeToggle('slow');
@@ -231,13 +234,6 @@ function onYouTubeIframeAPIReady() {
             });
         }
     }
-
-
-    
-
-    
-    
-
     
     function stopInterval(){
         if( loop != undefined ){
