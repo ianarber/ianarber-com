@@ -4,7 +4,7 @@ headerstatus: shunk-header
 valid: 1
 title: Indifferent
 iden: indifferent
-showreel_weight: 5
+showreel_weight: 3
 credits_weight: 11
 thumbnail: /assets/img/credits-grid/indifferent.jpg
 image: /assets/img/credits-grid/opengraph/indifferent.jpg
