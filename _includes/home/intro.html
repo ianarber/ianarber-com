@@ -4,7 +4,7 @@
 	    <div id="slider-container">
             
             {% assign slideId = 1 %}
-            {% assign intro = site.categories.news %}
+            {% assign intro = site.categories.news | sort: 'intro_weight' | reverse %}
             
             {% for p in intro %}
            

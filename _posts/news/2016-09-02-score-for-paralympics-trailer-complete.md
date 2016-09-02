@@ -3,6 +3,7 @@ layout: news
 category: news
 headerstatus: shunk-header
 valid: 0
+intro_weight: 5
 title: Score For Paralympics Trailer Complete
 film: Paralympics
 image: /assets/img/news-posts/opengraph/paralympics.jpg

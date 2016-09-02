@@ -11,7 +11,7 @@
 
 	<div class="poster-row">
 
-        {% assign credits = site.categories.credits | sort: 'showreel_weight' %}
+        {% assign credits = site.categories.credits | sort: 'showreel_weight' | reverse %}
         
 	    {% for p in credits %}
             {% if p.showreel_weight %}
