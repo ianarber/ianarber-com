@@ -56,6 +56,7 @@ function onYouTubeIframeAPIReady() {
         recalculateHeight();
         changeWelcomeText();
         calculateVideoSize();
+        clearQuoteStyle();
     });
     
     
@@ -104,6 +105,10 @@ function onYouTubeIframeAPIReady() {
         $profilePic.find('.video-wrapper > iframe').css({
             'width': width,
             'height': height});
+    }
+
+    function clearQuoteStyle(){
+        $profilePic.find('#quote, #cite').attr('style', '');
     }
     
     
@@ -209,7 +214,12 @@ function onYouTubeIframeAPIReady() {
             //playState = playerStatus;
             startInterval();
             $profilePic.css('background-color', 'transparent');
-            $profilePic.find('#welcome-intro, #quote, #cite').fadeToggle('slow');
+            $profilePic.find('#welcome-intro').fadeToggle('slow');
+                   
+            if ( window.innerWidth > 480 ) {
+                $profilePic.find('#quote, #cite').fadeToggle('slow');
+            }
+    
             $profilePic.find('.img-slide > p > a').animate({
                 'bottom': '140px'
             });
@@ -218,7 +228,12 @@ function onYouTubeIframeAPIReady() {
             //playState = playerStatus;
             stopInterval();
             $profilePic.css('background-color', 'black');
-            $profilePic.find('#welcome-intro, #quote, #cite').fadeToggle('slow');
+            $profilePic.find('#welcome-intro').fadeToggle('slow');
+            
+            if ( window.innerWidth > 480 ) {
+                $profilePic.find('#quote, #cite').fadeToggle('slow');
+            }
+            
             $profilePic.find('.img-slide > p > a').animate({
                 'bottom': '20px'
             });
@@ -228,7 +243,12 @@ function onYouTubeIframeAPIReady() {
             //playState = playerStatus;
             startInterval();
             $profilePic.css('background-color', 'transparent');
-            $profilePic.find('#welcome-intro, #quote, #cite').fadeToggle('slow');
+            $profilePic.find('#welcome-intro').fadeToggle('slow');
+            
+            if ( window.innerWidth > 480 ) {
+                $profilePic.find('#quote, #cite').fadeToggle('slow');
+            }
+            
             $profilePic.find('.img-slide > p > a').animate({
                 'bottom': '140px'
             });
