@@ -46,11 +46,12 @@ function onYouTubeIframeAPIReady() {
     var sliderNextNum = 2;
     var count = $intro.find('.img-slide > img').length;
     
-    //var playState;
+    var playState;
     
     recalculateHeight();
     changeWelcomeText();
     calculateVideoSize();
+    clearQuoteStyle();
     
     $(window).on('resize', function(){
         recalculateHeight();
@@ -108,7 +109,12 @@ function onYouTubeIframeAPIReady() {
     }
 
     function clearQuoteStyle(){
-        $profilePic.find('#quote, #cite').attr('style', '');
+        //$profilePic.find('#quote, #cite').attr('style', '');
+        if ( window.innerWidth <= 480 && playState != 1 ) {
+            $profilePic.find('#welcome-text, #quote, #cite').fadeOut(1);          
+        } else if ( window.innerWidth > 480  && playState != 1 ) {
+            $profilePic.find('#welcome-text, #quote, #cite').fadeIn(1);
+        }          
     }
     
     
@@ -211,13 +217,13 @@ function onYouTubeIframeAPIReady() {
     function controlVideo(playerStatus) {
         if (playerStatus == 0) {
             // ended
-            //playState = playerStatus;
+            playState = playerStatus;
             startInterval();
-            $profilePic.css('background-color', 'transparent');
+            //$profilePic.css('background-color', 'transparent');
             $profilePic.find('#welcome-intro').fadeToggle('slow');
                    
             if ( window.innerWidth > 480 ) {
-                $profilePic.find('#quote, #cite').fadeToggle('slow');
+                $profilePic.find('#welcome-text, #quote, #cite').fadeToggle('slow');
             }
     
             $profilePic.find('.img-slide > p > a').animate({
@@ -225,13 +231,13 @@ function onYouTubeIframeAPIReady() {
             });
         } else if (playerStatus == 1) {
             // playing
-            //playState = playerStatus;
+            playState = playerStatus;
             stopInterval();
-            $profilePic.css('background-color', 'black');
+            //$profilePic.css('background-color', 'black');
             $profilePic.find('#welcome-intro').fadeToggle('slow');
             
             if ( window.innerWidth > 480 ) {
-                $profilePic.find('#quote, #cite').fadeToggle('slow');
+                $profilePic.find('#welcome-text, #quote, #cite').fadeToggle('slow');
             }
             
             $profilePic.find('.img-slide > p > a').animate({
@@ -240,13 +246,13 @@ function onYouTubeIframeAPIReady() {
             
         } else if (playerStatus == 2) {
             // paused
-            //playState = playerStatus;
+            playState = playerStatus;
             startInterval();
-            $profilePic.css('background-color', 'transparent');
+            //$profilePic.css('background-color', 'transparent');
             $profilePic.find('#welcome-intro').fadeToggle('slow');
             
             if ( window.innerWidth > 480 ) {
-                $profilePic.find('#quote, #cite').fadeToggle('slow');
+                $profilePic.find('#welcome-text, #quote, #cite').fadeToggle('slow');
             }
             
             $profilePic.find('.img-slide > p > a').animate({

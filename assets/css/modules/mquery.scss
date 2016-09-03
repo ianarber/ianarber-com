@@ -272,6 +272,12 @@
 	.intro{
 		top: 20px;
 	}
+    
+    .img-slide{
+        i{
+            font-size: 400%;
+        }
+    }
 	
 	.profile-pic{
 		#welcome-intro{
@@ -553,14 +559,11 @@
         }
 	}
     
-    
-//    .main-contact-form{
-//        .social-icons{
-//            div:not(:last-child){
-//                margin-right: 5px;
-//            }
-//        }
-//    }
+    .img-slide{
+        i{
+            font-size: 350%;
+        }
+    }
     
     .bio{
         height: 345px;
@@ -694,11 +697,6 @@
                 }
             }
         }
-        #welcome-text,
-        #quote,
-        #cite{
-			display: none;
-		}
         img{
             width: 360%;
         }
