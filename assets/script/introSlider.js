@@ -109,12 +109,19 @@ function onYouTubeIframeAPIReady() {
     }
 
     function clearQuoteStyle(){
-        //$profilePic.find('#quote, #cite').attr('style', '');
+        
+        if ( window.innerWidth <= 612 && playState != 1 ) {
+            $profilePic.find('#welcome-text').fadeOut(1);          
+        } else if ( window.innerWidth > 612  && playState != 1 ) {
+            $profilePic.find('#welcome-text').fadeIn(1);
+        }   
+        
         if ( window.innerWidth <= 480 && playState != 1 ) {
-            $profilePic.find('#welcome-text, #quote, #cite').fadeOut(1);          
+            $profilePic.find('#quote, #cite').fadeOut(1);          
         } else if ( window.innerWidth > 480  && playState != 1 ) {
-            $profilePic.find('#welcome-text, #quote, #cite').fadeIn(1);
-        }          
+            $profilePic.find('#quote, #cite').fadeIn(1);
+        }   
+        
     }
     
     
@@ -222,8 +229,11 @@ function onYouTubeIframeAPIReady() {
             //$profilePic.css('background-color', 'transparent');
             $profilePic.find('#welcome-intro').fadeToggle('slow');
                    
+            if ( window.innerWidth > 612 ) {
+                $profilePic.find('#welcome-text').fadeToggle('slow');
+            }
             if ( window.innerWidth > 480 ) {
-                $profilePic.find('#welcome-text, #quote, #cite').fadeToggle('slow');
+                $profilePic.find('#quote, #cite').fadeToggle('slow');
             }
     
             $profilePic.find('.img-slide > p > a').animate({
@@ -236,8 +246,11 @@ function onYouTubeIframeAPIReady() {
             //$profilePic.css('background-color', 'black');
             $profilePic.find('#welcome-intro').fadeToggle('slow');
             
+            if ( window.innerWidth > 612 ) {
+                $profilePic.find('#welcome-text').fadeToggle('slow');
+            }
             if ( window.innerWidth > 480 ) {
-                $profilePic.find('#welcome-text, #quote, #cite').fadeToggle('slow');
+                $profilePic.find('#quote, #cite').fadeToggle('slow');
             }
             
             $profilePic.find('.img-slide > p > a').animate({
@@ -251,8 +264,11 @@ function onYouTubeIframeAPIReady() {
             //$profilePic.css('background-color', 'transparent');
             $profilePic.find('#welcome-intro').fadeToggle('slow');
             
+            if ( window.innerWidth > 612 ) {
+                $profilePic.find('#welcome-text').fadeToggle('slow');
+            }
             if ( window.innerWidth > 480 ) {
-                $profilePic.find('#welcome-text, #quote, #cite').fadeToggle('slow');
+                $profilePic.find('#quote, #cite').fadeToggle('slow');
             }
             
             $profilePic.find('.img-slide > p > a').animate({
