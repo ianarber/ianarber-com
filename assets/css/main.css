@@ -2709,6 +2709,8 @@ width decreases */
       margin-right: 15px; }
   .intro {
     top: 20px; }
+  .img-slide i {
+    font-size: 400%; }
   .profile-pic #welcome-intro {
     font-size: 145%; }
   .profile-pic #welcome-text {
@@ -2849,6 +2851,8 @@ width decreases */
     width: 80%; }
   .profile-pic #welcome-intro {
     word-spacing: normal; }
+  .img-slide i {
+    font-size: 350%; }
   .bio {
     height: 345px; }
     .bio .bio-pic {
@@ -2927,10 +2931,6 @@ width decreases */
         z-index: 2;
         bottom: 10px;
         width: 95%; }
-  .profile-pic #welcome-text,
-  .profile-pic #quote,
-  .profile-pic #cite {
-    display: none; }
   .profile-pic img {
     width: 360%; }
   .img-slide a {
