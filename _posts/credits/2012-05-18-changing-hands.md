@@ -1,14 +1,13 @@
 ---
 layout: credit-info
-headerstatus: shunk-header
+category: credits
+headerstatus: shrunk-header
 valid: 1
 title: Changing Hands
-thumbnail: /assets/img/credits-grid/changing-hands.jpg
-image: /assets/img/credits-grid/opengraph/changing-hands.jpg
-image_size: 3
-category: credits
+image_cover: /assets/img/credits-grid/changing-hands.jpg
+image_social: /assets/img/credits-grid/opengraph/changing-hands.jpg
 role: Composer
-type: Feature Film
+credit_type: Feature Film
 imdb: http://www.imdb.com/title/tt2657648
 soundcloud: https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/74363319&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=false&amp;show_reposts=false
 genre: Crime Thriller

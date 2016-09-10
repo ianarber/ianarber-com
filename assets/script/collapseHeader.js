@@ -19,11 +19,11 @@ var cbpAnimatedHeader = (function() {
 		var sy = scrollY();
 		if ( sy >= changeHeaderOn ) {
 			//classie.add( header, 'shunk-header' );
-            $header.addClass('shunk-header');
+            $header.addClass('shrunk-header');
 		}
 		else {
 			//classie.remove( header, 'shunk-header' );
-            $header.removeClass('shunk-header');
+            $header.removeClass('shrunk-header');
 		}
 		didScroll = false;
 	}

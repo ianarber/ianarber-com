@@ -1,15 +1,14 @@
 ---
 layout: credit-info
-headerstatus: shunk-header
+category: credits
+headerstatus: shrunk-header
 valid: 1
 title: Before Your Eyes
 credits_weight: 3
-thumbnail: /assets/img/credits-grid/before-your-eyes.jpg
-image: /assets/img/credits-grid/opengraph/before-your-eyes.jpg
-image_size: 3
-category: credits
+image_cover: /assets/img/credits-grid/before-your-eyes.jpg
+image_social: /assets/img/credits-grid/opengraph/before-your-eyes.jpg
 role: Composer
-type: Short Film
+credit_type: Short Film
 imdb: http://www.imdb.com/title/tt4687470
 soundcloud: https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/218177374&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false
 genre: Drama

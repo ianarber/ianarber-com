@@ -1,19 +1,18 @@
 ---
 layout: news
 category: news
-headerstatus: shunk-header
+headerstatus: shrunk-header
 valid: 1
 intro_weight: 3
 title: Ian to Score new BBC 2 Series
-film: Quacks
-image: /assets/img/news-posts/opengraph/quacks.jpg
-image_size: 1
-header: /assets/img/news-posts/header/quacks.jpg
+film_show: Quacks
+image_social: /assets/img/news-posts/opengraph/quacks.jpg
+image_header: /assets/img/news-posts/header/quacks.jpg
 heading: Ian will score upcoming series "Quacks" for BBC2
-excerpt_separator: <!--more-->
+post_excerpt: Ian will score upcoming series "Quacks" for BBC2. Starring Rory Kinnear, Rupert Everett and Matthew Baynton.
 ---
 
-Ian will score upcoming series "Quacks" for BBC2. Starring Rory Kinnear, Rupert Everett and Matthew Baynton.<!--more-->
+Ian will score upcoming series "Quacks" for BBC2. Starring Rory Kinnear, Rupert Everett and Matthew Baynton.
 <br/>
 Written by James Wood (Rev, Gamechangers). Directed by Andy De Emmony (Father Ted, Red Dwarf). Produced by BBC & NBC Universal.
 <br/><br/>

@@ -4,7 +4,7 @@ layout: default
 
 <div class="post-container">
     <figure class="post-image">
-        <img src="{{ page.image }}" alt="{{ page.film }} image" />
+        <img src="{{ page.image_social }}" alt="{{ page.film_show }} image" />
     </figure>
 
     <div class="post-title">
@@ -12,7 +12,7 @@ layout: default
     </div>
     <div class="post-date">
         <ul class="fa-ul">
-            <li><i class="fa-li fa fa-film"></i>{{ page.film }}</li>
+            <li><i class="fa-li fa fa-film"></i>{{ page.film_show }}</li>
             <li><i class="fa-li fa fa-calendar-o"></i>{{ page.date | date: '%b %Y' }}</li>
         </ul>
     </div>

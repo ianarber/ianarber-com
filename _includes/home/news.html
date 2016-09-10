@@ -19,11 +19,11 @@
             <article class="news-preview">
                 <a href="{{ p.url }}">	
                 <figure>
-                    <img src="{{ p.image }}" alt="{{ p.title }} Blog Post Thumnail Preview"/>
+                    <img src="{{ p.image_social }}" alt="{{ p.title }} Blog Post Thumnail Preview"/>
                 </figure>
-                <p>{{ p.film }}</p>
+                <p>{{ p.film_show }}</p>
                 <p>{{ p.title }}</p>
-                {{ p.excerpt }}
+                    <p>{{ p.post_excerpt }}</p>
                 <div class="post-byline">
                     <ul class="fa-ul">
                         <li><i class="fa-li fa fa-calendar-o"></i>{{ p.date | date: '%b %Y' }}</li>

@@ -1,19 +1,18 @@
 ---
 layout: credit-info
-headerstatus: shunk-header
+category: credits
+headerstatus: shrunk-header
 valid: 1
 title: The Island of Dolls
-iden: theislandofdolls
+identity: theislandofdolls
 showreel_weight: 4
 credits_weight: 10
-thumbnail: /assets/img/credits-grid/the-island-of-dolls.jpg
-image: /assets/img/credits-grid/opengraph/the-island-of-dolls.jpg
-image_size: 3
-category: credits
+image_cover: /assets/img/credits-grid/the-island-of-dolls.jpg
+image_social: /assets/img/credits-grid/opengraph/the-island-of-dolls.jpg
 role: Composer
-type: Feature Film
+credit_type: Feature Film
 imdb: http://www.imdb.com/title/tt4423788
-sample: assets/media/the_island_of_the_dolls_60s
+audio_sample: assets/media/the_island_of_the_dolls_60s
 genre: Horror/Mystery
 director: Javier Solorzano Casarin
 producers: Christian Mejia Acosta, SJ Evans & Emma Raine Walker

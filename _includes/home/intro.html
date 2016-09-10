@@ -15,7 +15,7 @@
                 {% if p.valid == 1 %}
             
                 <div class="img-slide" id="img-slide-{{slideId}}">
-                    <img src="{{ p.header }}" alt="{{ p.title }} Intro Slider Poster"/>
+                    <img src="{{ p.image_header }}" alt="{{ p.title }} Intro Slider Poster"/>
 
                     {% if p.videolink %}
                         <i class="fa fa-play-circle-o"></i>
@@ -24,7 +24,7 @@
                         </div>
                     {% endif %}
 
-                    <p><a href="{{ p.url }}">{{ p.film }} - {{ p.title }}</a></p>
+                    <p><a href="{{ p.url }}">{{ p.film_show }} - {{ p.title }}</a></p>
                 </div>
 
                 {% assign slideId = slideId | plus: 1 %}

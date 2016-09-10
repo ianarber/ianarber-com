@@ -1,19 +1,18 @@
 ---
 layout: credit-info
-headerstatus: shunk-header
+category: credits
+headerstatus: shrunk-header
 valid: 1
 title: Indifferent
-iden: indifferent
+identity: indifferent
 showreel_weight: 3
 credits_weight: 11
-thumbnail: /assets/img/credits-grid/indifferent.jpg
-image: /assets/img/credits-grid/opengraph/indifferent.jpg
-image_size: 3
-category: credits
+image_cover: /assets/img/credits-grid/indifferent.jpg
+image_social: /assets/img/credits-grid/opengraph/indifferent.jpg
 role: Composer
-type: Feature Film
+credit_type: Feature Film
 imdb: http://www.imdb.com/title/tt3004644
-sample: assets/media/indifferent_60s
+audio_sample: assets/media/indifferent_60s
 genre: Drama/Fanatasy
 director: Adam Lipsius
 writers: Emma Raine Walker

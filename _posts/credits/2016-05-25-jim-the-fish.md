@@ -1,15 +1,14 @@
 ---
 layout: credit-info
-headerstatus: shunk-header
+category: credits
+headerstatus: shrunk-header
 valid: 1
 title: Jim 'The Fish'
 credits_weight: 5
-thumbnail: /assets/img/credits-grid/jim-the-fish.jpg
-image: /assets/img/credits-grid/opengraph/jim-the-fish.jpg
-image_size: 3
-category: credits
+image_cover: /assets/img/credits-grid/jim-the-fish.jpg
+image_social: /assets/img/credits-grid/opengraph/jim-the-fish.jpg
 role: Composer
-type: Short Film
+credit_type: Short Film
 imdb: https://www.facebook.com/jimthefishfilm
 soundcloud: https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/243568656&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false
 genre: Drama/Romance

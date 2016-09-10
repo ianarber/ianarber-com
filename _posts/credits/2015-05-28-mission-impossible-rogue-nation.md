@@ -1,18 +1,17 @@
 ---
 layout: credit-info
-headerstatus: shunk-header
+category: credits
+headerstatus: shrunk-header
 valid: 1
 title: Mission Impossible - Rouge Nation
 short_title: MI5 Rouge Nation
-iden: mi5rougenation
+identity: mi5rougenation
 showreel_weight: 1
 credits_weight: 8
-thumbnail: /assets/img/credits-grid/mission-impossible-rouge-nation.jpg
-image: /assets/img/credits-grid/opengraph/mission-impossible-rouge-nation.jpg
-image_size: 3
-category: credits
+image_cover: /assets/img/credits-grid/mission-impossible-rouge-nation.jpg
+image_social: /assets/img/credits-grid/opengraph/mission-impossible-rouge-nation.jpg
 role: Assistant Composer
-type: Feature Film
+credit_type: Feature Film
 imdb: http://www.imdb.com/title/tt2381249
 genre: Drama/Fanatasy
 director: Christopher McQuarrie

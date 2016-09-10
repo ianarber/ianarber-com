@@ -1,17 +1,16 @@
 ---
 layout: credit-info
-headerstatus: shunk-header
+category: credits
+headerstatus: shrunk-header
 valid: 1
 title: Scott and Sid
-iden: scottandsid
+identity: scottandsid
 showreel_weight: 2
 credits_weight: 9
-thumbnail: /assets/img/credits-grid/scott-and-sid.jpg
-image: /assets/img/credits-grid/opengraph/scott-and-sid.jpg
-image_size: 3
-category: credits
+image_cover: /assets/img/credits-grid/scott-and-sid.jpg
+image_social: /assets/img/credits-grid/opengraph/scott-and-sid.jpg
 role: Composer
-type: Feature Film
+credit_type: Feature Film
 imdb: http://www.imdb.com/title/tt4702346
 genre: Coming-of-age Drama
 director: Scott Elliot

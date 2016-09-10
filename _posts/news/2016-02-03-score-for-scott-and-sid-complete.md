@@ -1,16 +1,15 @@
 ---
 layout: news
 category: news
-headerstatus: shunk-header
+headerstatus: shrunk-header
 valid: 1
 intro_weight: 2
 title: Score for Scott and Sid Complete
-film: Scott and Sid
-image: /assets/img/news-posts/opengraph/scott-and-sid.jpg
-image_size: 1
-header: /assets/img/news-posts/header/scott-and-sid.jpg
+film_show: Scott and Sid
+image_social: /assets/img/news-posts/opengraph/scott-and-sid.jpg
+image_header: /assets/img/news-posts/header/scott-and-sid.jpg
 heading: Ian has finished scoring British coming-of-age drama Scott and Sid
-excerpt_separator: <!--more-->
+post_excerpt: Ian has finished scoring British coming-of-age drama "Scott and Sid", starring Richard Mason and Tom Blyth.
 ---
 
 Ian has finished scoring British coming-of-age drama "Scott and Sid", starring Richard Mason and Tom Blyth.<!--more-->

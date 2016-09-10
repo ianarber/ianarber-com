@@ -1,15 +1,14 @@
 ---
 layout: credit-info
-headerstatus: shunk-header
+category: credits
+headerstatus: shrunk-header
 valid: 1
 title: We Love Paleo
 credits_weight: 2
-thumbnail: /assets/img/credits-grid/we-love-paleo.jpg
-image: /assets/img/credits-grid/opengraph/we-love-paleo.jpg
-image_size: 3
-category: credits
+image_cover: /assets/img/credits-grid/we-love-paleo.jpg
+image_social: /assets/img/credits-grid/opengraph/we-love-paleo.jpg
 role: Composer
-type: Documentary
+credit_type: Documentary
 imdb: http://www.imdb.com/title/tt4061760
 soundcloud: https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/221864026&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false
 genre: Lifestyle Documentary

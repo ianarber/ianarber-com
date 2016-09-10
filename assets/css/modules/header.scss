@@ -73,63 +73,63 @@
 
 /*** shrink class that will be applied to header via collapseHeader.js on scroll ***/
 
-#header.shunk-header{
+#header.shrunk-header{
     height: 60px;
 }
 
-#header.shunk-header .ianarber{
+#header.shrunk-header .ianarber{
     top: -12px;
     font-size: 150%;
 }
 
-#header.shunk-header .menu-list-1,
-#header.shunk-header .menu-list-2{
+#header.shrunk-header .menu-list-1,
+#header.shrunk-header .menu-list-2{
     margin-top: -4px;
 }
 
-#header.shunk-header .menu-items-1,
-#header.shunk-header .menu-items-2{
+#header.shrunk-header .menu-items-1,
+#header.shrunk-header .menu-items-2{
     font-size: 65%;
 }
 
-#header.shunk-header .composer{
+#header.shrunk-header .composer{
     top: -7px;
 }
 
-#header.shunk-header .composer:before,
-#header.shunk-header .composer:after{
+#header.shrunk-header .composer:before,
+#header.shrunk-header .composer:after{
     top: 4px;
     width: 37.1%;
 }
 
-#header.shunk-header .composer:before {
+#header.shrunk-header .composer:before {
     right: 1.7%;
 }
 
-#header.shunk-header .composer:after {
+#header.shrunk-header .composer:after {
     right: -1%;
 }
 
-#header.shunk-header .film{
+#header.shrunk-header .film{
     top: -15px;
 }
 
-#header.shunk-header .film:before,
-#header.shunk-header .film:after{
+#header.shrunk-header .film:before,
+#header.shrunk-header .film:after{
     top: 4px;
     width: 28.9%;
 }
 
-#header.shunk-header .film:before {
+#header.shrunk-header .film:before {
     right: 1.8%;
 }
 
-#header.shunk-header .film:after {
+#header.shrunk-header .film:after {
     right: -1.5%;
 }
 
-#header.shunk-header .composer,
-#header.shunk-header .film{
+#header.shrunk-header .composer,
+#header.shrunk-header .film{
     font-size: 45%;
 
 }

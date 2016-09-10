@@ -19,7 +19,7 @@
                 
                 <div class="poster" >
                     <figure class="poster-figure">
-                        <img src="{{ p.thumbnail }}" alt="{{ p.title }} Recent Credits Poster" />
+                        <img src="{{ p.image_cover }}" alt="{{ p.title }} Recent Credits Poster" />
                         <!-- figcaption elements will overlay on mouseover -->
                         <figcaption class="poster-caption">
                             <div>
@@ -35,15 +35,15 @@
                                 </ul>
                                 <div class="seperator"></div>
                                 <div class="credit-brief">{{ p.synopsis }}</div>
-                                {% if p.sample %}
-                                <audio class="{{ p.iden }}">
-                                    <source src="{{ p.sample }}.mp3" type="audio/mpeg">
-                                    <source src="{{ p.sample }}.ogg" type="audio/ogg">
+                                {% if p.audio_sample %}
+                                <audio class="{{ p.identity }}">
+                                    <source src="{{ p.audio_sample }}.mp3" type="audio/mpeg">
+                                    <source src="{{ p.audio_sample }}.ogg" type="audio/ogg">
                                     Your browser does not support the audio element.
                                 </audio>
                                 <div class="controls">
-                                    <i id="{{ p.iden }}" class="fa fa-play-circle active"></i>
-                                    <i id="{{ p.iden }}-stop" class="fa fa-stop-circle"></i>
+                                    <i id="{{ p.identity }}" class="fa fa-play-circle active"></i>
+                                    <i id="{{ p.identity }}-stop" class="fa fa-stop-circle"></i>
                                 </div>
                                 {% endif %}
                             </div>

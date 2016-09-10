@@ -1,17 +1,16 @@
 ---
 layout: news
 category: news
-headerstatus: shunk-header
+headerstatus: shrunk-header
 valid: 1
 intro_weight: 4
 title: Ian to Score new Usain Bolt Documentary
-film: I Am Bolt
-image: /assets/img/news-posts/opengraph/i-am-bolt.jpg
-image_size: 1
-header: /assets/img/news-posts/header/i-am-bolt.jpg
+film_show: I Am Bolt
+image_social: /assets/img/news-posts/opengraph/i-am-bolt.jpg
+image_header: /assets/img/news-posts/header/i-am-bolt.jpg
 heading: Ian has been signed on to score the soundtrack for upcoming Usain Bolt documentary - I Am Bolt
-excerpt_separator: <!--more-->
+post_excerpt: Ian has signed on to score Usain Bolt's theatrical-release documentary, "I Am Bolt". Due for release in 2016.
 ---
 
-Ian has signed on to score Usain Bolt's theatrical-release documentary, "I Am Bolt". Due for release in 2016.<!--more-->
+Ian has signed on to score Usain Bolt's theatrical-release documentary, "I Am Bolt". Due for release in 2016.
 <br/><br/>

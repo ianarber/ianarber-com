@@ -5,7 +5,7 @@ layout: default
 <div class="row post-container">
     <div class="row post-credit-header">
         <figure class="col span-1-of-3 post-credit-image">
-            <img src="{{ page.thumbnail }}" alt="{{ page.title }} Poster" />
+            <img src="{{ page.image_cover }}" alt="{{ page.title }} Poster" />
         </figure>
 
         {% if page.soundcloud %}
@@ -23,7 +23,7 @@ layout: default
     </div>
     <div class="post-date">
         <ul class="fa-ul">
-            <li><i class="fa-li fa fa-film"></i>{{ page.type }}</li>
+            <li><i class="fa-li fa fa-film"></i>{{ page.credit_type }}</li>
             <li><i class="fa-li fa fa-calendar-o"></i>{{ page.date | date: '%b %Y' }}</li>
             <li><i class="fa-li fa fa-user"></i>{{ page.role }}</li>
             {% if page.imdb %}

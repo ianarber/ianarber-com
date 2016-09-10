@@ -1,16 +1,15 @@
 ---
 layout: credit-info
-headerstatus: shunk-header
+category: credits
+headerstatus: shrunk-header
 valid: 1
 title: Ambulance
-iden: ambulance
+identity: ambulance
 credits_weight: 4
-thumbnail: /assets/img/credits-grid/ambulance.jpg
-image: /assets/img/credits-grid/opengraph/ambulance.jpg
-image_size: 3
-category: credits
+image_cover: /assets/img/credits-grid/ambulance.jpg
+image_social: /assets/img/credits-grid/opengraph/ambulance.jpg
 role: Composer
-type: Short Film
+credit_type: Short Film
 imdb: http://www.imdb.com/title/tt5581070
 genre: Horror/Thriller
 director: Arya Moghaddam

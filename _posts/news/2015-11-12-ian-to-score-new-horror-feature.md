@@ -1,15 +1,14 @@
 ---
 layout: news
 category: news
-headerstatus: shunk-header
+headerstatus: shrunk-header
 valid: 1
 title: Ian to Score new Horror Feature
-film: The Island of Dolls
-image: /assets/img/news-posts/opengraph/the-island-of-dolls.jpg
-image_size: 1
-header: /assets/img/news-posts/header/the-island-of-dolls.jpg
+film_show: The Island of Dolls
+image_social: /assets/img/news-posts/opengraph/the-island-of-dolls.jpg
+image_header: /assets/img/news-posts/header/the-island-of-dolls.jpg
 heading: Ian is to score the upcoming Horror feature-film Island of the Dolls
-excerpt_separator: <!--more-->
+post_excerpt: Ian will score the upcoming Horror feature-film "Island of the Dolls", due to shoot in Mexico early 2016.
 ---
 
 Ian will score the upcoming Horror feature-film "Island of the Dolls", due to shoot in Mexico early 2016.<!--more-->

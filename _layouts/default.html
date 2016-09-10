@@ -3,7 +3,7 @@
 {% if page.description %}
     {% assign finalDescription = page.description %}     
     {% elsif page.layout == 'news' %}
-    {% assign finalDescription = page.excerpt | remove: '<p>' | remove: '</p>' | strip_newlines %}
+    {% assign finalDescription = page.post_excerpt | remove: '<p>' | remove: '</p>' | strip_newlines %}
     {% elsif page.layout == 'credit-info' %}
     {% assign finalDescription = 'New credit annoucement from Ian Arber: ' | append: page.title %} 
 {% endif %}
@@ -46,22 +46,15 @@
     <meta name="twitter:url" content="{{ site.myurl }}{{ page.url | replace:'index.html',''}}">
     <meta property="og:site_name" content="{{ site.name }}">
     
-    <meta property="og:image" content="{{ site.myurl }}{{ page.image }}">
+    <meta property="og:image" content="{{ site.myurl }}{{ page.image_social }}">
     <meta property="og:image:type" content="image/jpeg">
 
-    {% if page.image_size == 1 %}
+    {% if page.layout == 'news' %}
         {% assign imageWidth = 1200 %}
         {% assign imageHeight = 630 %}
         <meta property="og:image:width" content="1200">
         <meta property="og:image:height" content="630">
-    {% endif %}
-    {% if page.image_size == 2 %}
-        {% assign imageWidth = 600 %}
-        {% assign imageHeight = 315 %}
-        <meta property="og:image:width" content="600">
-        <meta property="og:image:height" content="315">
-    {% endif %}
-    {% if page.image_size == 3 %}
+        {% elsif page.layout == 'credit-info' %}
         {% assign imageWidth = 200 %}
         {% assign imageHeight = 200 %}
         <meta property="og:image:width" content="200">
@@ -72,19 +65,19 @@
         <meta property="og:video" content="{{ page.videolink }}">
         <meta property="og:video:secure_url" content="{{ page.videolink }}">
         
-        {% if page.video_height %}
-            <meta property="og:video:height" content="{{ page.video_height }}">
-            {% else %}
-            <meta property="og:video:height" content="360">
-        {% endif %}
         {% if page.video_width %}
             <meta property="og:video:width" content="{{ page.video_width }}">
             {% else %}
             <meta property="og:video:width" content="640">
         {% endif %}
+        {% if page.video_height %}
+            <meta property="og:video:height" content="{{ page.video_height }}">
+            {% else %}
+            <meta property="og:video:height" content="360">
+        {% endif %} 
     {% endif %}
     
-    <meta name="twitter:image" content="{{ site.myurl }}{{ page.image }}">
+    <meta name="twitter:image" content="{{ site.myurl }}{{ page.image_social }}">
 
     <link rel="stylesheet" href="/assets/css/{{ site.cssToImport }}">
     <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700|Droid+Serif:400,700' rel='stylesheet' type='text/css'>
@@ -96,7 +89,7 @@
             "@type": "WebSite",
             "name": "{{ site.author }}",
             "headline": "{{ site.title }}",
-            "image": "{{ site.myurl }}{{ page.image }}",
+            "image": "{{ site.myurl }}{{ page.image_social }}",
             "description": "{{ finalDescription }}",
             "url": "{{ site.myurl }}{{ page.url | replace:'index.html',''}}",
             "potentialAction": { 
@@ -136,7 +129,7 @@
                  "headline": "{{ page.title }}",
                  "image": {
                                 "@type": "ImageObject",
-                                "url": "{{ site.myurl }}{{ page.image }}",
+                                "url": "{{ site.myurl }}{{ page.image_social }}",
                                 "height": "{{ imageHeight }}",
                                 "width": "{{ imageWidth }}"
                           },
