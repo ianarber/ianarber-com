@@ -23,11 +23,11 @@ task :publish do
     system "rm -rf *"
     system "mv #{tmp}/* ."
     system "mv aerobaticConfig.json package.json"
-    system 'git config --global user.email "adesmier@gmail.com"'
-    system 'git config --global user.name "adesmier"'
+    system 'git config --global user.email "ian_arber@hotmail.co.uk"'
+    system 'git config --global user.name "Ian Arber"'
     system "git add ."
     system "git commit -am 'Rebuild triggered from Contentful webhook'"
-    system "git remote add bb git@bitbucket.org:adesmier/ianarber.git"
+    system "git remote add bb git@bitbucket.org:ianarber/ianarber.git"
     system "git push -f bb aerobatic"
   end
 end
