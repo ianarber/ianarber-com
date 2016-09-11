@@ -18,7 +18,7 @@ GEM
       launchy
     domain_name (0.5.20160826)
       unf (>= 0.0.5, < 1.0.0)
-    ffi (1.9.14-x64-mingw32)
+    ffi (1.9.14)
     forwardable-extended (2.6.0)
     http (1.0.4)
       addressable (~> 2.3)
@@ -67,10 +67,10 @@ GEM
     sass (3.4.22)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.7.2-x64-mingw32)
+    unf_ext (0.0.7.2)
 
 PLATFORMS
-  x64-mingw32
+  ruby
 
 DEPENDENCIES
   contentful_bootstrap
@@ -78,4 +78,4 @@ DEPENDENCIES
   jekyll-contentful-data-import
 
 BUNDLED WITH
-   1.13.0
+   1.12.5
