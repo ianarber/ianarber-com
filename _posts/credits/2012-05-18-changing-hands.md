@@ -2,7 +2,6 @@
 layout: credit-info
 category: credits
 headerstatus: shrunk-header
-valid: 1
 title: Changing Hands
 image_cover: /assets/img/credits-grid/changing-hands.jpg
 image_social: /assets/img/credits-grid/opengraph/changing-hands.jpg

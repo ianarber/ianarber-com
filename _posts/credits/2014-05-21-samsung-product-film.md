@@ -2,7 +2,6 @@
 layout: credit-info
 category: credits
 headerstatus: shrunk-header
-valid: 1
 title: Samsung Product Film
 image_cover: /assets/img/credits-grid/samsung-product-film.jpg
 image_social: /assets/img/credits-grid/opengraph/samsung-product-film.jpg

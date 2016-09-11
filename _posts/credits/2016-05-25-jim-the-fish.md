@@ -2,7 +2,6 @@
 layout: credit-info
 category: credits
 headerstatus: shrunk-header
-valid: 1
 title: Jim 'The Fish'
 credits_weight: 5
 image_cover: /assets/img/credits-grid/jim-the-fish.jpg

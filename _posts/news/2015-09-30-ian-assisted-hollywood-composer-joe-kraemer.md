@@ -2,7 +2,6 @@
 layout: news
 category: news
 headerstatus: shrunk-header
-valid: 1
 intro_weight: 1
 title: Ian Assisted Hollywood Composer Joe Kraemer
 film_show: Mission Impossible - Rogue Nation

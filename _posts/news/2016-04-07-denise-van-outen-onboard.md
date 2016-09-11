@@ -2,7 +2,6 @@
 layout: news
 category: news
 headerstatus: shrunk-header
-valid: 1
 title: Denise Van-Outen Onboard
 film_show: Indifferent
 image_social: /assets/img/news-posts/opengraph/indifferent.jpg

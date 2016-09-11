@@ -2,7 +2,6 @@
 layout: credit-info
 category: credits
 headerstatus: shrunk-header
-valid: 1
 title: The Window
 credits_weight: 1
 image_cover: /assets/img/credits-grid/the-window.jpg

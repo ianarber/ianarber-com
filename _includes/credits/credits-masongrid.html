@@ -37,7 +37,6 @@
                 
                 
                 {% for p in creditsArray %}
-                    {% if p.valid == 1 %}
                 
                     <li>
                         <a href="{{ p.url }}">
@@ -65,11 +64,9 @@
                         </a>
                     </li>
                   
-                    {% endif %}
                 {% endfor %}
                           
                 {% for p in creditsArrayNoWeight %}
-                    {% if p.valid == 1 %}
                 
                     <li>
                         <a href="{{ p.url }}">
@@ -97,7 +94,6 @@
                         </a>
                     </li>
                   
-                    {% endif %}
                 {% endfor %}  
                            
             </ul>

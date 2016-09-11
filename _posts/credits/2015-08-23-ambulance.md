@@ -2,7 +2,6 @@
 layout: credit-info
 category: credits
 headerstatus: shrunk-header
-valid: 1
 title: Ambulance
 identity: ambulance
 credits_weight: 4

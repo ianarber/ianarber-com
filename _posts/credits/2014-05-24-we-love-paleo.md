@@ -2,7 +2,6 @@
 layout: credit-info
 category: credits
 headerstatus: shrunk-header
-valid: 1
 title: We Love Paleo
 credits_weight: 2
 image_cover: /assets/img/credits-grid/we-love-paleo.jpg

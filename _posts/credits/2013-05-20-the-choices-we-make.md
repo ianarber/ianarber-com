@@ -2,7 +2,6 @@
 layout: credit-info
 category: credits
 headerstatus: shrunk-header
-valid: 1
 title: The Choices We Make
 image_cover: /assets/img/credits-grid/the-choices-we-make.jpg
 image_social: /assets/img/credits-grid/opengraph/the-choices-we-make.jpg

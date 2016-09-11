@@ -2,7 +2,6 @@
 layout: credit-info
 category: credits
 headerstatus: shrunk-header
-valid: 1
 title: Mission Impossible - Rouge Nation
 short_title: MI5 Rouge Nation
 identity: mi5rougenation

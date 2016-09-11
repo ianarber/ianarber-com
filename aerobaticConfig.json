@@ -1,0 +1,23 @@
+{
+  "_aerobatic": {
+    "router": [
+      {
+        "module": "basic-auth",
+        "path": "/clientarea",
+        "options": {
+          "username": "$BASIC_AUTH_USERNAME",
+          "password": "$BASIC_AUTH_PASSWORD"
+        }
+      },
+      {
+        "module": "webpage"
+      },
+      {
+        "module": "custom-errors",
+        "errors": {
+          "404": "/404"
+        }
+      }
+    ]
+  }
+}

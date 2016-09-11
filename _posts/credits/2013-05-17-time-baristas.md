@@ -2,7 +2,6 @@
 layout: credit-info
 category: credits
 headerstatus: shrunk-header
-valid: 1
 title: Time Baraistas
 image_cover: /assets/img/credits-grid/time-baristas.jpg
 image_social: /assets/img/credits-grid/opengraph/time-baristas.jpg

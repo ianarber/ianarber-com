@@ -2,7 +2,6 @@
 layout: credit-info
 category: credits
 headerstatus: shrunk-header
-valid: 1
 title: Carpe Diem
 image_cover: /assets/img/credits-grid/carpe-diem.jpg
 image_social: /assets/img/credits-grid/opengraph/carpe-diem.jpg

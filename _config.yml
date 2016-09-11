@@ -5,3 +5,9 @@ cssToImport: main.css
 myurl: http://www.ianarber.com
 permalink: /:categories/:month/:year/:title/
 future: true
+
+contentful:
+  spaces:
+    - posts:
+        space: gtm1rv60wwt5
+        access_token: d983efa8a6eb0705784f7285f463b3fca2aa63f16b1ca6cce1169df36496b8d2

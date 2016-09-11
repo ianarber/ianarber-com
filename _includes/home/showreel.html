@@ -15,7 +15,6 @@
         
 	    {% for p in credits %}
             {% if p.showreel_weight %}
-                {% if p.valid == 1 %}
                 
                 <div class="poster" >
                     <figure class="poster-figure">
@@ -50,8 +49,7 @@
                         </figcaption>
                     </figure>
                 </div>
-               
-                {% endif %}
+                
             {% endif %}
 	    {% endfor %}
 	

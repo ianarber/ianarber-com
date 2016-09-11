@@ -11,16 +11,14 @@
                 {% if slideId > 5 %}
                     {% break %}
                 {% endif %}
-
-                {% if p.valid == 1 %}
             
                 <div class="img-slide" id="img-slide-{{slideId}}">
                     <img src="{{ p.image_header }}" alt="{{ p.title }} Intro Slider Poster"/>
 
-                    {% if p.videolink %}
+                    {% if p.video_link %}
                         <i class="fa fa-play-circle-o"></i>
                         <div class="video-wrapper">
-                            <iframe id="trailer-video" src="{{ p.videolink }}&amp;controls=0"></iframe>
+                            <iframe id="trailer-video" src="{{ p.video_link }}&amp;controls=0"></iframe>
                         </div>
                     {% endif %}
 
@@ -28,8 +26,6 @@
                 </div>
 
                 {% assign slideId = slideId | plus: 1 %}
-            
-                {% endif %}
             
             {% endfor %}
             

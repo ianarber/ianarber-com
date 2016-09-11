@@ -2,7 +2,6 @@
 layout: news
 category: news
 headerstatus: shrunk-header
-valid: 1
 intro_weight: 2
 title: Score for Scott and Sid Complete
 film_show: Scott and Sid

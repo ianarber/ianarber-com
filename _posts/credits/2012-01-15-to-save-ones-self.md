@@ -2,7 +2,6 @@
 layout: credit-info
 category: credits
 headerstatus: shrunk-header
-valid: 1
 title: To Save One's Self
 image_cover: /assets/img/credits-grid/to-save-ones-self.jpg
 image_social: /assets/img/credits-grid/opengraph/to-save-ones-self.jpg

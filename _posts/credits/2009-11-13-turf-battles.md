@@ -2,7 +2,6 @@
 layout: credit-info
 category: credits
 headerstatus: shrunk-header
-valid: 1
 title: Turf Battles
 image_cover: /assets/img/credits-grid/turf-battles.jpg
 image_social: /assets/img/credits-grid/opengraph/turf-battles.jpg

@@ -2,7 +2,6 @@
 layout: credit-info
 category: credits
 headerstatus: shrunk-header
-valid: 1
 title: Before Your Eyes
 credits_weight: 3
 image_cover: /assets/img/credits-grid/before-your-eyes.jpg

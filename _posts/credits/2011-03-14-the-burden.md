@@ -2,7 +2,6 @@
 layout: credit-info
 category: credits
 headerstatus: shrunk-header
-valid: 1
 title: The Burden
 image_cover: /assets/img/credits-grid/the-burden.jpg
 image_social: /assets/img/credits-grid/opengraph/the-burden.jpg
