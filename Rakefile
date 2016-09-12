@@ -26,7 +26,7 @@ task :publish do
     system 'git config --global user.email "ian_arber@hotmail.co.uk"'
     system 'git config --global user.name "Ian Arber"'
     system "git add ."
-    system "git commit -am 'Rebuild triggered from Contentful webhook'"
+    system "git commit -am 'Rebuild triggered from Contentful webhook --skip-ci'"
     system "git remote add bb git@bitbucket.org:ianarber/ianarber.git"
     system "git push -f bb aerobatic"
   end
