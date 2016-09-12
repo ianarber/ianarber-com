@@ -36,8 +36,7 @@
                                 <div class="credit-brief">{{ p.synopsis }}</div>
                                 {% if p.audio_sample %}
                                 <audio class="{{ p.identity }}">
-                                    <source src="{{ p.audio_sample }}.mp3" type="audio/mpeg">
-                                    <source src="{{ p.audio_sample }}.ogg" type="audio/ogg">
+                                    <source src="{{ p.audio_sample }}" type="audio/mpeg">
                                     Your browser does not support the audio element.
                                 </audio>
                                 <div class="controls">
