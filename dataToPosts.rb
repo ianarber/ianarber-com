@@ -19,7 +19,12 @@ articles_counter = 0
 begin
 	#create filename for post MD file in the format 'yyyy-mm-dd-some-title.md'
 	credits_date = "#{postData['creditPost'][credits_counter]['credit_date']}".partition('T').first
-	title_slug = "#{postData['creditPost'][credits_counter]['title']}".downcase.gsub(" ", "-")
+
+	title_slug = "#{postData['creditPost'][credits_counter]['title']}".downcase.gsub("-", " ")
+    #remove all quotes and then replace multiple spaces with a dash
+    title_slug = title_slug.gsub(/["':;]/, "")
+    title_slug = title_slug.gsub(/[ ]{1,}/, "-")
+
 	filename = credits_date + "-" + title_slug + ".md"
 
 	#create post file and append YAML front matter data
@@ -37,7 +42,13 @@ begin
 		f.puts "imdb: #{postData['creditPost'][credits_counter]['imdb']}"
 		f.puts "genre: #{postData['creditPost'][credits_counter]['genre']}"
 		f.puts "director: #{postData['creditPost'][credits_counter]['director']}"
-		f.puts "synopsis: #{postData['creditPost'][credits_counter]['synopsis']}"
+		f.puts "synopsis: |"
+
+        #print out each line of the synopsis prepended with a space to be able to handle a multi-line yaml item
+        synopsis = "#{postData['creditPost'][credits_counter]['synopsis']}"
+        synopsis.each_line do |line|
+            f.puts " " + line
+        end
 
 		begin
 			f.puts "audio_sample: #{postData['creditPost'][credits_counter]['audio_sample']['url']}"
@@ -84,7 +95,13 @@ end while credits_counter < num_of_credits.to_i
 begin
 	#create filename for post MD file in the format 'yyyy-mm-dd-some-title.md'
 	news_date = "#{postData['newsArticle'][articles_counter]['article_date']}".partition('T').first
-	title_slug = "#{postData['newsArticle'][articles_counter]['title']}".downcase.gsub(" ", "-")
+
+    #remove all non-alphanumeric characters
+	title_slug = "#{postData['newsArticle'][articles_counter]['title']}".downcase.gsub("-", " ")
+    #remove all quotes and then replace multiple spaces with a dash
+    title_slug = title_slug.gsub(/["']/, "")
+    title_slug = title_slug.gsub(/[ ]{1,}/, "-")
+
 	filename = news_date + "-" + title_slug + ".md"
 
 	#create post file and append YAML front matter data
