@@ -84,7 +84,11 @@ begin
 
 		body = "#{postData['creditPost'][credits_counter]['body']}"
 		if body != ''
-			f.puts "#{body}"
+            body.each_line do |line|
+                f.puts line
+                f.puts "<br />"
+            end
+            f.puts "<br />"
 		end
 	end
 
@@ -138,11 +142,13 @@ begin
 
 		body = "#{postData['newsArticle'][articles_counter]['body']}"
 		if body != ''
-			f.puts "#{body}"
+            body.each_line do |line|
+                f.puts line
+                f.puts "<br />"
+            end
+            f.puts "<br />"
 		end
 	end
 
 	articles_counter+=1
 end while articles_counter < num_of_articles.to_i
-
-

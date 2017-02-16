@@ -1,9 +1,12 @@
 .credit-post{
-    margin: 5px 15px 0 15px;
+    margin: 5px 15px -25px 15px;
+    blockquote{
+        margin-bottom: 25px;
+    }
 }
 
 .post-credit-audio{
-    iframe{           
+    iframe{
         display: block;
         border: none;
         width: 100%;
@@ -26,5 +29,5 @@
 }
 
 #credit-hr{
-    margin-top: 20px;
+    margin-top: 25px;
 }

@@ -20,5 +20,5 @@ exclude:
 contentful:
   spaces:
     - posts:
-        space: gtm1rv60wwt5
-        access_token: d983efa8a6eb0705784f7285f463b3fca2aa63f16b1ca6cce1169df36496b8d2
+        space: fshuoq9yrvsn
+        access_token: a51ccfe481868b12a650d2b87357c59db8720a39aad5a73e86d3a1f52db46391
