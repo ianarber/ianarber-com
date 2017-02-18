@@ -29,15 +29,15 @@ function onYouTubeIframeAPIReady() {
 
     //jQuery dom caching
     var $intro = $('.intro');
-    
+
     //variables for intro slider height calculation
     var $profilePic = $intro.find('.profile-pic');
-    var topHeight = 165;
+    var topHeight = 195;
     var offset = 30;
     var windowHeight = 0;
     var finalHeight = 0;
     var navHeight = 0;
-    
+
     //variables for image slider and nav buttons
     var isMobile = 0;
     var $navBtns = $intro.find('#nav-scroll-btns');
@@ -45,24 +45,24 @@ function onYouTubeIframeAPIReady() {
     var current = 1;
     var sliderNextNum = 2;
     var count = $intro.find('.img-slide > img').length;
-    
+
     var playState;
-    
+
     recalculateHeight();
-    changeWelcomeText();
+    //changeWelcomeText();
     calculateVideoSize();
     clearQuoteStyle();
-    
+
     $(window).on('resize', function(){
         recalculateHeight();
-        changeWelcomeText();
+        //changeWelcomeText();
         calculateVideoSize();
         clearQuoteStyle();
     });
-    
-    
+
+
     function recalculateHeight(){
-        
+
         if ( window.innerWidth > 1220 ) {
             offset = 30;
         } else if ( window.innerWidth <= 1220 && window.innerWidth > 1120 ) {
@@ -72,8 +72,8 @@ function onYouTubeIframeAPIReady() {
         } else if ( window.innerWidth <= 1005 ) {
             offset = -30;
         }
-        
-        
+
+
         windowHeight = $(window.top).height() - offset;
         finalHeight = windowHeight - topHeight;
         navHeight = finalHeight + 70;
@@ -83,67 +83,74 @@ function onYouTubeIframeAPIReady() {
         if( navHeight >= 520 ){
             $navBtns.css('top', navHeight + 'px');
         }
-        
+
     }
-    
-    
-    function changeWelcomeText(){
-        if ( window.innerWidth <= 480 ) {
-            var html = '<h1>Welcome to the home of</h1><h1>film composer Ian Arber</h1>';
-            $profilePic.find('#welcome-intro h1:first').html(html);
-            
-        } else if ( window.innerWidth > 480 ) {
-            $profilePic.find('#welcome-intro h1:first').html(
-                'Welcome to the home of film composer Ian Arber.'
-            )
-        }
-    }
+
+
+    // function changeWelcomeText(){
+    //     if ( window.innerWidth <= 480 ) {
+    //         var html = '<h1>Welcome to the home of</h1><h1>film composer Ian Arber</h1>';
+    //         $profilePic.find('#welcome-intro h1:first').html(html);
+    //
+    //     } else if ( window.innerWidth > 480 ) {
+    //         $profilePic.find('#welcome-intro h1:first').html(
+    //             'Welcome to the home of film composer Ian Arber.'
+    //         )
+    //     }
+    // }
 
     function calculateVideoSize(){
         var width = $profilePic.width();
         var height = $profilePic.height();
-        
+
         $profilePic.find('.video-wrapper > iframe').css({
             'width': width,
             'height': height});
     }
 
     function clearQuoteStyle(){
-        
+
         if ( window.innerWidth <= 612 && playState != 1 ) {
-            $profilePic.find('#welcome-text').fadeOut(1);          
+            $profilePic.find('#welcome-text').fadeOut(1);
         } else if ( window.innerWidth > 612  && playState != 1 ) {
             $profilePic.find('#welcome-text').fadeIn(1);
-        }   
-        
+        }
+
         if ( window.innerWidth <= 480 && playState != 1 ) {
-            $profilePic.find('#quote, #cite').fadeOut(1);          
+            $profilePic.find('#quote, #cite').fadeOut(1);
         } else if ( window.innerWidth > 480  && playState != 1 ) {
             $profilePic.find('#quote, #cite').fadeIn(1);
-        }   
-        
+        }
+
     }
-    
-    
-    
-    
-    
+
+
+
     //initally fade out all images
-    $intro.find("div[id^='img-slide-']").fadeOut(0);
+    //$intro.find("div[id^='img-slide-']").fadeOut(0);
     //fade in first slide
-    $intro.find('#img-slide-' + current).fadeIn(1000);  
-    //start slider loop
-    
-    
-    var loop = setInterval(imageSlider, 7000);
-    
-    
-    
-    
-    
+    //$intro.find('#img-slide-' + current).fadeIn(1000);
+
+
+    var loop
+    $(window).on('load', function(){
+        //fade in first slide
+        $intro.find('#img-slide-' + current).fadeIn(1000);
+
+        $('.poster-figure').find('img').fadeIn(1000);
+
+        //fade out loading spinner
+        $intro.find('#intro-spinner').fadeOut(0);
+        //start slider loop
+        loop = setInterval(imageSlider, 7000);
+    });
+
+
+
+
     //interval function
     function imageSlider(){
-        
+
         //var count = $('.img-slide > img').length;
         var relToMatch;
         var nextSlide;
@@ -157,20 +164,24 @@ function onYouTubeIframeAPIReady() {
         relToMatch = $(nextSlide).attr('id');
         //call function to set nav buttons active
         highlightNavBtns(relToMatch);
+
+        //var $heroImage = $('<img>');
+        //setHeroImage($heroImage, newHeroSrc);
+
         //increment or reset variables ready for next iteration
         (sliderNextNum >= count) ? sliderNextNum = 1: sliderNextNum++;
         (current >= count) ? current = 1: current++;
     }
-    
+
 
     $navBtnsLi.on('click', function () {
-        
+
         //cancel the interval
-        stopInterval();     
-        
+        stopInterval();
+
         //increment index value
         var index = $(this).index() + 1;
-        
+
         //only execute if current slide is different from clicked nav button
         if( current != index ){
             //remove all active classes from img elements
@@ -181,7 +192,7 @@ function onYouTubeIframeAPIReady() {
             $navBtnsLi.removeClass('active');
             $(this).addClass('active');
         }
-        
+
         //set variables based on index user clicked
         current = index;
         sliderNextNum = ++index;
@@ -192,35 +203,35 @@ function onYouTubeIframeAPIReady() {
         //restart interval
         startInterval();
     });
-    
-    
-    
-    
 
-  
+
+
+
+
+
     $profilePic.find('i').on('click', function(){
-        
+
         var $playVidBtn = $(this);
-        
+
         stopInterval();
-        
+
         $profilePic.css('background-color', 'black');
-        
+
         $playVidBtn.addClass('disable-play-icon');
-        
+
         player.playVideo();
-        
+
         setTimeout(function(){
             $playVidBtn.siblings('.video-wrapper').css('pointer-events', 'all');
             $playVidBtn.siblings('img').addClass('disable-play-icon');
-        }, 200);    
-        
+        }, 200);
+
     });
-    
+
     function onPlayerStateChange(event) {
         controlVideo(event.data);
     }
-    
+
     function controlVideo(playerStatus) {
         if (playerStatus == 0) {
             // ended
@@ -228,14 +239,14 @@ function onYouTubeIframeAPIReady() {
             startInterval();
             //$profilePic.css('background-color', 'transparent');
             $profilePic.find('#welcome-intro').fadeToggle('slow');
-                   
+
             if ( window.innerWidth > 612 ) {
                 $profilePic.find('#welcome-text').fadeToggle('slow');
             }
             if ( window.innerWidth > 480 ) {
                 $profilePic.find('#quote, #cite').fadeToggle('slow');
             }
-    
+
             $profilePic.find('.img-slide > p > a').animate({
                 'bottom': '140px'
             });
@@ -245,52 +256,52 @@ function onYouTubeIframeAPIReady() {
             stopInterval();
             //$profilePic.css('background-color', 'black');
             $profilePic.find('#welcome-intro').fadeToggle('slow');
-            
+
             if ( window.innerWidth > 612 ) {
                 $profilePic.find('#welcome-text').fadeToggle('slow');
             }
             if ( window.innerWidth > 480 ) {
                 $profilePic.find('#quote, #cite').fadeToggle('slow');
             }
-            
+
             $profilePic.find('.img-slide > p > a').animate({
                 'bottom': '20px'
             });
-            
+
         } else if (playerStatus == 2) {
             // paused
             playState = playerStatus;
             startInterval();
             //$profilePic.css('background-color', 'transparent');
             $profilePic.find('#welcome-intro').fadeToggle('slow');
-            
+
             if ( window.innerWidth > 612 ) {
                 $profilePic.find('#welcome-text').fadeToggle('slow');
             }
             if ( window.innerWidth > 480 ) {
                 $profilePic.find('#quote, #cite').fadeToggle('slow');
             }
-            
+
             $profilePic.find('.img-slide > p > a').animate({
                 'bottom': '140px'
             });
         }
     }
-    
+
     function stopInterval(){
         if( loop != undefined ){
-            clearInterval(loop);         
+            clearInterval(loop);
         }
     }
 
-    
+
     function startInterval(){
         if( loop != undefined ){
             loop = setInterval(imageSlider, 7000);
         }
     }
 
-    
+
     function highlightNavBtns(imageRel){
         $navBtnsLi.each(function(){
             if($(this).attr('rel') === imageRel){
@@ -300,8 +311,8 @@ function onYouTubeIframeAPIReady() {
             }
         });
     }
-    
-    
+
+
 //});
 
 

@@ -2,7 +2,7 @@
 	<div class="section-header">
 		<h1>Recent Credits</h1>
 	</div>
-	
+
     <div id="imdb-logo">
         <a href="http://www.imdb.com/name/nm4725072/" target="_blank">
             <img src="/assets/img/imdb.png" alt="Logo link to Ian Arber's IMDb profile"/>
@@ -12,17 +12,17 @@
 	<div class="poster-row">
 
         {% assign credits = site.categories.credits | sort: 'showreel_weight' | reverse %}
-        
+
 	    {% for p in credits %}
             {% if p.showreel_weight %}
-                
+
                 <div class="poster" >
                     <figure class="poster-figure">
                         <img src="{{ p.image_cover }}" alt="{{ p.title }} Recent Credits Poster" />
                         <!-- figcaption elements will overlay on mouseover -->
                         <figcaption class="poster-caption">
                             <div>
-                                <ul class="fa-ul"> 
+                                <ul class="fa-ul">
                                     {% if p.short_title %}
                                         <li><i class="fa-li fa fa-film"></i>{{ p.short_title }}</li>
                                         {% elsif p.title %}
@@ -48,21 +48,21 @@
                         </figcaption>
                     </figure>
                 </div>
-                
+
             {% endif %}
 	    {% endfor %}
-	
-	</div>	
-	
+
+	</div>
+
 	<div class="showreel-clear"></div>
-	
+
     <a href="/credits"><button class="main-btn-style">View More</button></a>
-	
+
 	<div class="section-header">
 		<h1>Showreel</h1>
 	</div>
 
 	<iframe class="sc-player-frame" src="https://w.soundcloud.com/player/?url=https://api.soundcloud.com/playlists/46688832&amp;amp%3bauto_play=false&amp;amp%3bhide_related=false&amp;amp%3bshow_comments=true&amp;amp%3bshow_user=true&amp;amp%3bshow_reposts=false&amp;amp%3bvisual=true&amp;visual=false&amp;auto_play=false"></iframe>
-	
-	<a href="/listen"><button class="main-btn-style">Hear More</button></a>	
+
+	<a href="/listen"><button class="main-btn-style">Hear More</button></a>
 </section>

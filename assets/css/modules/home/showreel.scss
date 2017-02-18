@@ -1,7 +1,7 @@
 .showreel-background{
 	background-color: $backgroundColor;
     height: auto;
-	margin-top: 85px;
+	margin-top: 115px;
     margin-bottom: 20px;
     .showreel-clear{
         clear: both;
@@ -30,8 +30,11 @@
 		flex: auto;
 		min-width: 200px;
 		max-width: 200px;
+		min-height: 305px;
 		margin-top: 20px;
 		margin-right: 10px;
+		border: 1px solid red;
+		background: url('/assets/img/spinner.gif') no-repeat center center;
 		&:first-child{
 			margin-left: 10px;
 		}
@@ -41,6 +44,7 @@
 		z-index: 1;
 		width: 200px;
 		transition: transform 1s;
+		display: none;
 	}
 }
 
@@ -106,7 +110,7 @@
         right: 0;
         top: 20px;
         width: 25%;
-        margin: 0 auto;      
+        margin: 0 auto;
         opacity: 0;
         cursor: none;
         pointer-events: none;

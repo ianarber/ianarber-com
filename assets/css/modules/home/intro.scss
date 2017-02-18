@@ -1,6 +1,6 @@
 .intro{
 	position: relative;
-	top: 85px;
+	top: 115px;
 	min-height: 565px;
 	background-color: #efefef;
 	border-top: 1px solid #efefef;
@@ -12,44 +12,60 @@
     }
 }
 
-.intro .social{
-	margin-top: 550px;
+#intro-brief{
+	font-size: 90%;
+	text-align: center;
+	letter-spacing: 1px;
+	margin-top: 15px;
 }
+
+#intro-spinner{
+	position: absolute;
+	top: 200px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 100px;
+}
+
+// .intro .social{
+// 	margin-top: 550px;
+// }
 
 /**futher stylings in globals.scss**/
 
-.profile-pic{	
+.profile-pic{
     width: 96%;
     min-height: 450px;
-	#welcome-intro{
-		position: absolute;
-        z-index: 2;
-		top: 35px;
-		left: 40px;
-		width: auto;
-		margin-right: 40px;
-		padding: 0 8px;
-		font-size: 230%;
-		font-weight: 600;
-		word-spacing: 1px;
-        letter-spacing: 2px;
-		text-transform: uppercase;
-        background-color: rgba(242, 242, 242, 0.6);
-        color: rgba(0, 0, 0, 0.8);
-	}
-	#welcome-text{
-		position: absolute;
-        z-index: 2;
-		margin-top: 3px;
-		margin-left: 30px;
-		font-size: 60%;
-		font-weight: 300;
-        letter-spacing: 0.5px;
-		width: 75%;
-		padding: 2px 8px;
-		background-color: rgba(242, 242, 242, 0.6);
-        color: rgba(0, 0, 0, 0.8);
-	}
+	// #welcome-intro{
+	// 	position: absolute;
+    //     z-index: 2;
+	// 	top: 35px;
+	// 	left: 40px;
+	// 	width: auto;
+	// 	margin-right: 40px;
+	// 	padding: 0 8px;
+	// 	font-size: 230%;
+	// 	font-weight: 600;
+	// 	word-spacing: 1px;
+    //     letter-spacing: 2px;
+	// 	text-transform: uppercase;
+    //     background-color: rgba(242, 242, 242, 0.6);
+    //     color: rgba(0, 0, 0, 0.8);
+	// }
+	// #welcome-text{
+	// 	position: absolute;
+    //     z-index: 2;
+	// 	margin-top: 3px;
+	// 	margin-left: 30px;
+	// 	font-size: 120%;
+	// 	font-weight: 300;
+    //     letter-spacing: 0.5px;
+	// 	width: 85%;
+	// 	padding: 2px 8px;
+	// 	background-color: rgba(242, 242, 242, 0.6);
+    //     color: rgba(0, 0, 0, 0.8);
+	// }
 	#quote{
 		position: absolute;
         z-index: 2;
@@ -62,7 +78,7 @@
         letter-spacing: 0.5px;
 		padding: 3px 8px;
 		text-align: right;
-		background-color: rgba(0, 0, 0, 0.6);
+		background-color: rgb(0, 0, 0);
         opacity: 1;
 	}
 	#cite{
@@ -76,7 +92,7 @@
         letter-spacing: 0.5px;
 		padding: 3px 8px;
 		text-align: right;
-		background-color: rgba(0, 0, 0, 0.6);
+		background-color: rgb(0, 0, 0);
 	}
 }
 
@@ -85,6 +101,7 @@
 }
 
 .img-slide{
+	display: none;
     a{
         position: absolute;
         z-index: 2;
@@ -96,8 +113,8 @@
         font-weight: 600;
         word-spacing: 1px;
         letter-spacing: 1px;
-        background-color: rgba(242, 242, 242, 0.6);
-        color: rgba(0, 0, 0, 0.8);
+        background-color: rgb(242, 242, 242);
+        color: rgb(0, 0, 0);
     }
     i{
         position: absolute;
@@ -117,7 +134,7 @@
     img{
         z-index: 1;
     }
-    
+
     .video-wrapper{
         position: absolute;
         z-index: 0;

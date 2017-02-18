@@ -1,10 +1,10 @@
 /* TODO: clean up mquery file */
 
-@media only screen and (max-width: 1232px){  
+@media only screen and (max-width: 1232px){
     #listen-gallery{
         .listen-grid-elements > li{
             width: 50%;
-        } 
+        }
     }
 }
 
@@ -14,7 +14,7 @@
 	#header{
 		height: 110px;
 	}
-	
+
 	#logo{
 		.ianarber{
 			font-size: 220%;
@@ -36,18 +36,18 @@
 			}
     	}
 	}
-	
+
 	.menu-list-1,
 	.menu-list-2{
     	margin-top: 19px;
 	}
-     
+
     .menu-list-1{
         li:not(:last-child){
             margin-right: 40px;
         }
-    }  
-	
+    }
+
 	.menu-items-1,
 	.menu-items-2{
 		font-size: 70%;
@@ -55,15 +55,15 @@
 			margin-right: 30px;
 		}
 	}
-	
+
 	.intro{
 		top: 75px;
 	}
-	
+
 	.profile-pic{
-		#welcome-intro{
-			font-size: 180%;
-		}
+		// #welcome-intro{
+		// 	font-size: 180%;
+		// }
 		#quote{
 			font-size: 75%;
 		}
@@ -71,19 +71,19 @@
 			bottom: 23px;
 			font-size: 65%;
 		}
-	}	
-    
+	}
+
     .showreel-background{
         margin-top: 75px;
     }
-    
-    
+
+
     .bio{
         #nav-scroll-btns {
             top: 680px;
         }
     }
-    
+
     .bio-profile{
         img{
             width: 120px;
@@ -92,14 +92,14 @@
             height: 120px;
         }
     }
-    
+
     #yt-showreel-wrapper{
         iframe{
             height: 470px;
         }
     }
-    
-    
+
+
 
 }
 
@@ -108,7 +108,7 @@
 	#header{
 		height: 80px;
 	}
-	
+
 	#logo{
 		.ianarber{
 			font-size: 185%;
@@ -133,18 +133,18 @@
 			}
         }
 	}
-	
+
 	.menu-list-1,
 	.menu-list-2{
     	margin-top: 5px;
 	}
-    
+
     .menu-list-1{
         li:not(:last-child){
             margin-right: 25px;
         }
-    }  
-	
+    }
+
 	.menu-items-1,
 	.menu-items-2{
 		font-size: 65%;
@@ -152,37 +152,37 @@
 			margin-right: 20px;
 		}
 	}
-	
+
 	.intro{
 		top: 45px;
 	}
-    
+
     .profile-pic{
-		#welcome-intro{
-			font-size: 165%;
-		}
+		// #welcome-intro{
+		// 	font-size: 165%;
+		// }
         img{
             left: -220px;
             width: 140%;
         }
 	}
-    
+
     .img-slide a{
         font-size: 90%;
     }
-    
+
     .showreel-background{
         margin-top: 45px;
     }
-    
+
     #submit-form{
         textarea{
             width: 270px;
         }
     }
-    
-    
-    
+
+
+
     .bio{
         height: 625px;
         .bio-pic{
@@ -192,7 +192,7 @@
             top: 580px;
         }
     }
-    
+
     .testimonials{
         width: 810px;
         .content{
@@ -206,7 +206,7 @@
     #testimonial-wrapper{
         width: 4050px;
     }
-    
+
     #yt-showreel-wrapper{
         iframe{
             height: 430px;
@@ -219,7 +219,7 @@
 	#header{
 		height: 60px;
 	}
-	
+
 	#logo{
 		.ianarber{
             top: -12px;
@@ -240,7 +240,7 @@
 				top: 4px;
 				width: 28.9%;
 			}
-    	}  
+    	}
         .composer {
             top: -7px;
         }
@@ -248,18 +248,18 @@
             top: -15px;
         }
 	}
-	
+
 	.menu-list-1,
 	.menu-list-2{
     	margin-top: -4px;
 	}
-    
+
     .menu-list-1{
         li:not(:last-child){
             margin-right: 10px;
         }
-    } 
-	
+    }
+
 	.menu-items-1,
 	.menu-items-2{
 		font-size: 65%;
@@ -268,31 +268,31 @@
 			margin-right: 15px;
 		}
 	}
-	
+
 	.intro{
 		top: 20px;
 	}
-    
+
     .img-slide{
         i{
             font-size: 400%;
         }
     }
-	
+
 	.profile-pic{
-		#welcome-intro{
-			font-size: 145%;
-		}
+		// #welcome-intro{
+		// 	font-size: 145%;
+		// }
 		#welcome-text{
 			font-size: 60%;
 			width: 80%;
 		}
 	}
-    
+
     .showreel-background{
         margin-top: 20px;
     }
-    
+
 
     #grid-gallery{
         .grid{
@@ -301,7 +301,7 @@
             }
         }
     }
-    
+
     .bio{
         height: 525px;
         .bio-pic{
@@ -311,7 +311,7 @@
             top: 480px;
         }
     }
-   
+
     #yt-showreel-wrapper{
         iframe{
             height: 390px;
@@ -335,7 +335,7 @@
             width: 290px;
         }
     }
-    
+
 }
 
 /* 481px to 760px */
@@ -343,7 +343,7 @@
     .main-nav{
 		display: none;
     }
-	
+
 	#logo{
 		width: 100%;
 	}
@@ -351,31 +351,31 @@
     #nav-toggle{
         display: block;
     }
-	
+
 	.profile-pic{
-        #welcome-intro{
-            top: 20px;
-		    left: 20px;
-		}
+        // #welcome-intro{
+        //     top: 20px;
+		//     left: 20px;
+		// }
         img{
             left: -300px;
             width: 265%;
         }
 	}
-    
+
     .img-slide a{
         font-size: 80%;
         letter-spacing: 0.5px;
     }
-	
+
     .showreel-background{
         margin-top: 20px;
     }
-    
+
     .form{
 	    height: 635px;
     }
-    
+
     #tooltip-form{
         input[type=text],
         input[type=email]{
@@ -387,49 +387,49 @@
             width: 350px;
         }
     }
-    
+
     .direct{
         margin-top: 5px;
     }
-    
+
     .form .social{
         margin-top: 15px;
     }
-    
+
     .agent{
 	    margin-top: 15px;
     }
-    
-    
+
+
     .post-container{
 	    width: 90%;
     }
-    
+
     .post-credit-audio{
-        iframe{           
+        iframe{
             padding: 0%;
             width: 90%;
         }
     }
-    
+
     .listen-grid {
         .section-header{
             display: none;
         }
     }
-    
+
     .genre-menu{
         transform: translateY(20px);
     }
-        
+
     .listen-wrapper{
         margin-top: 80px;
     }
-        
+
     #listen-gallery{
         .listen-grid-elements > li{
             width: 100%;
-        } 
+        }
     }
 
     .main-contact-form{
@@ -438,7 +438,7 @@
             margin-top: 70px;
         }
     }
-    
+
     #main-form{
         max-width: 400px;
         margin-bottom: 70px;
@@ -451,7 +451,7 @@
             padding-left: 28px;
         }
     }
-    
+
     #form-lb-name,
     #form-lb-email,
     #form-lb-msg{
@@ -460,19 +460,19 @@
             left: 28px;
         }
     }
-    
+
     .main-contact-form{
         hr{
             width: 450px;
         }
     }
-    
+
     .thank-you{
         div{
             width: 600px;
         }
     }
-    
+
     .bio{
         height: 415px;
         .bio-pic{
@@ -482,7 +482,7 @@
             top: 375px;
         }
     }
-    
+
     .bio-text{
         hr:first-of-type{
             margin-bottom: 40px;
@@ -491,13 +491,13 @@
             margin-top: 45px;
         }
     }
-    
+
     #yt-showreel-wrapper{
         iframe{
             height: 350px;
         }
     }
-    
+
     .testimonials{
         width: 600px;
         #testimonial-container{
@@ -515,19 +515,19 @@
     #testimonial-wrapper{
         width: 3000px;
     }
-    
+
     .footer{
         height: 495px;
     }
-        
+
     .foot-upper{
         top: 185px;
     }
-    
+
     .foot-lower{
         top: 205px;
     }
-    
+
     .foot-social{
         h4{
             margin-top: -5px;
@@ -540,8 +540,8 @@
     .copyright{
 	    top: 470px;
     }
-    	
-	
+
+
 }
 
 
@@ -552,19 +552,19 @@
             width: 80%;
         }
     }
-	
-	.profile-pic{
-        #welcome-intro{
-            word-spacing: normal;
-        }
-	}
-    
+
+	// .profile-pic{
+    //     #welcome-intro{
+    //         word-spacing: normal;
+    //     }
+	// }
+
     .img-slide{
         i{
             font-size: 350%;
         }
     }
-    
+
     .bio{
         height: 345px;
         .bio-pic{
@@ -574,7 +574,7 @@
             top: 305px;
         }
     }
-    
+
     .bio-text{
         .bio-profile{
             img{
@@ -594,7 +594,7 @@
             margin-top: 15px;
         }
     }
-    
+
     .testimonials{
         width: 400px;
         #testimonial-container{
@@ -612,15 +612,15 @@
     #testimonial-wrapper{
         width: 2000px;
     }
-    
+
     .footer{
         height: 555px;
     }
-        
+
     .foot-upper{
         top: 240px;
     }
-    
+
     .foot-lower{
         top: 260px;
     }
@@ -628,31 +628,31 @@
     .copyright{
 	    top: 530px;
     }
-    
-    
+
+
     #grid-gallery{
         .grid > li{
             width: 50%;
         }
     }
-    
+
     #yt-showreel-wrapper{
         iframe{
             height: 260px;
         }
     }
-    
+
 }
 
 
-@media only screen and (max-width: 618px){   
+@media only screen and (max-width: 618px){
     .thank-you{
         div{
             width: 400px;
         }
     }
 }
-@media only screen and (max-width: 612px){   
+@media only screen and (max-width: 612px){
     #tooltip-form{
         input[type=text],
         input[type=email]{
@@ -673,43 +673,43 @@
 		top: 10px;
 		right: -25px;
 	}
-	
+
 	.profile-pic{
-        #welcome-intro{
-            position: static;
-            top: 10px;
-		    left: 10px;
-            background-color: transparent;
-            h1 > h1{
-                background-color: rgba(242, 242, 242, 0.6);
-                padding: 0px 8px;
-                &:first-child{
-                    position: absolute;
-                    z-index: 2;
-                    top: 10px;
-                    width: 95%;
-                }
-                &:last-child{
-                    position: absolute;
-                    z-index: 2;
-                    bottom: 10px;
-                    width: 95%;
-                }
-            }
-        }
+        // #welcome-intro{
+        //     position: static;
+        //     top: 10px;
+		//     left: 10px;
+        //     background-color: transparent;
+        //     h1 > h1{
+        //         background-color: rgba(242, 242, 242, 0.6);
+        //         padding: 0px 8px;
+        //         &:first-child{
+        //             position: absolute;
+        //             z-index: 2;
+        //             top: 10px;
+        //             width: 95%;
+        //         }
+        //         &:last-child{
+        //             position: absolute;
+        //             z-index: 2;
+        //             bottom: 10px;
+        //             width: 95%;
+        //         }
+        //     }
+        // }
         img{
             width: 360%;
         }
 	}
-    
+
     .img-slide a{
         font-size: 75%;
     }
-    
+
     .showreel-background{
         margin-top: 20px;
     }
-    
+
 
 
     .form .social{
@@ -719,23 +719,23 @@
             }
         }
     }
-    
+
     #grid-gallery{
         .grid > li{
             width: 100%;
         }
     }
-    
+
     .post-container{
 	    width: 95%;
     }
-    
+
     .post-image{
         img{
             width: 80%;
         }
     }
-    
+
     #main-form{
         max-width: 300px;
         textarea{
@@ -747,7 +747,7 @@
             padding-left: 27px;
         }
     }
-    
+
     #form-lb-name,
     #form-lb-email,
     #form-lb-msg{
@@ -756,19 +756,19 @@
             left: 23px;
         }
     }
-    
+
     .main-contact-form{
         hr{
             width: 300px;
         }
     }
-    
+
     .thank-you{
         div{
             width: 300px;
         }
     }
-    
+
     .bio{
         height: 295px;
         .bio-pic{
@@ -778,19 +778,19 @@
             top: 255px;
         }
     }
-    
+
     #yt-showreel-wrapper{
         iframe{
             height: 180px;
         }
     }
-    
+
 }
 
 
 
 @media only screen and (max-width: 459px){
-    
+
     #tooltip-form{
         input[type=text],
         input[type=email]{
@@ -802,19 +802,19 @@
                 content: "\a";
                 white-space: pre;
             }
-            
-        }    
+
+        }
         #submit-break{
             display: block;
         }
         textarea{
             width: 200px;
         }
-        
-        
-        
+
+
+
     }
-    
+
     .testimonials{
         width: 300px;
         #testimonial-container{
@@ -831,20 +831,20 @@
 
     #testimonial-wrapper{
         width: 1500px;
-    }    
-    
+    }
+
     .footer{
         height: 610px;
     }
-        
+
     .foot-upper{
         top: 280px;
     }
-    
+
     .foot-lower{
         top: 300px;
     }
-    
+
     .foot-social{
         .social-icons{
             div:not(:last-child){
@@ -856,23 +856,23 @@
     .copyright{
 	    top: 585px;
     }
-    
-    
-    
+
+
+
 }
 
 
 
 /* --- to 400px */
 @media only screen and (max-width: 400px){
-    
+
     #genres,
     #categories{
         li{
             min-width: 110px;
         }
     }
-    
+
     .bg-iframe{
         img{
             top: 34%;
@@ -889,19 +889,19 @@
             top: 225px;
         }
     }
-    
+
     .footer{
         height: 640px;
     }
-    
+
     .foot-lower{
         top: 320px;
     }
-    
+
     .copyright{
 	    top: 615px;
     }
-    
+
     #yt-showreel-wrapper{
         iframe{
             height: 140px;
@@ -932,13 +932,13 @@
             font-size: 80%;
         }
     }
-    
+
     #submit-form{
         #message{
             display: none;
         }
     }
-    
+
     .form .social{
         .social-icons{
             font-size: 80%;
@@ -951,7 +951,7 @@
             }
         }
     }
-    
+
     .main-contact-form .social{
         .social-icons{
             font-size: 80%;
@@ -964,7 +964,7 @@
             }
         }
     }
-    
+
     .foot-social{
         .social-icons{
             font-size: 75%;
@@ -981,8 +981,8 @@
     .footer-info li{
         font-size: 90%;
     }
-    
 
-   
-    
+
+
+
 }

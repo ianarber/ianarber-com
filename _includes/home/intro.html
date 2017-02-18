@@ -1,19 +1,25 @@
 <section class="section intro">
+
+	<h2 id="intro-brief">Fresh from his work on "Mission: Impossible - Rogue Nation",
+		Ian Arber is an emerging talent in the film music world...</h2>
+
 	<div class="profile-pic">
-	
+
 	    <div id="slider-container">
-            
+
+			<img id="intro-spinner" src="/assets/img/spinner.gif" alt="loading spinner" />
+
             {% assign slideId = 1 %}
             {% assign intro = site.categories.news | sort: 'intro_weight' | reverse %}
-            
+
             {% for p in intro %}
-           
+
                 {% if slideId > 5 %}
                     {% break %}
                 {% endif %}
-            
+
                 <div class="img-slide" id="img-slide-{{slideId}}">
-                    <img src="{{ p.image_header }}" alt="{{ p.title }} Intro Slider Poster"/>
+                    <img class="intro-header-image" src="{{ p.image_header }}" alt="{{ p.title }} Intro Slider Poster"/>
 
                     {% if p.video_link %}
                         <i class="fa fa-play-circle-o"></i>
@@ -26,38 +32,38 @@
                 </div>
 
                 {% assign slideId = slideId | plus: 1 %}
-            
+
             {% endfor %}
-            
+
         </div>
-	
-		<div id="welcome-intro">
-            <h1>Welcome to the home of film composer Ian Arber.</h1>
-			<div id="welcome-text">
+
+		<!-- <div id="welcome-intro">
+            <h1>Welcome to the home of film composer Ian Arber.</h1> -->
+			<!-- <div id="welcome-text">
 				<h2>Fresh from his work on "Mission: Impossible - Rogue Nation",
                     Ian Arber is an emerging talent in the film music world...</h2>
-			</div>
-		</div>
+			</div> -->
+		<!-- </div> -->
 		<div id="quote">
-			<q>...It was my pleasure, and an honor, to have him on the team for Mission: Impossible - Rogue Nation.</q>	
+			<q>...It was my pleasure, and an honor, to have him on the team for Mission: Impossible - Rogue Nation.</q>
 		</div>
 		<div id="cite">
             Joe Kraemer, Composer - <cite>Mission: Impossible - Rogue Nation</cite>
 		</div>
 	</div>
-	
+
 	<div id="nav-scroll-btns">
         <ul>
             <li class="active" rel="img-slide-1"></li>
-            
+
             {% assign navId = 2 %}
             {% for post in site.categories.news limit:4 %}
-            
+
                 <li rel="img-slide-{{navId}}"></li>
-                       
+
             {% assign navId = navId | plus: 1 %}
             {% endfor %}
-            
+
         </ul>
     </div>
 </section>
