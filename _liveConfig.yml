@@ -1,0 +1,28 @@
+name: Ian Arber - Composer
+author: Ian Arber
+cssToImport: main.css
+myurl: https://www.ianarber.com
+permalink: /:categories/:month/:year/:title/
+future: true
+
+exclude:
+  - node_modules
+  - gulpfile.js
+  - package.json
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - Rakefile
+  - dataToPosts.rb
+  - assets/css/modules
+  - assets/css/main.scss
+
+collections:
+    quotes:
+        output: true
+
+contentful:
+  spaces:
+    - posts:
+        space: fshuoq9yrvsn
+        access_token: a51ccfe481868b12a650d2b87357c59db8720a39aad5a73e86d3a1f52db46391

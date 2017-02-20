@@ -84,8 +84,8 @@ gulp.task('contentful', function(done){
 /**
  * Process Contentful YAML data into markdown files in the _projects folder
  */
-gulp.task('projects', ['contentful'], function(done){
-    return cp.spawn('ruby' , ['./createProjects.rb'], {stdio: 'inherit'})
+gulp.task('create-posts', ['contentful'], function(done){
+    return cp.spawn('ruby' , ['./dataToPosts.rb'], {stdio: 'inherit'})
         .on('close', done);
 });
 
@@ -95,10 +95,10 @@ gulp.task('projects', ['contentful'], function(done){
  * download to finish
  */
 
-gulp.task('download-images', ['projects'], function(done){
-    return cp.spawn('node' , ['./fetchContentfulImgs.js'], {stdio: 'inherit'})
-        .on('close', done);
-});
+// gulp.task('download-images', ['projects'], function(done){
+//     return cp.spawn('node' , ['./fetchContentfulImgs.js'], {stdio: 'inherit'})
+//         .on('close', done);
+// });
 
 /*
  * Resize and minify downbloaded images for web. Needs download-images task to fully complete
@@ -111,20 +111,20 @@ gulp.task('download-images', ['projects'], function(done){
            - Resized images are all valid image files
            - Gulp task needs to fail of one of the above did not pass
  */
-gulp.task('resize-images', ['download-images'], function(done){
-    return gulp.src('./assets/images/home/download/*.jpg')
-        .pipe(imageResize({
-            width: 470,
-            height: 470,
-            crop: true,
-            upscale: false
-        }))
-        .pipe(imageMin({
-            progressive: true,
-            use: [jpegTran()]
-        }))
-        .pipe(gulp.dest('./assets/images/home'));
-});
+// gulp.task('resize-images', ['download-images'], function(done){
+//     return gulp.src('./assets/images/home/download/*.jpg')
+//         .pipe(imageResize({
+//             width: 470,
+//             height: 470,
+//             crop: true,
+//             upscale: false
+//         }))
+//         .pipe(imageMin({
+//             progressive: true,
+//             use: [jpegTran()]
+//         }))
+//         .pipe(gulp.dest('./assets/images/home'));
+// });
 
 
 
@@ -138,7 +138,7 @@ gulp.task('default', ['browser-sync', 'watch']);
  * task to run when building on Netlify (runs all tasks
  * appart from browser-sync)
  */
-gulp.task('netlify-deploy', ['clean-site', 'sass', 'resize-images'], function(done){
+gulp.task('netlify-deploy', ['clean-site', 'sass', 'create-posts'], function(done){
     return cp.spawn(jekyll , ['build', '--config', '_liveConfig.yml'], {stdio: 'inherit'})
         .on('close', done);
 });
