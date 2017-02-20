@@ -57,13 +57,10 @@
 	}
 
 	.intro{
-		top: 75px;
+		top: 105px;
 	}
 
 	.profile-pic{
-		// #welcome-intro{
-		// 	font-size: 180%;
-		// }
 		#quote{
 			font-size: 75%;
 		}
@@ -74,7 +71,7 @@
 	}
 
     .showreel-background{
-        margin-top: 75px;
+        margin-top: 105px;
     }
 
 
@@ -154,13 +151,10 @@
 	}
 
 	.intro{
-		top: 45px;
+		top: 75px;
 	}
 
     .profile-pic{
-		// #welcome-intro{
-		// 	font-size: 165%;
-		// }
         img{
             left: -220px;
             width: 140%;
@@ -172,7 +166,7 @@
     }
 
     .showreel-background{
-        margin-top: 45px;
+        margin-top: 75px;
     }
 
     #submit-form{
@@ -270,8 +264,13 @@
 	}
 
 	.intro{
-		top: 20px;
+		top: 50px;
 	}
+
+    #intro-brief{
+    	font-size: 80%;
+    	margin-top: 17px;
+    }
 
     .img-slide{
         i{
@@ -280,9 +279,6 @@
     }
 
 	.profile-pic{
-		// #welcome-intro{
-		// 	font-size: 145%;
-		// }
 		#welcome-text{
 			font-size: 60%;
 			width: 80%;
@@ -290,7 +286,7 @@
 	}
 
     .showreel-background{
-        margin-top: 20px;
+        margin-top: 50px;
     }
 
 
@@ -353,10 +349,6 @@
     }
 
 	.profile-pic{
-        // #welcome-intro{
-        //     top: 20px;
-		//     left: 20px;
-		// }
         img{
             left: -300px;
             width: 265%;
@@ -369,7 +361,7 @@
     }
 
     .showreel-background{
-        margin-top: 20px;
+        margin-top: 50px;
     }
 
     .form{
@@ -500,15 +492,13 @@
 
     .testimonials{
         width: 600px;
-        #testimonial-container{
-            height: 108px;
-        }
         .content{
             width: 600px;
             height: 108px;
         }
         #navLinks {
             width: 600px;
+            margin-top: -20px;
         }
     }
 
@@ -517,15 +507,15 @@
     }
 
     .footer{
-        height: 495px;
+        height: 505px;
     }
 
     .foot-upper{
-        top: 185px;
+        top: 205px;
     }
 
     .foot-lower{
-        top: 205px;
+        top: 225px;
     }
 
     .foot-social{
@@ -538,13 +528,21 @@
     }
 
     .copyright{
-	    top: 470px;
+	    top: 480px;
     }
 
 
 }
 
-
+@media only screen and (max-width: 780px){
+    #intro-brief{
+    	font-size: 85%;
+    	margin-top: 15px;
+    }
+    .profile-pic{
+    	margin-top: 20px;
+    }
+}
 
 @media only screen and (max-width: 680px){
     .showreel-background{
@@ -552,12 +550,6 @@
             width: 80%;
         }
     }
-
-	// .profile-pic{
-    //     #welcome-intro{
-    //         word-spacing: normal;
-    //     }
-	// }
 
     .img-slide{
         i{
@@ -597,9 +589,6 @@
 
     .testimonials{
         width: 400px;
-        #testimonial-container{
-            height: 150px;
-        }
         .content{
             width: 400px;
             height: 150px;
@@ -618,11 +607,11 @@
     }
 
     .foot-upper{
-        top: 240px;
+        top: 250px;
     }
 
     .foot-lower{
-        top: 260px;
+        top: 270px;
     }
 
     .copyright{
@@ -675,28 +664,6 @@
 	}
 
 	.profile-pic{
-        // #welcome-intro{
-        //     position: static;
-        //     top: 10px;
-		//     left: 10px;
-        //     background-color: transparent;
-        //     h1 > h1{
-        //         background-color: rgba(242, 242, 242, 0.6);
-        //         padding: 0px 8px;
-        //         &:first-child{
-        //             position: absolute;
-        //             z-index: 2;
-        //             top: 10px;
-        //             width: 95%;
-        //         }
-        //         &:last-child{
-        //             position: absolute;
-        //             z-index: 2;
-        //             bottom: 10px;
-        //             width: 95%;
-        //         }
-        //     }
-        // }
         img{
             width: 360%;
         }
@@ -707,10 +674,8 @@
     }
 
     .showreel-background{
-        margin-top: 20px;
+        margin-top: 50px;
     }
-
-
 
     .form .social{
         .social-icons{
@@ -790,6 +755,11 @@
 
 
 @media only screen and (max-width: 459px){
+    #intro-brief{
+        font-size: 75%;
+        margin-top: 15px;
+        letter-spacing: 0px;
+    }
 
     #tooltip-form{
         input[type=text],
@@ -810,16 +780,10 @@
         textarea{
             width: 200px;
         }
-
-
-
     }
 
     .testimonials{
         width: 300px;
-        #testimonial-container{
-            height: 190px;
-        }
         .content{
             width: 300px;
             height: 190px;
@@ -838,11 +802,11 @@
     }
 
     .foot-upper{
-        top: 280px;
+        top: 300px;
     }
 
     .foot-lower{
-        top: 300px;
+        top: 320px;
     }
 
     .foot-social{
@@ -891,15 +855,15 @@
     }
 
     .footer{
-        height: 640px;
+        height: 655px;
     }
 
     .foot-lower{
-        top: 320px;
+        top: 340px;
     }
 
     .copyright{
-	    top: 615px;
+	    top: 630px;
     }
 
     #yt-showreel-wrapper{
@@ -981,8 +945,4 @@
     .footer-info li{
         font-size: 90%;
     }
-
-
-
-
 }

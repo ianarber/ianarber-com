@@ -20,7 +20,8 @@ width decreases */
 	margin: 0 auto;
 	#testimonial-container{
 		width: 100%;
-		height: 88px;
+		//height: 88px;
+		height: auto;
 		overflow: hidden;
 	}
 	i{
@@ -68,7 +69,7 @@ width decreases */
 }
 
 #navLinks {
-	margin-top: -20px;
+	margin-top: -10px;
 }
 
 .footer-info,

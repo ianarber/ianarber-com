@@ -53,6 +53,18 @@ hr{
 	max-width: 1140px;
 }
 
+/****************HOME PAGE LOADING SPINNER*******************/
+
+#intro-spinner{
+	position: absolute;
+    display: none;
+	top: 350px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 60px;
+}
+
 /**********************SOCIAL ICONS*********************/
 
 .social-icons{

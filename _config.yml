@@ -17,6 +17,10 @@ exclude:
   - assets/css/modules
   - assets/css/main.scss
 
+collections:
+    quotes:
+        output: true
+
 contentful:
   spaces:
     - posts:

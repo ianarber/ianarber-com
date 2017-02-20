@@ -7,8 +7,6 @@
 
 	    <div id="slider-container">
 
-			<img id="intro-spinner" src="/assets/img/spinner.gif" alt="loading spinner" />
-
             {% assign slideId = 1 %}
             {% assign intro = site.categories.news | sort: 'intro_weight' | reverse %}
 
@@ -37,19 +35,19 @@
 
         </div>
 
-		<!-- <div id="welcome-intro">
-            <h1>Welcome to the home of film composer Ian Arber.</h1> -->
-			<!-- <div id="welcome-text">
-				<h2>Fresh from his work on "Mission: Impossible - Rogue Nation",
-                    Ian Arber is an emerging talent in the film music world...</h2>
-			</div> -->
-		<!-- </div> -->
-		<div id="quote">
-			<q>...It was my pleasure, and an honor, to have him on the team for Mission: Impossible - Rogue Nation.</q>
-		</div>
-		<div id="cite">
-            Joe Kraemer, Composer - <cite>Mission: Impossible - Rogue Nation</cite>
-		</div>
+		{% for quote in site.quotes %}
+
+			{% if quote.intro_quote %}
+				<div id="quote">
+					<q>{{ quote.intro_quote }}</q>
+				</div>
+				<div id="cite">
+		            {{ quote.author }}, {{ quote.role }} - <cite>{{ quote.film }}</cite>
+				</div>
+			{% endif %}
+
+		{% endfor %}
+
 	</div>
 
 	<div id="nav-scroll-btns">

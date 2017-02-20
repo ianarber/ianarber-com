@@ -11,9 +11,11 @@ end
 #get number of newsArticle and creditPost elements
 num_of_credits = "#{postData['creditPost'].length}"
 num_of_articles = "#{postData['newsArticle'].length}"
+num_of_quotes = "#{postData['quote'].length}"
 
 credits_counter = 0
 articles_counter = 0
+quotes_counter = 0
 
 #create credit posts in _posts/credits
 begin
@@ -35,8 +37,8 @@ begin
 		f.puts "headerstatus: shrunk-header"
 		f.puts "title: #{postData['creditPost'][credits_counter]['title']}"
 		f.puts "identity: #{postData['creditPost'][credits_counter]['identity']}"
-		f.puts "image_cover: #{postData['creditPost'][credits_counter]['image_cover']['url']}"
-		f.puts "image_social: #{postData['creditPost'][credits_counter]['image_social']['url']}"
+		f.puts "image_cover: #{postData['creditPost'][credits_counter]['image_cover']['url']}" + "?w=200&q=80"
+		f.puts "image_social: #{postData['creditPost'][credits_counter]['image_cover']['url']}" + "?fit=thumb&w=300&h=300&q=80"
 		f.puts "role: #{postData['creditPost'][credits_counter]['role']}"
 		f.puts "credit_type: #{postData['creditPost'][credits_counter]['credit_type']}"
 		f.puts "imdb: #{postData['creditPost'][credits_counter]['imdb']}"
@@ -116,8 +118,8 @@ begin
 		f.puts "headerstatus: shrunk-header"
 		f.puts "title: #{postData['newsArticle'][articles_counter]['title']}"
 		f.puts "film_show: #{postData['newsArticle'][articles_counter]['film_show']}"
-		f.puts "image_header: #{postData['newsArticle'][articles_counter]['image_header']['url']}"
-		f.puts "image_social: #{postData['newsArticle'][articles_counter]['image_social']['url']}"
+		f.puts "image_header: #{postData['newsArticle'][articles_counter]['image_header']['url']}" + "?fit=thumb&w=1920&h=1080&q=80"
+		f.puts "image_social: #{postData['newsArticle'][articles_counter]['image_header']['url']}" + "?fit=thumb&w=1200&h=630&q=80"
 		f.puts "heading: #{postData['newsArticle'][articles_counter]['heading']}"
 		f.puts "post_excerpt: #{postData['newsArticle'][articles_counter]['post_excerpt']}"
 
@@ -125,17 +127,24 @@ begin
 		if intro_weight != ''
 			f.puts "intro_weight: #{intro_weight}"
 		end
+
 		video_link = "#{postData['newsArticle'][articles_counter]['video_link']}"
 		if video_link != ''
-			f.puts "video_link: #{video_link}"
+			f.puts "video_link: #{video_link}" + "?enablejsapi=1&amp;rel=0&amp;showinfo=0&amp;autohide=1&amp;modestbranding=1"
 		end
+
 		video_width = "#{postData['newsArticle'][articles_counter]['video_width']}"
 		if video_width != ''
 			f.puts "video_width: #{video_width}"
+        else
+            f.puts "video_width: 1280"
 		end
+
 		video_height = "#{postData['newsArticle'][articles_counter]['video_height']}"
 		if video_height != ''
 			f.puts "video_height: #{video_height}"
+        else
+            f.puts "video_height: 720"
 		end
 
 		f.puts "---"
@@ -152,3 +161,28 @@ begin
 
 	articles_counter+=1
 end while articles_counter < num_of_articles.to_i
+
+#create quote collection in _quote/
+begin
+	title_slug = "#{postData['quote'][quotes_counter]['quoteAuthor']}".downcase.gsub(" ", "-")
+	filename = title_slug + ".md"
+
+	File.open("_quotes/#{filename}", "w") do |f|
+		f.puts "---"
+		f.puts "author: #{postData['quote'][quotes_counter]['quoteAuthor']}"
+        f.puts "role: #{postData['quote'][quotes_counter]['quoteRole']}"
+        f.puts "film: \"#{postData['quote'][quotes_counter]['quoteFilm']}\""
+        f.puts "url: #{postData['quote'][quotes_counter]['quoteUrl']}"
+
+        intro = "#{postData['quote'][quotes_counter]['introQuote']}"
+        f.puts "intro: #{intro}"
+        if intro == 'true'
+            f.puts "intro_quote: \"#{postData['quote'][quotes_counter]['quoteIntroText']}\""
+        end
+
+        f.puts "---"
+        f.puts "#{postData['quote'][quotes_counter]['quoteText']}"
+	end
+
+	quotes_counter+=1
+end while quotes_counter < num_of_quotes.to_i

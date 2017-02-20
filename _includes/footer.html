@@ -3,61 +3,27 @@
 		<div id="left-quote"><i class="fa fa-quote-left"></i></div>
 		<div id="testimonial-container">
 			<div id="testimonial-wrapper">
+
+				{% for quote in site.quotes %}
+
 				<div class="content">
 					<blockquote>
 						<p>
-							Ian Arber is an excellent composer, a thoroughly professional musician who keeps things organized and lighthearted, even in the most tense of situations.  It was my pleasure, and an honor, to have him on the team for Mission: Impossible - Rogue Nation
+							{{ quote.content }}
 						</p>
 						<footer>
-							<a href="http://www.imdb.com/name/nm0469145" target="_blank">Joe Kraemer // Composer // "Mission: Impossible - Rogue Nation"</a>
+							<a href="{{ quote.url }}" target="_blank">{{ quote.author }} // {{ quote.role }} // {{ quote.film }}</a>
 						</footer>
 					</blockquote>
 				</div>
-				<div class="content">
-					<blockquote>
-						<p>
-							Ian's dedication to his craft is both impressive and inspirational. His knowledge base has been integral to the sound design on some of our recent works and I look forward to working with him closely over the coming years. Highly recommended to all
-						</p>
-						<footer>
-							<a href="https://twitter.com/ryancrashburn?lang=en-gb" target="_blank">Ryan Mackfall // Owner // Crashburn Media</a>
-						</footer>
-					</blockquote>
-				</div>
-				<div class="content">
-					<blockquote>
-						<p>
-							Ian Arber is a truly ambitious composer who has distinguished talent for creating a wondrous score. A movie without a good score is like an airplane with no wings. Ian Arber’s astonishing talent will raise a movie off the ground and give your vision a life of its own
-						</p>
-						<footer>
-							<a href="http://www.imdb.com/name/nm4719243" target="_blank">Arya Moghaddam // Director // "Kia" &amp; "Ambulance"</a>
-						</footer>
-					</blockquote>
-				</div>
-				<div class="content">
-					<blockquote>
-						<p>
-							Working with Ian was a true joy and privilege. His imagination is only revaled by his brilliance and work ethic. Ian takes direction amazingly well, and delivers more than you could ever expect. He brings the joy back into the project, and delivers Hollywood magic
-						</p>
-						<footer>
-							<a href="http://www.imdb.com/name/nm4091628" target="_blank">Jonathan Moch // Director // "The Burden"</a>
-						</footer>
-					</blockquote>
-				</div>
-				<div class="content">
-					<blockquote>
-						<p>
-							The premiere went very well indeed.  No small thanks to the excellent score. Ian’s score was, shall I say, “instrumental” in making it a success! The dramatic changes in the music helped emphasize the flow of the story and bind together the different segments
-						</p>
-						<footer>
-							<a href="http://www.imdb.com/name/nm2648967" target="_blank">Ron Milestone // Editor // "Changing Hands"</a>
-						</footer>
-					</blockquote>
-				</div>
+
+				{% endfor %}
+
 			</div>
 		</div>
-		
-		<div id="right-quote"><i class="fa fa-quote-right"></i></div>	
-		
+
+		<div id="right-quote"><i class="fa fa-quote-right"></i></div>
+
 		<div id="navLinks">
 			<ul>
 				<li class="itemLinks" data-pos="0"></li>
@@ -68,7 +34,7 @@
 			</ul>
 		</div>
 	</div>
-	
+
 	<div class="row footer-info foot-upper">
         <ul>
             <!--TODO: check links work -->
@@ -78,9 +44,9 @@
             <li><a href="/credits">Credits</a></li>&middot;
             <li><a href="/contact">Contact</a></li>&middot;
             <li><a href="/clientarea">Client Area</a></li>
-        </ul>	
+        </ul>
 	</div>
-	
+
 	<div class="row footer-info foot-lower">
 	    <div class="col span-1-of-2 foot-about">
 			<h4><a href="/about">About</a></h4>
@@ -100,9 +66,9 @@
                 <div><a target="_blank" href="http://www.imdb.com/name/nm4725072/"><i>IMDb</i></a></div>
 <!--                <div><a href="skype:ian_arber?call"><i class="fa fa-skype"></i></a></div>-->
             </div>
-		</div>	    
+		</div>
 	</div>
-	
+
 	<div class="row copyright">
         <p>&copy; 2016 Ian Arber &middot; Website design by <a href="http://adesmier.com" target="_blank">Anthony Desmier</a></p>
 	</div>

@@ -42,74 +42,74 @@ $(function(){
         var positionMultiplier = 255;
 
         if ( window.innerWidth > 1120 ){
-            
-            createTranslateCss(position); 
-            
+
+            createTranslateCss(position);
+
             link.classList.add("active");
-            
+
         } else if ( window.innerWidth <= 1120 && window.innerWidth > 895) {
-            
-            quoteId = parseInt(link.itemID);        
-            position = alterPosition(position, quoteId, (positionMultiplier - 10));  
-            
+
+            quoteId = parseInt(link.itemID);
+            position = alterPosition(position, quoteId, (positionMultiplier - 10));
+
             createTranslateCss(position);
-            
-            link.classList.add("active");    
-            
+
+            link.classList.add("active");
+
         } else if ( $(window).width() <= 895 && $(window).width() > 680) {
-            
-            quoteId = parseInt(link.itemID);        
-            position = alterPosition(position, quoteId, (positionMultiplier + 200));  
-            
+
+            quoteId = parseInt(link.itemID);
+            position = alterPosition(position, quoteId, (positionMultiplier + 200));
+
             createTranslateCss(position);
-            
-            link.classList.add("active");    
-            
+
+            link.classList.add("active");
+
         } else if ( $(window).width() <= 680 && $(window).width() > 459) {
-            
-            quoteId = parseInt(link.itemID);        
-            position = alterPosition(position, quoteId, (positionMultiplier + 400));  
-            
+
+            quoteId = parseInt(link.itemID);
+            position = alterPosition(position, quoteId, (positionMultiplier + 400));
+
             createTranslateCss(position);
-            
-            link.classList.add("active");    
-            
+
+            link.classList.add("active");
+
         } else if ( $(window).width() <= 459 ) {
-            
-            quoteId = parseInt(link.itemID);        
-            position = alterPosition(position, quoteId, (positionMultiplier + 500));  
-            
+
+            quoteId = parseInt(link.itemID);
+            position = alterPosition(position, quoteId, (positionMultiplier + 500));
+
             createTranslateCss(position);
-            
-            link.classList.add("active");    
-            
+
+            link.classList.add("active");
+
         }
-        
-        
+
+
     }
-    
-    
-    
+
+
+
     function createTranslateCss(positionValue){
-        
+
         positionValue = positionValue + 'px';
-        
+
         var translateValue = "translate3d(" + positionValue + ", 0px, 0)";
-        wrapper.style[transformProperty] = translateValue;       
+        wrapper.style[transformProperty] = translateValue;
     }
-    
-    
+
+
     function alterPosition(positionValue, positionId, multiplier){
-        
-        positionValue = parseInt(positionValue);  
+
+        positionValue = parseInt(positionValue);
         var newPosition = (positionValue + (multiplier * positionId));
 
-        newPosition = newPosition.toString();       
+        newPosition = newPosition.toString();
         return newPosition;
     }
-    
-    
-    
+
+
+
 
     //
     // Dealing with Transforms
@@ -131,11 +131,11 @@ $(function(){
         }
         return null;
     }
-    
-    
-    
+
+
+
     var timeoutID;
- 
+
     function startTimer() {
         // wait 2 seconds before calling goInactive
         timeoutID = window.setInterval(goToNextItem, 8000);
@@ -161,23 +161,4 @@ $(function(){
     }
 
 });
-
-
-
-
-
-
-//The code for sliding the content automatically
-
-
-
-
-
-
-
-
-
-
-
-
 
