@@ -166,9 +166,10 @@ hr{
 #nav-scroll-btns ul li{
     float: left;
     text-align: center;
-    margin: 10px;
+    //margin: 10px;
+    margin: 0 10px 10px 10px;
     &:not(:last-of-type){
-        margin-right: 25px;
+        margin-right: 30px;
     }
     list-style: none;
     cursor: pointer;

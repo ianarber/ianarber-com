@@ -542,6 +542,10 @@
     .profile-pic{
     	margin-top: 20px;
     }
+    #navLinks ul li,
+    #nav-scroll-btns ul li{
+        margin: 0 10px 0px 10px;
+    }
 }
 
 @media only screen and (max-width: 680px){
@@ -887,7 +891,7 @@
 
     .profile-pic{
         img{
-            width: 430%;
+            width: 530%;
         }
 	}
 

@@ -67,18 +67,18 @@ function recalculateHeight(){
     windowHeight = $(window.top).height() - offset;
     finalHeight = windowHeight - topHeight;
     navHeight = finalHeight + 70;
-    $profilePic.css('height', finalHeight + 'px');
+    $profilePic.css('height', (finalHeight - 5) + 'px');
     $intro.css('height', (finalHeight + 115) + 'px');
 
     if( navHeight >= 520 ){
-        if ( window.innerWidth <= 780 ) {
-            var newNavHeight = navHeight + 10;
-            $navBtns.css('top', newNavHeight + 'px');
-        } else {
+        //if ( window.innerWidth <= 780 ) {
+        //    var newNavHeight = navHeight + 10;
+        //    $navBtns.css('top', newNavHeight + 'px');
+        //} else {
             $navBtns.css('top', navHeight + 'px');
-        }
+        //}
     }
-    
+
 }
 
 function calculateVideoSize(){
@@ -92,16 +92,22 @@ function calculateVideoSize(){
 
 function clearQuoteStyle(){
 
-    if ( window.innerWidth <= 612 && playState != 1 ) {
-        $profilePic.find('#welcome-text').fadeOut(1);
-    } else if ( window.innerWidth > 612  && playState != 1 ) {
-        $profilePic.find('#welcome-text').fadeIn(1);
-    }
+    //if ( window.innerWidth <= 612 && playState != 1 ) {
+    //    $profilePic.find('#welcome-text').fadeOut(1);
+    //} else if ( window.innerWidth > 612  && playState != 1 ) {
+    //    $profilePic.find('#welcome-text').fadeIn(1);
+    //}
 
     if ( window.innerWidth <= 480 && playState != 1 ) {
         $profilePic.find('#quote, #cite').fadeOut(1);
+        $profilePic.find('.img-slide > p > a').animate({
+            'bottom': '20px'
+        });
     } else if ( window.innerWidth > 480  && playState != 1 ) {
         $profilePic.find('#quote, #cite').fadeIn(1);
+        $profilePic.find('.img-slide > p > a').animate({
+            'bottom': '140px'
+        });
     }
 
 }
@@ -195,11 +201,11 @@ function controlVideo(playerStatus) {
         //}
         if ( window.innerWidth > 480 ) {
             $profilePic.find('#quote, #cite').fadeToggle('slow');
+            $profilePic.find('.img-slide > p > a').animate({
+                'bottom': '140px'
+            });
         }
 
-        $profilePic.find('.img-slide > p > a').animate({
-            'bottom': '140px'
-        });
     } else if (playerStatus == 1) {
         // playing
         playState = playerStatus;
@@ -212,11 +218,12 @@ function controlVideo(playerStatus) {
         //}
         if ( window.innerWidth > 480 ) {
             $profilePic.find('#quote, #cite').fadeToggle('slow');
+            $profilePic.find('.img-slide > p > a').animate({
+                'bottom': '20px'
+            });
         }
 
-        $profilePic.find('.img-slide > p > a').animate({
-            'bottom': '20px'
-        });
+
 
     } else if (playerStatus == 2) {
         // paused
@@ -230,11 +237,12 @@ function controlVideo(playerStatus) {
         //}
         if ( window.innerWidth > 480 ) {
             $profilePic.find('#quote, #cite').fadeToggle('slow');
+            $profilePic.find('.img-slide > p > a').animate({
+                'bottom': '140px'
+            });
         }
 
-        $profilePic.find('.img-slide > p > a').animate({
-            'bottom': '140px'
-        });
+
     }
 }
 
@@ -301,5 +309,3 @@ $(window).on('load', function(){
     //start slider loop
     loop = setInterval(imageSlider, 7000);
 });
-
-
