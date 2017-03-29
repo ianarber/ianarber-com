@@ -88,7 +88,7 @@ begin
 		if body != ''
             body.each_line do |line|
                 f.puts line
-                #f.puts "<br />"
+                f.puts "<br />"
             end
             f.puts "<br />"
 		end
@@ -153,7 +153,7 @@ begin
 		if body != ''
             body.each_line do |line|
                 f.puts line
-                #f.puts "<br />"
+                f.puts "<br />"
             end
             f.puts "<br />"
 		end
