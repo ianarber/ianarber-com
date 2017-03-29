@@ -20,9 +20,3 @@ exclude:
 collections:
     quotes:
         output: true
-
-contentful:
-  spaces:
-    - posts:
-        space: cn9cpn7kv7gw
-        access_token: ada57850dcef0806293627506e55f63d9ba2cb00aa7e9b83aed85d06b70b97ad
