@@ -6,6 +6,7 @@ permalink: /:categories/:month/:year/:title/
 future: true
 
 exclude:
+  - clientarea.html
   - node_modules
   - gulpfile.js
   - package.json
