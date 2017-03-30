@@ -94,8 +94,11 @@
     bottom: 20px;
 }
 
-.img-slide{
+.profile-pic .img-slide{
 	display: none;
+}
+
+.img-slide{
     a{
         position: absolute;
         z-index: 2;
