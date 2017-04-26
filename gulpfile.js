@@ -14,7 +14,8 @@ var imageResize = require('gulp-image-resize');
 
 /*********************************************************************************/
 
-var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
+var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'bundle exec jekyll';
+
 var messages = {
     jekyllBuild: 'DEV MODE: Building Jekyll Site\n<span style="color: grey">Running:</span> $ bundle exec jekyll build'
 };
@@ -24,7 +25,8 @@ var messages = {
  */
 gulp.task('jekyll-build', function (done) {
     browserSync.notify(messages.jekyllBuild);
-    return cp.spawn( jekyll , ['build'], {stdio: 'inherit'})
+    //return cp.spawn( jekyll , ['build'], {stdio: 'inherit'})
+	return cp.spawn('bundle', ['exec', 'jekyll', 'build'], {stdio: 'inherit'})
         .on('close', done);
 });
 
@@ -77,7 +79,7 @@ gulp.task('watch', function () {
  * Grab data from Contentful in YAML format and place in _data folder
  */
 gulp.task('contentful', function(done){
-    return cp.spawn(jekyll , ['contentful'], {stdio: 'inherit'})
+    return cp.spawn('bundle', ['exec', 'jekyll', 'contentful'], {stdio: 'inherit'})
         .on('close', done);
 });
 
@@ -139,7 +141,7 @@ gulp.task('default', ['browser-sync', 'watch']);
  * appart from browser-sync)
  */
 gulp.task('netlify-deploy', ['clean-site', 'sass', 'create-posts'], function(done){
-    return cp.spawn(jekyll , ['build', '--config', '_liveConfig.yml'], {stdio: 'inherit'})
+    return cp.spawn('bundle' , ['exec', 'jekyll', 'build', '--config', '_liveConfig.yml'], {stdio: 'inherit'})
         .on('close', done);
 });
 /**

@@ -36,7 +36,7 @@ begin
 		f.puts "category: credits"
 		f.puts "headerstatus: shrunk-header"
 		f.puts "title: #{postData['creditPost'][credits_counter]['title']}"
-		f.puts "identity: #{postData['creditPost'][credits_counter]['identity']}"
+		f.puts "identity: #{title_slug}"
 		f.puts "image_cover: #{postData['creditPost'][credits_counter]['image_cover']['url']}" + "?w=200&q=80"
 		f.puts "image_social: #{postData['creditPost'][credits_counter]['image_cover']['url']}" + "?fit=thumb&w=300&h=300&q=80"
 		f.puts "role: #{postData['creditPost'][credits_counter]['role']}"
@@ -164,24 +164,24 @@ end while articles_counter < num_of_articles.to_i
 
 #create quote collection in _quote/
 begin
-	title_slug = "#{postData['quote'][quotes_counter]['quoteAuthor']}".downcase.gsub(" ", "-")
+	title_slug = "#{postData['quote'][quotes_counter]['quote_author']}".downcase.gsub(" ", "-")
 	filename = title_slug + ".md"
 
 	File.open("_quotes/#{filename}", "w") do |f|
 		f.puts "---"
-		f.puts "author: #{postData['quote'][quotes_counter]['quoteAuthor']}"
-        f.puts "role: #{postData['quote'][quotes_counter]['quoteRole']}"
-        f.puts "film: \"#{postData['quote'][quotes_counter]['quoteFilm']}\""
-        f.puts "url: #{postData['quote'][quotes_counter]['quoteUrl']}"
+		f.puts "author: #{postData['quote'][quotes_counter]['quote_author']}"
+        f.puts "role: #{postData['quote'][quotes_counter]['quote_role']}"
+        f.puts "film: \"#{postData['quote'][quotes_counter]['quote_film']}\""
+        f.puts "url: #{postData['quote'][quotes_counter]['quote_url']}"
 
-        intro = "#{postData['quote'][quotes_counter]['introQuote']}"
+        intro = "#{postData['quote'][quotes_counter]['intro_quote']}"
         f.puts "intro: #{intro}"
         if intro == 'true'
-            f.puts "intro_quote: \"#{postData['quote'][quotes_counter]['quoteIntroText']}\""
+            f.puts "intro_quote: \"#{postData['quote'][quotes_counter]['quote_intro_text']}\""
         end
 
         f.puts "---"
-        f.puts "#{postData['quote'][quotes_counter]['quoteText']}"
+        f.puts "#{postData['quote'][quotes_counter]['quote_text']}"
 	end
 
 	quotes_counter+=1

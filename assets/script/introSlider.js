@@ -106,7 +106,7 @@ function clearQuoteStyle(){
     } else if ( window.innerWidth > 480  && playState != 1 ) {
         $profilePic.find('#quote, #cite').fadeIn(1);
         $profilePic.find('.img-slide > p > a').animate({
-            'bottom': '140px'
+            'bottom': '120px'
         });
     }
 
