@@ -1,0 +1,1 @@
+Quote markdown files using Contentful data will be created here

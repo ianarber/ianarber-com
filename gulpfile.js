@@ -148,5 +148,5 @@ gulp.task('netlify-deploy', ['clean-site', 'sass', 'create-posts'], function(don
  * delete the _site folder
  */
 gulp.task('clean-site', function(){
-  return del.sync(['_site', '_data/contentful/**']);
+  return del.sync(['_site', '_data/contentful/**', '_quotes/*.md']);
 });
