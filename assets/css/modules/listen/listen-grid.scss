@@ -104,7 +104,7 @@
         box-shadow: 0px 0px 1px 1px #aaa, 1px 0px 0px 0px rgba(255, 255, 255, 0.9) inset, 0px 1px 2px rgba(0, 0, 0, 0.2);
         border-radius: 2px;
         padding: 4px 0px;
-        margin-bottom: 8px;     
+        margin-bottom: 8px;
     }
 }
 
@@ -126,7 +126,7 @@
     .listen-grid-elements > li{
         width: 33%;
         float: left;
-    } 
+    }
 }
 
 .playlist-header{
@@ -140,14 +140,14 @@
 }
 
 .bg-iframe{
-    position: relative;   
+    position: relative;
     iframe{
         padding: 10px;
         border: none;
         width: 100%;
-        
+
         transition: opacity 0.3s;
-        
+
     }
     img{
         position: absolute;
@@ -176,7 +176,8 @@
 }
 
 .bg-iframe.spinner{
-    background: url('http://www.ianarber.com/assets/img/spinner.gif') no-repeat center center;
+    background: url('../img/spinner.gif') no-repeat center center/60px;
+    background-size: 60px;
 }
 
 .disable-play-icon{
