@@ -8,9 +8,6 @@ var cleanCss    = require('gulp-clean-css');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
 var del         = require('del');
-var imageMin    = require('gulp-imagemin');
-var jpegTran    = require('imagemin-jpegtran');
-var imageResize = require('gulp-image-resize');
 
 /*********************************************************************************/
 
@@ -86,8 +83,16 @@ gulp.task('contentful', function(done){
 /**
  * Process Contentful YAML data into markdown files in the _projects folder
  */
-gulp.task('create-posts', ['contentful'], function(done){
+gulp.task('create-posts', ['contentful', 'get-bio-images'], function(done){
     return cp.spawn('ruby' , ['./dataToPosts.rb'], {stdio: 'inherit'})
+        .on('close', done);
+});
+
+/**
+ * Create MD file for bio about page images in _bioimages folder
+ */
+gulp.task('get-bio-images', function(done){
+    return cp.spawn('ruby' , ['./getBioImages.rb'], {stdio: 'inherit'})
         .on('close', done);
 });
 
@@ -148,5 +153,5 @@ gulp.task('netlify-deploy', ['clean-site', 'sass', 'create-posts'], function(don
  * delete the _site folder
  */
 gulp.task('clean-site', function(){
-  return del.sync(['_site', '_data/contentful/**', '_quotes/*.md']);
+  return del.sync(['_site', '_data/contentful/**', '_quotes/*.md', '_bioimages/*.md']);
 });

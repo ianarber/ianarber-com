@@ -1,3 +1,6 @@
+# this script  will convert Contentful data in _data/contentful/spaces/posts.yaml
+# into the relevant posts .MD file. Called using the 'gulp create-posts' task
+
 require 'yaml'
 require 'psych'
 
@@ -172,7 +175,7 @@ begin
 		f.puts "author: #{postData['quote'][quotes_counter]['quote_author']}"
         f.puts "role: #{postData['quote'][quotes_counter]['quote_role']}"
         f.puts "film: \"#{postData['quote'][quotes_counter]['quote_film']}\""
-        f.puts "url: #{postData['quote'][quotes_counter]['quote_url']}"
+        f.puts "link: #{postData['quote'][quotes_counter]['quote_url']}"
 
         intro = "#{postData['quote'][quotes_counter]['intro_quote']}"
         f.puts "intro: #{intro}"

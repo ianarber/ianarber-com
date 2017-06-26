@@ -6,6 +6,8 @@ permalink: /:categories/:month/:year/:title/
 future: true
 
 exclude:
+  - attic
+  - clientarea.html
   - node_modules
   - gulpfile.js
   - package.json
@@ -19,6 +21,8 @@ exclude:
 
 collections:
     quotes:
+        output: true
+    bioimages:
         output: true
 
 contentful:

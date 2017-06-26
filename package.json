@@ -1,24 +1,19 @@
 {
-    "name": "ianarber-com",
-    "version": "0.0.0",
-    "description": "Bio wesbite for composer Ian Arber. Built on Jekyll using Gulp",
-    "main": "gulpfile.js",
-    "author": "Anthony Desmier",
-    "devDependencies": {
-        "async": "^2.1.4",
-        "browser-sync": "^2.15.0",
-        "del": "^2.2.2",
-        "gulp": "^3.9.1",
-        "gulp-autoprefixer": "^3.1.1",
-        "gulp-clean-css": "^2.0.12",
-        "gulp-image-resize": "^0.11.0",
-        "gulp-imagemin": "^3.1.1",
-        "gulp-sass": "^2.3.2",
-        "imagemin-jpegtran": "^5.0.2",
-        "js-yaml": "^3.7.0"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://ianarber@bitbucket.org/ianarber/ianarber.git"
-    }
+  "name": "ianarber-com",
+  "version": "0.0.0",
+  "description": "Bio wesbite for composer Ian Arber. Built on Jekyll using Gulp",
+  "main": "gulpfile.js",
+  "author": "Anthony Desmier",
+  "devDependencies": {
+    "browser-sync": "^2.15.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-sass": "^2.3.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://ianarber@bitbucket.org/ianarber/ianarber.git"
+  }
 }
