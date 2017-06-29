@@ -145,7 +145,8 @@
 	border: none;
 }
 
-.showreel-background iframe{
+#showreel-sc-iframe{
     width: 80%;
     height: 450px;
+	background: url('../img/spinner.gif') no-repeat center center/60px;
 }

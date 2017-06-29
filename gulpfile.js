@@ -84,7 +84,7 @@ gulp.task('contentful', function(done){
  * Process Contentful YAML data into markdown files in the _projects folder
  */
 gulp.task('create-posts', ['contentful', 'get-bio-images'], function(done){
-    return cp.spawn('ruby' , ['./dataToPosts.rb'], {stdio: 'inherit'})
+    return cp.spawn('bundle' , ['exec', 'ruby', './scripts//dataToPosts.rb'], {stdio: 'inherit'})
         .on('close', done);
 });
 
@@ -92,7 +92,7 @@ gulp.task('create-posts', ['contentful', 'get-bio-images'], function(done){
  * Create MD file for bio about page images in _bioimages folder
  */
 gulp.task('get-bio-images', function(done){
-    return cp.spawn('ruby' , ['./getBioImages.rb'], {stdio: 'inherit'})
+    return cp.spawn('bundle' , ['exec', 'ruby', './scripts/getBioImages.rb'], {stdio: 'inherit'})
         .on('close', done);
 });
 

@@ -20,6 +20,8 @@ credits_counter = 0
 articles_counter = 0
 quotes_counter = 0
 
+##-----##-----## CREDIT POSTS ##-----##-----##
+
 #create credit posts in _posts/credits
 begin
 	#create filename for post MD file in the format 'yyyy-mm-dd-some-title.md'
@@ -100,6 +102,8 @@ begin
 	credits_counter+=1
 end while credits_counter < num_of_credits.to_i
 
+##-----##-----## NEWS ARTICLE POSTS ##-----##-----##
+
 #create news article posts in _posts/news
 begin
 	#create filename for post MD file in the format 'yyyy-mm-dd-some-title.md'
@@ -133,7 +137,7 @@ begin
 
 		video_link = "#{postData['newsArticle'][articles_counter]['video_link']}"
 		if video_link != ''
-			f.puts "video_link: #{video_link}" + "?enablejsapi=1&amp;rel=0&amp;showinfo=0&amp;autohide=1&amp;modestbranding=1"
+			f.puts "video_link: #{video_link}" + "?enablejsapi=1&amp;rel=0&amp;showinfo=0&amp;autohide=1&amp;modestbranding=1&amp;controls=0"
 		end
 
 		video_width = "#{postData['newsArticle'][articles_counter]['video_width']}"
@@ -165,6 +169,8 @@ begin
 	articles_counter+=1
 end while articles_counter < num_of_articles.to_i
 
+##-----##-----## QUOTES COLLECTION ##-----##-----##
+
 #create quote collection in _quote/
 begin
 	title_slug = "#{postData['quote'][quotes_counter]['quote_author']}".downcase.gsub(" ", "-")
@@ -189,3 +195,5 @@ begin
 
 	quotes_counter+=1
 end while quotes_counter < num_of_quotes.to_i
+
+##-----##-----## ABOUT PAGE COLLECTION ##-----##-----##

@@ -7,6 +7,7 @@ future: true
 
 exclude:
   - attic
+  - scripts
   - clientarea.html
   - node_modules
   - gulpfile.js
@@ -14,8 +15,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
-  - Rakefile
-  - dataToPosts.rb
   - assets/css/modules
   - assets/css/main.scss
 

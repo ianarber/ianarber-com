@@ -167,6 +167,8 @@ $navBtnsLi.on('click', function () {
 //play video if play button is present
 $profilePic.find('i').on('click', function(){
 
+    calculateVideoSize();
+
     var $playVidBtn = $(this);
 
     stopInterval();
