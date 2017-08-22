@@ -8,7 +8,6 @@ future: true
 exclude:
   - attic
   - scripts
-  - clientarea.html
   - node_modules
   - gulpfile.js
   - package.json
