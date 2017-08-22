@@ -113,7 +113,8 @@ begin
 	title_slug = "#{postData['newsArticle'][articles_counter]['title']}".downcase.gsub("-", " ")
     #remove all quotes and then replace multiple spaces with a dash
     title_slug = title_slug.gsub(/["']/, "")
-    title_slug = title_slug.gsub(/[ ]{1,}/, "-")
+	title_slug = title_slug.gsub(/[ ]{1,}/, "-")
+	title_slug = title_slug.gsub(/[.,&]/, "")
 
 	filename = news_date + "-" + title_slug + ".md"
 
