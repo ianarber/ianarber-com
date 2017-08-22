@@ -15,7 +15,7 @@ $(function(){
         rememberLastLogin: false,
         allowForgotPassword: false,
         theme: {
-            logo: 'https://serverless-stories.netlify.com/phil.jpg',
+            logo: 'https://serverless-stories.netlify.com/phil.jpg', //TODO: update
             primaryColor: '#0d2f52',
             labeledSubmitButton: false
         },
@@ -29,7 +29,7 @@ $(function(){
             }
         },
         auth: {
-            redirectUrl: 'http://192.168.1.151:3000/clientarea',
+            redirectUrl: 'https://599c5cbca700c44394dba747--ianarber.netlify.com/clientarea', //TODO: update
             responseType: 'token id_token'
         }
     };
