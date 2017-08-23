@@ -29,7 +29,7 @@ $(function(){
             }
         },
         auth: {
-            redirectUrl: 'https://599c5cbca700c44394dba747--ianarber.netlify.com/clientarea', //TODO: update
+            redirectUrl: 'https://auth0-lock.ianarber.com/clientarea', //TODO: update
             responseType: 'token id_token'
         }
     };
