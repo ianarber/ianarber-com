@@ -9,7 +9,6 @@ function insertExpiresDate(json){
 }
 
 $(function(){
-    var allowedEmail = 'guest@ianarber.com';
     // theme, style and auth options for auth0 lock widget https://auth0.com/docs/libraries/lock/v10/customization
     var auth0LockOptions = {
         rememberLastLogin: false,
@@ -21,12 +20,7 @@ $(function(){
         },
         languageDictionary: {
             emailInputPlaceholder: "user@email.com",
-            title: "Client Area",
-            error: {
-                login: {
-                "lock.unauthorized": "unauthorized"
-                }
-            }
+            title: "Client Area"
         },
         auth: {
             redirectUrl: 'https://auth0-lock.ianarber.com/clientarea', //TODO: update
@@ -39,20 +33,20 @@ $(function(){
     auth0lock.on('authenticated', function(authResult) {
         auth0lock.getUserInfo(authResult.accessToken, function(error, profile) {
           if (error) {
-            return alert(error.message);
+            return alert(error.message); //TODO: don't use alert here
           }
 
           profile = insertExpiresDate(profile); //valid for 24 hours
           localStorage.setItem('ianarber-auth0-access-token', authResult.idToken); //can be used to call secure webtask function
           localStorage.setItem('ianarber-auth0-profile', JSON.stringify(profile));
         });
-      });
+    });
 
     var $clientAreaBtns = $('.client-area-btn'); //run for all client area links
     var $clearAuthItems = $('#clear-auth-items'); //TODO: Needs to be removed
 
     /*
-      We first check if there is an item called 'auth0-profile' in local storage. If there is it's email key needs to equal the value
+      We first check if there is an item called 'ianarber-auth0-profile' in local storage. If there is it's email key needs to equal the value
       in allowedEmail. If it does then check if the expires key date is still within 24 hours. If so the profile is still valid so the user
       does not have to log in again. They are taken to the client area page.
 
@@ -64,7 +58,7 @@ $(function(){
         e.preventDefault();
         var user = JSON.parse(localStorage.getItem('ianarber-auth0-profile'));
 
-        if(user && user.expires && user.email === allowedEmail){ //first check if profile email stored is correct
+        if(user && user.expires){ //first check if profile email stored is correct
             var expiresDate = Date.parse(user.expires.date);
             var date = new Date();
             date.setDate(date.getDate());
