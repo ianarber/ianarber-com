@@ -9,6 +9,10 @@ var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
 var del         = require('del');
 
+//react stuff
+var babel       = require('gulp-babel');
+var sourcemaps  = require('gulp-sourcemaps');
+
 /*********************************************************************************/
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'bundle exec jekyll';
@@ -95,6 +99,30 @@ gulp.task('get-bio-images', function(done){
     return cp.spawn('bundle' , ['exec', 'ruby', './scripts/getBioImages.rb'], {stdio: 'inherit'})
         .on('close', done);
 });
+
+/**
+ * Compile and bundle React code
+ */ //TODO
+
+// gulp.task('build-react', function(){
+//     var src = [
+//         'react/script/*.js',
+//         'react/components/*.jsx'
+//     ];
+    
+//     return gulp.src(src)
+//         .pipe(sourcemaps.init());
+//         .pipe(babel({
+//             presets: [
+//             'es2015',
+//             'react'
+//             ]
+//         }));
+//         .pipe(sourcemaps.write('.'));
+//         .pipe(gulp.dest('assets/script'));
+// });
+
+
 
 /*
  * Calls the JS file as a child process to download all Contentful home page images
