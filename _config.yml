@@ -14,14 +14,13 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - react
   - assets/css/modules
   - assets/css/main.scss
 
 collections:
-    quotes:
-        output: true
-    bioimages:
-        output: true
+  - quotes
+  - bioimages
 
 contentful:
   spaces:

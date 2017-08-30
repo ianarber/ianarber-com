@@ -8,25 +8,39 @@ var cleanCss    = require('gulp-clean-css');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
 var del         = require('del');
+var fs          = require('fs');
 
 //react stuff
-var babel       = require('gulp-babel');
-var sourcemaps  = require('gulp-sourcemaps');
+var browserify  = require('browserify');
+var vsource     = require('vinyl-source-stream');
+//var gutil       = require('gulp-util');
+var babelify    = require('babelify');
 
-/*********************************************************************************/
+/*********************************************************************************************************/
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'bundle exec jekyll';
 
 var messages = {
-    jekyllBuild: 'DEV MODE: Building Jekyll Site\n<span style="color: grey">Running:</span> $ bundle exec jekyll build'
+    jekyllBuild: 'DEV MODE: Building Jekyll Site'
 };
+
+//to absract module version numbers
+var package = JSON.parse(fs.readFileSync('./package.json'));
+
+// External dependencies you do not want to rebundle while developing,
+// but include in your application deployment
+var dependencies = [
+	'react',
+  	'react-dom'
+];
+var reactVersion = package.dependencies.react.replace('^', '');
+var reactOutputName = 'vendor-react' + reactVersion + '.js';
 
 /**
  * Build the Jekyll Site
  */
 gulp.task('jekyll-build', function (done) {
     browserSync.notify(messages.jekyllBuild);
-    //return cp.spawn( jekyll , ['build'], {stdio: 'inherit'})
 	return cp.spawn('bundle', ['exec', 'jekyll', 'build'], {stdio: 'inherit'})
         .on('close', done);
 });
@@ -56,7 +70,7 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
  */
 gulp.task('sass', function (){
     return gulp.src('assets/css/main.scss')
-        .pipe(sass({
+        .pipe(sass({ //TODO: Not sure if thsi is doing anything
             //includePaths: ['scss'],
             //onError: browserSync.notify
         }))
@@ -73,22 +87,22 @@ gulp.task('sass', function (){
  */
 gulp.task('watch', function () {
     gulp.watch('assets/css/**', ['sass']);
-    gulp.watch(['*.html', '_layouts/**', '_includes/**', '_posts/*', 'assets/script/**'], ['jekyll-rebuild']);
-});
-
-/**
- * Grab data from Contentful in YAML format and place in _data folder
- */
-gulp.task('contentful', function(done){
-    return cp.spawn('bundle', ['exec', 'jekyll', 'contentful'], {stdio: 'inherit'})
-        .on('close', done);
+    gulp.watch(['*.html', '_layouts/**', '_includes/**', '_posts/*', 'assets/script/**', 'react/**'], ['jekyll-rebuild']);
 });
 
 /**
  * Process Contentful YAML data into markdown files in the _projects folder
  */
 gulp.task('create-posts', ['contentful', 'get-bio-images'], function(done){
-    return cp.spawn('bundle' , ['exec', 'ruby', './scripts//dataToPosts.rb'], {stdio: 'inherit'})
+    return cp.spawn('bundle' , ['exec', 'ruby', './scripts/dataToPosts.rb'], {stdio: 'inherit'})
+        .on('close', done);
+});
+
+/**
+ * Grab data from Contentful, using Contenful gem, in YAML format and place in _data folder
+ */
+gulp.task('contentful', function(done){
+    return cp.spawn('bundle', ['exec', 'jekyll', 'contentful'], {stdio: 'inherit'})
         .on('close', done);
 });
 
@@ -102,27 +116,11 @@ gulp.task('get-bio-images', function(done){
 
 /**
  * Compile and bundle React code
- */ //TODO
+ */
 
-// gulp.task('build-react', function(){
-//     var src = [
-//         'react/script/*.js',
-//         'react/components/*.jsx'
-//     ];
-    
-//     return gulp.src(src)
-//         .pipe(sourcemaps.init());
-//         .pipe(babel({
-//             presets: [
-//             'es2015',
-//             'react'
-//             ]
-//         }));
-//         .pipe(sourcemaps.write('.'));
-//         .pipe(gulp.dest('assets/script'));
-// });
-
-
+gulp.task('build-react', function(){
+    buildReact(false);
+});
 
 /*
  * Calls the JS file as a child process to download all Contentful home page images
@@ -161,14 +159,12 @@ gulp.task('get-bio-images', function(done){
 //         .pipe(gulp.dest('./assets/images/home'));
 // });
 
-
-
-
 /**
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('default', ['build-react', 'browser-sync', 'watch']);
+
 /**
  * task to run when building on Netlify (runs all tasks
  * appart from browser-sync)
@@ -177,9 +173,48 @@ gulp.task('netlify-deploy', ['clean-site', 'sass', 'create-posts'], function(don
     return cp.spawn('bundle' , ['exec', 'jekyll', 'build', '--config', '_liveConfig.yml'], {stdio: 'inherit'})
         .on('close', done);
 });
+
 /**
  * delete the _site folder
  */
 gulp.task('clean-site', function(){
-  return del.sync(['_site', '_data/contentful/**', '_quotes/*.md', '_bioimages/*.md']);
+  return del.sync(['_site', '_data/contentful/**', '_quotes/*.md', '_bioimages/*.md', 'assets/script/bundle*', 'assets/script/vendor/*']);
 });
+
+
+///////////////////////////////////////////////////////////////
+
+
+function buildReact(isProduction){
+	// Browserify will bundle all our js files together in to one and will let
+	// us use modules in the front end.
+	var appBundler = browserify({
+        entries: './react/script/hello.jsx',
+        extensions: ['.jsx'],
+    	debug: true
+  	});
+
+  	if (!isProduction && !fs.existsSync('./assets/script/vendor/' + reactOutputName)){
+  		// create vendors.js for dev environment.
+  		browserify({require: dependencies, debug: true})
+			.bundle()
+			//.on('error', gutil.log)
+			.pipe(vsource(reactOutputName))
+			.pipe(gulp.dest('./assets/script/vendor/'));
+  	}
+  	if (!isProduction){
+  		// make the dependencies external so they dont get bundled by the 
+		// app bundler. Dependencies are already bundled in vendor.js for
+		// development environments.
+  		dependencies.forEach(function(dep){
+  			appBundler.external(dep);
+  		});
+  	}
+ 
+  	appBundler.transform('babelify', {presets: ['es2015', 'react']})
+	    .bundle()
+	    //.on('error',gutil.log)
+	    .pipe(vsource('bundle-react-app.js'))
+        .pipe(gulp.dest('./assets/script/'));
+        
+}
