@@ -15,6 +15,9 @@ exclude:
   - Gemfile.lock
   - README.md
   - react
+  - assets/script/mobileMenu.js
+  - assets/script/quoteSlider.js
+  - assets/script/clientAreaAuth.js
   - assets/css/modules
   - assets/css/main.scss
 

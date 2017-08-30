@@ -2,10 +2,12 @@
  * REQUIRES
  */
 var gulp        = require('gulp');
-var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
 var cleanCss    = require('gulp-clean-css');
 var prefix      = require('gulp-autoprefixer');
+var concat      = require('gulp-concat');
+var uglify      = require('gulp-uglify');
+var browserSync = require('browser-sync');
 var cp          = require('child_process');
 var del         = require('del');
 var fs          = require('fs');
@@ -13,6 +15,8 @@ var fs          = require('fs');
 //react stuff
 var browserify  = require('browserify');
 var vsource     = require('vinyl-source-stream');
+//to uglify files from a vinyl source https://stackoverflow.com/questions/24992980/how-to-uglify-output-with-browserify-in-gulp
+var buffer      = require('vinyl-buffer');
 //var gutil       = require('gulp-util');
 var babelify    = require('babelify');
 
@@ -55,7 +59,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['sass', 'scripts', 'jekyll-build'], function() {
     browserSync({
         server: {
             baseDir: '_site'
@@ -80,6 +84,28 @@ gulp.task('sass', function (){
         .pipe(browserSync.reload({stream:true}))
         .pipe(gulp.dest('assets/css'));
 });
+
+
+
+/**
+ * Concatenation of javascript files. Only common files for now
+ */
+var jsFiles = [
+    'assets/script/mobileMenu.js',
+    'assets/script/quoteSlider.js',
+    'assets/script/clientAreaAuth.js'
+];
+
+gulp.task('scripts', function(){
+    return gulp.src(jsFiles)
+        .pipe(concat('bundle-common.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('assets/script'))
+});
+
+
+
+
 
 /**
  * Watch scss files for changes & recompile
@@ -178,7 +204,7 @@ gulp.task('netlify-deploy', ['clean-site', 'sass', 'create-posts'], function(don
  * delete the _site folder
  */
 gulp.task('clean-site', function(){
-  return del.sync(['_site', '_data/contentful/**', '_quotes/*.md', '_bioimages/*.md', 'assets/script/bundle*', 'assets/script/vendor/*']);
+  return del.sync(['_site', '_data/contentful/**', '_quotes/*.md', '_bioimages/*.md', 'assets/script/bundle*']);
 });
 
 
@@ -198,8 +224,10 @@ function buildReact(isProduction){
   		// create vendors.js for dev environment.
   		browserify({require: dependencies, debug: true})
 			.bundle()
-			//.on('error', gutil.log)
-			.pipe(vsource(reactOutputName))
+            //.on('error', gutil.log)
+            .pipe(vsource(reactOutputName))
+            .pipe(buffer())
+            .pipe(uglify())
 			.pipe(gulp.dest('./assets/script/vendor/'));
   	}
   	if (!isProduction){
@@ -213,8 +241,10 @@ function buildReact(isProduction){
  
   	appBundler.transform('babelify', {presets: ['es2015', 'react']})
 	    .bundle()
-	    //.on('error',gutil.log)
-	    .pipe(vsource('bundle-react-app.js'))
+        //.on('error',gutil.log)
+        .pipe(vsource('bundle-react-app.js'))
+        .pipe(buffer())
+        .pipe(uglify())
         .pipe(gulp.dest('./assets/script/'));
         
 }

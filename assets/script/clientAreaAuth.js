@@ -1,14 +1,15 @@
-function insertExpiresDate(json){
-    var date = new Date();
-    date.setDate(date.getDate() + 1); //24 hour expires time
-    var jsonDate = date.toJSON();
-
-    var dateObj = {'date': jsonDate};
-    json['expires'] = dateObj;
-    return json;
-}
-
 $(function(){
+
+    function insertExpiresDate(json){
+        var date = new Date();
+        date.setDate(date.getDate() + 1); //24 hour expires time
+        var jsonDate = date.toJSON();
+    
+        var dateObj = {'date': jsonDate};
+        json['expires'] = dateObj;
+        return json;
+    }
+    
     // theme, style and auth options for auth0 lock widget https://auth0.com/docs/libraries/lock/v10/customization
     var auth0LockOptions = {
         rememberLastLogin: false,
@@ -23,7 +24,7 @@ $(function(){
             title: "Client Area"
         },
         auth: {
-            redirectUrl: 'http://192.168.1.151:3000/clientarea', //TODO: update
+            redirectUrl: 'http://192.168.0.34:3000/clientarea', //TODO: update
             responseType: 'token id_token'
         }
     };
