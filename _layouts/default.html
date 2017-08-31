@@ -160,6 +160,8 @@
     {% endif %}
     <!-- JSON-LD -END- -->
 
+
+    {% if jekyll.environment == 'production' %}
     <!-- Google Analyitics Code -START- -->
     <script>
         (function (i, s, o, g, r, a, m) {
@@ -178,6 +180,9 @@
         ga('send', 'pageview');
     </script>
     <!-- Google Analyitics Code -END- -->
+    {% endif %}
+
+
 </head>
 
 <body>

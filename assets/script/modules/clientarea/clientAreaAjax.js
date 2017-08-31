@@ -39,4 +39,6 @@ $(function(){
     //can't guarantee token will have been written to storage once page loads so run function 3 times
     webtaskAjaxInterval = setInterval(getWebtaskData, 500);
 
+    console.log('HEYYYY!');
+
 });
