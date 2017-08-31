@@ -16,19 +16,21 @@ var fs          = require('fs');
 var browserify  = require('browserify');
 var vsource     = require('vinyl-source-stream');
 var buffer      = require('vinyl-buffer'); //to uglify files from a vinyl source https://stackoverflow.com/questions/24992980/how-to-uglify-output-with-browserify-in-gulp
-var babelify    = require('babelify');
+var collapse    = require('bundle-collapser/plugin'); //for building production react module
 
 /*********************************************************************************************************/
 
 //var jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'bundle exec jekyll';
 
-var messages = { jekyllBuild: 'DEV MODE: Building Jekyll Site' };
+var messages = {
+    jekyllBuild: 'DEV MODE: Building Jekyll Site',
+    jekyllReBuild: 'DEV MODE: Jekyll Re-build triggered'
+};
 
 //to absract module version numbers
 var package = JSON.parse(fs.readFileSync('./package.json'));
 
-// External dependencies you do not want to rebundle while developing,
-// but include in your application deployment
+//External dependencies not to bundle while developing, but include in application deployment
 var dependencies = [
 	'react',
   	'react-dom'
@@ -45,6 +47,19 @@ var jsFiles = [
 /*********************************************************************************************************/
 
 /**
+ * GULP TASKS --- ENVIRONMENT SETTING
+ */
+
+gulp.task('set-node-env-dev', function(){
+    return process.env.NODE_ENV = 'development';
+});
+
+gulp.task('set-node-env-prod', function(){
+    return process.env.NODE_ENV = 'production';
+});
+
+
+/**
  * GULP TASKS --- DEVELOPMENT
  */
 
@@ -52,10 +67,10 @@ var jsFiles = [
  * Default task, running just `gulp` will compile the sass, scripts, react
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', ['browser-sync']);
+gulp.task('default', ['set-node-env-dev', 'browser-sync', 'watch']);
 
 /**
- * Wait for jekyll-build, then launch the Server
+ * Wait for all 4 tasks to complete, then launch the Server
  */
 gulp.task('browser-sync', ['sass', 'build-react', 'scripts', 'jekyll-build'], function() {
     browserSync({
@@ -84,7 +99,7 @@ gulp.task('sass', function (){
  * Compile and bundle React code
  */
 gulp.task('build-react', function(){
-    buildReact(false);
+    buildReact(process.env.NODE_ENV);
 });
 
 /**
@@ -100,7 +115,8 @@ gulp.task('scripts', function(){
 });
 
 /**
- * Build the Jekyll Site
+ * Build the Jekyll Site. Sass, react and scripts tasks are not dependant but jekyll-build requires these to have finished
+ * so put these 3 tasks within []
  */
 gulp.task('jekyll-build', ['sass', 'build-react', 'scripts'], function (done) {
     browserSync.notify(messages.jekyllBuild);
@@ -109,22 +125,26 @@ gulp.task('jekyll-build', ['sass', 'build-react', 'scripts'], function (done) {
 });
 
 /**
- * Rebuild Jekyll & do page reload
+ * Rebuild Jekyll & do page reload. No need to re-build any scripts or sass as they have their own watch events
  */
-gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
-    browserSync.reload();
+gulp.task('jekyll-rebuild', function () {
+    browserSync.notify(messages.jekyllReBuild);
+    return cp.spawn('bundle', ['exec', 'jekyll', 'build'], {stdio: 'inherit'})
+        .on('close', function(){
+            browserSync.reload(); //once jekyll has finished building
+        });
 });
 
 /**
- * Watch scss files for changes & recompile
+ * Watch scss/script files for changes & recompile
  * Watch html/md files, run jekyll & reload BrowserSync
  */
-// gulp.task('watch', function () {
-//     gulp.watch('assets/css/**', ['sass']);
-//     gulp.watch('assets/script/modules/**', ['scripts']);
-//     gulp.watch('react/**', ['build-react']);
-//     gulp.watch(['*.html', '_layouts/**', '_includes/**', '_posts/*'], ['jekyll-rebuild']);
-// });
+gulp.task('watch', ['browser-sync'], function () {
+    gulp.watch('assets/css/**', ['sass']);
+    gulp.watch('assets/script/modules/**', ['scripts']);
+    gulp.watch('react/**', ['build-react']);
+    gulp.watch(['*.html', '_layouts/**', '_includes/**', '_posts/*'], ['jekyll-rebuild']);
+});
 
 
 /**
@@ -135,8 +155,8 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
  * task to run when building on Netlify (runs all tasks
  * appart from browser-sync)
  */
-gulp.task('netlify-deploy', ['clean', 'sass', 'create-posts'], function(done){
-    return cp.spawn('bundle' , ['exec', 'jekyll', 'build', 'JEKYLL_ENV=production'], {stdio: 'inherit'})
+gulp.task('netlify-deploy', ['set-node-env-prod', 'clean', 'sass', 'scripts', 'build-react', 'create-posts'], function(done){
+    return cp.spawn('bundle' , ['exec', 'jekyll', 'build'], {stdio: 'inherit'})
         .on('close', done);
 });
 
@@ -184,36 +204,48 @@ gulp.task('clean', function(){
 
 /*********************************************************************************************************/
 
-function buildReact(isProduction){
-	// Browserify will bundle all our js files together in to one and will let
-	// us use modules in the front end.
+function buildReact(env){
+
 	var appBundler = browserify({
         entries: './react/script/hello.jsx',
         extensions: ['.jsx'],
     	debug: true
   	});
 
-  	if (!isProduction && !fs.existsSync('./assets/script/vendor/' + reactOutputName)){
-          // create vendors.js for dev environment.
-        console.log('***Building vendor React***');
-  		browserify({require: dependencies, debug: true})
+  	if(env === 'development' && !fs.existsSync('./assets/script/vendor/' + reactOutputName)){
+        //create react vendor bundle for dev environment
+        browserify({require: dependencies, debug: true})
 			.bundle()
             .pipe(vsource(reactOutputName))
-            .pipe(buffer())
-            .pipe(uglify())
 			.pipe(gulp.dest('assets/script/vendor'));
   	}
-  	if (!isProduction){
-  		// make the dependencies external so they dont get bundled by the 
-		// app bundler. Dependencies are already bundled in vendor.js for
-		// development environments.
+  	if(env === 'development'){
+  		//make the dependencies external so they dont get bundled by the app bundler
   		dependencies.forEach(function(dep){
   			appBundler.external(dep);
   		});
   	}
- 
-  	appBundler.transform('babelify', {presets: ['es2015', 'react']})
-	    .bundle()
+    if(env === 'production'){
+        //create react vendor bundle for production
+        //https://facebook.github.io/react/docs/optimizing-performance.html#browserify
+        browserify({
+            require: dependencies,
+            plugin: [collapse],
+            debug: true
+        })
+            .transform('envify', {'global': true})
+            .transform('uglifyify', {'global': true})
+            .bundle()
+            .pipe(vsource(reactOutputName))
+            .pipe(buffer())
+            .pipe(uglify({mangle: true}))
+            .pipe(gulp.dest('assets/script/vendor'));
+    }
+    
+    //now transpile and bundle the custom react code
+    appBundler
+        .transform('babelify', {presets: ['es2015', 'react']})
+        .bundle()
         .pipe(vsource('react-app.js'))
         .pipe(buffer())
         .pipe(uglify())
@@ -222,3 +254,4 @@ function buildReact(isProduction){
         .pipe(gulp.dest('assets/script/bundle'));
         
 }
+
