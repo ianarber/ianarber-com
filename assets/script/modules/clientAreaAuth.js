@@ -24,7 +24,7 @@ $(function(){
             title: "Client Area"
         },
         auth: {
-            redirectUrl: 'http://192.168.0.34:3000/clientarea', //TODO: update
+            redirectUrl: 'http://auth0-lock.ianarber.com/clientarea', //TODO: update
             responseType: 'token id_token'
         }
     };
