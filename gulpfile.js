@@ -7,6 +7,8 @@ var cleanCss    = require('gulp-clean-css');
 var prefix      = require('gulp-autoprefixer');
 var concat      = require('gulp-concat');
 var uglify      = require('gulp-uglify');
+var gulpif      = require('gulp-if');
+var rename      = require('gulp-rename');
 var browserSync = require('browser-sync');
 var cp          = require('child_process');
 var del         = require('del');
@@ -36,7 +38,7 @@ var dependencies = [
   	'react-dom'
 ];
 var reactVersion = package.dependencies.react.replace('^', '');
-var reactOutputName = 'react' + reactVersion + '.js';
+var reactVendorOutput = 'react' + reactVersion + '.js';
 
 var jsFiles = [
     'assets/script/modules/mobileMenu.js',
@@ -56,6 +58,10 @@ gulp.task('set-node-env-dev', function(){
 
 gulp.task('set-node-env-prod', function(){
     return process.env.NODE_ENV = 'production';
+});
+
+gulp.task('set-jekyll-env-prod', function(){
+    return process.env.JEKYLL_ENV = 'production';
 });
 
 
@@ -86,31 +92,86 @@ gulp.task('browser-sync', ['sass', 'build-react', 'scripts', 'jekyll-build'], fu
  * Compile files from assets/css/main.scss into both _site/assets/css (for browsersync live injecting) and assets/css (for future jekyll builds)
  */
 gulp.task('sass', function (){
+    var env = process.env.NODE_ENV === 'production' ? true : false;
     return gulp.src('assets/css/main.scss')
         .pipe(sass())
-        .pipe(cleanCss({compatibility: 'ie8'})) //minify main.css
         .pipe(prefix({browsers: ['last 30 versions'], cascade: false}))
-        .pipe(gulp.dest('_site/assets/css'))
-        .pipe(browserSync.reload({stream:true}))
+        .pipe(gulpif(env, cleanCss({compatibility: 'ie8'}))) //minify main.css
+        .pipe(gulpif(env, rename('main.min.css')))
+        .pipe(gulpif(!env, gulp.dest('_site/assets/css')))
+        .pipe(gulpif(!env, browserSync.reload({stream:true})))
         .pipe(gulp.dest('assets/css'));
 });
 
 /**
  * Compile and bundle React code
  */
-gulp.task('build-react', function(){
-    buildReact(process.env.NODE_ENV);
+gulp.task('build-react', ['build-vendor-react'],  function(){
+
+    var env = process.env.NODE_ENV === 'production' ? true : false;
+	var appBundler = browserify({
+        entries: './react/script/hello.jsx',
+        extensions: ['.jsx'],
+    	debug: true
+  	});
+
+  	if(!env){
+  		//make the dependencies external in dev environment so they dont get bundled by the app bundler
+  		dependencies.forEach(function(dep){
+  			appBundler.external(dep);
+  		});
+  	}
+    if(env){
+        //for production bundle all vendor react and custom react together and optimize
+        //https://facebook.github.io/react/docs/optimizing-performance.html#browserify
+        appBundler
+            .transform('envify', {'global': true})
+            .transform('uglifyify', {'global': true})
+    }
+    
+    return appBundler
+        .transform('babelify', {presets: ['es2015', 'react']})
+        .bundle()
+        .pipe(vsource('react-app.js'))
+        .pipe(gulpif(env, buffer()))
+        .pipe(gulpif(env, uglify())) //only minify in production
+        .pipe(gulpif(env, rename('react-app.min.js')))
+        .pipe(gulpif(!env, gulp.dest('_site/assets/script/bundle')))
+        .pipe(gulpif(!env, browserSync.reload({stream:true})))
+        .pipe(gulp.dest('assets/script/bundle'));
+
+});
+
+/**
+ * Compile and bundle React vendor modules for dev environment
+ */
+gulp.task('build-vendor-react',  function(){
+    
+    var env = process.env.NODE_ENV === 'production' ? true : false;
+
+    if(!env && !fs.existsSync('./assets/script/vendor/' + reactVendorOutput)){
+        var vendorBundler = browserify({require: dependencies, debug: true});
+        return vendorBundler
+            .bundle()
+            .pipe(vsource(reactVendorOutput))
+            .pipe(gulp.dest('assets/script/vendor'));
+    } else {
+        return;
+    }
+
 });
 
 /**
  * Concatenation of javascript files. Only common files for now
  */
 gulp.task('scripts', function(){
+    var env = process.env.NODE_ENV === 'production' ? true : false;
     return gulp.src(jsFiles)
-        .pipe(concat('common.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('_site/assets/script/bundle'))
-        .pipe(browserSync.reload({stream:true}))
+        .pipe(concat('common.js'))
+        .pipe(gulpif(env, uglify()))
+        .pipe(gulpif(env, rename('common.min.js')))
+        .pipe(gulpif(!env, gulp.dest('_site/assets/script/bundle')))
+        .pipe(gulpif(!env, browserSync.reload({stream:true})))
         .pipe(gulp.dest('assets/script/bundle'))
 });
 
@@ -155,7 +216,7 @@ gulp.task('watch', ['browser-sync'], function () {
  * task to run when building on Netlify (runs all tasks
  * appart from browser-sync)
  */
-gulp.task('netlify-deploy', ['set-node-env-prod', 'clean', 'sass', 'scripts', 'build-react', 'create-posts'], function(done){
+gulp.task('netlify-deploy', ['set-node-env-prod', 'set-jekyll-env-prod', 'clean', 'sass', 'scripts', 'build-react', 'create-posts'], function(done){
     return cp.spawn('bundle' , ['exec', 'jekyll', 'build'], {stdio: 'inherit'})
         .on('close', done);
 });
@@ -198,60 +259,5 @@ gulp.task('get-bio-images', function(done){
  * delete the _site folder
  */
 gulp.task('clean', function(){
-  return del.sync(['_site', '_data/contentful/**', '_quotes/*.md', '_bioimages/*.md', 'assets/script/bundle/*']);
+  return del.sync(['_site', '_data/contentful/**', '_quotes/*.md', '_bioimages/*.md', 'assets/script/bundle/*', 'assets/css/*.css']);
 });
-
-
-/*********************************************************************************************************/
-
-function buildReact(env){
-
-	var appBundler = browserify({
-        entries: './react/script/hello.jsx',
-        extensions: ['.jsx'],
-    	debug: true
-  	});
-
-  	if(env === 'development' && !fs.existsSync('./assets/script/vendor/' + reactOutputName)){
-        //create react vendor bundle for dev environment
-        browserify({require: dependencies, debug: true})
-			.bundle()
-            .pipe(vsource(reactOutputName))
-			.pipe(gulp.dest('assets/script/vendor'));
-  	}
-  	if(env === 'development'){
-  		//make the dependencies external so they dont get bundled by the app bundler
-  		dependencies.forEach(function(dep){
-  			appBundler.external(dep);
-  		});
-  	}
-    if(env === 'production'){
-        //create react vendor bundle for production
-        //https://facebook.github.io/react/docs/optimizing-performance.html#browserify
-        browserify({
-            require: dependencies,
-            plugin: [collapse],
-            debug: true
-        })
-            .transform('envify', {'global': true})
-            .transform('uglifyify', {'global': true})
-            .bundle()
-            .pipe(vsource(reactOutputName))
-            .pipe(buffer())
-            .pipe(uglify({mangle: true}))
-            .pipe(gulp.dest('assets/script/vendor'));
-    }
-    
-    //now transpile and bundle the custom react code
-    appBundler
-        .transform('babelify', {presets: ['es2015', 'react']})
-        .bundle()
-        .pipe(vsource('react-app.js'))
-        .pipe(buffer())
-        .pipe(uglify())
-        .pipe(gulp.dest('_site/assets/script/bundle'))
-        .pipe(browserSync.reload({stream:true}))
-        .pipe(gulp.dest('assets/script/bundle'));
-        
-}
-

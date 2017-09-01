@@ -1,9 +1,9 @@
 name: Ian Arber - Composer
 author: Ian Arber
-cssToImport: main.css
 myurl: https://www.ianarber.com
 permalink: /:categories/:month/:year/:title/
 future: true
+vendor_react: react15.6.1.js
 
 exclude:
   - attic
