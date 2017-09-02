@@ -12,7 +12,7 @@ $(function(){
     
     // theme, style and auth options for auth0 lock widget https://auth0.com/docs/libraries/lock/v10/customization
     var auth0LockOptions = {
-        rememberLastLogin: false,
+        rememberLastLogin: true,
         allowForgotPassword: false,
         theme: {
             logo: 'https://serverless-stories.netlify.com/phil.jpg', //TODO: update
@@ -24,7 +24,7 @@ $(function(){
             title: "Client Area"
         },
         auth: {
-            redirectUrl: 'https://auth0-lock.ianarber.com/clientarea', //TODO: update
+            redirectUrl: 'http://192.168.0.34:3000/clientarea', //TODO: update
             responseType: 'token id_token'
         }
     };

@@ -226,10 +226,8 @@
 
     {% if page.title == 'Client Area' %}
         {% if jekyll.environment == 'production' %}
-            <script type="text/javascript" src="/assets/script/modules/clientarea/clientAreaAjax.js"></script>
             <script type="text/javascript" src="/assets/script/bundle/react-app.min.js"></script>
         {% elsif jekyll.environment == 'development' %}
-            <script type="text/javascript" src="/assets/script/modules/clientarea/clientAreaAjax.js"></script>
             <script type="text/javascript" src="/assets/script/vendor/{{ site.vendor_react }}"></script>
             <script type="text/javascript" src="/assets/script/bundle/react-app.js"></script>
         {% endif %}

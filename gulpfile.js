@@ -110,7 +110,7 @@ gulp.task('build-react', ['build-vendor-react'],  function(){
 
     var env = process.env.NODE_ENV === 'production' ? true : false;
 	var appBundler = browserify({
-        entries: './react/script/hello.jsx',
+        entries: './react/scripts/index.jsx',
         extensions: ['.jsx'],
     	debug: true
   	});
