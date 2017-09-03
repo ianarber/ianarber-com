@@ -9,6 +9,25 @@ $(function(){
         json['expires'] = dateObj;
         return json;
     }
+
+    function openAuth0Lock(event){
+        event.preventDefault();
+        var user = JSON.parse(localStorage.getItem('ianarber-auth0-profile'));
+
+        if(user && user.expires){ //first check if profile email stored is correct
+            var expiresDate = Date.parse(user.expires.date);
+            var date = new Date();
+            date.setDate(date.getDate());
+            var currentDate = Date.parse(date.toJSON());
+            if(expiresDate >= currentDate){ //and then if it's still valid
+                window.location = '/clientarea';
+            }  else {
+                auth0lock.show();
+            }
+        } else {
+             auth0lock.show();
+        }
+    }
     
     // theme, style and auth options for auth0 lock widget https://auth0.com/docs/libraries/lock/v10/customization
     var auth0LockOptions = {
@@ -24,7 +43,7 @@ $(function(){
             title: "Client Area"
         },
         auth: {
-            redirectUrl: 'http://192.168.0.34:3000/clientarea', //TODO: update
+            redirectUrl: 'https://auth0-lock.ianarber.com/clientarea', //TODO: update
             responseType: 'token id_token'
         }
     };
@@ -56,23 +75,15 @@ $(function(){
       will be asked to login
     */
     $clientAreaBtns.on('click', function(e){
-        e.preventDefault();
-        var user = JSON.parse(localStorage.getItem('ianarber-auth0-profile'));
+        openAuth0Lock(e);
+    });
 
-        if(user && user.expires){ //first check if profile email stored is correct
-            var expiresDate = Date.parse(user.expires.date);
-            var date = new Date();
-            date.setDate(date.getDate());
-            var currentDate = Date.parse(date.toJSON());
-            if(expiresDate >= currentDate){ //and then if it's still valid
-                window.location = '/clientarea';
-            }  else {
-                auth0lock.show();
-            }
-        } else {
-             auth0lock.show();
-        }
-
+    /*
+     react component on client page will be added after page is ready so traverse dom for
+     new button component. Note: not ideal!
+    */
+    $(document).on('click', '#btn-on-client-area',  function(e){
+        openAuth0Lock(e);
     });
 
     //TODO: Needs to be removed
