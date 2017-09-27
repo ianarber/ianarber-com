@@ -1,6 +1,8 @@
 import React from 'react';
 
 import Unauthorized from '../../components/Unauthorized';
+import Showreel from '../../components/Showreel';
+import ClientAreaPlaylist from '../../components/ClientAreaPlaylist';
 import Spinner from '../../components/Spinner';
 import ajax from '../../scripts/ContentfulAjax';
 
@@ -53,9 +55,50 @@ export default class Container extends React.Component{
         if(this.state.contentfulData){
             const {status, data} = this.state.contentfulData;
             if(status === 200){
-                return <div>Success</div>
+                
+                let renderedShowreels = [];
+                let renderedPlaylists = [];
+                let items = data.items;
+
+                for(let i = 0; i < items.length; i++){
+                    if(items[i].fields.showreelLink){
+                        const {title, year, showreelLink} = items[i].fields;
+                        renderedShowreels.push(
+                            <Showreel key={i}
+                                title={title}
+                                year={year}
+                                link={showreelLink}
+                            />
+                        );
+                    } else {
+                        const {title, genre, year, director, playlistLink} = items[i].fields;
+                        renderedPlaylists.push(
+                            <ClientAreaPlaylist key={i}
+                                title={title}
+                                genre={genre}
+                                year={year}
+                                director={director}
+                                link={playlistLink}
+                            />
+                        );
+                    }
+                }
+
+                return(
+                    <div>
+                        {renderedShowreels}
+                        <h2 className="sub-header">Full Scores</h2><hr />
+
+                        <div id="iframe-wrapper">
+                            <ul>
+                                {renderedPlaylists}
+                            </ul> 
+                            <a href="/contact"><button className="main-btn-style">Contact Me</button></a>
+                        </div>
+                    </div>
+                )
+
             } else if(status === 401) {
-                console.log('here' + data);
                 return <Unauthorized data={data} />
             }
         } else {
