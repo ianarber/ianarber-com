@@ -1,7 +1,7 @@
 import axios from "axios";
 
 //webtask contentful api endpoint
-let url = 'https://webtask.it.auth0.com/api/run/wt-26212ff75758b7d16d19104dea3bca60-0/subscribers/clientarea';
+let url = 'https://webtask.it.auth0.com/api/run/wt-ac3e583c9f00d93f6ffc5708cf3656eb-0/clientpage/clientarea';
 
 export default {
     getContent: function(){
