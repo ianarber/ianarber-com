@@ -2,6 +2,8 @@
     max-width: 1440px;
     margin: 0 auto;
     height: auto;
+    min-height: calc(100vh - 395px);
+    transition: height 1.3s;
     .section-header{
         margin-top: 60px;
         margin-bottom: 20px;
@@ -10,6 +12,14 @@
         list-style: none;
     }
 
+}
+
+.clientarea-spinner-wrapper {
+    margin: 50px 0 100px 0;
+    display: flex;
+    i {
+        flex: 1;
+    }
 }
 
 .sub-header{
@@ -25,7 +35,7 @@
     width: 70%;
     text-align: center;
     margin: 0 auto;
-    background: url('../img/spinner.gif') no-repeat center center/60px;
+    //background: url('../img/spinner.gif') no-repeat center center/60px;
     iframe{
         margin: 20px 0px;
         width: 100%;
@@ -33,11 +43,14 @@
     }
 }
 
-#iframe-wrapper{
+#reel-iframe-wrapper{
     width: 95%;
     margin: 0px auto 30px auto;
     .bg-iframe{
         width: 85%;
         margin: 0 auto;
+        iframe{
+            height: 500px;
+        }
     }
 }
