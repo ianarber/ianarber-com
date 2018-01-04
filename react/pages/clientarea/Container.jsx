@@ -87,9 +87,9 @@ export default class Container extends React.Component{
                 return(
                     <div>
                         {renderedShowreels}
-                        <h2 className="sub-header">Full Scores</h2><hr />
+                        <h2 className="sub-header">Showreel Playlist</h2><hr />
 
-                        <div id="iframe-wrapper">
+                        <div id="reel-iframe-wrapper">
                             <ul>
                                 {renderedPlaylists}
                             </ul> 

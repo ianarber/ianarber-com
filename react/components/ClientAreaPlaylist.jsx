@@ -9,8 +9,15 @@ export default function ClientAreaPlaylist(props){
             <div className="bg-iframe spinner">
                 <div className="bg-iframe-info">
                     <h5>{title}</h5>
-                    <p>{genre}, {year}</p>
-                    <p>Directed by {director}</p>
+                    <p>
+                        {genre &&
+                            <span>{genre}, </span>
+                        }
+                        {year}
+                    </p>
+                    {director &&
+                        <p>Directed by {director}</p>
+                    }
                 </div>
                 <iframe id={title} src={link}></iframe>
             </div>
