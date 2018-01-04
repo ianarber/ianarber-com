@@ -31,25 +31,28 @@ $(function(){
     
     // theme, style and auth options for auth0 lock widget https://auth0.com/docs/libraries/lock/v10/customization
     var auth0LockOptions = {
-        rememberLastLogin: true,
+        rememberLastLogin: false,
         allowForgotPassword: false,
+        prefill: {
+            email: 'guest@ianarber.com'
+        },
         theme: {
-            logo: 'https://serverless-stories.netlify.com/phil.jpg', //TODO: update
+            logo: '/assets/img/ian_headshot_auth.jpg', //TODO: update
             primaryColor: '#0d2f52',
             labeledSubmitButton: false
         },
         languageDictionary: {
-            emailInputPlaceholder: "user@email.com",
+            emailInputPlaceholder: "guest@ianarber.com",
             title: "Client Area"
         },
         auth: {
-            redirectUrl: 'https://auth0-lock.ianarber.com/clientarea', //TODO: update
+            redirectUrl: 'http://192.168.1.145:3000/clientarea', //TODO: update
             responseType: 'token id_token'
         }
     };
 
     //create new auth0 lock widget with options
-    var auth0lock = new Auth0Lock('djk9b6nLgKKKCTdVs1kVyHoL1jko5xNl', 'adesmier.eu.auth0.com', auth0LockOptions);
+    var auth0lock = new Auth0Lock('TdKEaCjzuCd5uiQfnq8CpJuJoZSoGSg0', 'ianarber.auth0.com', auth0LockOptions);
     auth0lock.on('authenticated', function(authResult) {
         auth0lock.getUserInfo(authResult.accessToken, function(error, profile) {
           if (error) {
