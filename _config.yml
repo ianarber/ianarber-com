@@ -25,8 +25,12 @@ collections:
   - quotes
   - bioimages
 
+# Make sure to export both these variables in your environment
+# in order to authenticate to Contentful
+# export CONTENTFUL_ACCESS_TOKEN=abc123
+# export CONTENTFUL_SPACE_ID=abc123
 contentful:
   spaces:
     - posts:
-        space: cn9cpn7kv7gw
-        access_token: ada57850dcef0806293627506e55f63d9ba2cb00aa7e9b83aed85d06b70b97ad
+        space: ENV_CONTENTFUL_SPACE_ID
+        access_token: ENV_CONTENTFUL_ACCESS_TOKEN
