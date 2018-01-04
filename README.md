@@ -9,6 +9,9 @@ Portfolio Website for Ian Arber
 * Site hosted on Netlify
 
 ### Attributions
-[![alt text](https://images.contentful.com/fo9twyrwpveg/44baP9Gtm8qE2Umm8CQwQk/c43325463d1cb5db2ef97fca0788ea55/PoweredByContentful_LightBackground.svg)](https://www.contentful.com)
-[![alt text](https://www.netlify.com/img/global/badges/netlify-light.svg)](https://www.netlify.com)
+
+<a href="https://www.contentful.com/" rel="nofollow" target="_blank"><img src="https://images.contentful.com/fo9twyrwpveg/44baP9Gtm8qE2Umm8CQwQk/c43325463d1cb5db2ef97fca0788ea55/PoweredByContentful_LightBackground.svg" width="100" alt="Powered by Contentful" /></a> <a href="https://www.netlify.com" rel="nofollow" target=“_blank”><img src="https://www.netlify.com/img/global/badges/netlify-color-bg.svg" width="100" alt="Deployed on Netlify" /></a>
+
+
+
 
