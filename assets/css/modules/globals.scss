@@ -385,3 +385,34 @@ hr{
     margin-top: 30px;
 }
 
+/**********************OVERIDDING STYLES FOR AUTH0 LOCK WIDGET*********************/
+
+.auth0-lock-header-logo{
+    display: none !important;
+}
+
+.auth0-lock-header{
+    height: auto !important;
+}
+
+.auth0-lock-name{
+    font-family: $mainFontStyle !important;
+    font-size: 18px !important;
+    color: $mainFontColor !important;
+    letter-spacing: 1px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
