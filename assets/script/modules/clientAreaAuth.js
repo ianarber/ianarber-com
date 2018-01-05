@@ -57,7 +57,7 @@ $(function(){
             title: "Client Area"
         },
         auth: {
-            redirectUrl: 'http://192.168.1.145:3002/reel', //TODO: update
+            redirectUrl: 'https://ianarber-test.netlify.com/reel', //TODO: update
             responseType: 'token id_token'
         }
     };
