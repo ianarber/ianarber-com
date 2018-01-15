@@ -15,10 +15,12 @@ end
 num_of_credits = "#{postData['creditPost'].length}"
 num_of_articles = "#{postData['newsArticle'].length}"
 num_of_quotes = "#{postData['quote'].length}"
+num_of_playlists = "#{postData['listenPage'].length}"
 
 credits_counter = 0
 articles_counter = 0
 quotes_counter = 0
+listen_counter = 0
 
 ##-----##-----## CREDIT POSTS ##-----##-----##
 
@@ -197,4 +199,22 @@ begin
 	quotes_counter+=1
 end while quotes_counter < num_of_quotes.to_i
 
-##-----##-----## ABOUT PAGE COLLECTION ##-----##-----##
+##-----##-----## LISTEN PAGE COLLECTION ##-----##-----##
+
+#create listen collection in _listen/
+begin
+	title_slug = "#{postData['listenPage'][listen_counter]['genre']}".downcase
+	title_slug = title_slug.gsub(/[^0-9a-z]/i, "")
+	filename = title_slug + ".md"
+
+	File.open("_listen/#{filename}", "w") do |f|
+		f.puts "---"
+		f.puts "title: #{title_slug}"
+		f.puts "genre: #{postData['listenPage'][listen_counter]['genre']}"
+        f.puts "playlist_url: #{postData['listenPage'][listen_counter]['playlist_url']}"
+		f.puts "featuring: \"#{postData['listenPage'][listen_counter]['featuring']}\""
+        f.puts "---"
+	end
+
+	listen_counter+=1
+end while listen_counter < num_of_playlists.to_i

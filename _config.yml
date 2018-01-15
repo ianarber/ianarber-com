@@ -23,6 +23,7 @@ exclude:
 
 collections:
   - quotes
+  - listen
   - bioimages
 
 # Make sure to export both these variables in your environment

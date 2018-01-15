@@ -4,7 +4,7 @@
     </div>
 
     <div class="listen-wrapper">
-        <div id="filter-wrapper"><i id="arrow" class="fa fa-arrow-circle-right"></i><p id="menu-info" data-swap="Filter Active" data-original="Filter by Genre">Filter by Genre</p></div>
+        <!-- <div id="filter-wrapper"><i id="arrow" class="fa fa-arrow-circle-right"></i><p id="menu-info" data-swap="Filter Active" data-original="Filter by Genre">Filter by Genre</p></div>
         <nav class="genre-menu">
             <ul id="genres">
                 <h5>Filter Genre</h5>
@@ -23,16 +23,16 @@
                 <li id="cat-ffilms" rel="sc-ffilms">Films</li>
                 <li id="cat-tv" rel="sc-tv">TV/Documentary</li>
             </ul>
-        </nav>
+        </nav> -->
         
        
         <div id="listen-gallery">
             <ul class="listen-grid-elements">
                 <h2 class="playlist-header sc-play">Playlists</h2><hr>
 
-                {% for playlists in site.data.listen.playlists %}
+                {% for playlists in site.listen %}
 
-                <li class="sc-audio sc-{{ playlists.classname }}">
+                <li class="sc-audio sc-{{ playlists.title }}">
                     <div class="bg-iframe spinner">
                         <div class="bg-iframe-info">
                             <h5>{{ playlists.genre }}</h5>
@@ -41,7 +41,8 @@
 <!--                        <img src="{{ site.myurl }}/assets/img/sc-previews/playlist-{{ playlists.classname }}.jpg" alt="SC Widget Preview"/>-->
 <!--                        <i class="fa fa-play-circle-o"></i>-->
 <!--                        <iframe id="widget-{{ playlists.classname }}" class="play-frame" src="/blank.html" data-src="{{ playlists.soundcloud }}"></iframe>                          -->
-                        <iframe id="widget-{{ playlists.classname }}" class="play-frame" src="{{ playlists.soundcloud }}" data-src="{{ playlists.soundcloud }}"></iframe>                          
+                        <!-- <iframe id="widget-{{ playlists.classname }}" class="play-frame" src="{{ playlists.soundcloud }}" data-src="{{ playlists.soundcloud }}"></iframe> -->
+                        <iframe id="widget-{{ playlists.title }}" class="play-frame" src="{{ playlists.playlist_url }}"></iframe>                          
                         <div class="fg-cover"></div>
                     </div>                     
                 </li>
@@ -54,7 +55,7 @@
             
             <a href="/contact"><button class="main-btn-style">Contact Me</button></a>
             
-            <h2 class="playlist-header sc-ffilms">Films</h2><hr>
+            <!-- <h2 class="playlist-header sc-ffilms">Films</h2><hr>
             
             <p id="expand-wrapper"><i id="see-more" class="fa fa-arrow-circle-o-down"></i><span id="span-expand">Expand</span></p>
            
@@ -105,7 +106,7 @@
                 <div class="listen-clear"></div>
                 <a href="/contact"><button class="main-btn-style">Contact Me</button></a>
                 
-            </div>
+            </div> -->
         </div>
     </div>
 </section>
