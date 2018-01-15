@@ -1,8 +1,10 @@
+# not able to use data in _data/contentful/spaces/_posts.yaml as they only
+# contain post data and not asset data. So use Contentful Ruby plugin instead
 require 'contentful'
 
-# maybe read these in from the jekyll _config file??
-spaceId = 'cn9cpn7kv7gw'
-accessToken = 'ada57850dcef0806293627506e55f63d9ba2cb00aa7e9b83aed85d06b70b97ad'
+# need to add these 2 values to environment
+spaceId = ENV['CONTENTFUL_SPACE_ID']
+accessToken = ENV['CONTENTFUL_ACCESS_TOKEN']
 
 total_images = 6
 image_urls = {}
