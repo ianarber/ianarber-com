@@ -1,3 +1,6 @@
+//promise polyfill for IE
+require('es6-promise').polyfill();
+
 import axios from "axios";
 
 //webtask contentful api endpoint
