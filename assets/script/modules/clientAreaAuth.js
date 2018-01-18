@@ -57,7 +57,7 @@ $(function(){
             title: "Client Area"
         },
         auth: {
-            redirectUrl: 'https://ianarber-test.netlify.com/reel', //TODO: update
+            redirectUrl: 'https://www.ianarber.com/reel', //TODO: update
             responseType: 'token id_token'
         }
     };
