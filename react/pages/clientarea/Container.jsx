@@ -40,7 +40,7 @@ export default class Container extends React.Component{
                 this.setState({
                     contentfulData: {
                         status: 401,
-                        data: 'You must log in to access the Client Page'
+                        data: 'Please login to access the Client Page'
                     }
                 });
                 return;
@@ -49,6 +49,12 @@ export default class Container extends React.Component{
                 intervalCounter: this.state.intervalCounter + 1
             });
         });
+    }
+
+    removeLocalStorageItems(){
+        window.localStorage.removeItem('ianarber-auth0-profile');
+        window.localStorage.removeItem('ianarber-auth0-access-token');
+        console.log('local storage items removed');
     }
 
     render(){
@@ -99,6 +105,7 @@ export default class Container extends React.Component{
                 )
 
             } else if(status === 401) {
+                this.removeLocalStorageItems();
                 return <Unauthorized data={data} />
             }
         } else {
