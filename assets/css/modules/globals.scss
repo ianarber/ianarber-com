@@ -377,12 +377,12 @@ hr{
     }
 }
 
-.response-message-with-icon .thank-you-response{
+.response-message-with-icon.thank-you-response{
     margin-top: 100px;   
 }
 
-.response-message-with-icon .client-area-unauthorized-response{
-    margin-top: 30px;
+.response-message-with-icon.client-area-unauthorized-response{
+    margin-top: 70px;
 }
 
 /**********************OVERIDDING STYLES FOR AUTH0 LOCK WIDGET*********************/
