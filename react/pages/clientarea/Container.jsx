@@ -62,23 +62,22 @@ export default class Container extends React.Component{
             const {status, data} = this.state.contentfulData;
             if(status === 200){
                 
-                let renderedShowreels = [];
-                let renderedPlaylists = [];
+                let showreelVideo;
+                let showreelPlaylist;
+                let renderedPlaylists = null;
                 let items = data.items;
 
                 for(let i = 0; i < items.length; i++){
-                    if(items[i].fields.showreelLink){
-                        const {title, year, showreelLink} = items[i].fields;
-                        renderedShowreels.push(
+                    if(items[i].fields.mainShowreelContent){
+                        const {title, year, genre, director, showreelLink, playlistLink} = items[i].fields;
+                        showreelVideo = (
                             <Showreel key={i}
                                 title={title}
                                 year={year}
                                 link={showreelLink}
                             />
                         );
-                    } else {
-                        const {title, genre, year, director, playlistLink} = items[i].fields;
-                        renderedPlaylists.push(
+                        showreelPlaylist = (
                             <ClientAreaPlaylist key={i}
                                 title={title}
                                 genre={genre}
@@ -87,19 +86,37 @@ export default class Container extends React.Component{
                                 link={playlistLink}
                             />
                         );
+                    } else {
+                        const {title, genre, year, director, playlistLink} = items[i].fields;
+                        console.log('sdfsd ', playlistLink)
+                        if(playlistLink){
+                            renderedPlaylists.push(
+                                <ClientAreaPlaylist key={i}
+                                    title={title}
+                                    genre={genre}
+                                    year={year}
+                                    director={director}
+                                    link={playlistLink}
+                                />
+                            );
+                        }
                     }
                 }
 
                 return(
                     <div>
-                        {renderedShowreels}
+                        {showreelVideo}
                         <h2 className="sub-header">Showreel Playlist</h2><hr />
 
                         <div id="reel-iframe-wrapper">
-                            <ul>
-                                {renderedPlaylists}
-                            </ul> 
+                            <ul>{showreelPlaylist}</ul>
                             <a href="/contact"><button className="main-btn-style">Contact Me</button></a>
+
+                            {renderedPlaylists &&
+                                <hr />
+                            }
+                            <ul>{renderedPlaylists}</ul>
+
                         </div>
                     </div>
                 )

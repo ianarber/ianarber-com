@@ -4,6 +4,8 @@ export default function ClientAreaPlaylist(props){
 
     const {title, genre, year, director, link} = props;
 
+    console.log('playlist is: ', link)
+
     return(
         <li>
             <div className="bg-iframe spinner">
