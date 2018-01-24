@@ -259,5 +259,11 @@ gulp.task('get-bio-images', function(done){
  * delete the _site folder
  */
 gulp.task('clean', function(){
-  return del.sync(['_site', '_data/contentful/**', '_quotes/*.md', '_bioimages/*.md', 'assets/script/bundle/*', 'assets/css/*.css']);
+  return del.sync(['_site',
+                   '_data/contentful/**',
+                   '_quotes/*.md',
+                   '_bioimages/*.md',
+                   '_listen/*.md',
+                   'assets/script/bundle/*',
+                   'assets/css/*.css']);
 });
