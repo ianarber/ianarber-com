@@ -42,7 +42,15 @@ begin
 		f.puts "layout: credit-info"
 		f.puts "category: credits"
 		f.puts "headerstatus: shrunk-header"
-		f.puts "title: #{postData['creditPost'][credits_counter]['title']}"
+
+		title = "#{postData['creditPost'][credits_counter]['title']}"
+		if title.start_with?('"')
+			title = "'#{postData['creditPost'][credits_counter]['title']}'"
+			f.puts "title: #{title}"
+		else
+			f.puts "title: #{postData['creditPost'][credits_counter]['title']}"
+		end
+
 		f.puts "identity: #{title_slug}"
 		f.puts "image_cover: #{postData['creditPost'][credits_counter]['image_cover']['url']}" + "?w=200&q=80"
 		f.puts "image_social: #{postData['creditPost'][credits_counter]['image_cover']['url']}" + "?fit=thumb&w=300&h=300&q=80"
@@ -126,7 +134,15 @@ begin
 		f.puts "layout: news"
 		f.puts "category: news"
 		f.puts "headerstatus: shrunk-header"
-		f.puts "title: #{postData['newsArticle'][articles_counter]['title']}"
+
+		title = "#{postData['newsArticle'][articles_counter]['title']}"
+		if title.start_with?('"')
+			title = "'#{postData['newsArticle'][articles_counter]['title']}'"
+			f.puts "title: #{title}"
+		else
+			f.puts "title: #{postData['newsArticle'][articles_counter]['title']}"
+		end
+
 		f.puts "film_show: #{postData['newsArticle'][articles_counter]['film_show']}"
 		f.puts "image_header: #{postData['newsArticle'][articles_counter]['image_header']['url']}" + "?fit=thumb&w=1920&h=1080&q=80"
 		f.puts "image_social: #{postData['newsArticle'][articles_counter]['image_header']['url']}" + "?fit=thumb&w=1200&h=630&q=80"
@@ -141,20 +157,20 @@ begin
 		video_link = "#{postData['newsArticle'][articles_counter]['video_link']}"
 		if video_link != ''
 			f.puts "video_link: #{video_link}" + "?enablejsapi=1&amp;rel=0&amp;showinfo=0&amp;autohide=1&amp;modestbranding=1&amp;controls=0"
-		end
 
-		video_width = "#{postData['newsArticle'][articles_counter]['video_width']}"
-		if video_width != ''
-			f.puts "video_width: #{video_width}"
-        else
-            f.puts "video_width: 1280"
-		end
+			video_width = "#{postData['newsArticle'][articles_counter]['video_width']}"
+			if video_width != ''
+				f.puts "video_width: #{video_width}"
+			else
+				f.puts "video_width: 1280"
+			end
 
-		video_height = "#{postData['newsArticle'][articles_counter]['video_height']}"
-		if video_height != ''
-			f.puts "video_height: #{video_height}"
-        else
-            f.puts "video_height: 720"
+			video_height = "#{postData['newsArticle'][articles_counter]['video_height']}"
+			if video_height != ''
+				f.puts "video_height: #{video_height}"
+			else
+				f.puts "video_height: 720"
+			end
 		end
 
 		f.puts "---"
@@ -209,7 +225,7 @@ begin
 
 	File.open("_listen/#{filename}", "w") do |f|
 		f.puts "---"
-		f.puts "title: #{title_slug}"
+		f.puts "title: '#{title_slug}'"
 		f.puts "genre: #{postData['listenPage'][listen_counter]['genre']}"
         f.puts "playlist_url: #{postData['listenPage'][listen_counter]['playlist_url']}"
 		f.puts "featuring: \"#{postData['listenPage'][listen_counter]['featuring']}\""
