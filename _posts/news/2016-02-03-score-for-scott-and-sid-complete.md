@@ -2,7 +2,6 @@
 layout: news
 category: news
 headerstatus: shrunk-header
-intro_weight: 2
 title: Score for Scott and Sid Complete
 film_show: Scott and Sid
 image_social: /assets/img/news-posts/opengraph/scott-and-sid.jpg
