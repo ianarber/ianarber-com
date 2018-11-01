@@ -88,7 +88,6 @@ export default class Container extends React.Component{
                         );
                     } else {
                         const {title, genre, year, director, playlistLink} = items[i].fields;
-                        console.log('sdfsd ', playlistLink)
                         if(playlistLink){
                             renderedPlaylists.push(
                                 <ClientAreaPlaylist key={i}
@@ -118,6 +117,16 @@ export default class Container extends React.Component{
                             <ul>{renderedPlaylists}</ul>
 
                         </div>
+
+                        <h2 className="sub-header">Music catalogue</h2><hr />
+                        <div id="catalog-download-text">
+                            <p>You can download various genre styles from my music back catalogue</p>
+                            <a href="https://www.dropbox.com/sh/hfe4wxxh75nk7p8/AAAkqxHAmCtE_BmJlikoi5LLa?dl=0" target="_blank">
+                                <button className="main-btn-style">Download</button>
+                            </a>
+                        </div>
+                        <br />
+
                     </div>
                 )
 
