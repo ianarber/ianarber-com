@@ -90,28 +90,6 @@ function calculateVideoSize(){
         'height': height});
 }
 
-function clearQuoteStyle(){
-
-    //if ( window.innerWidth <= 612 && playState != 1 ) {
-    //    $profilePic.find('#welcome-text').fadeOut(1);
-    //} else if ( window.innerWidth > 612  && playState != 1 ) {
-    //    $profilePic.find('#welcome-text').fadeIn(1);
-    //}
-
-    if ( window.innerWidth <= 480 && playState != 1 ) {
-        $profilePic.find('#quote, #cite').fadeOut(1);
-        $profilePic.find('.img-slide > p > a').animate({
-            'bottom': '20px'
-        });
-    } else if ( window.innerWidth > 480  && playState != 1 ) {
-        $profilePic.find('#quote, #cite').fadeIn(1);
-        $profilePic.find('.img-slide > p > a').animate({
-            'bottom': '120px'
-        });
-    }
-
-}
-
 function imageSlider(){
     //var count = $('.img-slide > img').length;
     var relToMatch;
@@ -195,56 +173,14 @@ function controlVideo(playerStatus) {
         // ended
         playState = playerStatus;
         startInterval();
-        //$profilePic.css('background-color', 'transparent');
-        //$profilePic.find('#welcome-intro').fadeToggle('slow');
-
-        //if ( window.innerWidth > 612 ) {
-        //    $profilePic.find('#welcome-text').fadeToggle('slow');
-        //}
-        if ( window.innerWidth > 480 ) {
-            $profilePic.find('#quote, #cite').fadeToggle('slow');
-            $profilePic.find('.img-slide > p > a').animate({
-                'bottom': '140px'
-            });
-        }
-
     } else if (playerStatus == 1) {
         // playing
         playState = playerStatus;
         stopInterval();
-        //$profilePic.css('background-color', 'black');
-        //$profilePic.find('#welcome-intro').fadeToggle('slow');
-
-        //if ( window.innerWidth > 612 ) {
-        //    $profilePic.find('#welcome-text').fadeToggle('slow');
-        //}
-        if ( window.innerWidth > 480 ) {
-            $profilePic.find('#quote, #cite').fadeToggle('slow');
-            $profilePic.find('.img-slide > p > a').animate({
-                'bottom': '20px'
-            });
-        }
-
-
-
     } else if (playerStatus == 2) {
         // paused
         playState = playerStatus;
         startInterval();
-        //$profilePic.css('background-color', 'transparent');
-        //$profilePic.find('#welcome-intro').fadeToggle('slow');
-
-        //if ( window.innerWidth > 612 ) {
-        //    $profilePic.find('#welcome-text').fadeToggle('slow');
-        //}
-        if ( window.innerWidth > 480 ) {
-            $profilePic.find('#quote, #cite').fadeToggle('slow');
-            $profilePic.find('.img-slide > p > a').animate({
-                'bottom': '140px'
-            });
-        }
-
-
     }
 }
 
@@ -286,12 +222,10 @@ function startInterval(){
 //initially run finctions
 recalculateHeight();
 calculateVideoSize();
-clearQuoteStyle();
 
 $(window).on('resize', function(){
     recalculateHeight();
     calculateVideoSize();
-    clearQuoteStyle();
 });
 
 

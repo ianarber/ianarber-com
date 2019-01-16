@@ -37,19 +37,6 @@
 
         </div>
 
-		{% for quote in site.quotes %}
-
-			{% if quote.intro_quote %}
-				<div id="quote">
-					<q>{{ quote.intro_quote }}</q>
-				</div>
-				<div id="cite">
-		            {{ quote.author }}, {{ quote.role }} - <cite>{{ quote.film }}</cite>
-				</div>
-			{% endif %}
-
-		{% endfor %}
-
 	</div>
 
 	<div id="nav-scroll-btns">
