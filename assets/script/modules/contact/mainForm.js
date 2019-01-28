@@ -6,9 +6,9 @@ var contactEmail1 = document.getElementById('email-carolynne');
 contactEmail1.setAttribute('href', 'mailto:' + 'carolynne' + '@' + 'smatalent' + '.' + 'com');
 contactEmail1.innerHTML = 'carolynne' + '@' + 'smatalent' + '.' + 'com';
 
-var contactEmail2 = document.getElementById('email-lesley');
-contactEmail2.setAttribute('href', 'mailto:' + 'lesley' + '@' + 'smatalent' + '.' + 'com');
-contactEmail2.innerHTML = 'lesley' + '@' + 'smatalent' + '.' + 'com';
+var contactEmail2 = document.getElementById('email-michelle');
+contactEmail2.setAttribute('href', 'mailto:' + 'michelle' + '@' + 'smatalent' + '.' + 'com');
+contactEmail2.innerHTML = 'michelle' + '@' + 'smatalent' + '.' + 'com';
 
 var contactEmail3 = document.getElementById('email-ian');
 contactEmail3.innerHTML = 'contact' + '@' + 'ianarber' + '.' + 'com';
