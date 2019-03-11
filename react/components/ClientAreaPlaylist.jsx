@@ -7,7 +7,7 @@ export default function ClientAreaPlaylist(props){
     return(
         <li>
             <div className="bg-iframe spinner">
-                <div className="bg-iframe-info">
+                {/* <div className="bg-iframe-info">
                     <h5>{title}</h5>
                     <p>
                         {genre &&
@@ -18,7 +18,7 @@ export default function ClientAreaPlaylist(props){
                     {director &&
                         <p>Directed by {director}</p>
                     }
-                </div>
+                </div> */}
                 <iframe id={title} src={link}></iframe>
             </div>
         </li>

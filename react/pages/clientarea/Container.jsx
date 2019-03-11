@@ -79,10 +79,10 @@ export default class Container extends React.Component{
                         );
                         showreelPlaylist = (
                             <ClientAreaPlaylist key={i}
-                                title={title}
-                                genre={genre}
-                                year={year}
-                                director={director}
+                                // title={title}
+                                // genre={genre}
+                                // year={year}
+                                // director={director}
                                 link={playlistLink}
                             />
                         );
@@ -104,13 +104,21 @@ export default class Container extends React.Component{
 
                 return(
                     <div>
+                        <br />
+                        <h2 className="sub-header">Show Me The Picture: The Story of Jim Marshall</h2><hr />
+                        <div className="catalog-download-text">
+                            <p>Download Original Soundtrack</p>
+                            <a href="https://www.dropbox.com/sh/e1gqkv8zi1rqx5y/AAAxDQgCpm9vUzew4elRofVNa?dl=0" target="_blank">
+                                <button className="main-btn-style client-area-button">Download</button>
+                            </a>
+                        </div>
+                        <br />
+
                         {showreelVideo}
-                        <h2 className="sub-header">Showreel Playlist</h2><hr />
+                        <h2 className="sub-header">Audio Showreel - 2019</h2><hr />
 
                         <div id="reel-iframe-wrapper">
                             <ul>{showreelPlaylist}</ul>
-                            <a href="/contact"><button className="main-btn-style">Contact Me</button></a>
-
                             {renderedPlaylists &&
                                 <hr />
                             }
@@ -119,10 +127,18 @@ export default class Container extends React.Component{
                         </div>
 
                         <h2 className="sub-header">Music catalogue</h2><hr />
-                        <div id="catalog-download-text">
+                        <div className="catalog-download-text">
                             <p>You can download various genre styles from my music back catalogue</p>
                             <a href="https://www.dropbox.com/sh/hfe4wxxh75nk7p8/AAAkqxHAmCtE_BmJlikoi5LLa?dl=0" target="_blank">
-                                <button className="main-btn-style">Download</button>
+                                <button className="main-btn-style client-area-button">Download</button>
+                            </a>
+                        </div>
+                        <br />
+
+                        <hr />
+                        <div className="catalog-download-text">
+                            <a href="/contact">
+                                <button className="main-btn-style client-area-button">Contact Me</button>
                             </a>
                         </div>
                         <br />
