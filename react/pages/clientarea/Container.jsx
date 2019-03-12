@@ -104,10 +104,9 @@ export default class Container extends React.Component{
 
                 return(
                     <div>
-                        <br />
-                        <h2 className="sub-header">Show Me The Picture: The Story of Jim Marshall</h2><hr />
+                        <h2 className="sub-header">Recent Scores</h2><hr />
                         <div className="catalog-download-text">
-                            <p>Download Original Soundtrack</p>
+                            <p>Show Me The Picture: The Story of Jim Marshall</p>
                             <a href="https://www.dropbox.com/sh/e1gqkv8zi1rqx5y/AAAxDQgCpm9vUzew4elRofVNa?dl=0" target="_blank">
                                 <button className="main-btn-style client-area-button">Download</button>
                             </a>
