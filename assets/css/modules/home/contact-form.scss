@@ -20,6 +20,7 @@
 }
 
 .direct,
+.publicist,
 .social,
 .agent{
 	text-align: center;
@@ -32,6 +33,18 @@
         font-weight: 300;
 	}
 }
+
+// .publicist{
+//     margin-top: 15px;
+//     p{
+//         font-size: 85%;
+//     }
+//     i{
+// 		margin-top: 10px;
+//         margin-bottom: 5px;
+// 		border: none;
+// 	}
+// }
 
 .direct{
     margin-top: 25px;
@@ -148,7 +161,7 @@
 }
 
 .form .social{
-    margin-top: 25px;
+    margin-top: 15px;
     .social-icons{
         margin-top: 10px;
         div:not(:last-child){
@@ -163,7 +176,8 @@
     }
 }
 
-.agent{
+.agent,
+.publicist{
 	margin-top: 10px;
 	h6{
 		margin-top: 10px;
@@ -181,4 +195,13 @@
             color: $mainFontColor;
 		}
 	}
+}
+
+.publicist-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i{
+        margin: 0 10px;
+    }
 }
