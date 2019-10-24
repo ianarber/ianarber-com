@@ -1,159 +1,179 @@
-import React from 'react';
+import React from "react";
 
-import Unauthorized from '../../components/Unauthorized';
-import Showreel from '../../components/Showreel';
-import ClientAreaPlaylist from '../../components/ClientAreaPlaylist';
-import Spinner from '../../components/Spinner';
-import ajax from '../../scripts/ContentfulAjax';
+import Unauthorized from "../../components/Unauthorized";
+import Showreel from "../../components/Showreel";
+import ClientAreaPlaylist from "../../components/ClientAreaPlaylist";
+import Spinner from "../../components/Spinner";
+import ajax from "../../scripts/ContentfulAjax";
 
-export default class Container extends React.Component{
-    constructor(props){
-        super(props);
-        this.state = {
-            contentfulData: null,
-            intervalCounter: 0
-        }
-    }
+export default class Container extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      contentfulData: null,
+      intervalCounter: 0
+    };
+  }
 
-    //React life cycle functions - START
+  //React life cycle functions - START
 
-    componentDidMount(){
-        //allow time for token to be written to disk after url redirect
-        this.ajaxInterval = setInterval(this.requestData, 1000);
-    }
+  componentDidMount() {
+    //allow time for token to be written to disk after url redirect
+    this.ajaxInterval = setInterval(this.requestData, 1000);
+  }
 
-    componentWillUnmount(){
-        clearInterval(this.ajaxInterval);
-    }
+  componentWillUnmount() {
+    clearInterval(this.ajaxInterval);
+  }
 
-    //React life cycle functions - END
+  //React life cycle functions - END
 
-    requestData = () => {
-        ajax.getContent().then(data => {
-            clearInterval(this.ajaxInterval); //a token was found in local storage
-            this.setState({
-                contentfulData: data
-            });
-        }).catch(error => { //allow 3 attempts to get token
-            if(this.state.intervalCounter === 3){
-                clearInterval(this.ajaxInterval);
-                this.setState({
-                    contentfulData: {
-                        status: 401,
-                        data: 'Please login to access the Client Page'
-                    }
-                });
-                return;
-            }
-            this.setState({
-                intervalCounter: this.state.intervalCounter + 1
-            });
+  requestData = () => {
+    ajax
+      .getContent()
+      .then(data => {
+        clearInterval(this.ajaxInterval); //a token was found in local storage
+        this.setState({
+          contentfulData: data
         });
-    }
-
-    removeLocalStorageItems(){
-        window.localStorage.removeItem('ianarber-auth0-profile');
-        window.localStorage.removeItem('ianarber-auth0-access-token');
-        console.log('local storage items removed');
-    }
-
-    render(){
-        if(this.state.contentfulData){
-            const {status, data} = this.state.contentfulData;
-            if(status === 200){
-                
-                let showreelVideo;
-                let showreelPlaylist;
-                let renderedPlaylists = null;
-                let items = data.items;
-
-                for(let i = 0; i < items.length; i++){
-                    if(items[i].fields.mainShowreelContent){
-                        const {title, year, genre, director, showreelLink, playlistLink} = items[i].fields;
-                        showreelVideo = (
-                            <Showreel key={i}
-                                title={title}
-                                year={year}
-                                link={showreelLink}
-                            />
-                        );
-                        showreelPlaylist = (
-                            <ClientAreaPlaylist key={i}
-                                // title={title}
-                                // genre={genre}
-                                // year={year}
-                                // director={director}
-                                link={playlistLink}
-                            />
-                        );
-                    } else {
-                        const {title, genre, year, director, playlistLink} = items[i].fields;
-                        if(playlistLink){
-                            renderedPlaylists.push(
-                                <ClientAreaPlaylist key={i}
-                                    title={title}
-                                    genre={genre}
-                                    year={year}
-                                    director={director}
-                                    link={playlistLink}
-                                />
-                            );
-                        }
-                    }
-                }
-
-                return(
-                    <div>
-                        <h2 className="sub-header">Recent Scores</h2><hr />
-                        <div className="catalog-download-text">
-                            <p>Show Me The Picture: The Story of Jim Marshall</p>
-                            <a href="https://www.dropbox.com/sh/e1gqkv8zi1rqx5y/AAAxDQgCpm9vUzew4elRofVNa?dl=0" target="_blank">
-                                <button className="main-btn-style client-area-button">Download</button>
-                            </a>
-                        </div>
-                        <br />
-
-                        {showreelVideo}
-                        <h2 className="sub-header">Audio Showreel - 2019</h2><hr />
-
-                        <div id="reel-iframe-wrapper">
-                            <ul>{showreelPlaylist}</ul>
-                            {renderedPlaylists &&
-                                <hr />
-                            }
-                            <ul>{renderedPlaylists}</ul>
-
-                        </div>
-
-                        <h2 className="sub-header">Music catalogue</h2><hr />
-                        <div className="catalog-download-text">
-                            <p>You can download various genre styles from my music back catalogue</p>
-                            <a href="https://www.dropbox.com/sh/hfe4wxxh75nk7p8/AAAkqxHAmCtE_BmJlikoi5LLa?dl=0" target="_blank">
-                                <button className="main-btn-style client-area-button">Download</button>
-                            </a>
-                        </div>
-                        <br />
-
-                        <hr />
-                        <div className="catalog-download-text">
-                            <a href="/contact">
-                                <button className="main-btn-style client-area-button">Contact Me</button>
-                            </a>
-                        </div>
-                        <br />
-
-                    </div>
-                )
-
-            } else if(status === 401) {
-                this.removeLocalStorageItems();
-                return <Unauthorized data={data} />
+      })
+      .catch(error => {
+        //allow 3 attempts to get token
+        if (this.state.intervalCounter === 3) {
+          clearInterval(this.ajaxInterval);
+          this.setState({
+            contentfulData: {
+              status: 401,
+              data: "Please login to access the Client Page"
             }
-        } else {
-            return(
-                <Spinner />
-            )
+          });
+          return;
         }
-    }
+        this.setState({
+          intervalCounter: this.state.intervalCounter + 1
+        });
+      });
+  };
 
+  removeLocalStorageItems() {
+    window.localStorage.removeItem("ianarber-auth0-profile");
+    window.localStorage.removeItem("ianarber-auth0-access-token");
+    console.log("local storage items removed");
+  }
+
+  render() {
+    if (this.state.contentfulData) {
+      const { status, data } = this.state.contentfulData;
+      if (status === 200) {
+        let showreelVideo;
+        let showreelPlaylist;
+        let renderedPlaylists = null;
+        let items = data.items;
+
+        for (let i = 0; i < items.length; i++) {
+          if (items[i].fields.mainShowreelContent) {
+            const {
+              title,
+              year,
+              genre,
+              director,
+              showreelLink,
+              playlistLink
+            } = items[i].fields;
+            showreelVideo = (
+              <Showreel key={i} title={title} year={year} link={showreelLink} />
+            );
+            showreelPlaylist = (
+              <ClientAreaPlaylist
+                key={i}
+                // title={title}
+                // genre={genre}
+                // year={year}
+                // director={director}
+                link={playlistLink}
+              />
+            );
+          } else {
+            const { title, genre, year, director, playlistLink } = items[
+              i
+            ].fields;
+            if (playlistLink) {
+              renderedPlaylists.push(
+                <ClientAreaPlaylist
+                  key={i}
+                  title={title}
+                  genre={genre}
+                  year={year}
+                  director={director}
+                  link={playlistLink}
+                />
+              );
+            }
+          }
+        }
+
+        return (
+          <div>
+            <h2 className="sub-header">Recent Scores</h2>
+            <hr />
+            <div className="catalog-download-text">
+              <p>The Capture (BBC One)</p>
+              <a
+                href="https://www.dropbox.com/sh/a2f6nn1uliad1fa/AABqcPUcjdIqrh30rWDYtF10a?dl=0"
+                target="_blank"
+              >
+                <button className="main-btn-style client-area-button">
+                  Download
+                </button>
+              </a>
+            </div>
+            <br />
+
+            {showreelVideo}
+            <h2 className="sub-header">Audio Showreel - 2019</h2>
+            <hr />
+
+            <div id="reel-iframe-wrapper">
+              <ul>{showreelPlaylist}</ul>
+              {renderedPlaylists && <hr />}
+              <ul>{renderedPlaylists}</ul>
+            </div>
+
+            <h2 className="sub-header">Music catalogue</h2>
+            <hr />
+            <div className="catalog-download-text">
+              <p>
+                You can download various genre styles from my music back
+                catalogue
+              </p>
+              <a
+                href="https://www.dropbox.com/sh/hfe4wxxh75nk7p8/AAAkqxHAmCtE_BmJlikoi5LLa?dl=0"
+                target="_blank"
+              >
+                <button className="main-btn-style client-area-button">
+                  Download
+                </button>
+              </a>
+            </div>
+            <br />
+
+            <hr />
+            <div className="catalog-download-text">
+              <a href="/contact">
+                <button className="main-btn-style client-area-button">
+                  Contact Me
+                </button>
+              </a>
+            </div>
+            <br />
+          </div>
+        );
+      } else if (status === 401) {
+        this.removeLocalStorageItems();
+        return <Unauthorized data={data} />;
+      }
+    } else {
+      return <Spinner />;
+    }
+  }
 }
