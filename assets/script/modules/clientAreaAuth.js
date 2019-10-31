@@ -54,7 +54,7 @@ $(function(){
         },
         languageDictionary: {
             emailInputPlaceholder: "guest@ianarber.com",
-            title: "Client Area"
+            title: "Reel"
         },
         auth: {
             redirectUrl: 'https://www.ianarber.com/reel', //TODO: update
