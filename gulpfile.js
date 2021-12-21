@@ -264,6 +264,7 @@ gulp.task('clean', function(){
                    '_quotes/*.md',
                    '_bioimages/*.md',
                    '_listen/*.md',
+                   '_posts/**/*.md',
                    'assets/script/bundle/*',
                    'assets/css/*.css']);
 });
