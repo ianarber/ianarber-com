@@ -16,7 +16,6 @@ exclude:
   - README.md
   - react
   - assets/script/modules/mobileMenu.js
-  - assets/script/modules/quoteSlider.js
   - assets/script/modules/clientAreaAuth.js
   - assets/css/modules
   - assets/css/main.scss
