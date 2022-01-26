@@ -1,8 +1,10 @@
 import React from "react";
-import {render} from 'react-dom';
-import Container from '../pages/clientarea/Container';
+import { render } from "react-dom";
 
-render(
-    <Container />,
-    document.getElementById('react-root')
-);
+import BasePage from "../pages/BasePage";
+
+const reactRoot = document.getElementById("react-root");
+
+if (reactRoot) {
+  render(<BasePage />, document.getElementById("react-root"));
+}

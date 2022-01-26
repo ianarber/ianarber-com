@@ -224,7 +224,7 @@
 
     {% comment %} WILL EVENTUALLY MOVE SCRIPTS IMPORT FOR ALL PAGES TO BELOW {% endcomment %}
 
-    {% if page.title == 'Client Area' %}
+    {% if page.title == 'Client Area' or page.title == 'Listen' %}
         {% if jekyll.environment == 'production' %}
             <script type="text/javascript" src="/assets/script/bundle/react-app.min.js"></script>
         {% elsif jekyll.environment == 'development' %}
