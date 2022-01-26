@@ -265,5 +265,6 @@ gulp.task('clean', function(){
                    '_listen/*.md',
                    '_posts/**/*.md',
                    'assets/script/bundle/*',
+                   'assets/script/vendor/*',
                    'assets/css/*.css']);
 });
