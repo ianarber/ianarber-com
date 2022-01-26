@@ -3,7 +3,7 @@ author: Ian Arber
 myurl: https://www.ianarber.com
 permalink: /:categories/:month/:year/:title/
 future: true
-vendor_react: react15.6.1.js
+vendor_react: react17.0.2.js
 
 exclude:
   - attic
