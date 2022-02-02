@@ -13,6 +13,10 @@ exports.handler = async function (event, context) {
     const response = await axios.get(GET_URL);
     return {
       statusCode: 200,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET",
+      },
       body: JSON.stringify({ title: response.data }),
     };
   } catch (err) {
