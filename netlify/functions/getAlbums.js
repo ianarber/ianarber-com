@@ -1,9 +1,6 @@
 const axios = require("axios");
 
 exports.handler = async function (event, context) {
-  console.log(event);
-  console.log(context);
-
   const { CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN } = process.env;
   const CONTENTFUL_BASE_URL = "https://cdn.contentful.com";
   const CONTENT_TYPE = "listenPageAlbums";
@@ -17,11 +14,11 @@ exports.handler = async function (event, context) {
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "GET",
       },
-      body: JSON.stringify({ title: response.data }),
+      body: JSON.stringify({ ...response.data }),
     };
   } catch (err) {
     return {
-      statusCode: 404,
+      statusCode: 500,
       body: err.toString(),
     };
   }
