@@ -20,53 +20,26 @@
 
 
 
-.composer,
-.film{
+.composer {
 	position: relative;
     font-size: 70%;
     font-weight: 700;
 	transition: all 0.3s ease-in-out;   
 }
 
-#logo{
+#logo {
     text-align: center;
     text-transform: uppercase;
     font-family: $logoFontStyle;
-    .composer{
-        display: table;
-        margin: 0 auto;
-		top: 6px;
-        &:before, &:after{
-            border-top: 2px solid $mainFontColor;
-            content: '';
-            display: table-cell;
-            position: relative;
-            top: 7px;
-			width: 37.2%;
-			transition: all 0.3s ease-in-out;
-        }
-        &:before { right: 1.8%; }
-        &:after {
-            right: -1%;
-        }
+
+    .logo-text-wrapper {
+        padding-top: 7px;
     }
-    .film{
+
+    .composer {
         display: table;
         margin: 0 auto;
 		top: -5px;
-        &:before, &:after{
-            border-top: 2px solid $mainFontColor;
-            content: '';
-            display: table-cell;
-            position: relative;
-            top: 7px;
-            width: 28.5%;
-			transition: all 0.3s ease-in-out;
-        }
-        &:before { right: 1.8%; }
-        &:after {
-            right: -1.4%;
-        }
     }
 }
 
@@ -75,6 +48,10 @@
 
 #header.shrunk-header{
     height: 60px;
+
+    .logo-text-wrapper {
+        padding-top: 5px;
+    }
 }
 
 #header.shrunk-header .ianarber{
@@ -93,45 +70,11 @@
 }
 
 #header.shrunk-header .composer{
-    top: -7px;
+    top: -14px;
 }
 
-#header.shrunk-header .composer:before,
-#header.shrunk-header .composer:after{
-    top: 4px;
-    width: 37.1%;
-}
-
-#header.shrunk-header .composer:before {
-    right: 1.7%;
-}
-
-#header.shrunk-header .composer:after {
-    right: -1%;
-}
-
-#header.shrunk-header .film{
-    top: -15px;
-}
-
-#header.shrunk-header .film:before,
-#header.shrunk-header .film:after{
-    top: 4px;
-    width: 28.9%;
-}
-
-#header.shrunk-header .film:before {
-    right: 1.8%;
-}
-
-#header.shrunk-header .film:after {
-    right: -1.5%;
-}
-
-#header.shrunk-header .composer,
-#header.shrunk-header .film{
+#header.shrunk-header .composer {
     font-size: 45%;
-
 }
 
 /***************************************************************************/
