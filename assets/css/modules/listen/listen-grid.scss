@@ -1,6 +1,7 @@
 .listen-grid {
     max-width: 1840px;
     margin: 0 auto;
+    padding: 0 50px;
     height: auto;
     .section-header{
         margin-top: 60px;
@@ -17,6 +18,25 @@
     }
     button:last-of-type{
         margin-bottom: 30px;
+    }
+}
+
+.listen-albums-container .grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 50px;
+    text-align: center;
+
+    .listen-albums-item {
+        img {
+            width: 250px;
+            height: 250px;
+        }
+
+        iframe {
+            width: 250px;
+            height: 300px;
+        }
     }
 }
 

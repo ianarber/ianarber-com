@@ -677,7 +677,29 @@ const Container = () => {
     }
   };
 
-  return <div>{JSON.stringify(albums)}</div>;
+  const renderGridItems = () => {
+    return albums.map((album) => (
+      <div className="listen-albums-item">
+        <img src={album.coverUrl} alt={`{album.title cover}`} />
+        <iframe
+          src="https://open.spotify.com/embed/album/4e5zOBRLEIViEbdBjlB8WB?utm_source=generator"
+          frameborder="0"
+          allow="encrypted-media"
+        ></iframe>
+        <h4>{album.title}</h4>
+      </div>
+    ));
+  };
+
+  return (
+    <div className="listen-albums-container">
+      {albums ? (
+        <div className="grid-wrapper">{renderGridItems()}</div>
+      ) : (
+        <div>loading</div>
+      )}
+    </div>
+  );
 };
 
 export default Container;

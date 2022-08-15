@@ -1,15 +1,5 @@
 /* TODO: clean up mquery file */
 
-@media only screen and (max-width: 1232px){
-    #listen-gallery{
-        .listen-grid-elements > li{
-            width: 50%;
-        }
-    }
-}
-
-
-
 @media only screen and (max-width: 1220px){
 	#header{
 		height: 110px;
@@ -400,24 +390,8 @@
         }
     }
 
-    .listen-grid {
-        .section-header{
-            display: none;
-        }
-    }
-
     .genre-menu{
         transform: translateY(20px);
-    }
-
-    .listen-wrapper{
-        margin-top: 80px;
-    }
-
-    #listen-gallery{
-        .listen-grid-elements > li{
-            width: 100%;
-        }
     }
 
     .main-contact-form{
