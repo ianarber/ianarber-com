@@ -40,6 +40,19 @@
         display: table;
         margin: 0 auto;
 		top: -5px;
+        &:before, &:after{
+            border-top: 2px solid $mainFontColor;
+            content: '';
+            display: table-cell;
+            position: relative;
+            top: 7px;
+            width: 37.5%;
+			transition: all 0.3s ease-in-out;
+        }
+        &:before { right: 1.8%; }
+        &:after {
+            right: -1.4%;
+        }
     }
 }
 
@@ -71,10 +84,11 @@
 
 #header.shrunk-header .composer{
     top: -14px;
-}
-
-#header.shrunk-header .composer {
     font-size: 45%;
+
+    &:before, &:after {
+        top: 4px;
+    }
 }
 
 /***************************************************************************/

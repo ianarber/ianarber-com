@@ -1,5 +1,5 @@
 .listen-grid {
-    max-width: 1840px;
+    max-width: 1240px;
     margin: 0 auto;
     padding: 0 50px;
     height: auto;
@@ -29,13 +29,14 @@
 
     .listen-albums-item {
         img {
-            width: 250px;
-            height: 250px;
+            width: 300px;
+            height: 300px;
         }
 
         iframe {
-            width: 250px;
-            height: 300px;
+            width: 300px;
+            height: 400px;
+            margin: 10px 0;
         }
     }
 }

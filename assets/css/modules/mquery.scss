@@ -9,20 +9,12 @@
 		.ianarber{
 			font-size: 220%;
 		}
-		.composer,
-		.film{
+		.composer {
 			font-size: 60%;
 		}
 		.composer{
 			&:before, &:after{
-				top: 5px;
-				width: 37.7%;
-			}
-    	}
-		.film{
-			&:before, &:after{
-				top: 5px;
-				width: 29.6%;
+				top: 4px;
 			}
     	}
 	}
