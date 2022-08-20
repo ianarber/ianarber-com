@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Spinner from "../../components/Spinner";
 
 // const DATA_DUMP = {
 //   sys: {
-//     type: "Array"
+//     type: "Array",
 //   },
 //   total: 8,
 //   skip: 0,
@@ -11,15 +12,15 @@ import axios from "axios";
 //   items: [
 //     {
 //       metadata: {
-//         tags: []
+//         tags: [],
 //       },
 //       sys: {
 //         space: {
 //           sys: {
 //             type: "Link",
 //             linkType: "Space",
-//             id: "cn9cpn7kv7gw"
-//           }
+//             id: "cn9cpn7kv7gw",
+//           },
 //         },
 //         id: "3f5ffNyNgAX5OxBnsfxbzG",
 //         type: "Entry",
@@ -29,18 +30,18 @@ import axios from "axios";
 //           sys: {
 //             id: "master",
 //             type: "Link",
-//             linkType: "Environment"
-//           }
+//             linkType: "Environment",
+//           },
 //         },
 //         revision: 2,
 //         contentType: {
 //           sys: {
 //             type: "Link",
 //             linkType: "ContentType",
-//             id: "listenPageAlbums"
-//           }
+//             id: "listenPageAlbums",
+//           },
 //         },
-//         locale: "en-GB"
+//         locale: "en-GB",
 //       },
 //       fields: {
 //         title: "Show Me The Picture",
@@ -48,23 +49,23 @@ import axios from "axios";
 //           sys: {
 //             type: "Link",
 //             linkType: "Asset",
-//             id: "40tPumR7ouXuJ1e0RtX42b"
-//           }
+//             id: "40tPumR7ouXuJ1e0RtX42b",
+//           },
 //         },
-//         url: "https://open.spotify.com/embed/album/2gULVYQEFRWxJIs9S1dh8o?utm_source=generator"
-//       }
+//         url: "https://open.spotify.com/embed/album/2gULVYQEFRWxJIs9S1dh8o?utm_source=generator",
+//       },
 //     },
 //     {
 //       metadata: {
-//         tags: []
+//         tags: [],
 //       },
 //       sys: {
 //         space: {
 //           sys: {
 //             type: "Link",
 //             linkType: "Space",
-//             id: "cn9cpn7kv7gw"
-//           }
+//             id: "cn9cpn7kv7gw",
+//           },
 //         },
 //         id: "59n5dOJEiR1aoOwuAQbAhO",
 //         type: "Entry",
@@ -74,18 +75,18 @@ import axios from "axios";
 //           sys: {
 //             id: "master",
 //             type: "Link",
-//             linkType: "Environment"
-//           }
+//             linkType: "Environment",
+//           },
 //         },
 //         revision: 3,
 //         contentType: {
 //           sys: {
 //             type: "Link",
 //             linkType: "ContentType",
-//             id: "listenPageAlbums"
-//           }
+//             id: "listenPageAlbums",
+//           },
 //         },
-//         locale: "en-GB"
+//         locale: "en-GB",
 //       },
 //       fields: {
 //         title: "Redcon-1",
@@ -93,23 +94,23 @@ import axios from "axios";
 //           sys: {
 //             type: "Link",
 //             linkType: "Asset",
-//             id: "1KwxnIFV3Hqn0utQTcntIt"
-//           }
+//             id: "1KwxnIFV3Hqn0utQTcntIt",
+//           },
 //         },
-//         url: "https://open.spotify.com/embed/album/4e5zOBRLEIViEbdBjlB8WB?utm_source=generator"
-//       }
+//         url: "https://open.spotify.com/embed/album/4e5zOBRLEIViEbdBjlB8WB?utm_source=generator",
+//       },
 //     },
 //     {
 //       metadata: {
-//         tags: []
+//         tags: [],
 //       },
 //       sys: {
 //         space: {
 //           sys: {
 //             type: "Link",
 //             linkType: "Space",
-//             id: "cn9cpn7kv7gw"
-//           }
+//             id: "cn9cpn7kv7gw",
+//           },
 //         },
 //         id: "6HLxAmvfGfErHbeOPwfjfw",
 //         type: "Entry",
@@ -119,18 +120,18 @@ import axios from "axios";
 //           sys: {
 //             id: "master",
 //             type: "Link",
-//             linkType: "Environment"
-//           }
+//             linkType: "Environment",
+//           },
 //         },
 //         revision: 2,
 //         contentType: {
 //           sys: {
 //             type: "Link",
 //             linkType: "ContentType",
-//             id: "listenPageAlbums"
-//           }
+//             id: "listenPageAlbums",
+//           },
 //         },
-//         locale: "en-GB"
+//         locale: "en-GB",
 //       },
 //       fields: {
 //         title: "I Am Bolt",
@@ -138,23 +139,23 @@ import axios from "axios";
 //           sys: {
 //             type: "Link",
 //             linkType: "Asset",
-//             id: "6S9aGNuHfqrEbjORCEjVy0"
-//           }
+//             id: "6S9aGNuHfqrEbjORCEjVy0",
+//           },
 //         },
-//         url: "https://open.spotify.com/embed/album/6n3sBJQZP4rQ0OYHvlNQfD?utm_source=generator"
-//       }
+//         url: "https://open.spotify.com/embed/album/6n3sBJQZP4rQ0OYHvlNQfD?utm_source=generator",
+//       },
 //     },
 //     {
 //       metadata: {
-//         tags: []
+//         tags: [],
 //       },
 //       sys: {
 //         space: {
 //           sys: {
 //             type: "Link",
 //             linkType: "Space",
-//             id: "cn9cpn7kv7gw"
-//           }
+//             id: "cn9cpn7kv7gw",
+//           },
 //         },
 //         id: "3yJDv9aBNkMuhKnPii6Oyu",
 //         type: "Entry",
@@ -164,18 +165,18 @@ import axios from "axios";
 //           sys: {
 //             id: "master",
 //             type: "Link",
-//             linkType: "Environment"
-//           }
+//             linkType: "Environment",
+//           },
 //         },
 //         revision: 2,
 //         contentType: {
 //           sys: {
 //             type: "Link",
 //             linkType: "ContentType",
-//             id: "listenPageAlbums"
-//           }
+//             id: "listenPageAlbums",
+//           },
 //         },
-//         locale: "en-GB"
+//         locale: "en-GB",
 //       },
 //       fields: {
 //         title: "The One",
@@ -183,23 +184,23 @@ import axios from "axios";
 //           sys: {
 //             type: "Link",
 //             linkType: "Asset",
-//             id: "5XyWMkcYhnkXQ5WSRbrWSz"
-//           }
+//             id: "5XyWMkcYhnkXQ5WSRbrWSz",
+//           },
 //         },
-//         url: "https://open.spotify.com/embed/album/26NGUEs7plWzOBzipAYf9l?utm_source=generator"
-//       }
+//         url: "https://open.spotify.com/embed/album/26NGUEs7plWzOBzipAYf9l?utm_source=generator",
+//       },
 //     },
 //     {
 //       metadata: {
-//         tags: []
+//         tags: [],
 //       },
 //       sys: {
 //         space: {
 //           sys: {
 //             type: "Link",
 //             linkType: "Space",
-//             id: "cn9cpn7kv7gw"
-//           }
+//             id: "cn9cpn7kv7gw",
+//           },
 //         },
 //         id: "5O2O2SyAZ2WNwNHA2XEQvR",
 //         type: "Entry",
@@ -209,18 +210,18 @@ import axios from "axios";
 //           sys: {
 //             id: "master",
 //             type: "Link",
-//             linkType: "Environment"
-//           }
+//             linkType: "Environment",
+//           },
 //         },
 //         revision: 2,
 //         contentType: {
 //           sys: {
 //             type: "Link",
 //             linkType: "ContentType",
-//             id: "listenPageAlbums"
-//           }
+//             id: "listenPageAlbums",
+//           },
 //         },
-//         locale: "en-GB"
+//         locale: "en-GB",
 //       },
 //       fields: {
 //         title: "After The Screaming Stops",
@@ -228,23 +229,23 @@ import axios from "axios";
 //           sys: {
 //             type: "Link",
 //             linkType: "Asset",
-//             id: "6Ru18XJOD7tD9z0BjwXwKt"
-//           }
+//             id: "6Ru18XJOD7tD9z0BjwXwKt",
+//           },
 //         },
-//         url: "https://open.spotify.com/embed/album/3BK2zNOspKhB9KIPpBVQcR?utm_source=generator"
-//       }
+//         url: "https://open.spotify.com/embed/album/3BK2zNOspKhB9KIPpBVQcR?utm_source=generator",
+//       },
 //     },
 //     {
 //       metadata: {
-//         tags: []
+//         tags: [],
 //       },
 //       sys: {
 //         space: {
 //           sys: {
 //             type: "Link",
 //             linkType: "Space",
-//             id: "cn9cpn7kv7gw"
-//           }
+//             id: "cn9cpn7kv7gw",
+//           },
 //         },
 //         id: "1f57vHq4Np120iJ8EgdvYp",
 //         type: "Entry",
@@ -254,18 +255,18 @@ import axios from "axios";
 //           sys: {
 //             id: "master",
 //             type: "Link",
-//             linkType: "Environment"
-//           }
+//             linkType: "Environment",
+//           },
 //         },
 //         revision: 2,
 //         contentType: {
 //           sys: {
 //             type: "Link",
 //             linkType: "ContentType",
-//             id: "listenPageAlbums"
-//           }
+//             id: "listenPageAlbums",
+//           },
 //         },
-//         locale: "en-GB"
+//         locale: "en-GB",
 //       },
 //       fields: {
 //         title: "Scott & Sid",
@@ -273,23 +274,23 @@ import axios from "axios";
 //           sys: {
 //             type: "Link",
 //             linkType: "Asset",
-//             id: "pAEDloEnDxWpHk1daqMCT"
-//           }
+//             id: "pAEDloEnDxWpHk1daqMCT",
+//           },
 //         },
-//         url: "https://open.spotify.com/embed/album/17anjhlAK6KBqvhFwU4Xex?utm_source=generator"
-//       }
+//         url: "https://open.spotify.com/embed/album/17anjhlAK6KBqvhFwU4Xex?utm_source=generator",
+//       },
 //     },
 //     {
 //       metadata: {
-//         tags: []
+//         tags: [],
 //       },
 //       sys: {
 //         space: {
 //           sys: {
 //             type: "Link",
 //             linkType: "Space",
-//             id: "cn9cpn7kv7gw"
-//           }
+//             id: "cn9cpn7kv7gw",
+//           },
 //         },
 //         id: "2AEn50rTBi8UGk1fKXMxnL",
 //         type: "Entry",
@@ -299,18 +300,18 @@ import axios from "axios";
 //           sys: {
 //             id: "master",
 //             type: "Link",
-//             linkType: "Environment"
-//           }
+//             linkType: "Environment",
+//           },
 //         },
 //         revision: 3,
 //         contentType: {
 //           sys: {
 //             type: "Link",
 //             linkType: "ContentType",
-//             id: "listenPageAlbums"
-//           }
+//             id: "listenPageAlbums",
+//           },
 //         },
-//         locale: "en-GB"
+//         locale: "en-GB",
 //       },
 //       fields: {
 //         title: "The Capture",
@@ -318,23 +319,23 @@ import axios from "axios";
 //           sys: {
 //             type: "Link",
 //             linkType: "Asset",
-//             id: "WxkQycZjzXiNPoYheKOgA"
-//           }
+//             id: "WxkQycZjzXiNPoYheKOgA",
+//           },
 //         },
-//         url: "https://open.spotify.com/embed/album/26FTC6C2eXcqmPMPyxmE1V?utm_source=generator"
-//       }
+//         url: "https://open.spotify.com/embed/album/26FTC6C2eXcqmPMPyxmE1V?utm_source=generator",
+//       },
 //     },
 //     {
 //       metadata: {
-//         tags: []
+//         tags: [],
 //       },
 //       sys: {
 //         space: {
 //           sys: {
 //             type: "Link",
 //             linkType: "Space",
-//             id: "cn9cpn7kv7gw"
-//           }
+//             id: "cn9cpn7kv7gw",
+//           },
 //         },
 //         id: "2S6EGwkiCNvaXl8PTKsJF4",
 //         type: "Entry",
@@ -344,18 +345,18 @@ import axios from "axios";
 //           sys: {
 //             id: "master",
 //             type: "Link",
-//             linkType: "Environment"
-//           }
+//             linkType: "Environment",
+//           },
 //         },
 //         revision: 2,
 //         contentType: {
 //           sys: {
 //             type: "Link",
 //             linkType: "ContentType",
-//             id: "listenPageAlbums"
-//           }
+//             id: "listenPageAlbums",
+//           },
 //         },
-//         locale: "en-GB"
+//         locale: "en-GB",
 //       },
 //       fields: {
 //         title: "The Chelsea Detective",
@@ -363,26 +364,26 @@ import axios from "axios";
 //           sys: {
 //             type: "Link",
 //             linkType: "Asset",
-//             id: "1dwHWs3DXasVg5kwGP1VNA"
-//           }
+//             id: "1dwHWs3DXasVg5kwGP1VNA",
+//           },
 //         },
-//         url: "https://open.spotify.com/embed/album/6yv2Ql7yFGA1QjRAQHMZlP?utm_source=generator"
-//       }
-//     }
+//         url: "https://open.spotify.com/embed/album/6yv2Ql7yFGA1QjRAQHMZlP?utm_source=generator",
+//       },
+//     },
 //   ],
 //   includes: {
 //     Asset: [
 //       {
 //         metadata: {
-//           tags: []
+//           tags: [],
 //         },
 //         sys: {
 //           space: {
 //             sys: {
 //               type: "Link",
 //               linkType: "Space",
-//               id: "cn9cpn7kv7gw"
-//             }
+//               id: "cn9cpn7kv7gw",
+//             },
 //           },
 //           id: "1KwxnIFV3Hqn0utQTcntIt",
 //           type: "Asset",
@@ -392,11 +393,11 @@ import axios from "axios";
 //             sys: {
 //               id: "master",
 //               type: "Link",
-//               linkType: "Environment"
-//             }
+//               linkType: "Environment",
+//             },
 //           },
 //           revision: 1,
-//           locale: "en-GB"
+//           locale: "en-GB",
 //         },
 //         fields: {
 //           title: "Redcon-1 OST",
@@ -407,25 +408,25 @@ import axios from "axios";
 //               size: 49923,
 //               image: {
 //                 width: 500,
-//                 height: 500
-//               }
+//                 height: 500,
+//               },
 //             },
 //             fileName: "Redcon-1 OST.jpg",
-//             contentType: "image/jpeg"
-//           }
-//         }
+//             contentType: "image/jpeg",
+//           },
+//         },
 //       },
 //       {
 //         metadata: {
-//           tags: []
+//           tags: [],
 //         },
 //         sys: {
 //           space: {
 //             sys: {
 //               type: "Link",
 //               linkType: "Space",
-//               id: "cn9cpn7kv7gw"
-//             }
+//               id: "cn9cpn7kv7gw",
+//             },
 //           },
 //           id: "1dwHWs3DXasVg5kwGP1VNA",
 //           type: "Asset",
@@ -435,11 +436,11 @@ import axios from "axios";
 //             sys: {
 //               id: "master",
 //               type: "Link",
-//               linkType: "Environment"
-//             }
+//               linkType: "Environment",
+//             },
 //           },
 //           revision: 1,
-//           locale: "en-GB"
+//           locale: "en-GB",
 //         },
 //         fields: {
 //           title: "The Chelsea Detective OST",
@@ -450,25 +451,25 @@ import axios from "axios";
 //               size: 142270,
 //               image: {
 //                 width: 640,
-//                 height: 640
-//               }
+//                 height: 640,
+//               },
 //             },
 //             fileName: "The Chelsea Detective OST.jpeg",
-//             contentType: "image/jpeg"
-//           }
-//         }
+//             contentType: "image/jpeg",
+//           },
+//         },
 //       },
 //       {
 //         metadata: {
-//           tags: []
+//           tags: [],
 //         },
 //         sys: {
 //           space: {
 //             sys: {
 //               type: "Link",
 //               linkType: "Space",
-//               id: "cn9cpn7kv7gw"
-//             }
+//               id: "cn9cpn7kv7gw",
+//             },
 //           },
 //           id: "40tPumR7ouXuJ1e0RtX42b",
 //           type: "Asset",
@@ -478,11 +479,11 @@ import axios from "axios";
 //             sys: {
 //               id: "master",
 //               type: "Link",
-//               linkType: "Environment"
-//             }
+//               linkType: "Environment",
+//             },
 //           },
 //           revision: 1,
-//           locale: "en-GB"
+//           locale: "en-GB",
 //         },
 //         fields: {
 //           title: "Show Me The Picture OST",
@@ -493,25 +494,25 @@ import axios from "axios";
 //               size: 153869,
 //               image: {
 //                 width: 640,
-//                 height: 640
-//               }
+//                 height: 640,
+//               },
 //             },
 //             fileName: "Show Me The Picture OST.jpeg",
-//             contentType: "image/jpeg"
-//           }
-//         }
+//             contentType: "image/jpeg",
+//           },
+//         },
 //       },
 //       {
 //         metadata: {
-//           tags: []
+//           tags: [],
 //         },
 //         sys: {
 //           space: {
 //             sys: {
 //               type: "Link",
 //               linkType: "Space",
-//               id: "cn9cpn7kv7gw"
-//             }
+//               id: "cn9cpn7kv7gw",
+//             },
 //           },
 //           id: "5XyWMkcYhnkXQ5WSRbrWSz",
 //           type: "Asset",
@@ -521,11 +522,11 @@ import axios from "axios";
 //             sys: {
 //               id: "master",
 //               type: "Link",
-//               linkType: "Environment"
-//             }
+//               linkType: "Environment",
+//             },
 //           },
 //           revision: 1,
-//           locale: "en-GB"
+//           locale: "en-GB",
 //         },
 //         fields: {
 //           title: "the One OST1",
@@ -536,25 +537,25 @@ import axios from "axios";
 //               size: 1814694,
 //               image: {
 //                 width: 1000,
-//                 height: 1000
-//               }
+//                 height: 1000,
+//               },
 //             },
 //             fileName: "The One OST.jpeg",
-//             contentType: "image/jpeg"
-//           }
-//         }
+//             contentType: "image/jpeg",
+//           },
+//         },
 //       },
 //       {
 //         metadata: {
-//           tags: []
+//           tags: [],
 //         },
 //         sys: {
 //           space: {
 //             sys: {
 //               type: "Link",
 //               linkType: "Space",
-//               id: "cn9cpn7kv7gw"
-//             }
+//               id: "cn9cpn7kv7gw",
+//             },
 //           },
 //           id: "6Ru18XJOD7tD9z0BjwXwKt",
 //           type: "Asset",
@@ -564,11 +565,11 @@ import axios from "axios";
 //             sys: {
 //               id: "master",
 //               type: "Link",
-//               linkType: "Environment"
-//             }
+//               linkType: "Environment",
+//             },
 //           },
 //           revision: 1,
-//           locale: "en-GB"
+//           locale: "en-GB",
 //         },
 //         fields: {
 //           title: "After The Screaming Stops OST1",
@@ -579,25 +580,25 @@ import axios from "axios";
 //               size: 248941,
 //               image: {
 //                 width: 1200,
-//                 height: 1200
-//               }
+//                 height: 1200,
+//               },
 //             },
 //             fileName: "Bros OST.jpeg",
-//             contentType: "image/jpeg"
-//           }
-//         }
+//             contentType: "image/jpeg",
+//           },
+//         },
 //       },
 //       {
 //         metadata: {
-//           tags: []
+//           tags: [],
 //         },
 //         sys: {
 //           space: {
 //             sys: {
 //               type: "Link",
 //               linkType: "Space",
-//               id: "cn9cpn7kv7gw"
-//             }
+//               id: "cn9cpn7kv7gw",
+//             },
 //           },
 //           id: "6S9aGNuHfqrEbjORCEjVy0",
 //           type: "Asset",
@@ -607,11 +608,11 @@ import axios from "axios";
 //             sys: {
 //               id: "master",
 //               type: "Link",
-//               linkType: "Environment"
-//             }
+//               linkType: "Environment",
+//             },
 //           },
 //           revision: 1,
-//           locale: "en-GB"
+//           locale: "en-GB",
 //         },
 //         fields: {
 //           title: "I Am Bolt OST1",
@@ -622,25 +623,25 @@ import axios from "axios";
 //               size: 218793,
 //               image: {
 //                 width: 640,
-//                 height: 640
-//               }
+//                 height: 640,
+//               },
 //             },
 //             fileName: "I Am Bolt OST.jpeg",
-//             contentType: "image/jpeg"
-//           }
-//         }
+//             contentType: "image/jpeg",
+//           },
+//         },
 //       },
 //       {
 //         metadata: {
-//           tags: []
+//           tags: [],
 //         },
 //         sys: {
 //           space: {
 //             sys: {
 //               type: "Link",
 //               linkType: "Space",
-//               id: "cn9cpn7kv7gw"
-//             }
+//               id: "cn9cpn7kv7gw",
+//             },
 //           },
 //           id: "WxkQycZjzXiNPoYheKOgA",
 //           type: "Asset",
@@ -650,11 +651,11 @@ import axios from "axios";
 //             sys: {
 //               id: "master",
 //               type: "Link",
-//               linkType: "Environment"
-//             }
+//               linkType: "Environment",
+//             },
 //           },
 //           revision: 1,
-//           locale: "en-GB"
+//           locale: "en-GB",
 //         },
 //         fields: {
 //           title: "The Capture OST1",
@@ -665,25 +666,25 @@ import axios from "axios";
 //               size: 112539,
 //               image: {
 //                 width: 640,
-//                 height: 640
-//               }
+//                 height: 640,
+//               },
 //             },
 //             fileName: "The Capture OST.jpeg",
-//             contentType: "image/jpeg"
-//           }
-//         }
+//             contentType: "image/jpeg",
+//           },
+//         },
 //       },
 //       {
 //         metadata: {
-//           tags: []
+//           tags: [],
 //         },
 //         sys: {
 //           space: {
 //             sys: {
 //               type: "Link",
 //               linkType: "Space",
-//               id: "cn9cpn7kv7gw"
-//             }
+//               id: "cn9cpn7kv7gw",
+//             },
 //           },
 //           id: "pAEDloEnDxWpHk1daqMCT",
 //           type: "Asset",
@@ -693,11 +694,11 @@ import axios from "axios";
 //             sys: {
 //               id: "master",
 //               type: "Link",
-//               linkType: "Environment"
-//             }
+//               linkType: "Environment",
+//             },
 //           },
 //           revision: 1,
-//           locale: "en-GB"
+//           locale: "en-GB",
 //         },
 //         fields: {
 //           title: "Scott and Sid OST1",
@@ -708,17 +709,17 @@ import axios from "axios";
 //               size: 58379,
 //               image: {
 //                 width: 640,
-//                 height: 640
-//               }
+//                 height: 640,
+//               },
 //             },
 //             fileName: "Scott and Sid OST.jpeg",
-//             contentType: "image/jpeg"
-//           }
-//         }
-//       }
-//     ]
-//   }
-// }
+//             contentType: "image/jpeg",
+//           },
+//         },
+//       },
+//     ],
+//   },
+// };
 
 const Container = () => {
   const [albums, setAlbums] = useState(null);
@@ -738,6 +739,7 @@ const Container = () => {
         setAlbums(extractAlbums(response.data));
       })
       .catch((err) => {
+        console.error(err)
         setError({ error: err, message: "Unable to retrieve albums" });
       });
   }, []);
@@ -769,7 +771,6 @@ const Container = () => {
     return albums.map((album) => (
       <div className="listen-albums-item">
         <img src={album.coverUrl} alt={`{album.title cover}`} />
-        <h4>{album.title}</h4>
         <iframe
           src={album.playlistUrl}
           frameborder="0"
@@ -781,10 +782,15 @@ const Container = () => {
 
   return (
     <div className="listen-albums-container">
-      {albums ? (
+      {error ? (
+        <div className="listen-error">
+          <i class="fa fa-frown-o"></i>
+          <p>Unable to retrieve albums</p>
+        </div>
+      ) : albums ? (
         <div className="grid-wrapper">{renderGridItems()}</div>
       ) : (
-        <div>loading</div>
+        <Spinner />
       )}
     </div>
   );

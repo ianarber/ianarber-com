@@ -41,6 +41,16 @@
     }
 }
 
+.listen-albums-container .listen-error {
+    height: 100vh;
+    margin: 40px 0 50px 0;
+    text-align: center;
+
+    i {
+        font-size: 30px;
+    }
+}
+
 .listen-wrapper{
     width: 95%;
     margin-left: auto;
