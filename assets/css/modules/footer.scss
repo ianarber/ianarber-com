@@ -1,6 +1,6 @@
 .footer{
 	position: relative;
-	height: 395px;
+	height: 195px;
 	background-color: #333;
 	box-shadow: 0 0 2px 1px #222;
 	color: #efefef;
@@ -27,15 +27,6 @@ width decreases */
 	i{
 		font-size: 75%;
 	}
-}
-
-/* set width to 5 times the data-pos attribute value to fit 5 testimonials */
-#testimonial-wrapper{
-	width: 5275px;
-	font-size: 70%;
-	letter-spacing: 1px;
-	transform: translate3d(0, 0, 0);
-	transition: transform .5s ease-in-out;
 }
 
 .content{
@@ -74,11 +65,6 @@ width decreases */
 
 .footer-info,
 .copyright{
-	position: absolute;
-	width: 100%;
-	right: 0;
-	left: 0;
-	top: 160px;
 	margin: 0 auto;
 	text-align: center;
 	h4{
@@ -89,7 +75,7 @@ width decreases */
 }
 
 .foot-lower{
-    top: 200px;
+    padding-top: 5px;
 }
 
 .foot-about{
@@ -156,7 +142,7 @@ width decreases */
 }
 
 .copyright{
-	top: 365px;
+	margin-top: 20px;
 	font-size: 60%;
 	word-spacing: 1px;
     letter-spacing: 0.2px;

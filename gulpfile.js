@@ -42,7 +42,6 @@ var reactVendorOutput = 'react' + reactVersion + '.js';
 
 var jsFiles = [
     'assets/script/modules/mobileMenu.js',
-    'assets/script/modules/quoteSlider.js',
     'assets/script/modules/clientAreaAuth.js'
 ];
 
@@ -264,6 +263,8 @@ gulp.task('clean', function(){
                    '_quotes/*.md',
                    '_bioimages/*.md',
                    '_listen/*.md',
+                   '_posts/**/*.md',
                    'assets/script/bundle/*',
+                   'assets/script/vendor/*',
                    'assets/css/*.css']);
 });

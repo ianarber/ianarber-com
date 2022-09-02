@@ -4,6 +4,12 @@
   "description": "Bio wesbite for composer Ian Arber. Built on Jekyll using Gulp",
   "main": "gulpfile.js",
   "author": "Anthony Desmier",
+  "scripts": {
+    "clean": "./node_modules/gulp/bin/gulp.js clean",
+    "create-posts": "./node_modules/gulp/bin/gulp.js create-posts",
+    "start": "./node_modules/gulp/bin/gulp.js",
+    "docker-bash": "docker exec -it $(docker ps | awk '{ if ($NF ~ /ianarber-com/) print $1 }') /bin/bash"
+  },
   "devDependencies": {
     "axios": "0.25.0",
     "babel-preset-es2015": "^6.24.1",
@@ -33,7 +39,7 @@
     "url": "https://github.com/ianarber/ianarber-com.git"
   },
   "dependencies": {
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   }
 }

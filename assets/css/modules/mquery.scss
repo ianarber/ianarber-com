@@ -1,15 +1,5 @@
 /* TODO: clean up mquery file */
 
-@media only screen and (max-width: 1232px){
-    #listen-gallery{
-        .listen-grid-elements > li{
-            width: 50%;
-        }
-    }
-}
-
-
-
 @media only screen and (max-width: 1220px){
 	#header{
 		height: 110px;
@@ -19,21 +9,16 @@
 		.ianarber{
 			font-size: 220%;
 		}
-		.composer,
-		.film{
+		.composer {
 			font-size: 60%;
 		}
 		.composer{
 			&:before, &:after{
-				top: 5px;
-				width: 37.7%;
+				top: 4px;
 			}
-    	}
-		.film{
-			&:before, &:after{
-				top: 5px;
-				width: 29.6%;
-			}
+            &:before{
+                width: 39%;
+            }
     	}
 	}
 
@@ -111,22 +96,14 @@
 			font-size: 185%;
             top: -10px;
 		}
-		.composer,
-		.film{
+		.composer{
 			font-size: 55%;
 		}
         .composer{
-            top: -4px;
+            top: -12px;
             &:before, &:after{
 				top: 5px;
 				width: 36.9%;
-			}
-        }
-        .film{
-            top: -14px;
-            &:before, &:after{
-				top: 5px;
-				width: 28.3%;
 			}
         }
 	}
@@ -197,10 +174,6 @@
         }
     }
 
-    #testimonial-wrapper{
-        width: 4050px;
-    }
-
     #yt-showreel-wrapper{
         iframe{
             height: 430px;
@@ -219,27 +192,22 @@
             top: -12px;
 			font-size: 150%;
 		}
-		.composer,
-		.film{
+		.composer{
 			font-size: 45%;
 		}
 		.composer{
-			&:before, &:after{
+			&:before{
 				top: 4px;
-				width: 37.1%;
+				width: 39%;
+                right: 2%;
 			}
-    	}
-		.film{
-			&:before, &:after{
+            &:after{
 				top: 4px;
-				width: 28.9%;
+				width: 35.6%;
 			}
     	}
         .composer {
-            top: -7px;
-        }
-        .film {
-            top: -15px;
+            top: -14px;
         }
 	}
 
@@ -404,24 +372,8 @@
         }
     }
 
-    .listen-grid {
-        .section-header{
-            display: none;
-        }
-    }
-
     .genre-menu{
         transform: translateY(20px);
-    }
-
-    .listen-wrapper{
-        margin-top: 80px;
-    }
-
-    #listen-gallery{
-        .listen-grid-elements > li{
-            width: 100%;
-        }
     }
 
     .main-contact-form{
@@ -500,10 +452,6 @@
             width: 600px;
             margin-top: -20px;
         }
-    }
-
-    #testimonial-wrapper{
-        width: 3000px;
     }
 
     .footer{
@@ -603,10 +551,6 @@
         #navLinks {
             width: 400px;
         }
-    }
-
-    #testimonial-wrapper{
-        width: 2000px;
     }
 
     .footer{
@@ -798,10 +742,6 @@
         #navLinks {
             width: 300px;
         }
-    }
-
-    #testimonial-wrapper{
-        width: 1500px;
     }
 
     .footer{

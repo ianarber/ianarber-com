@@ -1,0 +1,39 @@
+version: "3.7"
+
+services:
+  ianarber-com:
+    image: ianarber/ianarber-com:v1.0
+    command: bash
+    ports:
+      - 3000:3000
+      - 3001:3001
+    volumes:
+      - ./_bioimages:/home/ianarber-com/_bioimages
+      - ./_data:/home/ianarber-com/_data
+      - ./_includes:/home/ianarber-com/_includes
+      - ./_layouts:/home/ianarber-com/_layouts
+      - ./_listen:/home/ianarber-com/_listen
+      - ./_plugins:/home/ianarber-com/_plugins
+      - ./_posts:/home/ianarber-com/_posts
+      - ./_quotes:/home/ianarber-com/_quotes
+      - ./assets:/home/ianarber-com/assets
+      - ./react:/home/ianarber-com/react
+      - ./scripts:/home/ianarber-com/scripts
+      - ./_config.yml:/home/ianarber-com/_config.yml
+      - ./about.html:/home/ianarber-com/about.html
+      - ./blank.html:/home/ianarber-com/blank.html
+      - ./contact.html:/home/ianarber-com/contact.html
+      - ./credits.html:/home/ianarber-com/credits.html
+      - ./Gemfile:/home/ianarber-com/Gemfile
+      - ./Gemfile.lock:/home/ianarber-com/Gemfile.lock
+      - ./gulpfile.js:/home/ianarber-com/gulpfile.js
+      - ./index.html:/home/ianarber-com/index.html
+      - ./listen.html:/home/ianarber-com/listen.html
+      - ./package.json:/home/ianarber-com/package.json
+      - ./reel.html:/home/ianarber-com/reel.html
+      - ./thankyou.html:/home/ianarber-com/thankyou.html
+    stdin_open: true
+    tty: true
+    environment:
+      CONTENTFUL_SPACE_ID: ${CONTENTFUL_SPACE_ID}
+      CONTENTFUL_ACCESS_TOKEN: ${CONTENTFUL_ACCESS_TOKEN}

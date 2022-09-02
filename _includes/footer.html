@@ -1,56 +1,6 @@
 <footer class="section footer">
-	<div class="testimonials">
-		<div id="left-quote"><i class="fa fa-quote-left"></i></div>
-		<div id="testimonial-container">
-			<div id="testimonial-wrapper">
-
-				{% for quote in site.quotes %}
-
-				<div class="content">
-					<blockquote>
-						<p>
-							{{ quote.content }}
-						</p>
-						<footer>
-							<a href="{{ quote.link }}" target="_blank">{{ quote.author }} // {{ quote.role }} // {{ quote.film }}</a>
-						</footer>
-					</blockquote>
-				</div>
-
-				{% endfor %}
-
-			</div>
-		</div>
-
-		<div id="right-quote"><i class="fa fa-quote-right"></i></div>
-
-		<div id="navLinks">
-			<ul>
-				<li class="itemLinks" data-pos="0"></li>
-				<li class="itemLinks" data-pos="-1055"></li>
-				<li class="itemLinks" data-pos="-2110"></li>
-				<li class="itemLinks" data-pos="-3165"></li>
-				<li class="itemLinks" data-pos="-4220"></li>
-			</ul>
-		</div>
-	</div>
-
-	<div class="row footer-info foot-upper">
-        <ul>
-            <!--TODO: check links work -->
-            <li><a href="/">Home</a></li>&middot;
-            <li><a href="/about">About</a></li>&middot;
-            <li><a href="/listen">Listen</a></li>&middot;
-            <li><a href="/credits">Credits</a></li>&middot;
-            <li><a href="/contact">Contact</a></li>&middot;
-            <li><a href="/reel" class="client-area-btn">Reel</a></li>
-        </ul>
-	</div>
-
 	<div class="row footer-info foot-lower">
 	    <div class="col span-1-of-2 foot-about">
-			<h4><a href="/about">About</a></h4>
-			<!--TODO: resize headshot image -->
 			<img src="/assets/img/ian_headshot_footer.jpg" alt="Ian Arber Headshot"/>
 			<p>
 				Ian Arber is a London-based Film &amp; TV composer known for his work on <a href="https://www.imdb.com/title/tt5057130/" target="_blank">Medici (2018)</a>, <a href="https://www.imdb.com/title/tt6980438/" target="_blank">Quacks (2017)</a>, <a href="https://www.imdb.com/title/tt7068942/" target="_blank">Bros - After the Screaming Stops (2018)</a> and <a href="https://www.bbc.co.uk/proms" target="_blank">The BBC Proms Theme (2019)</a>.
@@ -61,15 +11,13 @@
 			<div class="social-icons">
                 <div><a target="_blank" href="http://www.facebook.com/ianarbercomposer"><i class="fa fa-facebook"></i></a></div>
                 <div><a target="_blank" href="http://www.twitter.com/ianarber"><i class="fa fa-twitter"></i></a></div>
-                <div><a target="_blank" href="http://www.soundcloud.com/ianarber"><i class="fa fa-soundcloud"></i></a></div>
                 <div><a target="_blank" href="https://www.instagram.com/ianarber"><i class="fa fa-instagram"></i></a></div>
                 <div><a target="_blank" href="http://www.imdb.com/name/nm4725072/"><i>IMDb</i></a></div>
-<!--                <div><a href="skype:ian_arber?call"><i class="fa fa-skype"></i></a></div>-->
             </div>
 		</div>
 	</div>
 
 	<div class="row copyright">
-        <p>&copy; 2016 Ian Arber &middot; Website design by <a href="https://www.throughthestack.com/" target="_blank">Anthony Desmier</a></p>
+        <p>&copy; 2022 Ian Arber &middot; Website design by Anthony Desmier</p>
 	</div>
 </footer>
