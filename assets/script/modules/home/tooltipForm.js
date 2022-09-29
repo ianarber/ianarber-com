@@ -3,10 +3,6 @@
 var tooltipForm = document.getElementById('submit-form');
 tooltipForm.setAttribute('action', '//formspree.io/' + 'contact' + '@' + 'ianarber' + '.' + 'com');
 
-var contactEmail1 = document.getElementById('email-carolynne');
-contactEmail1.setAttribute('href', 'mailto:' + 'carolynne' + '@' + 'smatalent' + '.' + 'com');
-contactEmail1.innerHTML = 'carolynne' + '@' + 'smatalent' + '.' + 'com';
-
 var contactEmail2 = document.getElementById('email-john');
 contactEmail2.setAttribute('href', 'mailto:' + 'johnt' + '@' + 'soundtrk' + '.' + 'com');
 contactEmail2.innerHTML = 'johnt' + '@' + 'soundtrk' + '.' + 'com';
