@@ -3,8 +3,8 @@ var mainForm = document.getElementById('main-form');
 mainForm.setAttribute('action', '//formspree.io/' + 'contact' + '@' + 'ianarber' + '.' + 'com');
 
 var contactEmail1 = document.getElementById('email-ollie');
-contactEmail2.setAttribute('href', 'mailto:' + 'ollie' + '@' + 'coolmusicltd' + '.' + 'com');
-contactEmail2.innerHTML = 'ollie' + '@' + 'coolmusicltd' + '.' + 'com';
+contactEmail1.setAttribute('href', 'mailto:' + 'ollie' + '@' + 'coolmusicltd' + '.' + 'com');
+contactEmail1.innerHTML = 'ollie' + '@' + 'coolmusicltd' + '.' + 'com';
 
 var contactEmail2 = document.getElementById('email-john');
 contactEmail2.setAttribute('href', 'mailto:' + 'johnt' + '@' + 'soundtrk' + '.' + 'com');
