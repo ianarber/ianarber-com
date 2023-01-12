@@ -1,0 +1,119 @@
+# latest image supported by netlify
+FROM ubuntu:20.04
+
+# extracts from Dockerfile at https://github.com/netlify/build-image
+
+# base dependencies
+RUN apt-get update && apt-get install -y -q --no-install-recommends \
+    apt-transport-https \
+    build-essential \
+    ca-certificates \
+    patch \
+    g++ \
+    gcc \
+    make \
+    libc6-dev \
+    patch \
+    libreadline6-dev \
+    curl \
+    git \
+    gnupg2 \
+    libssl-dev \
+    wget \
+    gawk \
+    autoconf \
+    automake \
+    bison \
+    libffi-dev \
+    libgdbm-dev \
+    libncurses5-dev \
+    libsqlite3-dev \
+    libtool \
+    libyaml-dev \
+    pkg-config \
+    sqlite3 \
+    zlib1g-dev \
+    libgmp-dev \
+    libreadline-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# RUN useradd -ms /bin/bash buildbot
+# USER buildbot
+
+# Ruby
+
+ENV RUBY_VERSION=2.7.2
+
+RUN curl -sSL https://rvm.io/mpapis.asc | gpg --import - && curl -sSL https://rvm.io/pkuczynski.asc | gpg2 --import && \
+    curl -sL https://get.rvm.io | bash -s stable --with-gems="bundler" --autolibs=read-fail
+
+# RUN gpg --keyserver keyserver.ubuntu.com --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+
+RUN /bin/bash -l -c "curl -L get.rvm.io | bash -s stable"
+# RUN /bin/bash -l -c "rvm install $RUBY_VERSION"
+# RUN /bin/bash -l -c "echo 'gem: --no-ri --no-rdoc' > ~/.gemrc"
+# RUN /bin/bash -l -c "gem install bundler --no-ri --no-rdoc"
+
+
+RUN /bin/bash -c "rvm install $RUBY_VERSION && rvm use $RUBY_VERSION && gem install bundler && \
+    rvm use $RUBY_VERSION --default && rvm cleanup all"
+
+ENV PATH /usr/local/rvm/bin:$PATH
+
+
+# SHELL ["/bin/bash", "--login", "-i", "-c"]
+# RUN source /root/.bashrc && rvm install $RUBY_VERSION && rvm use $RUBY_VERSION
+# SHELL ["/bin/bash", "--login", "-c"]
+
+# Node.js
+
+# this installer is needed for older node versions where no corepack is available
+# RUN curl -o- -L https://yarnpkg.com/install.sh > /usr/local/bin/yarn-installer.sh
+
+ENV NODE_VERSION=6.17.1
+ENV NVM_VERSION=0.39.1
+
+# Install nvm with node and npm
+SHELL ["/bin/bash", "--login", "-i", "-c"]
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v$NVM_VERSION/install.sh | bash
+RUN source /root/.bashrc && nvm install $NODE_VERSION
+SHELL ["/bin/bash", "--login", "-c"]
+
+# RUN curl https://raw.githubusercontent.com/creationix/nvm/v$NVM_VERSION/install.sh | bash \
+#     && . $NVM_DIR/nvm.sh \
+#     && nvm install $NODE_VERSION \
+#     && nvm alias default $NODE_VERSION \
+#     && nvm use default
+
+ENV NODE_PATH $NVM_DIR/v$NODE_VERSION/lib/node_modules
+ENV PATH      $NVM_DIR/v$NODE_VERSION/bin:$PATH
+
+# # Install node.js, yarn, grunt, bower
+# RUN git clone https://github.com/creationix/nvm.git ~/.nvm && \
+#     cd ~/.nvm && \
+#     git checkout v$NVM_VERSION && \
+#     cd /
+
+# ENV YARN_VERSION=1.22.19
+# ENV PNPM_VERSION=7.13.4
+
+# RUN /bin/bash -c ". ~/.nvm/nvm.sh && \
+#          nvm install --no-progress $NODE_VERSION && \
+#          npm install -g grunt-cli bower && \
+#          nvm alias default node && \
+#          nvm cache clear && \
+#          corepack enable && \
+#          corepack prepare yarn@$YARN_VERSION --activate && \
+#          corepack prepare pnpm@$PNPM_VERSION --activate"
+
+# ENV NODE_PATH $NVM_DIR/v$NODE_VERSION/lib/node_modules
+# ENV PATH $NVM_DIR/v$NODE_VERSION/bin:$PATH
+
+WORKDIR /usr/src
+
+# copy files
+COPY ./.ruby-version /usr/src/
+COPY ./Gemfile /usr/src/
+COPY ./Gemfile.lock /usr/src/
+COPY ./.nvmrc /usr/src/
+COPY ./package.json /usr/src/
