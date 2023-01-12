@@ -1,12 +1,13 @@
 # this script  will convert Contentful data in _data/contentful/spaces/posts.yaml
 # into the relevant posts .MD file. Called using the 'gulp create-posts' task
 
+require 'date'
 require 'yaml'
 require 'psych'
 
 #read in YAML file into has variable
 postData = begin
-  YAML.load(File.open("_data/contentful/spaces/posts.yaml"))
+  Psych.safe_load(File.open("_data/contentful/spaces/posts.yaml"), permitted_classes: [DateTime, Date, Time])
 rescue ArgumentError => e
   puts "Could not parse YAML: #{e.message}"
 end
@@ -144,8 +145,13 @@ begin
 		end
 
 		f.puts "film_show: #{postData['newsArticle'][articles_counter]['film_show']}"
-		f.puts "image_header: #{postData['newsArticle'][articles_counter]['image_header']['url']}" + "?fit=thumb&w=1920&h=1080&q=80"
-		f.puts "image_social: #{postData['newsArticle'][articles_counter]['image_header']['url']}" + "?fit=thumb&w=1200&h=630&q=80"
+
+		image_header = "#{postData['newsArticle'][articles_counter]['image_header']}"
+		if image_header != ''
+			f.puts "image_header: #{postData['newsArticle'][articles_counter]['image_header']['url']}" + "?fit=thumb&w=1920&h=1080&q=80"
+			f.puts "image_social: #{postData['newsArticle'][articles_counter]['image_header']['url']}" + "?fit=thumb&w=1200&h=630&q=80"
+		end
+
 		f.puts "heading: #{postData['newsArticle'][articles_counter]['heading']}"
 		f.puts "post_excerpt: #{postData['newsArticle'][articles_counter]['post_excerpt']}"
 
