@@ -17,6 +17,12 @@
 .contact-details{
     width: 90%;
     margin: 0 auto;
+
+    .home-contact-agent-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
 }
 
 .direct,
