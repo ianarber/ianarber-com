@@ -1,5 +1,4 @@
 .main-contact-form{
-    height: 500px;
     .section-header:first-of-type{
         margin-top: 60px;
     }
@@ -17,6 +16,7 @@
         font-size: 90%;
         letter-spacing: 2px;
         text-align: center;
+        margin-top: 10px;
     }
     .social-icons{
         i{
@@ -40,8 +40,7 @@
 
 #main-form{
     max-width: 800px;
-    margin: 0 auto;
-    height: 210px;
+    margin: 0 auto 25px auto;
     
     input,
     textarea{
@@ -81,6 +80,8 @@
 
 #main-agent,
 #main-publicist{
+    display: flex;
+    justify-content: center;
     margin-left: 0%;
     margin-bottom: 30px;
 }

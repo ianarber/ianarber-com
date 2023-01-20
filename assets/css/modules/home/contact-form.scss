@@ -1,6 +1,5 @@
 .form{
-	height: 400px;
-    margin-bottom: 15px;
+    margin-bottom: 100px;
 	background-color: $backgroundColor;
     i{
         border: 2px solid $mainFontColor;
@@ -17,6 +16,12 @@
 .contact-details{
     width: 90%;
     margin: 0 auto;
+
+    .home-contact-agent-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
 }
 
 .direct,
@@ -33,18 +38,6 @@
         font-weight: 300;
 	}
 }
-
-// .publicist{
-//     margin-top: 15px;
-//     p{
-//         font-size: 85%;
-//     }
-//     i{
-// 		margin-top: 10px;
-//         margin-bottom: 5px;
-// 		border: none;
-// 	}
-// }
 
 .direct{
     margin-top: 25px;
@@ -178,7 +171,7 @@
 
 .agent,
 .publicist{
-	margin-top: 10px;
+	margin: 10px;
 	h6{
 		margin-top: 10px;
 		font-size: 75%;
