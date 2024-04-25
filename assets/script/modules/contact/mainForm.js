@@ -6,10 +6,6 @@ var contactEmail1 = document.getElementById('email-ollie');
 contactEmail1.setAttribute('href', 'mailto:' + 'ollie' + '@' + 'coolmusicltd' + '.' + 'com');
 contactEmail1.innerHTML = 'ollie' + '@' + 'coolmusicltd' + '.' + 'com';
 
-var contactEmail2 = document.getElementById('email-john');
-contactEmail2.setAttribute('href', 'mailto:' + 'johnt' + '@' + 'soundtrk' + '.' + 'com');
-contactEmail2.innerHTML = 'johnt' + '@' + 'soundtrk' + '.' + 'com';
-
 var contactEmail3 = document.getElementById('email-ian');
 contactEmail3.innerHTML = 'contact' + '@' + 'ianarber' + '.' + 'com';
 
