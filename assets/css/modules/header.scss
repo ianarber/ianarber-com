@@ -63,10 +63,10 @@
 /*** shrink class that will be applied to header via collapseHeader.js on scroll ***/
 
 #header.shrunk-header{
-    height: 60px;
+    height: 70px;
 
     .logo-text-wrapper {
-        padding-top: 5px;
+        padding-top: 10px;
     }
 }
 
@@ -77,12 +77,12 @@
 
 #header.shrunk-header .menu-list-1,
 #header.shrunk-header .menu-list-2{
-    margin-top: -4px;
+    margin-top: -2px;
 }
 
 #header.shrunk-header .menu-items-1,
 #header.shrunk-header .menu-items-2{
-    font-size: 65%;
+    font-size: 75%;
 }
 
 #header.shrunk-header .composer{

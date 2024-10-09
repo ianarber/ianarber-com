@@ -220,11 +220,11 @@ function startInterval(){
 
 
 //initially run finctions
-recalculateHeight();
+// recalculateHeight();
 calculateVideoSize();
 
 $(window).on('resize', function(){
-    recalculateHeight();
+    // recalculateHeight();
     calculateVideoSize();
 });
 
